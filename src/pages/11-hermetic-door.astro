@@ -1,0 +1,33 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import ProductPage from '../components/ProductPage.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="DOOR SYSTEMS" pageNumber="11" />
+    <ProductPage
+      title="Auto Hermetic Sliding Door"
+      description="Automatic hermetic sliding door made from stainless steel with Glass Cell 5mm. Equipped with electric motor and battery backup. Sensor-controlled operation from inside and outside OR. Auto motor reversal with safety lights. Includes Pb 2mm and Glass Pb for radiation protection."
+      features={[
+        'Stainless steel construction with Glass Cell 5mm',
+        'Electric motor with battery backup',
+        'Speed: 0.7 m/sec (single leaf), 1.4 m/sec (double leaf)',
+        'Sensor inside &amp; outside OR, foot switch control',
+        'Auto motor reversal with safety lights',
+        'Pb 2mm + Glass Pb radiation protection',
+      ]}
+      specCards={[
+        { icon: 'DIM', label: 'Door Size', value: 'W1600&times;H2100mm' },
+        { icon: 'PWR', label: 'Voltage',   value: '220 VAC' },
+        { icon: 'MAT', label: 'Material',  value: 'Stainless Steel' },
+        { icon: 'SPD', label: 'Speed',     value: '0.7 m/sec' },
+      ]}
+      imageFilename="product-hermetic-door.png"
+      imagePlaceholderText="Hermetic Sliding Door<br>Product Image"
+      thumbnails={['Open State', 'Seal Detail', 'Control Panel']}
+    />
+    <PageFooter />
+  </div>
+</div>
