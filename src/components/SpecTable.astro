@@ -1,0 +1,62 @@
+---
+interface TableRow {
+  parameter: string;
+  specification: string;
+}
+
+interface Callout {
+  title: string;
+  text: string;
+  variant?: 'teal';
+}
+
+interface Props {
+  title: string;
+  tableRows: TableRow[];
+  callouts?: Callout[];
+  diagramPath?: string;
+  diagramTitle?: string;
+}
+
+const { title, tableRows, callouts = [], diagramPath, diagramTitle } = Astro.props;
+---
+
+<div class="spec-table-page">
+  <h2 class="spec-table-page__title">{title}</h2>
+  <div class="spec-table-page__content">
+    <div class="spec-table-page__table-area">
+      <table class="spec-table">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Specification</th>
+          </tr>
+        </thead>
+        <tbody>
+          {tableRows.map((row) => (
+            <tr>
+              <td>{row.parameter}</td>
+              <td set:html={row.specification}></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+    <div class="spec-table-page__notes">
+      {callouts.map((callout) => (
+        <div class={`callout${callout.variant === 'teal' ? ' callout--teal' : ''}`}>
+          <h4 class="callout__title">{callout.title}</h4>
+          <p class="callout__text">{callout.text}</p>
+        </div>
+      ))}
+      {diagramPath && (
+        <div class="diagram-section mt-4">
+          {diagramTitle && <h4 class="callout__title">{diagramTitle}</h4>}
+          <object type="image/svg+xml" data={diagramPath} style="max-width: 100%; height: auto;">
+            {diagramTitle ?? 'Diagram'}
+          </object>
+        </div>
+      )}
+    </div>
+  </div>
+</div>
