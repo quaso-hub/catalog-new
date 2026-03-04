@@ -1,0 +1,38 @@
+---
+import CertBadge from '../components/CertBadge.astro';
+---
+
+<div class="page p-0">
+  <div class="cover--dark">
+    <div class="cover__logo-area">
+      <img src="/assets/logos/logo-elfatech-hd.svg" alt="Elfatech" class="cover__logo">
+      <div class="cover__company-name">PT Teknomed Indo Timur</div>
+    </div>
+
+    <div class="cover__hero">
+      <div class="cover__hero-placeholder">
+        <span>Premium OR Room Installation Photo</span>
+        <span class="placeholder-hint">Replace with high-resolution project photo</span>
+      </div>
+    </div>
+
+    <div class="cover__title-block">
+      <h1 class="cover__title">MODULAR<br>OPERATING THEATRE</h1>
+      <div class="cover__divider"></div>
+      <p class="cover__subtitle">Product Catalogue 2026</p>
+    </div>
+
+    <div class="cover__footer">
+      <CertBadge badges={[
+        { type: 'image', src: '/assets/logos/badge-ce.svg', alt: 'CE' },
+        { type: 'image', src: '/assets/logos/badge-iso13485.svg', alt: 'ISO 13485' },
+        { type: 'image', src: '/assets/logos/badge-sni.svg', alt: 'SNI' },
+        { type: 'text', text: 'TKDN' },
+      ]} />
+      <div class="cover__company-info">
+        <span class="cover__contact-line">+62 812-8865-4879</span>
+        <span class="cover__contact-line">teknomedindotimurpt@gmail.com</span>
+      </div>
+    </div>
+  </div>
+</div>
