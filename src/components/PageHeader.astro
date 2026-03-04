@@ -1,0 +1,14 @@
+---
+interface Props {
+  category: string;
+  pageNumber: string;
+}
+
+const { category, pageNumber } = Astro.props;
+---
+
+<header class="page-header">
+  <img src="/assets/logos/logo-elfatech-hd.svg" alt="Elfatech" class="page-header__logo">
+  <span class="page-header__category">{category}</span>
+  <span class="page-header__number">{pageNumber}</span>
+</header>
