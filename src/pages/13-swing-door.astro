@@ -1,0 +1,32 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import ProductPage from '../components/ProductPage.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="DOOR SYSTEMS" pageNumber="13" />
+    <ProductPage
+      title="Automatic Single Swing PB/Lead Door"
+      description="Automatic swing door with PB Lead insulation (Plywood 9mm + Rangka Hollow) and PIR insulation. Equipped with Motise X-Ray Special developed by LBA. View Glass Timbal for radiation observation."
+      features={[
+        'PB Lead insulation (Plywood 9mm + Rangka Hollow) + PIR',
+        'Motise X-Ray Special (developed by LBA)',
+        'View Glass Timbal for radiation observation',
+        'Frame: Steel Plate 1.5-2mm / Stainless Steel',
+        'Door leaf: Steel Plate 1.2-1.5mm / SS',
+        'Finishing: Powder Coating / Stainless Steel',
+      ]}
+      specCards={[
+        { icon: 'DIM', label: 'Door Size',    value: 'W1000&times;H2200mm' },
+        { icon: 'THK', label: 'Thickness',    value: '&plusmn;45-50mm' },
+        { icon: 'MAT', label: 'Material',     value: 'Steel / SS' },
+        { icon: 'ACC', label: 'Accessories',  value: 'Onassis, Wilka' },
+      ]}
+      imageFilename="product-swing-door-pb.png"
+      imagePlaceholderText="Automatic Single Swing PB/Lead Door<br>Product Image"
+    />
+    <PageFooter />
+  </div>
+</div>
