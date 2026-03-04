@@ -1,0 +1,33 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import SpecTable from '../components/SpecTable.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="SURGICAL EQUIPMENT" pageNumber="23" />
+    <SpecTable
+      title="Operating Table: Technical Specifications"
+      tableRows={[
+        { parameter: 'Table Top Size',       specification: '2100 &times; 550 mm' },
+        { parameter: 'Height Range',         specification: '710 - 1010 mm' },
+        { parameter: 'Trendelenburg',        specification: '&plusmn;25&deg;' },
+        { parameter: 'Lateral Tilt',         specification: '15&deg; / 15&deg;' },
+        { parameter: 'Back Section',         specification: '85&deg; / 20&deg; (up/down)' },
+        { parameter: 'Leg Section',          specification: '90&deg; / 90&deg; / 15&deg;' },
+        { parameter: 'Kidney Bridge',        specification: '110 mm' },
+        { parameter: 'Longitudinal Sliding', specification: '350 mm' },
+        { parameter: 'Drive System',         specification: 'Electro-hydraulic' },
+        { parameter: 'Power Supply',         specification: '220V, 50Hz, 1.0 kW' },
+      ]}
+      callouts={[
+        {
+          title: 'Surgical Versatility',
+          text: 'Compatible with a wide range of accessories for general surgery, orthopedics, urology, neurosurgery, and ophthalmology procedures.',
+        },
+      ]}
+    />
+    <PageFooter />
+  </div>
+</div>
