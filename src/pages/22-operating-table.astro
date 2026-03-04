@@ -1,0 +1,32 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import ProductPage from '../components/ProductPage.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="SURGICAL EQUIPMENT" pageNumber="22" />
+    <ProductPage
+      title="Electro-Hydraulic Operating Table"
+      description="Electro-hydraulic operating table with multi-section tabletop for flexible patient positioning across a wide range of surgical procedures. Tabletop 2100 &times; 550mm, longitudinal sliding 350mm."
+      features={[
+        'Electro-hydraulic drive system',
+        'Tabletop: 2100 &times; 550mm',
+        'Height range: 710 - 1010mm',
+        'Trendelenburg: &plusmn;25&deg;',
+        'Longitudinal sliding: 350mm',
+        'Power: 220V, 50Hz, 1.0 kW',
+      ]}
+      specCards={[
+        { icon: 'DIM', label: 'Table Top',   value: '2100&times;550mm' },
+        { icon: 'HGT', label: 'Height Range', value: '710-1010mm' },
+        { icon: 'SLD', label: 'Longitudinal', value: '350mm' },
+        { icon: 'PWR', label: 'Power',        value: '220V, 1.0kW' },
+      ]}
+      imageFilename="product-operating-table.png"
+      imagePlaceholderText="Operating Table<br>Product Image"
+    />
+    <PageFooter />
+  </div>
+</div>
