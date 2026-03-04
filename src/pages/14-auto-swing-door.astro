@@ -1,0 +1,32 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import ProductPage from '../components/ProductPage.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="DOOR SYSTEMS" pageNumber="14" />
+    <ProductPage
+      title="Automatic Swing Door"
+      description="Motorized automatic swing door combining the convenience of automated operation with the space efficiency of swing doors. Ideal for corridors, recovery rooms, and utility areas where sliding door tracks are not feasible."
+      features={[
+        'Electromechanical automatic swing operator',
+        'Push button, sensor, or remote-control activation',
+        'Adjustable opening angle (90&deg; to 180&deg;)',
+        'Soft-open and soft-close mechanism',
+        'Battery backup for power failure operation',
+        'Anti-collision infrared safety sensor',
+      ]}
+      specCards={[
+        { icon: 'DIM', label: 'Door Size',  value: 'W1000&times;H2200mm' },
+        { icon: 'PWR', label: 'Power',      value: 'AC220V' },
+        { icon: 'MAT', label: 'Material',   value: 'Steel / SS' },
+        { icon: 'THK', label: 'Thickness',  value: '&plusmn;45-50mm' },
+      ]}
+      imageFilename="product-auto-swing-door.png"
+      imagePlaceholderText="Automatic Swing Door<br>Product Image"
+    />
+    <PageFooter />
+  </div>
+</div>
