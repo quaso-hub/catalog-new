@@ -1,0 +1,40 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import ProductCompact from '../components/ProductCompact.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="FLOORING, FINISHING &amp; INFRASTRUCTURE" pageNumber="38" />
+    <h2 class="section-title">Medical Gas Equipment</h2>
+    <div class="divider-accent"></div>
+    <div class="grid grid--2col">
+      <ProductCompact
+        title="LED Automatic Manifold"
+        description="Main medical gas equipment. Input 110-240V, max input pressure 200 bar, output 0-12 bar adjustable. Applicable gas: O2, Air, CO2, N2, N2O."
+        specs={[
+          { label: 'Input',        value: '110-240V, 50-60Hz' },
+          { label: 'Max Pressure', value: '200 bar' },
+          { label: 'Output',       value: '0-12 bar adjustable' },
+          { label: 'Max Flow',     value: '100 m&sup3;/h' },
+          { label: 'Size',         value: '600&times;500&times;200mm' },
+        ]}
+        imageFilename="product-led-manifold.png"
+        imagePlaceholderText="LED Automatic Manifold"
+      />
+      <ProductCompact
+        title="Alarm System &amp; Remote Alarming"
+        description="Medical gas alarm system with remote alarming capability. 100% pressure tested, safe and reliable."
+        specs={[
+          { label: 'Input',  value: '15 MPa' },
+          { label: 'Output', value: '200 m&sup3;/h, 0.4-0.8 MPa' },
+          { label: 'Test',   value: '100% pressure test' },
+        ]}
+        imageFilename="product-alarm-system.png"
+        imagePlaceholderText="Alarm System"
+      />
+    </div>
+    <PageFooter />
+  </div>
+</div>
