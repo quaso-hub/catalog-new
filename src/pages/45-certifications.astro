@@ -1,0 +1,58 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="CERTIFICATIONS" pageNumber="45" />
+    <h2 class="section-title section-title--center">Quality &amp; Compliance</h2>
+    <div class="divider-accent mx-auto mb-4"></div>
+    <p class="section-subtitle section-subtitle--center">
+      Our commitment to quality is demonstrated through rigorous testing and international certifications.
+      All products meet or exceed regulatory requirements for medical environments.
+    </p>
+    <div class="cert-grid">
+      <div class="cert-item">
+        <div class="cert-item__badge">
+          <span class="cert-item__badge-text">CE</span>
+        </div>
+        <h4 class="cert-item__title">CE Marking</h4>
+        <p class="cert-item__description">
+          Conformit&eacute; Europ&eacute;enne certification indicating compliance with EU health,
+          safety, and environmental protection standards.
+        </p>
+      </div>
+      <div class="cert-item">
+        <div class="cert-item__badge">
+          <span class="cert-item__badge-text">ISO</span>
+        </div>
+        <h4 class="cert-item__title">ISO 13485:2016</h4>
+        <p class="cert-item__description">
+          Medical devices quality management system certification, ensuring consistent
+          design, development, and manufacturing processes.
+        </p>
+      </div>
+      <div class="cert-item">
+        <div class="cert-item__badge">
+          <span class="cert-item__badge-text">SNI</span>
+        </div>
+        <h4 class="cert-item__title">SNI Certified</h4>
+        <p class="cert-item__description">
+          Standar Nasional Indonesia certification for compliance with Indonesian
+          national standards for quality and safety.
+        </p>
+      </div>
+    </div>
+    <div class="additional-certs">
+      <h4 class="additional-certs__title">Additional Certifications</h4>
+      <div class="additional-certs__grid">
+        <div>&bull; Fire Rating Test Certificate</div>
+        <div>&bull; Antibacterial Coating Certificate</div>
+        <div>&bull; Radiation Leakage Test (for X-ray rooms)</div>
+        <div>&bull; Thermal Insulation Test</div>
+      </div>
+    </div>
+    <PageFooter />
+  </div>
+</div>
