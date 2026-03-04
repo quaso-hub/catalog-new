@@ -1,0 +1,43 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import ProductCompact from '../components/ProductCompact.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="FLOORING, FINISHING &amp; INFRASTRUCTURE" pageNumber="37" />
+    <div class="compact-section-intro">
+      <h3 class="compact-section-intro__title">Built-In Infrastructure</h3>
+      <p class="compact-section-intro__text">
+        Integrated storage and ventilation components designed to be flush-mounted
+        within the modular wall system for clean aesthetics and optimal functionality.
+      </p>
+    </div>
+    <div class="grid grid--2col">
+      <ProductCompact
+        title="PACS Cabinet / Medical Storage"
+        description="Kabinet alat / lemari medis dari material stainless steel SUS 304. Anti-rust, easy to clean, keeps medical equipment safe and sterile."
+        specs={[
+          { label: 'Material',  value: 'Stainless Steel SUS 304' },
+          { label: 'Dimension', value: '1200 &times; 2000 &times; 400 mm' },
+        ]}
+        imageFilename="product-pacs-cabinet.png"
+        imagePlaceholderText="PACS Cabinet"
+      />
+      <ProductCompact
+        title="Wall Corner Return Air Grille"
+        description="Return air module installed at each corner of the operating room, &plusmn;15cm from floor. Connected to HVAC system for air circulation. Includes lead protection layer for radiation shielding."
+        specs={[
+          { label: 'Material',  value: 'Stainless Steel' },
+          { label: 'Dimension', value: '600 &times; 400mm' },
+          { label: 'Position',  value: 'Corner, &plusmn;15cm from floor' },
+          { label: 'Function',  value: 'Return air to HVAC' },
+        ]}
+        imageFilename="product-air-grille.png"
+        imagePlaceholderText="Wall Corner Return Air Grille"
+      />
+    </div>
+    <PageFooter />
+  </div>
+</div>
