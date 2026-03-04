@@ -1,0 +1,16 @@
+/*
+ * PAGED.JS PRINT CONFIGURATION
+ * Configured in FASE M4
+ *
+ * Reference: https://pagedjs.org/documentation/
+ */
+
+/* @page rules will be added here in FASE M4:
+ *
+ * @page {
+ *   size: A4;
+ *   margin: 15mm;
+ *   bleed: 3mm;
+ *   marks: crop cross;
+ * }
+ */

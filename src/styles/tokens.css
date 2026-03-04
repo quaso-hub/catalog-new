@@ -1,0 +1,237 @@
+/*
+ * DESIGN TOKENS - MOT ELFATECH CATALOG
+ * Version 1.0
+ * 
+ * Usage: Import this file first in your CSS
+ * All values are CSS custom properties (variables)
+ */
+
+:root {
+  /* ========================================
+   * COLOR SYSTEM
+   * ======================================== */
+  
+  /* Primary - Navy Blue (Brand Color) */
+  --color-primary-900: #001a33;
+  --color-primary-800: #002244;
+  --color-primary-700: #003366;  /* MAIN */
+  --color-primary-600: #004488;
+  --color-primary-500: #0055aa;
+  --color-primary-400: #3377bb;
+  --color-primary-300: #6699cc;
+  --color-primary-200: #99bbdd;
+  --color-primary-100: #ccddef;
+  --color-primary-50:  #e6f0fa;
+
+  /* Neutral - Grays */
+  --color-neutral-900: #1a1a1a;  /* Body text */
+  --color-neutral-800: #333333;
+  --color-neutral-700: #4a4a4a;  /* Secondary text */
+  --color-neutral-600: #666666;
+  --color-neutral-500: #808080;  /* Muted text */
+  --color-neutral-400: #999999;
+  --color-neutral-300: #cccccc;  /* Borders */
+  --color-neutral-200: #e0e0e0;
+  --color-neutral-100: #f5f5f5;  /* Backgrounds */
+  --color-neutral-50:  #fafafa;
+  --color-white: #ffffff;
+
+  /* Accent Colors */
+  --color-accent-teal: #0d9488;
+  --color-accent-teal-light: #14b8a6;
+  --color-accent-gold: #b8860b;
+  --color-accent-gold-light: #d4a00a;
+  --color-accent-green: #16a34a;
+  --color-accent-red: #dc2626;
+  --color-accent-blue: #2563eb;
+
+  /* Semantic Colors */
+  --color-success: var(--color-accent-green);
+  --color-warning: var(--color-accent-gold);
+  --color-error: var(--color-accent-red);
+  --color-info: var(--color-primary-500);
+
+  /* ========================================
+   * TYPOGRAPHY
+   * ======================================== */
+  
+  /* Font Families */
+  --font-primary: 'Inter', 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  --font-technical: 'IBM Plex Sans', 'Roboto', var(--font-primary);
+  --font-mono: 'IBM Plex Mono', 'Consolas', 'Monaco', monospace;
+
+  /* Font Sizes - REDUCED ~10% for compact layout */
+  --text-xs: 0.625rem;    /* 10px (was 11px) */
+  --text-sm: 0.6875rem;   /* 11px (was 12px) */
+  --text-base: 0.8125rem; /* 13px (was 14px) */
+  --text-lg: 0.9375rem;   /* 15px (was 16px) */
+  --text-xl: 1rem;        /* 16px (was 18px) */
+  --text-2xl: 1.25rem;    /* 20px (was 22px) */
+  --text-3xl: 1.5rem;     /* 24px (was 28px) */
+  --text-4xl: 2rem;       /* 32px (was 36px) */
+  --text-5xl: 2.5rem;     /* 40px (was 48px) */
+
+  /* Line Heights - MORE COMPACT */
+  --leading-none: 1;
+  --leading-tight: 1.1;
+  --leading-snug: 1.2;    /* was 1.25 */
+  --leading-normal: 1.35; /* was 1.4 */
+  --leading-relaxed: 1.4; /* was 1.5 */
+  --leading-loose: 1.5;   /* was 1.6 */
+
+  /* Letter Spacing */
+  --tracking-tighter: -0.02em;
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+
+  /* Font Weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* ========================================
+   * SPACING
+   * ======================================== */
+  
+  /* Spacing - REDUCED ~10% for compact layout */
+  --space-0: 0;
+  --space-px: 1px;
+  --space-0-5: 0.125rem;  /* 2px */
+  --space-1: 0.25rem;     /* 4px */
+  --space-2: 0.4375rem;   /* 7px (was 8px) */
+  --space-3: 0.625rem;    /* 10px (was 12px) */
+  --space-4: 0.875rem;    /* 14px (was 16px) */
+  --space-5: 1rem;        /* 16px (was 20px) */
+  --space-6: 1.25rem;     /* 20px (was 24px) */
+  --space-7: 1.75rem;     /* 28px (was 32px) */
+  --space-8: 2.25rem;     /* 36px (was 40px) */
+  --space-9: 2.75rem;     /* 44px (was 48px) */
+  --space-10: 3.5rem;     /* 56px (was 64px) */
+  --space-11: 4.5rem;     /* 72px (was 80px) */
+  --space-12: 5.5rem;     /* 88px (was 96px) */
+
+  /* ========================================
+   * PAGE DIMENSIONS (A4 Landscape)
+   * ======================================== */
+
+  --page-width: 297mm;
+  --page-height: 210mm;
+  --page-bleed: 3mm;
+  --page-margin: 10mm;
+  --page-margin-top: 10mm;
+  --page-margin-bottom: 12mm;
+
+  /* Content area */
+  --content-width: calc(var(--page-width) - 2 * var(--page-margin));
+  --content-height: calc(var(--page-height) - var(--page-margin-top) - var(--page-margin-bottom));
+  --content-max-height: calc(var(--page-height) - var(--page-margin-top) - var(--page-margin-bottom) - 15mm);
+
+  /* ========================================
+   * GRID
+   * ======================================== */
+  
+  --grid-columns: 12;
+  --grid-gutter: 20px;
+  
+  /* Column widths (for 12 columns) */
+  --col-1: calc((100% - 11 * var(--grid-gutter)) / 12);
+  --col-2: calc((100% - 11 * var(--grid-gutter)) / 12 * 2 + var(--grid-gutter));
+  --col-3: calc((100% - 11 * var(--grid-gutter)) / 12 * 3 + var(--grid-gutter) * 2);
+  --col-4: calc((100% - 11 * var(--grid-gutter)) / 12 * 4 + var(--grid-gutter) * 3);
+  --col-5: calc((100% - 11 * var(--grid-gutter)) / 12 * 5 + var(--grid-gutter) * 4);
+  --col-6: calc((100% - 11 * var(--grid-gutter)) / 12 * 6 + var(--grid-gutter) * 5);
+  --col-7: calc((100% - 11 * var(--grid-gutter)) / 12 * 7 + var(--grid-gutter) * 6);
+  --col-8: calc((100% - 11 * var(--grid-gutter)) / 12 * 8 + var(--grid-gutter) * 7);
+  --col-9: calc((100% - 11 * var(--grid-gutter)) / 12 * 9 + var(--grid-gutter) * 8);
+  --col-10: calc((100% - 11 * var(--grid-gutter)) / 12 * 10 + var(--grid-gutter) * 9);
+  --col-11: calc((100% - 11 * var(--grid-gutter)) / 12 * 11 + var(--grid-gutter) * 10);
+  --col-12: 100%;
+
+  /* ========================================
+   * BORDERS & RADIUS
+   * ======================================== */
+  
+  --border-width: 1px;
+  --border-width-2: 2px;
+  --border-width-4: 4px;
+  
+  /* PRINT-FRIENDLY: Minimal radius (max 4px) */
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 4px;
+  --radius-xl: 4px;
+  --radius-2xl: 4px;
+  --radius-full: 4px;
+
+  /* ========================================
+   * SHADOWS - DISABLED FOR PRINT-READY DESIGN
+   * ======================================== */
+  
+  /* No shadows for clean print look */
+  --shadow-xs: none;
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+  --shadow-xl: none;
+  --shadow-card: none;
+  --shadow-hover: none;
+
+  /* ========================================
+   * TRANSITIONS
+   * ======================================== */
+  
+  --transition-fast: 150ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 300ms ease;
+  --transition-slower: 500ms ease;
+
+  /* ========================================
+   * Z-INDEX
+   * ======================================== */
+  
+  --z-base: 0;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal: 400;
+  --z-tooltip: 500;
+}
+
+/* ========================================
+ * PRINT-SPECIFIC OVERRIDES
+ * ======================================== */
+
+@media print {
+  :root {
+    /* Ensure colors print correctly */
+    --color-primary-700: #003366 !important;
+    
+    /* No shadows in print */
+    --shadow-xs: none;
+    --shadow-sm: none;
+    --shadow-md: none;
+    --shadow-lg: none;
+    --shadow-xl: none;
+    --shadow-card: none;
+    --shadow-hover: none;
+  }
+}
+
+/* ========================================
+ * DARK MODE (Optional - for digital version)
+ * ======================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root.dark-mode {
+    --color-neutral-900: #f5f5f5;
+    --color-neutral-100: #1a1a1a;
+    --color-neutral-50: #0d0d0d;
+    --color-white: #0a0a0a;
+  }
+}
