@@ -1,0 +1,14 @@
+---
+interface Props {
+  svgPath: string;
+  fallbackText: string;
+  maxHeight?: string;
+}
+
+const { svgPath, fallbackText, maxHeight } = Astro.props;
+const style = `max-width: 100%; height: auto;${maxHeight ? ` max-height: ${maxHeight};` : ''}`;
+---
+
+<object type="image/svg+xml" data={svgPath} style={style}>
+  {fallbackText}
+</object>
