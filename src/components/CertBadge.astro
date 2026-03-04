@@ -1,0 +1,31 @@
+---
+interface ImageBadge {
+  type: 'image';
+  src: string;
+  alt: string;
+}
+
+interface TextBadge {
+  type: 'text';
+  text: string;
+}
+
+type Badge = ImageBadge | TextBadge;
+
+interface Props {
+  badges: Badge[];
+}
+
+const { badges } = Astro.props;
+---
+
+<div class="cover__badges">
+  {badges.map((badge) => (
+    <div class={`cover__badge${badge.type === 'text' ? ' cover__badge--text' : ''}`}>
+      {badge.type === 'image'
+        ? <img src={badge.src} alt={badge.alt}>
+        : badge.text
+      }
+    </div>
+  ))}
+</div>
