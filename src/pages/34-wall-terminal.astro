@@ -1,0 +1,71 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="SUPPORT SYSTEMS" pageNumber="34" />
+    <div class="product-page">
+      <div class="product-page__image-area">
+        <div class="product-image-placeholder product-image-placeholder--full">
+          <span class="product-image-placeholder__icon">[IMG]</span>
+          <span class="product-image-placeholder__text">Wall Terminal Gas Medis<br>Anesthesia Technical Panel</span>
+          <span class="product-image-placeholder__filename">product-wall-terminal.png</span>
+        </div>
+      </div>
+      <div class="product-page__content">
+        <h2 class="product-page__title">Wall Terminal Gas Medis</h2>
+        <p class="product-page__description">
+          Terminal gas medis dan stop kontak listrik sebagai cadangan terhadap outlet
+          pada pendant. Tersedia outlet: O2, Vacuum, Air, Medical Air (3.5-5 bar),
+          CO2, N2O. Tersedia dalam 3 model standar koneksi berbeda.
+        </p>
+        <div class="product-page__features">
+          <h4 class="product-page__features-title">Available Models</h4>
+          <ul class="feature-list">
+            <li><strong>OHMEDA Connect</strong> - International standard connection</li>
+            <li><strong>DIN (German Standard)</strong> - European standard connection</li>
+            <li><strong>SIS Screw</strong> - Screw-type connection system</li>
+          </ul>
+        </div>
+        <table class="spec-table gas-color-table">
+          <thead>
+            <tr><th>Gas Type</th><th>OHMEDA</th><th>DIN</th><th>SIS</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Oxygen (O&#x2082;)</td>
+              <td style="color:#16a34a">Green</td>
+              <td style="color:#16a34a">Green</td>
+              <td style="color:#16a34a">Green</td>
+            </tr>
+            <tr>
+              <td>Medical Air</td>
+              <td style="color:#ca8a04">Yellow</td>
+              <td style="color:#ca8a04">Yellow</td>
+              <td style="color:#ca8a04">Yellow</td>
+            </tr>
+            <tr>
+              <td>Vacuum</td>
+              <td>White</td><td>White</td><td>White</td>
+            </tr>
+            <tr>
+              <td>N&#x2082;O</td>
+              <td style="color:#2563eb">Blue</td>
+              <td style="color:#2563eb">Blue</td>
+              <td style="color:#2563eb">Blue</td>
+            </tr>
+            <tr>
+              <td>CO&#x2082;</td>
+              <td style="color:#6b7280">Grey</td>
+              <td style="color:#6b7280">Grey</td>
+              <td style="color:#6b7280">Grey</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <PageFooter />
+  </div>
+</div>
