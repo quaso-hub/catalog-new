@@ -1,0 +1,34 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import SpecTable from '../components/SpecTable.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="SURGICAL EQUIPMENT" pageNumber="19" />
+    <SpecTable
+      title="Medical Pendant: Technical Specifications"
+      tableRows={[
+        { parameter: 'Configuration',          specification: 'Single arm / Double arm' },
+        { parameter: 'Arm Length',             specification: '800 mm + 800 mm' },
+        { parameter: 'Horizontal Rotation',    specification: '340&deg; per joint' },
+        { parameter: 'Load Capacity',          specification: 'Maximum: 120 kg, Net: 80 kg' },
+        { parameter: 'Gas Outlets (per side)', specification: 'O&#x2082; Terminal: 1, Vacuum Terminal: 1' },
+        { parameter: 'Medical Air Terminals',  specification: '2 units' },
+        { parameter: 'Electrical Sockets',     specification: '6 pcs per side, China Type 3 Pin 10A' },
+        { parameter: 'Data Connections',       specification: 'Network: 1 pc, Phone: 1 pc' },
+        { parameter: 'Equipment',              specification: '2 Shelves, 1 Drawer, 1 IV Pole &amp; Infusion Pump Rack' },
+        { parameter: 'Grounding',              specification: '2 Earth Studs, 2 Equipotential Sockets per side' },
+        { parameter: 'Brake System',           specification: 'Friction Brake' },
+      ]}
+      callouts={[
+        {
+          title: 'Flexible Configuration',
+          text: 'Available as surgical pendant (dry), anesthesia pendant (wet with gas), or combined configuration. Equipment shelves can be positioned at any height.',
+        },
+      ]}
+    />
+    <PageFooter />
+  </div>
+</div>
