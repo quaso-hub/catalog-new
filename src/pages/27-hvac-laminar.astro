@@ -1,0 +1,32 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import ProductPage from '../components/ProductPage.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="SUPPORT SYSTEMS" pageNumber="27" />
+    <ProductPage
+      title="HVAC &amp; Laminar Air Flow"
+      description="Hospital-grade HVAC system with laminar air flow diffuser designed specifically for operating theatres. Provides ultra-clean unidirectional airflow over the surgical zone with HEPA filtration achieving ISO Class 5 cleanliness in the critical zone."
+      features={[
+        'Laminar flow diffuser with HEPA H14 filter (99.995% efficiency)',
+        'ISO Class 5 / Class 100 air quality in surgical zone',
+        'Air change rate: 20-25 ACH (operating theatre standard)',
+        'Positive pressure maintained at &ge;15 Pa',
+        'Temperature control: 18-26&deg;C &plusmn;1&deg;C',
+        'Humidity control: 40-60% RH &plusmn;5%',
+      ]}
+      specCards={[
+        { icon: 'ACH',  label: 'Air Changes',  value: '20-25 ACH' },
+        { icon: 'TEMP', label: 'Temperature',  value: '18-26&deg;C' },
+        { icon: 'RH',   label: 'Humidity',     value: '40-60% RH' },
+        { icon: 'ISO',  label: 'Cleanliness',  value: 'ISO Class 5' },
+      ]}
+      imageFilename="product-laminar-flow.png"
+      imagePlaceholderText="Laminar Air Flow System<br>Product Image"
+    />
+    <PageFooter />
+  </div>
+</div>
