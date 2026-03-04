@@ -1,0 +1,32 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import ProductPage from '../components/ProductPage.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="SURGICAL EQUIPMENT" pageNumber="18" />
+    <ProductPage
+      title="Medical Pendant System"
+      description="Ceiling-mounted medical pendant system providing organized delivery of medical gases, electrical power, and data connections to the surgical field. Available in single-arm and double-arm configurations with 340&deg; rotation for maximum flexibility."
+      features={[
+        'Double arm: 800mm + 800mm rotating radius',
+        '340&deg; horizontal rotation with friction brake',
+        'Maximum load capacity: 120kg, net weight: 80kg',
+        '12 power sockets (6 per arm), China Type 3 Pin 10A',
+        '2 medical air terminals, equipotential sockets',
+        'Equipment shelves, IV pole, drawer included',
+      ]}
+      specCards={[
+        { icon: 'ROT', label: 'Rotation',   value: '340&deg;' },
+        { icon: 'WT',  label: 'Max Load',   value: '120 kg' },
+        { icon: 'GAS', label: 'Gas Outlets', value: '6-12 ports' },
+        { icon: 'PWR', label: 'Electrical',  value: '6 pcs/side' },
+      ]}
+      imageFilename="product-pendant-double.png"
+      imagePlaceholderText="Medical Pendant System<br>Product Image"
+    />
+    <PageFooter />
+  </div>
+</div>
