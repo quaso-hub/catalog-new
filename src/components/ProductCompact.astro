@@ -1,0 +1,33 @@
+---
+interface Spec {
+  label: string;
+  value: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  specs: Spec[];
+  imagePlaceholderText: string;
+  imageFilename: string;
+}
+
+const { title, description, specs, imagePlaceholderText, imageFilename } = Astro.props;
+---
+
+<div class="product-compact">
+  <div class="product-image-placeholder product-image-placeholder--medium">
+    <span class="product-image-placeholder__icon">[IMG]</span>
+    <span class="product-image-placeholder__text">{imagePlaceholderText}</span>
+    <span class="product-image-placeholder__filename">{imageFilename}</span>
+  </div>
+  <div class="product-compact__content">
+    <h3 class="product-compact__title">{title}</h3>
+    <p class="product-compact__description">{description}</p>
+    <div class="spec-inline">
+      {specs.map((spec) => (
+        <span><strong>{spec.label}:</strong> <span set:html={spec.value}></span></span>
+      ))}
+    </div>
+  </div>
+</div>
