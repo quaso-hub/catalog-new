@@ -1,0 +1,37 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import SpecTable from '../components/SpecTable.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="SUPPORT SYSTEMS" pageNumber="28" />
+    <SpecTable
+      title="HVAC &amp; Laminar Air Flow: Technical Specifications"
+      tableRows={[
+        { parameter: 'LAF Diffuser Size', specification: '2400 &times; 2400 mm (customizable)' },
+        { parameter: 'HEPA Filter Grade', specification: 'H14 (EN 1822), 99.995%' },
+        { parameter: 'Pre-Filter',        specification: 'G4 + F8 (EU standard)' },
+        { parameter: 'Air Velocity',      specification: '0.25 - 0.45 m/s (at diffuser face)' },
+        { parameter: 'Air Change Rate',   specification: '20-25 ACH (OR), 15-20 ACH (corridor)' },
+        { parameter: 'Room Pressure',     specification: '&ge;15 Pa positive (adjustable)' },
+        { parameter: 'Temperature Range', specification: '18 - 26&deg;C &plusmn;1&deg;C' },
+        { parameter: 'Humidity Range',    specification: '40 - 60% RH &plusmn;5%' },
+        { parameter: 'Noise Level',       specification: '&le;45 dB(A) at 1m' },
+        { parameter: 'AHU Capacity',      specification: 'Sized per room requirement' },
+        { parameter: 'Controls',          specification: 'BMS integration / standalone controller' },
+        { parameter: 'Standard',          specification: 'Permenkes No. 7/2019, ASHRAE 170' },
+      ]}
+      callouts={[
+        {
+          title: 'Compliance',
+          text: 'System designed to meet Permenkes No. 7 Tahun 2019 requirements for operating theatre air quality, as well as international standards ASHRAE 170 and ISO 14644.',
+        },
+      ]}
+      diagramPath="/assets/diagrams/hvac-airflow.svg"
+      diagramTitle="Airflow Direction"
+    />
+    <PageFooter />
+  </div>
+</div>
