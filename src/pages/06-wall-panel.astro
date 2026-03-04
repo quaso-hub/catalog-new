@@ -1,0 +1,34 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import ProductPage from '../components/ProductPage.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="WALL &amp; CEILING SYSTEMS" pageNumber="06" />
+    <ProductPage
+      title="Modular Wall Panel PIR"
+      description="Modular wall panel using PIR medical insulation with 75mm thickness, coated with HRP Antibacterial 0.5mm on AZ100 steel from Blue Scope. Color is bright and non-glaring per Permenkes standards. Anti-corrosion, anti-fungal, rust-proof, fire-resistant. Features Slip-Z joint system for seamless installation. Optional Pb 2mm lead lining for radiation protection."
+      features={[
+        'PIR foam core 75mm medical insulation',
+        'HRP Antibacterial 0.5mm on AZ100 steel from Blue Scope',
+        'Slip-Z joint "male-female" seamless system',
+        'Fire-resistant Class B-s1, d0 (EN 13501-1)',
+        'Anti-corrosion, anti-fungal, rust-proof',
+        'Optional Pb 2mm lead lining for radiation protection',
+        'Picture wall option: tempered glass 12mm',
+      ]}
+      specCards={[
+        { icon: 'DIM', label: 'Panel Size', value: '1180&times;3000mm' },
+        { icon: 'THK', label: 'Thickness',  value: '75mm' },
+        { icon: 'MAT', label: 'Coating',    value: 'HRP 0.5mm' },
+        { icon: 'FIRE', label: 'Fire Rating', value: 'B-s1, d0' },
+      ]}
+      imageFilename="product-wall-panel-pir.png"
+      imagePlaceholderText="Wall Panel PIR 75mm<br>Product Image"
+      thumbnails={['Detail 1', 'Detail 2', 'Joint System']}
+    />
+    <PageFooter />
+  </div>
+</div>
