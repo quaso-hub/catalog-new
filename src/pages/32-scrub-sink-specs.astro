@@ -1,0 +1,33 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import SpecTable from '../components/SpecTable.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="SUPPORT SYSTEMS" pageNumber="32" />
+    <SpecTable
+      title="Scrub Sink 2 Bay: Technical Specifications"
+      tableRows={[
+        { parameter: 'Material',           specification: 'Stainless Steel SUS-304, 1.2mm' },
+        { parameter: 'Washing Stations',   specification: 'Available in 1, 2, and 3 stations' },
+        { parameter: 'Dimension (2 Bay)',  specification: '1600 &times; 600 &times; 1550 mm / Custom size' },
+        { parameter: 'Water Heater',       specification: 'Included (integrated)' },
+        { parameter: 'Control System',     specification: 'Automatic sensor + manual emergency' },
+        { parameter: 'Sterilization',      specification: 'UV sterilized lamp system' },
+        { parameter: 'Filtration',         specification: 'Filter for 5 micron (customizable)' },
+        { parameter: 'Faucet',             specification: '2 bay faucet automatic + 2 foot manual' },
+        { parameter: 'Electrical Safety',  specification: 'Safety system to prevent electrical leakage' },
+        { parameter: 'Power',              specification: 'AC 220V, 50Hz, 250W' },
+      ]}
+      callouts={[
+        {
+          title: 'Pre-Surgical Hygiene',
+          text: 'Designed for pre-surgical hand washing protocols with automatic sensor activation and foot-operated manual backup. Integrated UV sterilization ensures water outlet cleanliness.',
+        },
+      ]}
+    />
+    <PageFooter />
+  </div>
+</div>
