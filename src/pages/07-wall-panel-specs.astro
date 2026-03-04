@@ -1,0 +1,41 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import SpecTable from '../components/SpecTable.astro';
+---
+
+<div class="page page--compact-07">
+  <div class="page-content">
+    <PageHeader category="WALL &amp; CEILING SYSTEMS" pageNumber="07" />
+    <SpecTable
+      title="Wall Panel PIR: Technical Specifications"
+      tableRows={[
+        { parameter: 'Panel Width',          specification: '1180 mm (effective)' },
+        { parameter: 'Panel Height',         specification: 'Up to 3000 mm (custom)' },
+        { parameter: 'Total Thickness',      specification: '75 mm' },
+        { parameter: 'Skin Material',        specification: 'HRP Antibacterial 0.5mm on AZ100 steel from Blue Scope' },
+        { parameter: 'Core Material',        specification: 'PIR (Polyisocyanurate) medical insulation foam' },
+        { parameter: 'Joint System',         specification: 'Slip-Z Male-Female' },
+        { parameter: 'Fire Rating',          specification: 'Class B-s1, d0 (EN 13501-1)' },
+        { parameter: 'Surface Finish',       specification: 'HRP Antibacterial coating from Blue Scope' },
+        { parameter: 'Color',                specification: 'Bright, non-glaring per Permenkes standards' },
+        { parameter: 'Radiation Protection', specification: 'Optional Pb 2mm lead lining, height 3 meters' },
+        { parameter: 'Picture Wall',         specification: 'Tempered glass covered 12mm (1 side option)' },
+      ]}
+      callouts={[
+        {
+          title: 'Installation Method',
+          text: 'Panels are installed using the patented Slip-Z joint system, ensuring airtight connections without exposed fasteners. This method minimizes dust traps and simplifies future panel replacement.',
+        },
+        {
+          title: 'Antibacterial Protection',
+          text: 'HRP Antibacterial coating from Blue Scope on AZ100 steel provides anti-corrosion, anti-fungal, and rust-proof protection essential for sterile operating environments.',
+          variant: 'teal',
+        },
+      ]}
+      diagramPath="/assets/diagrams/wall-panel-section.svg"
+      diagramTitle="Panel Cross-Section"
+    />
+    <PageFooter />
+  </div>
+</div>
