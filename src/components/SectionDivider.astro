@@ -10,5 +10,5 @@ const { title, subtitle } = Astro.props;
 <div class="section-divider">
   <h2 class="section-divider__title" set:html={title}></h2>
   <div class="divider-accent mx-auto"></div>
-  <p class="section-divider__subtitle">{subtitle}</p>
+  <p class="section-divider__subtitle" set:html={subtitle}></p>
 </div>
