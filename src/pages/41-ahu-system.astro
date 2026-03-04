@@ -1,0 +1,38 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import SpecTable from '../components/SpecTable.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="FLOORING, FINISHING &amp; INFRASTRUCTURE" pageNumber="41" />
+    <SpecTable
+      title="AHU Double Skin System"
+      tableRows={[
+        { parameter: 'AHU Size',         specification: '1200 &times; 3000 &times; 930 mm' },
+        { parameter: 'Body Material',    specification: 'Double skin AHU 25mm, Aluminium profil alloy T25mm' },
+        { parameter: 'Booster Fan',      specification: '&plusmn;3000 cfm, 1000 Pa' },
+        { parameter: 'Heater',           specification: '4500W (750W &times; 6), SS304 tube &amp; finned' },
+        { parameter: 'Magneheic Control', specification: 'Range 0-500 Pa' },
+        { parameter: 'UV-C Ultraviolet', specification: 'Philips Lamp, 30-72W' },
+        { parameter: 'Pre Filter',       specification: 'G4 washable/disposable, 30-65%, 24"&times;24"&times;2"' },
+        { parameter: 'Medium Filter',    specification: 'F8/F9, 90-95%, 24"&times;24"&times;12"' },
+        { parameter: 'Coil Evaporator',  specification: '10hp, 100,000 BTU/h, 3000 cfm, R410' },
+        { parameter: 'Outdoor Unit',     specification: 'DAIKIN, 12hp, 120,000 BTU/h' },
+      ]}
+      callouts={[
+        {
+          title: 'HVAC Control Panel',
+          text: 'Box panel 900 &times; 600 &times; 250mm. PLC programming, Omron relay, noise filter, switch hub 5 port, power supply 24V, MCB, MCCB, contactor LS, HMI control panel system 7".',
+        },
+        {
+          title: 'Ducting &amp; Piping',
+          text: 'Ducting: PIU TDI 20mm material, &plusmn;100 m&sup2;, perforated grill galvanis powder coating, volume damper.<br>Piping: Refrigerant ASTM B280, isolasi Harmaflek, pipa drain.',
+          variant: 'teal',
+        },
+      ]}
+    />
+    <PageFooter />
+  </div>
+</div>
