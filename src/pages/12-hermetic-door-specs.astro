@@ -1,0 +1,41 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import SpecTable from '../components/SpecTable.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="DOOR SYSTEMS" pageNumber="12" />
+    <SpecTable
+      title="Hermetic Sliding Door: Technical Specifications"
+      tableRows={[
+        { parameter: 'Door Size',           specification: '1600 &times; 2100 mm' },
+        { parameter: 'Material',            specification: 'Stainless Steel' },
+        { parameter: 'Glass',               specification: 'Glass Cell 5mm' },
+        { parameter: 'Motor',               specification: 'Electric Motors' },
+        { parameter: 'Battery Backup',      specification: 'Yes' },
+        { parameter: 'Voltage',             specification: '220 VAC, 50/60 Hz' },
+        { parameter: 'Power Auto Volt',     specification: '85-264 VAC' },
+        { parameter: 'Speed (Single Leaf)', specification: '0.7 m/sec' },
+        { parameter: 'Speed (Double Leaf)', specification: '1.4 m/sec' },
+        { parameter: 'Switch',              specification: 'Foot switch (labor assistant)' },
+        { parameter: 'Sensor',              specification: 'Inside &amp; outside OR' },
+        { parameter: 'Safety',              specification: 'Auto motor reversal + safety lights' },
+        { parameter: 'Radiation Protection', specification: 'Pb 2mm + Glass Pb' },
+      ]}
+      callouts={[
+        {
+          title: 'Hermetic Sealing',
+          text: 'Airtight door construction maintains required pressure differential for cleanroom environments. Equipped with auto motor reversal for safety and battery backup for uninterrupted operation during power outages.',
+        },
+        {
+          title: 'Radiation Protection',
+          text: 'Optional lead-lined panels provide radiation shielding for X-ray and CT scan rooms. Available in 1mm, 2mm, and 3mm Pb equivalent thicknesses.',
+          variant: 'teal',
+        },
+      ]}
+    />
+    <PageFooter />
+  </div>
+</div>
