@@ -1,0 +1,16 @@
+---
+interface Props {
+  text: string;
+  filename: string;
+  size?: 'full' | 'medium';
+  icon?: string;
+}
+
+const { text, filename, size = 'full', icon = '[IMG]' } = Astro.props;
+---
+
+<div class={`product-image-placeholder product-image-placeholder--${size}`}>
+  <span class="product-image-placeholder__icon">{icon}</span>
+  <span class="product-image-placeholder__text">{text}</span>
+  <span class="product-image-placeholder__filename">{filename}</span>
+</div>
