@@ -1,0 +1,65 @@
+---
+interface SpecCard {
+  icon: string;
+  label: string;
+  value: string;
+}
+
+interface Props {
+  title: string;
+  description: string;
+  features: string[];
+  specCards: SpecCard[];
+  imageFilename: string;
+  imagePlaceholderText: string;
+  thumbnails?: string[];
+}
+
+const {
+  title,
+  description,
+  features,
+  specCards,
+  imageFilename,
+  imagePlaceholderText,
+  thumbnails = [],
+} = Astro.props;
+---
+
+<div class="product-page">
+  <div class="product-page__image-area">
+    <div class="product-image-placeholder product-image-placeholder--full">
+      <span class="product-image-placeholder__icon">[IMG]</span>
+      <span class="product-image-placeholder__text" set:html={imagePlaceholderText}></span>
+      <span class="product-image-placeholder__filename">{imageFilename}</span>
+    </div>
+    {thumbnails.length > 0 && (
+      <div class="thumbnail-row">
+        {thumbnails.map((thumb) => (
+          <div class="thumbnail-item">{thumb}</div>
+        ))}
+      </div>
+    )}
+  </div>
+  <div class="product-page__content">
+    <h2 class="product-page__title">{title}</h2>
+    <p class="product-page__description">{description}</p>
+    <div class="product-page__features">
+      <h4 class="product-page__features-title">Key Features</h4>
+      <ul class="feature-list">
+        {features.map((feature) => (
+          <li set:html={feature}></li>
+        ))}
+      </ul>
+    </div>
+    <div class="spec-cards">
+      {specCards.map((card) => (
+        <div class="spec-card">
+          <div class="spec-card__icon">{card.icon}</div>
+          <span class="spec-card__label">{card.label}</span>
+          <span class="spec-card__value" set:html={card.value}></span>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
