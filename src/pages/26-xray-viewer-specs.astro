@@ -1,0 +1,39 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import SpecTable from '../components/SpecTable.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="SUPPORT SYSTEMS" pageNumber="26" />
+    <SpecTable
+      title="X-Ray Viewer: Technical Specifications"
+      tableRows={[
+        { parameter: 'Configuration',         specification: 'Double screen (2-bank)' },
+        { parameter: 'Frame Size',            specification: '880 &times; 503 &times; 29 mm' },
+        { parameter: 'Viewing Area',          specification: '736 &times; 440 mm (per screen)' },
+        { parameter: 'Light Source',          specification: 'LED backlight array' },
+        { parameter: 'Brightness',            specification: '&gt; 10,000 Lux (max)' },
+        { parameter: 'Uniformity',            specification: '&gt; 90%' },
+        { parameter: 'Dimmer',                specification: '12-step digital dimming' },
+        { parameter: 'Power Supply',          specification: 'AC 100-240V, 50/60Hz' },
+        { parameter: 'Power Consumption',     specification: '&le;30W' },
+        { parameter: 'Net Weight',            specification: '8.8 Kg' },
+        { parameter: 'Color Temperature',     specification: '5,900 &#8211; 9,000 K' },
+        { parameter: 'Luminance Adjustment',  specification: '20% &#8211; 100%' },
+        { parameter: 'LED Lifespan',          specification: '&gt; 100,000 hours' },
+        { parameter: 'Film Sensor',           specification: 'Auto on/off with film detection' },
+        { parameter: 'Mounting',              specification: 'Wall-mounted / recessed' },
+      ]}
+      callouts={[
+        {
+          title: 'Energy Efficiency',
+          text: 'LED technology reduces energy consumption by 82-93% compared to conventional fluorescent viewers, while providing superior brightness and uniformity with virtually maintenance-free operation.',
+          variant: 'teal',
+        },
+      ]}
+    />
+    <PageFooter />
+  </div>
+</div>
