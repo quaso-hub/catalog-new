@@ -1,0 +1,88 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import ImagePlaceholder from '../components/ImagePlaceholder.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="COMPANY PROFILE" pageNumber="03" />
+
+    <!-- About Section - Compact -->
+    <div class="grid grid--2col mb-4">
+      <div>
+        <h2 class="section-title">About Elfatech</h2>
+        <div class="divider-accent"></div>
+        <p class="about-text">
+          Elfatech is a provider of Modular Operating Theatre solutions in Indonesia.
+          We deliver complete surgical environment solutions from design to installation
+          and after-sales service.
+        </p>
+        <div class="vm-cards vm-cards--compact">
+          <div class="vm-card">
+            <h4 class="vm-card__title">Vision</h4>
+            <p class="vm-card__text">To be the trusted partner for MOT solutions in Southeast Asia.</p>
+          </div>
+          <div class="vm-card">
+            <h4 class="vm-card__title">Mission</h4>
+            <p class="vm-card__text">Delivering high-quality surgical environments for healthcare facilities.</p>
+          </div>
+        </div>
+      </div>
+      <ImagePlaceholder
+        text="Company / Facility Photo"
+        filename="about-company.jpg"
+        size="full"
+        icon="[PHOTO]"
+      />
+    </div>
+
+    <!-- Strengths Section -->
+    <h3 class="section-title">Our Strengths</h3>
+    <div class="divider-accent"></div>
+    <div class="strengths-grid strengths-grid--compact mb-3">
+      <div class="strength-item">
+        <div class="strength-item__icon">01</div>
+        <h5 class="strength-item__title">Customized Design</h5>
+        <p class="strength-item__text">Tailored solutions for your facility</p>
+      </div>
+      <div class="strength-item">
+        <div class="strength-item__icon">02</div>
+        <h5 class="strength-item__title">Local Manufacturing</h5>
+        <p class="strength-item__text">TKDN >40%, faster delivery</p>
+      </div>
+      <div class="strength-item">
+        <div class="strength-item__icon">03</div>
+        <h5 class="strength-item__title">Fast Installation</h5>
+        <p class="strength-item__text">Modular system, minimal disruption</p>
+      </div>
+      <div class="strength-item">
+        <div class="strength-item__icon">04</div>
+        <h5 class="strength-item__title">Full Service Support</h5>
+        <p class="strength-item__text">Design to after-sales maintenance</p>
+      </div>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="stats-row">
+      <div class="stat-box">
+        <span class="stat-box__number">50+</span>
+        <span class="stat-box__label">Projects</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-box__number">15+</span>
+        <span class="stat-box__label">Provinces</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-box__number">10yr</span>
+        <span class="stat-box__label">Warranty</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-box__number">24/7</span>
+        <span class="stat-box__label">Support</span>
+      </div>
+    </div>
+
+    <PageFooter />
+  </div>
+</div>
