@@ -1,0 +1,45 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import ProductCompact from '../components/ProductCompact.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="WALL &amp; CEILING SYSTEMS" pageNumber="09" />
+    <div class="compact-section-intro">
+      <h3 class="compact-section-intro__title">Finishing Components</h3>
+      <p class="compact-section-intro__text">
+        Essential finishing elements that complete the modular wall and ceiling system &#8211;
+        from seamless corner profiles to integrated LED lighting panels.
+      </p>
+    </div>
+    <div class="grid grid--2col">
+      <ProductCompact
+        title="Curving (Corner Profile R40)"
+        description="Siku penutup sudut dinding atau pertemuan dinding dengan lantai/ceiling. Sesuai syarat Permenkes bahwa setiap ruang Operasi tidak boleh ada sudut tajam. Memudahkan pembersihan pada ruang."
+        specs={[
+          { label: 'Material', value: 'Alumunium' },
+          { label: 'Radius',   value: '40&deg;' },
+          { label: 'Height',   value: '3000 mm' },
+        ]}
+        imagePlaceholderText="Curving R40"
+        imageFilename="product-curving-r40.png"
+      />
+      <ProductCompact
+        title="Room Light Panel"
+        description="Pemasangan dibenamkan rata dengan ceiling kaset (plafon). LED panel lighting dengan proteksi IP20 dan impact rating IK02."
+        specs={[
+          { label: 'IP Rating', value: 'IP20 (Finger Protected)' },
+          { label: 'Impact',    value: 'IK02 (0.2 J)' },
+          { label: 'Power',     value: '220-240V, 40W' },
+          { label: 'Freq',      value: '50/60 Hz' },
+          { label: 'Size',      value: '1197&times;297mm or 597&times;597mm' },
+        ]}
+        imagePlaceholderText="Room Light Panel"
+        imageFilename="product-room-light.png"
+      />
+    </div>
+    <PageFooter />
+  </div>
+</div>
