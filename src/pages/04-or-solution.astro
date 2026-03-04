@@ -1,0 +1,56 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="COMPLETE SOLUTIONS" pageNumber="04" />
+    <h2 class="section-title">Integrated Operating Theatre</h2>
+    <div class="divider-accent"></div>
+    <p class="section-subtitle">
+      From walls to equipment, we provide complete operating theatre solutions designed
+      to work together. Every component is engineered for proper integration.
+    </p>
+    <div class="or-layout-section">
+      <div class="diagram-container diagram-container--compact">
+        <object type="image/svg+xml" data="/assets/diagrams/or-layout-2d.svg">OR Room Layout</object>
+      </div>
+      <div class="or-specs-sidebar">
+        <h4>Specifications</h4>
+        <ul>
+          <li><strong>Room Class:</strong> ISO 5-7</li>
+          <li><strong>Air Changes:</strong> 20-25 ACH</li>
+          <li><strong>Pressure:</strong> +15 Pa</li>
+          <li><strong>Temperature:</strong> 18-24&deg;C</li>
+          <li><strong>Humidity:</strong> 40-60% RH</li>
+          <li><strong>Wall Panel:</strong> PIR 75mm</li>
+          <li><strong>Room Size:</strong> 6m &times; 6m</li>
+        </ul>
+      </div>
+    </div>
+    <div class="solution-features">
+      <div class="solution-feature">
+        <div class="solution-feature__icon">W</div>
+        <span class="solution-feature__title">Wall &amp; Ceiling</span>
+      </div>
+      <div class="solution-feature">
+        <div class="solution-feature__icon">D</div>
+        <span class="solution-feature__title">Door Systems</span>
+      </div>
+      <div class="solution-feature">
+        <div class="solution-feature__icon">L</div>
+        <span class="solution-feature__title">Lighting</span>
+      </div>
+      <div class="solution-feature">
+        <div class="solution-feature__icon">H</div>
+        <span class="solution-feature__title">HVAC</span>
+      </div>
+      <div class="solution-feature">
+        <div class="solution-feature__icon">G</div>
+        <span class="solution-feature__title">Medical Gas</span>
+      </div>
+    </div>
+    <PageFooter />
+  </div>
+</div>
