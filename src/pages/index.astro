@@ -1,17 +1,35 @@
 ---
+// MOT ELFATECH Catalog — Main entry point for print PDF
+// CSS imported globally for Puppeteer rendering
+import '../styles/base.css';
+import '../styles/components.css';
 
+// M2 Batch 1/6 — Pages 01-04
+import Cover from './01-cover.astro';
+import TOC from './02-toc.astro';
+import CompanyProfile from './03-company-profile.astro';
+import ORSolution from './04-or-solution.astro';
+
+// M2 Batch 2/6 — Pages 05-14 (to be added)
+// M2 Batch 3/6 — Pages 15-23 (to be added)
+// M2 Batch 4/6 — Pages 24-34 (to be added)
+// M2 Batch 5/6 — Pages 35-46 (to be added)
+// M2 Batch 6/6 — Pages 47-53 (to be added)
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOT ELFATECH Catalog 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <Cover />
+    <TOC />
+    <CompanyProfile />
+    <ORSolution />
+  </body>
 </html>
