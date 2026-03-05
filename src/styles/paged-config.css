@@ -1,16 +1,16 @@
 /*
- * PAGED.JS PRINT CONFIGURATION
- * Configured in FASE M4
+ * PAGED.JS PRINT CONFIGURATION — FASE M4
  *
- * Reference: https://pagedjs.org/documentation/
+ * Dibaca oleh Paged.js polyfill saat rendering PDF.
+ * @page di luar @media print agar Paged.js bisa membacanya.
+ *
+ * Ukuran halaman A4 landscape (297mm × 210mm) sesuai base.css/.page dimensions.
+ * Margin 0 karena margin halaman sudah dihandle oleh .page padding di base.css.
  */
 
-/* @page rules will be added here in FASE M4:
- *
- * @page {
- *   size: A4;
- *   margin: 15mm;
- *   bleed: 3mm;
- *   marks: crop cross;
- * }
- */
+@page {
+  size: A4 landscape;
+  margin: 0;
+  bleed: 3mm;
+  marks: crop cross;
+}
