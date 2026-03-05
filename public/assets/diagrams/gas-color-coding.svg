@@ -1,5 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 220" width="100%" height="auto">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap');
+      text { font-family: Inter, Arial, Helvetica, sans-serif; font-style: normal; }
+    </style>
+  </defs>
   <!--
     Medical Gas Color Coding - OHMEDA Standard (per spek-mot.md)
     Col layout: GAS TYPE x20-x140 | COLOR x140-x230 | MODEL x230-x350 | PRESSURE x350-x440
