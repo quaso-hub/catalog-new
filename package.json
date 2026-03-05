@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "build-pdf": "astro build && node ../scripts/generate-pdf-astro.js"
   },
   "dependencies": {
     "astro": "^5.17.1",
