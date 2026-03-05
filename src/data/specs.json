@@ -1,0 +1,1337 @@
+{
+  "_meta": {
+    "source": "XLSX:Table 1",
+    "source_file": "specs/excel/SPESIFIKASI MOT ELFATECH MA7 MAYOR PIR.xlsx",
+    "total_products": 31,
+    "generated_by": "scripts/extract-specs.py"
+  },
+  "pekerjaan_dinding_pabrikasi": {
+    "name": "PEKERJAAN DINDING PABRIKASI",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B7",
+    "specs": []
+  },
+  "rg_ok": {
+    "name": "Rg. OK",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B8",
+    "specs": [
+      {
+        "label": null,
+        "value": "Dinding Sandwich",
+        "source_ref": "XLSX:Table 1!B9"
+      },
+      {
+        "label": null,
+        "value": "Wall medical insulated panel PIR, t. 75 mm, HRP Antibacterial 0,5mm",
+        "source_ref": "XLSX:Table 1!B10"
+      },
+      {
+        "label": null,
+        "value": "Picture wall 1 sisi temper glass covered 12mm",
+        "source_ref": "XLSX:Table 1!B11"
+      }
+    ]
+  },
+  "celling_sandwich_pir": {
+    "name": "Celling Sandwich (PIR)",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B12",
+    "specs": [
+      {
+        "label": null,
+        "value": "Wall medical insulated panel PIR, t. 75 mm, HRP Antibacterial 0,5mm + Rangka",
+        "source_ref": "XLSX:Table 1!B13"
+      }
+    ],
+    "quantity": 1,
+    "unit": "ls"
+  },
+  "power_socket_box": {
+    "name": "Power Socket Box",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B14",
+    "specs": [],
+    "quantity": 1,
+    "unit": "set"
+  },
+  "material_support": {
+    "name": "Material support",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B15",
+    "specs": [],
+    "quantity": 1,
+    "unit": "ls"
+  },
+  "pb_2mm_pada_dinding_t_3_mtr": {
+    "name": "Pb 2mm pada dinding, t 3 mtr",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B16",
+    "specs": [],
+    "quantity": 1,
+    "unit": "ls"
+  },
+  "aksesoris": {
+    "name": "AKSESORIS",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B18",
+    "specs": []
+  },
+  "pass_box_stainless_steel_sus_304": {
+    "name": "PASS BOX STAINLESS STEEL SUS-304",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B19",
+    "specs": [
+      {
+        "label": null,
+        "value": "Material: SUS 304",
+        "source_ref": "XLSX:Table 1!B20"
+      },
+      {
+        "label": null,
+        "value": "Outside Dimension: 800 x 800 x 500 mm",
+        "source_ref": "XLSX:Table 1!B21"
+      },
+      {
+        "label": null,
+        "value": "Inside Dimension: 500 x 500 x 600 mm",
+        "source_ref": "XLSX:Table 1!B22"
+      },
+      {
+        "label": null,
+        "value": "Advantages: UV Lamp Included, With Timer Activation, Not Only Interlock System, Can Custome Size, Two Side Open Inter-Lock Door",
+        "source_ref": "XLSX:Table 1!B23"
+      },
+      {
+        "label": null,
+        "value": "Items: Switch Z 56 QB, Seal, Handle, Clear Glass 12 mm, Hinge, PLC Interlock System, Lights LED 220 V, Electrical, Magnetic Interlock, Timer Activation, Lights UV",
+        "source_ref": "XLSX:Table 1!B24"
+      }
+    ],
+    "quantity": 1,
+    "unit": "Bh"
+  },
+  "x_ray_viewer": {
+    "name": "X-RAY VIEWER",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B25",
+    "specs": [
+      {
+        "label": "Screen",
+        "value": "Double Screen",
+        "source_ref": "XLSX:Table 1!D26"
+      },
+      {
+        "label": "Dimensions (W.H.D) / Frame (W.H.D)",
+        "value": "880 x 503 x 29 mm",
+        "source_ref": "XLSX:Table 1!D27"
+      },
+      {
+        "label": null,
+        "value": "736 x 440 mm",
+        "source_ref": "XLSX:Table 1!D28"
+      },
+      {
+        "label": "Power Consumtion",
+        "value": "30 W",
+        "source_ref": "XLSX:Table 1!D29"
+      },
+      {
+        "label": "Light Source",
+        "value": "LED",
+        "source_ref": "XLSX:Table 1!D30"
+      },
+      {
+        "label": "Power Supply Input",
+        "value": "AC 100-240 V 50/60 Hz",
+        "source_ref": "XLSX:Table 1!D31"
+      },
+      {
+        "label": "Brightness (LUX)",
+        "value": "> 10.00",
+        "source_ref": "XLSX:Table 1!D32"
+      },
+      {
+        "label": "Net Weight (Kg)",
+        "value": "8.8",
+        "source_ref": "XLSX:Table 1!D33"
+      },
+      {
+        "label": "Color Temperature",
+        "value": "5,900 - 9,000 K",
+        "source_ref": "XLSX:Table 1!D34"
+      },
+      {
+        "label": "Luminance Adjusment",
+        "value": "20% - 100%",
+        "source_ref": "XLSX:Table 1!D35"
+      }
+    ],
+    "quantity": 1,
+    "unit": "Bh"
+  },
+  "scrub_sink_2_bay": {
+    "name": "SCRUB SINK 2 BAY",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B36",
+    "specs": [
+      {
+        "label": null,
+        "value": "Material SUS 304 Thickness 1.2 mm",
+        "source_ref": "XLSX:Table 1!B37"
+      },
+      {
+        "label": null,
+        "value": "Available in 1, 2 and 3 Washing Station",
+        "source_ref": "XLSX:Table 1!B38"
+      },
+      {
+        "label": null,
+        "value": "Dimension 1600 x 600 x 1550 mm / Custom Size",
+        "source_ref": "XLSX:Table 1!B39"
+      },
+      {
+        "label": null,
+        "value": "Water Heater - Included (In One System / Integrated)",
+        "source_ref": "XLSX:Table 1!B40"
+      },
+      {
+        "label": null,
+        "value": "Using Automatic Sensor System & Manually System For Emergency Use",
+        "source_ref": "XLSX:Table 1!B41"
+      },
+      {
+        "label": null,
+        "value": "Using Sterilized Ultraviolet Lamp System",
+        "source_ref": "XLSX:Table 1!B42"
+      },
+      {
+        "label": null,
+        "value": "Using Filtering SystemFor 5 Micron or Can Be Custom, Based On Requested",
+        "source_ref": "XLSX:Table 1!B43"
+      },
+      {
+        "label": null,
+        "value": "With 2 Bay Faucet Automatic System & 2 Foot System For Manual Used",
+        "source_ref": "XLSX:Table 1!B44"
+      },
+      {
+        "label": null,
+        "value": "With Safety System Electricity To Avoid Leakage Electricity",
+        "source_ref": "XLSX:Table 1!B45"
+      },
+      {
+        "label": null,
+        "value": "Low Cost Electricity Consumption, AC 220Volt, 50 Hz, 250 Watt",
+        "source_ref": "XLSX:Table 1!B46"
+      }
+    ],
+    "quantity": 1,
+    "unit": "Bh"
+  },
+  "hermetic_auto_dliding_door": {
+    "name": "Hermetic Auto Dliding Door",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B47",
+    "specs": [
+      {
+        "label": null,
+        "value": "Made Of Satainless Steel",
+        "source_ref": "XLSX:Table 1!B48"
+      },
+      {
+        "label": null,
+        "value": "Glass Cell: 5 mm Thick",
+        "source_ref": "XLSX:Table 1!B49"
+      },
+      {
+        "label": null,
+        "value": "Electric Motors",
+        "source_ref": "XLSX:Table 1!B50"
+      },
+      {
+        "label": null,
+        "value": "Battery Backup",
+        "source_ref": "XLSX:Table 1!B51"
+      },
+      {
+        "label": null,
+        "value": "Dimension 1600 x 2100 mm",
+        "source_ref": "XLSX:Table 1!B52"
+      },
+      {
+        "label": null,
+        "value": "Voltage: 220 VAC, 50/60 Hz",
+        "source_ref": "XLSX:Table 1!B53"
+      },
+      {
+        "label": null,
+        "value": "Labor Assistant Switch (Foot Switch)",
+        "source_ref": "XLSX:Table 1!B54"
+      },
+      {
+        "label": null,
+        "value": "Control & Opening In Sensor, The Sensor In Mounted Inside & Outside The Oprating Room",
+        "source_ref": "XLSX:Table 1!B55"
+      },
+      {
+        "label": null,
+        "value": "Speed: 0.7m / sec: door Leaf, -1.4m/sec: 2 door leaf",
+        "source_ref": "XLSX:Table 1!B56"
+      },
+      {
+        "label": null,
+        "value": "Power Auto Volt 85-264 VAC",
+        "source_ref": "XLSX:Table 1!B57"
+      },
+      {
+        "label": null,
+        "value": "Automatic Motor Reversal When Ther Are Obstacles, Including Pair Of Safety Lights",
+        "source_ref": "XLSX:Table 1!B58"
+      },
+      {
+        "label": null,
+        "value": "Lapis Pb 2mm dan Glass Pb",
+        "source_ref": "XLSX:Table 1!B59"
+      }
+    ],
+    "quantity": 1,
+    "unit": "Unit"
+  },
+  "automatic_swing_pb_lead_door": {
+    "name": "Automatic Swing PB/Lead Door",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B60",
+    "specs": [
+      {
+        "label": null,
+        "value": "Dimension Size: 1000 x 2200 mm",
+        "source_ref": "XLSX:Table 1!B61"
+      },
+      {
+        "label": null,
+        "value": "Insulation: PB Lead (Plywood 9 mm + Rangka Hollow) + Insulation PIR",
+        "source_ref": "XLSX:Table 1!B62"
+      },
+      {
+        "label": null,
+        "value": "View Glass Timbal",
+        "source_ref": "XLSX:Table 1!B63"
+      },
+      {
+        "label": null,
+        "value": "With Motise X-Ray Special (Developed by LBA)",
+        "source_ref": "XLSX:Table 1!B64"
+      },
+      {
+        "label": null,
+        "value": "PB Glass: View Glass Timbal",
+        "source_ref": "XLSX:Table 1!B65"
+      },
+      {
+        "label": null,
+        "value": "Material Frame: Steel Plate 1.5 - 2 mm/ Stainless Steel",
+        "source_ref": "XLSX:Table 1!B66"
+      },
+      {
+        "label": null,
+        "value": "Material Door Leaf: Steel Plate 1.2 - 1.5 mm/ Stainless Steel",
+        "source_ref": "XLSX:Table 1!B67"
+      },
+      {
+        "label": null,
+        "value": "Door Leaf Thickness: ±45-50 mm",
+        "source_ref": "XLSX:Table 1!B68"
+      },
+      {
+        "label": null,
+        "value": "Finished Powder Coating Color/ Stainless Steel",
+        "source_ref": "XLSX:Table 1!B69"
+      },
+      {
+        "label": null,
+        "value": "Accessories: Onassis, Wilka, Calvis, Griff, Dekson, Kend, etc",
+        "source_ref": "XLSX:Table 1!B70"
+      }
+    ],
+    "quantity": 1,
+    "unit": "Unit"
+  },
+  "lampu_penerangan_led_ruangan": {
+    "name": "Lampu penerangan LED ruangan",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B71",
+    "specs": [
+      {
+        "label": null,
+        "value": "Lampu penerangan LED Panel IP20/40-45 W, uk : 297 (w) x 1195 (l) x 10 (t) mm",
+        "source_ref": "XLSX:Table 1!B72"
+      }
+    ],
+    "quantity": 12,
+    "unit": "Unit"
+  },
+  "pasang_vynil_lantai": {
+    "name": "Pasang Vynil Lantai",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B73",
+    "specs": [
+      {
+        "label": null,
+        "value": "Anti bakteri, anti jamur, anti betadine, anti eosin, antistatic",
+        "source_ref": "XLSX:Table 1!B74"
+      },
+      {
+        "label": null,
+        "value": "include laveling",
+        "source_ref": "XLSX:Table 1!B75"
+      },
+      {
+        "label": null,
+        "value": "Plint lantai bahan aluminium (caping+cove) OK",
+        "source_ref": "XLSX:Table 1!B76"
+      }
+    ],
+    "quantity": 1,
+    "unit": "set"
+  },
+  "surgical_control_panel_room_touchscreen": {
+    "name": "Surgical Control Panel Room Touchscreen",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B77",
+    "specs": [
+      {
+        "label": null,
+        "value": "Material: - System Windows Smart Control Panel Room",
+        "source_ref": "XLSX:Table 1!B78"
+      },
+      {
+        "label": null,
+        "value": "'- Programing Modbus Tcp Ip",
+        "source_ref": "XLSX:Table 1!B79"
+      },
+      {
+        "label": null,
+        "value": "'- Swit Hub",
+        "source_ref": "XLSX:Table 1!B80"
+      },
+      {
+        "label": null,
+        "value": "'- Panel Listrik System Isi Control Room & Display Operating Timer",
+        "source_ref": "XLSX:Table 1!B81"
+      }
+    ],
+    "quantity": 1,
+    "unit": "Unit"
+  },
+  "hfp_ss90_160_mechanical_double_arm_rotating_crane_surgical_pendant": {
+    "name": "HFP-SS90/160 Mechanical Double Arm Rotating Crane Surgical Pendant",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B82",
+    "specs": [
+      {
+        "label": "Left Area",
+        "value": "Right Area",
+        "source_ref": "XLSX:Table 1!E83"
+      },
+      {
+        "label": "Power Socket: 6 pcs",
+        "value": "Power Socket: 6 pcs",
+        "source_ref": "XLSX:Table 1!E84"
+      },
+      {
+        "label": "Oxygen Gas Terminal: 1 pcs",
+        "value": "Oxygen Gas Terminal: 1 pcs",
+        "source_ref": "XLSX:Table 1!E85"
+      },
+      {
+        "label": "Vacuum Gas Terminal: 1 pcs",
+        "value": "Vacuum Gas Terminal: 1 pcs",
+        "source_ref": "XLSX:Table 1!E86"
+      },
+      {
+        "label": "Network Socket: 1 pcs",
+        "value": "Network Socket: 1 pcs",
+        "source_ref": "XLSX:Table 1!E87"
+      },
+      {
+        "label": "Equipotential Sockets: 2 pcs",
+        "value": "Equipotential Sockets: 2 pcs",
+        "source_ref": "XLSX:Table 1!E88"
+      },
+      {
+        "label": "Platform: 1 pcs",
+        "value": "Platform: 1 pcs",
+        "source_ref": "XLSX:Table 1!E89"
+      },
+      {
+        "label": "Platform With A Drawer: 1 pcs",
+        "value": "Platform With A Drawer: 1 pcs",
+        "source_ref": "XLSX:Table 1!E90"
+      },
+      {
+        "label": "Infusion stand : 1 pcs",
+        "value": "Infusion stand : 1 pcs",
+        "source_ref": "XLSX:Table 1!E91"
+      },
+      {
+        "label": null,
+        "value": "Arm Rotating Radius: 800mm + 800mm",
+        "source_ref": "XLSX:Table 1!B92"
+      },
+      {
+        "label": null,
+        "value": "Arm Rotating Angle: 340°",
+        "source_ref": "XLSX:Table 1!B93"
+      },
+      {
+        "label": null,
+        "value": "Braking System: Friction Brake",
+        "source_ref": "XLSX:Table 1!B94"
+      },
+      {
+        "label": null,
+        "value": "Maximum load capacity: 120kg",
+        "source_ref": "XLSX:Table 1!B95"
+      },
+      {
+        "label": null,
+        "value": "2 Medical Air Terminal Units",
+        "source_ref": "XLSX:Table 1!B96"
+      },
+      {
+        "label": null,
+        "value": "6 China Type 3 Pin 10A Sockets",
+        "source_ref": "XLSX:Table 1!B97"
+      },
+      {
+        "label": null,
+        "value": "2 Earth Studs",
+        "source_ref": "XLSX:Table 1!B98"
+      },
+      {
+        "label": null,
+        "value": "2 Equipment Shelves",
+        "source_ref": "XLSX:Table 1!B99"
+      },
+      {
+        "label": null,
+        "value": "1 Drawer",
+        "source_ref": "XLSX:Table 1!B100"
+      },
+      {
+        "label": null,
+        "value": "1 IV Pole & Infusion Pump Rack",
+        "source_ref": "XLSX:Table 1!B101"
+      },
+      {
+        "label": null,
+        "value": "Network connect : 1 pc",
+        "source_ref": "XLSX:Table 1!B102"
+      },
+      {
+        "label": null,
+        "value": "Phone Connect : 1 pc",
+        "source_ref": "XLSX:Table 1!B103"
+      },
+      {
+        "label": null,
+        "value": "NET Load of Pendant :80 Kg",
+        "source_ref": "XLSX:Table 1!B104"
+      }
+    ],
+    "quantity": 1,
+    "unit": "unit"
+  },
+  "700_700_shadowless_lamp": {
+    "name": "700/700 Shadowless Lamp",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B105",
+    "specs": [
+      {
+        "label": null,
+        "value": "Illuminance: ≥160.000Lux, ≥160.000Lux",
+        "source_ref": "XLSX:Table 1!B106"
+      },
+      {
+        "label": null,
+        "value": "Colour Temperature: 3800±500K, 4400±500K, 5000±500K",
+        "source_ref": "XLSX:Table 1!B107"
+      },
+      {
+        "label": null,
+        "value": "Color Reduction Index (Ra): 93",
+        "source_ref": "XLSX:Table 1!B108"
+      },
+      {
+        "label": null,
+        "value": "Total Irradiance: 544W/m², 534W/m²",
+        "source_ref": "XLSX:Table 1!B109"
+      },
+      {
+        "label": null,
+        "value": "Size of Light Field: 250-300mm",
+        "source_ref": "XLSX:Table 1!B110"
+      },
+      {
+        "label": null,
+        "value": "Service Life of Illuminant: 50.000h",
+        "source_ref": "XLSX:Table 1!B111"
+      },
+      {
+        "label": null,
+        "value": "Power Supply Voltage: AC110-240V 50/60Hz",
+        "source_ref": "XLSX:Table 1!B112"
+      },
+      {
+        "label": null,
+        "value": "Best Height of Instalation: 2900mm",
+        "source_ref": "XLSX:Table 1!B113"
+      },
+      {
+        "label": null,
+        "value": "Total Power Consumptio: 80W, 80W",
+        "source_ref": "XLSX:Table 1!B114"
+      },
+      {
+        "label": null,
+        "value": "Total LED Bulb Quantity: 218pcs (18x6 + 18x6)",
+        "source_ref": "XLSX:Table 1!B115"
+      },
+      {
+        "label": null,
+        "value": "Endo: Yes",
+        "source_ref": "XLSX:Table 1!B116"
+      }
+    ],
+    "quantity": 1,
+    "unit": "unit"
+  },
+  "operating_table_hfeot99x": {
+    "name": "Operating Table HFEOT99X",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B117",
+    "specs": [
+      {
+        "label": "Length and Width For Tabletop",
+        "value": "2100/550mm",
+        "source_ref": "XLSX:Table 1!F118"
+      },
+      {
+        "label": "Elevation(Down/Up)",
+        "value": "710/1010 mm",
+        "source_ref": "XLSX:Table 1!F119"
+      },
+      {
+        "label": "Trendelenburg/Reverse Trendelenburg",
+        "value": "25°/25°",
+        "source_ref": "XLSX:Table 1!F120"
+      },
+      {
+        "label": "Lateral Tilt (Left/Right)",
+        "value": "15°/15°",
+        "source_ref": "XLSX:Table 1!F121"
+      },
+      {
+        "label": "Head Rest (Up/Down)",
+        "value": "40°/90°",
+        "source_ref": "XLSX:Table 1!F122"
+      },
+      {
+        "label": "Footplate (Up/Down & Horizontal Positioing)",
+        "value": "90°/90°/15°",
+        "source_ref": "XLSX:Table 1!F123"
+      },
+      {
+        "label": "Back Plate (Up/Down)",
+        "value": "85°/20°",
+        "source_ref": "XLSX:Table 1!F124"
+      },
+      {
+        "label": "Kidney Bridge",
+        "value": "110mm",
+        "source_ref": "XLSX:Table 1!F125"
+      },
+      {
+        "label": "Lungitudinal Sliding",
+        "value": "350mm",
+        "source_ref": "XLSX:Table 1!F126"
+      },
+      {
+        "label": "Power",
+        "value": "220V 50Hz 1,0kW",
+        "source_ref": "XLSX:Table 1!F127"
+      }
+    ],
+    "quantity": 1,
+    "unit": "unit"
+  },
+  "ohmeda_gas_outlets": {
+    "name": "OHMEDA GAS OUTLETS",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B128",
+    "specs": [
+      {
+        "label": "Gas Type",
+        "value": "Color",
+        "source_ref": "XLSX:Table 1!D129"
+      },
+      {
+        "label": "Oxygen",
+        "value": "Green",
+        "source_ref": "XLSX:Table 1!D130"
+      },
+      {
+        "label": "Air 4 Bar",
+        "value": "Yellow",
+        "source_ref": "XLSX:Table 1!D131"
+      },
+      {
+        "label": "Vacuum",
+        "value": "White",
+        "source_ref": "XLSX:Table 1!D132"
+      },
+      {
+        "label": "N2O",
+        "value": "Blue",
+        "source_ref": "XLSX:Table 1!D133"
+      },
+      {
+        "label": "CO2",
+        "value": "Grey",
+        "source_ref": "XLSX:Table 1!D134"
+      },
+      {
+        "label": "AGSS",
+        "value": "Purple",
+        "source_ref": "XLSX:Table 1!D135"
+      }
+    ],
+    "quantity": 1,
+    "unit": "set"
+  },
+  "lampu_indikator_ruang_ok": {
+    "name": "Lampu Indikator Ruang Ok",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B136",
+    "specs": [],
+    "quantity": 1,
+    "unit": "bh"
+  },
+  "speaker_aktif": {
+    "name": "Speaker aktif",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B137",
+    "specs": [],
+    "quantity": 2,
+    "unit": "bh"
+  },
+  "pacs_cabinet": {
+    "name": "PACS CABINET",
+    "section": "A",
+    "section_name": "Paket MOT (Modular Operating Theatre)",
+    "source_ref": "XLSX:Table 1!B138",
+    "specs": [
+      {
+        "label": null,
+        "value": "Material: Stainless Steel",
+        "source_ref": "XLSX:Table 1!B139"
+      },
+      {
+        "label": null,
+        "value": "Dimension: 1200 x 2000 x 400 mm",
+        "source_ref": "XLSX:Table 1!B140"
+      }
+    ]
+  },
+  "ahu_double_skin": {
+    "name": "AHU DOUBLE SKIN",
+    "section": "B",
+    "section_name": "PEKERJAAN HVAC SYSTEM",
+    "source_ref": "XLSX:Table 1!B143",
+    "specs": [
+      {
+        "label": "Size",
+        "value": "1200 x 3000 x 930 mm",
+        "source_ref": "XLSX:Table 1!D144"
+      },
+      {
+        "label": "Material bodi",
+        "value": "doble skin AHU 25mm",
+        "source_ref": "XLSX:Table 1!D145"
+      },
+      {
+        "label": null,
+        "value": "alumunium profil aloy T25 mm",
+        "source_ref": "XLSX:Table 1!D146"
+      },
+      {
+        "label": "Boster fan:",
+        "value": "cap -+ 3000 cfm",
+        "source_ref": "XLSX:Table 1!D147"
+      },
+      {
+        "label": null,
+        "value": "presure 1000 PA",
+        "source_ref": "XLSX:Table 1!D148"
+      },
+      {
+        "label": "Heater",
+        "value": "power 4500 watt ( 750 w x 6 )",
+        "source_ref": "XLSX:Table 1!D149"
+      },
+      {
+        "label": null,
+        "value": "material tube ss304",
+        "source_ref": "XLSX:Table 1!D150"
+      },
+      {
+        "label": null,
+        "value": "material fined ss304",
+        "source_ref": "XLSX:Table 1!D151"
+      },
+      {
+        "label": "Magneheic control",
+        "value": "range 0 - 500 PA",
+        "source_ref": "XLSX:Table 1!D152"
+      },
+      {
+        "label": "uv c ultraviolet",
+        "value": "philiph lamp",
+        "source_ref": "XLSX:Table 1!D153"
+      },
+      {
+        "label": null,
+        "value": "30 w - 72 w",
+        "source_ref": "XLSX:Table 1!D154"
+      },
+      {
+        "label": "pree filter",
+        "value": "G4 washable/ disposable",
+        "source_ref": "XLSX:Table 1!D155"
+      },
+      {
+        "label": null,
+        "value": "30 - 65 %",
+        "source_ref": "XLSX:Table 1!D156"
+      },
+      {
+        "label": null,
+        "value": "size 24\" x 24\" x 2\"",
+        "source_ref": "XLSX:Table 1!D157"
+      },
+      {
+        "label": "Medium filter",
+        "value": "f8/f9",
+        "source_ref": "XLSX:Table 1!D158"
+      },
+      {
+        "label": null,
+        "value": "90 - 95%",
+        "source_ref": "XLSX:Table 1!D159"
+      },
+      {
+        "label": null,
+        "value": "size 24\" x 24\" x 12\"",
+        "source_ref": "XLSX:Table 1!D160"
+      },
+      {
+        "label": "Coil evaporator",
+        "value": "10hp",
+        "source_ref": "XLSX:Table 1!D161"
+      },
+      {
+        "label": null,
+        "value": "100.000 btu/h",
+        "source_ref": "XLSX:Table 1!D162"
+      },
+      {
+        "label": null,
+        "value": "air flow rate 3000 cfm",
+        "source_ref": "XLSX:Table 1!D163"
+      },
+      {
+        "label": null,
+        "value": "refrigerant R410",
+        "source_ref": "XLSX:Table 1!D164"
+      },
+      {
+        "label": null,
+        "value": "fins material alumunium",
+        "source_ref": "XLSX:Table 1!D165"
+      },
+      {
+        "label": "Outdoor unit",
+        "value": "DAIKIN (air conditioning)",
+        "source_ref": "XLSX:Table 1!D166"
+      },
+      {
+        "label": null,
+        "value": "12 hp",
+        "source_ref": "XLSX:Table 1!D167"
+      },
+      {
+        "label": null,
+        "value": "120.000 btu/h",
+        "source_ref": "XLSX:Table 1!D168"
+      }
+    ],
+    "quantity": 1,
+    "unit": "unit"
+  },
+  "ducting_suplay_return_plenum_100_m2": {
+    "name": "DUCTING (Suplay, Return & Plenum ) -+100 (m2)",
+    "section": "B",
+    "section_name": "PEKERJAAN HVAC SYSTEM",
+    "source_ref": "XLSX:Table 1!B169",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "polyurethane (piu)",
+        "source_ref": "XLSX:Table 1!D170"
+      },
+      {
+        "label": null,
+        "value": "TDI",
+        "source_ref": "XLSX:Table 1!D171"
+      },
+      {
+        "label": null,
+        "value": "thiknees 20mm",
+        "source_ref": "XLSX:Table 1!D172"
+      },
+      {
+        "label": null,
+        "value": "acsesories",
+        "source_ref": "XLSX:Table 1!D173"
+      },
+      {
+        "label": "perforated grill",
+        "value": "galvanis steel",
+        "source_ref": "XLSX:Table 1!D174"
+      },
+      {
+        "label": null,
+        "value": "pouder coating white",
+        "source_ref": "XLSX:Table 1!D175"
+      },
+      {
+        "label": "volume demper",
+        "value": "mild steel",
+        "source_ref": "XLSX:Table 1!D176"
+      },
+      {
+        "label": null,
+        "value": "pouder coating",
+        "source_ref": "XLSX:Table 1!D177"
+      }
+    ],
+    "quantity": 1,
+    "unit": "lot"
+  },
+  "laminar_air_flow": {
+    "name": "LAMINAR AIR FLOW",
+    "section": "B",
+    "section_name": "PEKERJAAN HVAC SYSTEM",
+    "source_ref": "XLSX:Table 1!B178",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "galvanis steel",
+        "source_ref": "XLSX:Table 1!D179"
+      },
+      {
+        "label": null,
+        "value": "pouder coating",
+        "source_ref": "XLSX:Table 1!D180"
+      },
+      {
+        "label": null,
+        "value": "type perporated",
+        "source_ref": "XLSX:Table 1!D181"
+      },
+      {
+        "label": "Final filter heppa",
+        "value": "H14",
+        "source_ref": "XLSX:Table 1!D182"
+      },
+      {
+        "label": null,
+        "value": "0.9999",
+        "source_ref": "XLSX:Table 1!D183"
+      },
+      {
+        "label": null,
+        "value": "size 24\" x 48\" x 3\"",
+        "source_ref": "XLSX:Table 1!D184"
+      }
+    ],
+    "quantity": 1,
+    "unit": "unit"
+  },
+  "control_panel_ahu": {
+    "name": "CONTROL PANEL AHU",
+    "section": "B",
+    "section_name": "PEKERJAAN HVAC SYSTEM",
+    "source_ref": "XLSX:Table 1!B185",
+    "specs": [
+      {
+        "label": "Material",
+        "value": "box panel 900 x 600 x 250",
+        "source_ref": "XLSX:Table 1!D186"
+      },
+      {
+        "label": null,
+        "value": "programing (PLC)",
+        "source_ref": "XLSX:Table 1!D187"
+      },
+      {
+        "label": null,
+        "value": "relay (omron)",
+        "source_ref": "XLSX:Table 1!D188"
+      },
+      {
+        "label": null,
+        "value": "noice filter",
+        "source_ref": "XLSX:Table 1!D189"
+      },
+      {
+        "label": null,
+        "value": "swit hub 5 port",
+        "source_ref": "XLSX:Table 1!D190"
+      },
+      {
+        "label": null,
+        "value": "power suplay 24 v",
+        "source_ref": "XLSX:Table 1!D191"
+      },
+      {
+        "label": null,
+        "value": "mcb",
+        "source_ref": "XLSX:Table 1!D192"
+      },
+      {
+        "label": null,
+        "value": "mccb",
+        "source_ref": "XLSX:Table 1!D193"
+      },
+      {
+        "label": null,
+        "value": "contactor control (LS )",
+        "source_ref": "XLSX:Table 1!D194"
+      },
+      {
+        "label": null,
+        "value": "Lamp RST",
+        "source_ref": "XLSX:Table 1!D195"
+      },
+      {
+        "label": null,
+        "value": "HMI control panel system 7''",
+        "source_ref": "XLSX:Table 1!D196"
+      }
+    ],
+    "quantity": 1,
+    "unit": "unit"
+  },
+  "piping_pipa": {
+    "name": "PIPING PIPA",
+    "section": "B",
+    "section_name": "PEKERJAAN HVAC SYSTEM",
+    "source_ref": "XLSX:Table 1!B197",
+    "specs": [
+      {
+        "label": null,
+        "value": "pipa refrigerant",
+        "source_ref": "XLSX:Table 1!D198"
+      },
+      {
+        "label": null,
+        "value": "ASTM B280",
+        "source_ref": "XLSX:Table 1!D199"
+      },
+      {
+        "label": null,
+        "value": "isolasi harmaflek",
+        "source_ref": "XLSX:Table 1!D200"
+      },
+      {
+        "label": null,
+        "value": "drine pipa",
+        "source_ref": "XLSX:Table 1!D201"
+      }
+    ],
+    "quantity": 1,
+    "unit": "lot"
+  },
+  "pekerjaan_listrik": {
+    "name": "Pekerjaan Listrik",
+    "section": "B",
+    "section_name": "PEKERJAAN HVAC SYSTEM",
+    "source_ref": "XLSX:Table 1!B202",
+    "specs": [
+      {
+        "label": null,
+        "value": "Kabel Power (unit AC, outdoor AC ) NYY",
+        "source_ref": "XLSX:Table 1!B203"
+      },
+      {
+        "label": null,
+        "value": "Kabel kontrol NYA",
+        "source_ref": "XLSX:Table 1!B204"
+      },
+      {
+        "label": null,
+        "value": "kabel Feeder",
+        "source_ref": "XLSX:Table 1!B205"
+      },
+      {
+        "label": null,
+        "value": "Graunding",
+        "source_ref": "XLSX:Table 1!B206"
+      }
+    ],
+    "quantity": 1,
+    "unit": "ls"
+  },
+  "konstruksi_unit_indoor_outdoor": {
+    "name": "Konstruksi Unit Indoor & Outdoor",
+    "section": "B",
+    "section_name": "PEKERJAAN HVAC SYSTEM",
+    "source_ref": "XLSX:Table 1!B207",
+    "specs": [],
+    "quantity": 1,
+    "unit": "Ls"
+  },
+  "peralatan_utama": {
+    "name": "Peralatan Utama",
+    "section": "C",
+    "section_name": "PEKERJAAN GAS MEDIC",
+    "source_ref": "XLSX:Table 1!B210",
+    "specs": [
+      {
+        "label": null,
+        "value": "- LED Automatic Manifold",
+        "source_ref": "XLSX:Table 1!B211"
+      },
+      {
+        "label": "Input Power",
+        "value": "110V to 240 V, 50Hz to 60 Hz",
+        "source_ref": "XLSX:Table 1!E212"
+      },
+      {
+        "label": "Max Input Pressure",
+        "value": "200 bar",
+        "source_ref": "XLSX:Table 1!E213"
+      },
+      {
+        "label": "Output Pressure",
+        "value": "0-12 bar(Adjustable)",
+        "source_ref": "XLSX:Table 1!E214"
+      },
+      {
+        "label": "Switching Pressure",
+        "value": "6-10 bar(Adjustable)",
+        "source_ref": "XLSX:Table 1!E215"
+      },
+      {
+        "label": "Applicable Gas",
+        "value": "O2, Air, CO2, N2, and N2O",
+        "source_ref": "XLSX:Table 1!E216"
+      },
+      {
+        "label": "Max Flow",
+        "value": "100m3/h(Customizable)",
+        "source_ref": "XLSX:Table 1!E217"
+      },
+      {
+        "label": "Inlet Connection",
+        "value": "1/2”(Customizable)",
+        "source_ref": "XLSX:Table 1!E218"
+      },
+      {
+        "label": "Outlet Connection",
+        "value": "22mm(Customizable)",
+        "source_ref": "XLSX:Table 1!E219"
+      },
+      {
+        "label": "Dimensions",
+        "value": "600mm × 500mm × 200mm",
+        "source_ref": "XLSX:Table 1!E220"
+      },
+      {
+        "label": null,
+        "value": "Safety Valve Opening Pressure",
+        "source_ref": "XLSX:Table 1!B221"
+      },
+      {
+        "label": "Primary Pressure Reducer",
+        "value": "18 bar",
+        "source_ref": "XLSX:Table 1!E222"
+      },
+      {
+        "label": "Secondary Pressure Reducer",
+        "value": "10 bar",
+        "source_ref": "XLSX:Table 1!E223"
+      },
+      {
+        "label": null,
+        "value": "- Alarm system and remote alarming",
+        "source_ref": "XLSX:Table 1!B224"
+      },
+      {
+        "label": null,
+        "value": "input : 15Mpa,output : 200m3/h, 0.4 - 0.8 Mpa",
+        "source_ref": "XLSX:Table 1!B225"
+      },
+      {
+        "label": null,
+        "value": "100% pressure test .safe and reliable",
+        "source_ref": "XLSX:Table 1!B226"
+      },
+      {
+        "label": null,
+        "value": "- LED Alarm gas",
+        "source_ref": "XLSX:Table 1!B227"
+      },
+      {
+        "label": null,
+        "value": "Input Power: 110VAC to 240 VAC, 50 Hz to 60 Hz",
+        "source_ref": "XLSX:Table 1!B228"
+      },
+      {
+        "label": null,
+        "value": "Pressure Range: -0.1~1.0 Mpa",
+        "source_ref": "XLSX:Table 1!B229"
+      },
+      {
+        "label": null,
+        "value": "LED Size: 0.8 Inch",
+        "source_ref": "XLSX:Table 1!B230"
+      },
+      {
+        "label": null,
+        "value": "Accuracy: ±1.5%",
+        "source_ref": "XLSX:Table 1!B231"
+      },
+      {
+        "label": null,
+        "value": "Applicable Gas: O2, Air, Vac, N2 and N2o, Etc",
+        "source_ref": "XLSX:Table 1!B232"
+      },
+      {
+        "label": null,
+        "value": "Installation Type: Wall-Mounted or Embedded in The Wall",
+        "source_ref": "XLSX:Table 1!B233"
+      },
+      {
+        "label": null,
+        "value": "- Zone Box Valve 5 Gas",
+        "source_ref": "XLSX:Table 1!B234"
+      },
+      {
+        "label": null,
+        "value": "Model: ZV-XXXXX, Gas Point: 5-GAS, Dimensions: 450 mm x 775 mm x 103 mm",
+        "source_ref": "XLSX:Table 1!B235"
+      },
+      {
+        "label": null,
+        "value": "NFPA /ISO full color standard",
+        "source_ref": "XLSX:Table 1!B236"
+      },
+      {
+        "label": null,
+        "value": "Applicable gas: O2, Air, Vac, CO2, N2, and N2O, etc.",
+        "source_ref": "XLSX:Table 1!B237"
+      },
+      {
+        "label": null,
+        "value": "Dome loaded regulator",
+        "source_ref": "XLSX:Table 1!B238"
+      },
+      {
+        "label": null,
+        "value": "Removable acrylic observation window",
+        "source_ref": "XLSX:Table 1!B239"
+      },
+      {
+        "label": null,
+        "value": "Features a pull-out with the ring",
+        "source_ref": "XLSX:Table 1!B240"
+      },
+      {
+        "label": null,
+        "value": "Stainless steel pressure gauge shows gas pressure",
+        "source_ref": "XLSX:Table 1!B241"
+      },
+      {
+        "label": null,
+        "value": "Valve size: 1/2″ to 2-1/2″",
+        "source_ref": "XLSX:Table 1!B242"
+      },
+      {
+        "label": null,
+        "value": "Wall-mounted or embedded in the wall",
+        "source_ref": "XLSX:Table 1!B243"
+      },
+      {
+        "label": null,
+        "value": "- Header O2",
+        "source_ref": "XLSX:Table 1!B244"
+      }
+    ],
+    "quantity": 1,
+    "unit": "set"
+  },
+  "pemipaan_gas_medis_o2_co2_vacuum_air_compress_n2o": {
+    "name": "Pemipaan Gas Medis O2,CO2 , Vacuum,Air compress,N2O",
+    "section": "C",
+    "section_name": "PEKERJAAN GAS MEDIC",
+    "source_ref": "XLSX:Table 1!B246",
+    "specs": [
+      {
+        "label": null,
+        "value": "Pipa Tembaga Gas medis ASTM B-819  1/2'",
+        "source_ref": "XLSX:Table 1!B247"
+      },
+      {
+        "label": null,
+        "value": "Pipa Tembaga Gas Medis  ASTM B-819 1 1/8'",
+        "source_ref": "XLSX:Table 1!B248"
+      },
+      {
+        "label": null,
+        "value": "Pipa Tembaga Gas Medis ASTM B-819 3/4'",
+        "source_ref": "XLSX:Table 1!B249"
+      },
+      {
+        "label": null,
+        "value": "- Fittings",
+        "source_ref": "XLSX:Table 1!B250"
+      }
+    ],
+    "quantity": 1,
+    "unit": "set"
+  }
+}
