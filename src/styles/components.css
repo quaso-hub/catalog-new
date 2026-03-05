@@ -1453,9 +1453,9 @@
 }
 
 .spec-inline {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-1) var(--space-2);
   font-size: var(--text-xs);
   color: var(--color-neutral-600);
   margin-top: var(--space-2);
@@ -1464,14 +1464,19 @@
 }
 
 .spec-inline span {
-  background: var(--color-white);
-  padding: var(--space-1) var(--space-2);
+  background: var(--color-neutral-50);
+  padding: 3px var(--space-2);
   border-radius: 2px;
   border: 1px solid var(--color-neutral-200);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
 }
 
 .spec-inline strong {
   color: var(--color-primary-700);
+  font-weight: var(--font-medium);
 }
 
 .product-image-placeholder--medium {
