@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 500 250"
+     width="100%" height="auto"
+     font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+
+  <defs>
+    <marker id="arrow-teal" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#0d9488"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="250" y="22" font-size="14" font-weight="700" fill="#003366" text-anchor="middle">SYSTEM ARCHITECTURE</text>
+  <text x="250" y="36" font-size="9" fill="#64748b" text-anchor="middle">Integrated MOT Control System</text>
+
+  <!-- ==================== Control Panel (center top, navy fill) ==================== -->
+  <rect x="175" y="48" width="150" height="50" fill="#003366" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="250" y="65" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">CONTROL PANEL</text>
+  <text x="250" y="78" font-size="8" fill="#ccfbf1" text-anchor="middle">Surgical Control Hub</text>
+  <text x="250" y="90" font-size="7" fill="#ccfbf1" text-anchor="middle">Modbus TCP/IP</text>
+
+  <!-- Vertical line from control panel to horizontal bar -->
+  <line x1="250" y1="98" x2="250" y2="112" stroke="#0d9488" stroke-width="1.5"/>
+
+  <!-- Horizontal distribution bar -->
+  <line x1="60" y1="112" x2="440" y2="112" stroke="#0d9488" stroke-width="1.5"/>
+
+  <!-- Vertical drops to 5 subsystem boxes -->
+  <line x1="60" y1="112" x2="60" y2="130" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <line x1="155" y1="112" x2="155" y2="130" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <line x1="250" y1="112" x2="250" y2="130" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <line x1="345" y1="112" x2="345" y2="130" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <line x1="440" y1="112" x2="440" y2="130" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+
+  <!-- ==================== 5 Subsystem Boxes ==================== -->
+  <!-- Box 1: Wall & Ceiling -->
+  <rect x="10" y="135" width="100" height="50" fill="#f1f5f9" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="60" y="155" font-size="9" font-weight="600" fill="#003366" text-anchor="middle">Wall &amp; Ceiling</text>
+  <text x="60" y="170" font-size="7" fill="#64748b" text-anchor="middle">PIR Panel System</text>
+
+  <!-- Box 2: Door Systems -->
+  <rect x="115" y="135" width="80" height="50" fill="#f1f5f9" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="155" y="155" font-size="9" font-weight="600" fill="#003366" text-anchor="middle">Door Systems</text>
+  <text x="155" y="170" font-size="7" fill="#64748b" text-anchor="middle">Hermetic &amp; Swing</text>
+
+  <!-- Box 3: HVAC & LAF -->
+  <rect x="200" y="135" width="100" height="50" fill="#f1f5f9" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="250" y="155" font-size="9" font-weight="600" fill="#003366" text-anchor="middle">HVAC &amp; LAF</text>
+  <text x="250" y="170" font-size="7" fill="#64748b" text-anchor="middle">ISO Class 5</text>
+
+  <!-- Box 4: Lighting -->
+  <rect x="305" y="135" width="80" height="50" fill="#f1f5f9" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="345" y="155" font-size="9" font-weight="600" fill="#003366" text-anchor="middle">Lighting</text>
+  <text x="345" y="170" font-size="7" fill="#64748b" text-anchor="middle">LED Shadowless</text>
+
+  <!-- Box 5: Medical Gas -->
+  <rect x="390" y="135" width="100" height="50" fill="#f1f5f9" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="440" y="155" font-size="9" font-weight="600" fill="#003366" text-anchor="middle">Medical Gas</text>
+  <text x="440" y="170" font-size="7" fill="#64748b" text-anchor="middle">OHMEDA Standard</text>
+
+  <!-- ==================== Surgical Zone (bottom, optional) ==================== -->
+  <!-- Dashed line from horizontal bar down to surgical zone -->
+  <line x1="250" y1="185" x2="250" y2="198" stroke="#0d9488" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <rect x="150" y="200" width="200" height="40" fill="rgba(13,148,136,0.08)" stroke="#0d9488" stroke-width="1.5" stroke-dasharray="6,3" rx="4"/>
+  <text x="250" y="218" font-size="9" font-weight="600" fill="#0d9488" text-anchor="middle">SURGICAL ZONE</text>
+  <text x="250" y="232" font-size="7" fill="#64748b" text-anchor="middle">Operating Table &#x2022; Pendants &#x2022; Surgical Lights</text>
+
+</svg>

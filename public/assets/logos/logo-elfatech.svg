@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 100" width="320" height="100">
+  <!-- 
+    ELFATECH Logo - Accurate Recreation from Original PNG
+    Design: Navy medical cross + human figure with extended arms + "elfatech" text
+    Colors: Primary Navy #2d3e6e, Accent Purple #5c5c96
+  -->
+  <defs>
+    <linearGradient id="crossGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a4d7a"/>
+      <stop offset="100%" style="stop-color:#2d3e6e"/>
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4a4a8a"/>
+      <stop offset="100%" style="stop-color:#6565a0"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Medical Cross Shape -->
+  <g transform="translate(8, 5)">
+    <!-- Cross - Top extension (rounded top) -->
+    <path d="M32,0 C32,0 40,0 48,0 C56,0 58,4 58,8 L58,28 L32,28 L22,28 C18,28 18,24 18,20 L18,8 C18,4 22,0 26,0 Z" fill="url(#crossGradient)"/>
+    
+    <!-- Cross - Left extension (curved bottom-left) -->
+    <path d="M0,35 C0,31 4,28 8,28 L22,28 L22,65 C22,72 16,78 10,78 C4,78 0,74 0,68 L0,35 Z" fill="url(#crossGradient)"/>
+    
+    <!-- Cross - Right/Body extension (main body going down) -->
+    <path d="M58,28 L58,82 C58,88 52,92 46,92 L34,92 C28,92 22,88 22,82 L22,65 L22,28 Z" fill="url(#crossGradient)"/>
+    
+    <!-- Accent Swoosh (left inner curve - purple/blue tint) -->
+    <path d="M8,62 Q12,72 28,78 Q18,76 12,68 Q6,58 8,45 Q10,55 14,62 Z" fill="url(#accentGradient)"/>
+    
+    <!-- Human Figure - Head (white circle) -->
+    <circle cx="40" cy="40" r="9" fill="#ffffff"/>
+    
+    <!-- Human Figure - Body (white curved shape) -->
+    <path d="M34,52 Q40,65 46,52 L44,72 Q40,78 36,72 Z" fill="#ffffff"/>
+    
+    <!-- Human Figure - Left Arm (curved extension) -->
+    <path d="M30,54 Q22,50 16,56 Q20,60 28,56 Q30,55 32,54 Z" fill="#ffffff"/>
+    
+    <!-- Human Figure - Right Arm (curved extension) -->
+    <path d="M50,54 Q58,50 64,56 Q60,60 52,56 Q50,55 48,54 Z" fill="#ffffff"/>
+  </g>
+  
+  <!-- Logo Text: "elfatech" -->
+  <text x="95" y="68" font-family="Inter, Arial, Helvetica, sans-serif" font-size="42" font-weight="700" fill="#2d3e6e" letter-spacing="-0.5">elfatech</text>
+</svg>

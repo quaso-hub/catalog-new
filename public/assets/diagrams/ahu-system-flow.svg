@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 500 580"
+     width="100%" height="auto"
+     font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+
+  <defs>
+    <marker id="arrow-teal" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#0d9488"/>
+    </marker>
+    <marker id="arrow-teal-right" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto">
+      <polygon points="0 3, 8 0, 8 6" fill="#0d9488"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="250" y="22" font-size="14" font-weight="700" fill="#003366" text-anchor="middle">AHU SYSTEM FLOW DIAGRAM</text>
+  <text x="250" y="38" font-size="9" fill="#64748b" text-anchor="middle">Air Handling Unit &#x2192; Ducting &#x2192; Laminar Air Flow &#x2192; Operating Room</text>
+
+  <!-- ==================== ROW 1: Outdoor Unit + Control Panel ==================== -->
+  <!-- Outdoor Unit (left) -->
+  <rect x="30" y="50" width="200" height="55" fill="#f1f5f9" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="130" y="68" font-size="10" font-weight="600" fill="#003366" text-anchor="middle">OUTDOOR UNIT &#x2014; DAIKIN</text>
+  <text x="130" y="81" font-size="8" fill="#64748b" text-anchor="middle">12 hp | 120,000 BTU/h</text>
+  <text x="130" y="93" font-size="8" fill="#64748b" text-anchor="middle">Refrigerant: R410</text>
+
+  <!-- Control Panel AHU (right) -->
+  <rect x="270" y="50" width="200" height="55" fill="#f1f5f9" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="370" y="68" font-size="10" font-weight="600" fill="#003366" text-anchor="middle">CONTROL PANEL AHU</text>
+  <text x="370" y="81" font-size="8" fill="#64748b" text-anchor="middle">PLC + HMI 7" Touch</text>
+  <text x="370" y="93" font-size="8" fill="#64748b" text-anchor="middle">900 &#xD7; 600 &#xD7; 250 mm</text>
+
+  <!-- Dashed line between Outdoor and Control Panel -->
+  <line x1="230" y1="77" x2="270" y2="77" stroke="#64748b" stroke-width="1" stroke-dasharray="4,3"/>
+  <rect x="232" y="64" width="36" height="10" fill="white" opacity="0.9"/>
+  <text x="250" y="72" font-size="7" fill="#64748b" text-anchor="middle" font-style="italic">Control Signal</text>
+
+  <!-- Arrow Outdoor → AHU -->
+  <line x1="130" y1="105" x2="130" y2="125" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <text x="148" y="118" font-size="7" fill="#64748b">ASTM B280 Pipe</text>
+
+  <!-- ==================== ROW 2: AHU Double Skin (BIG BOX) ==================== -->
+  <rect x="30" y="130" width="440" height="180" fill="#f8fafc" stroke="#003366" stroke-width="2" rx="4"/>
+  <text x="250" y="148" font-size="12" font-weight="700" fill="#003366" text-anchor="middle">AHU DOUBLE SKIN</text>
+  <text x="250" y="162" font-size="8" fill="#64748b" text-anchor="middle">1200 &#xD7; 3000 &#xD7; 930 mm</text>
+
+  <!-- Internal sub-boxes Row 1 (horizontal flow, left to right) -->
+  <!-- Sub-box 1: Pre-Filter -->
+  <rect x="45" y="175" width="85" height="50" fill="#f1f5f9" stroke="#003366" stroke-width="1" rx="3"/>
+  <text x="87" y="190" font-size="9" font-weight="600" fill="#003366" text-anchor="middle">Pre-Filter</text>
+  <text x="87" y="201" font-size="9" fill="#1a1a1a" text-anchor="middle">G4</text>
+  <text x="87" y="212" font-size="7" fill="#64748b" text-anchor="middle">30-65% eff.</text>
+  <text x="87" y="221" font-size="7" fill="#64748b" text-anchor="middle">24"&#xD7;24"&#xD7;2"</text>
+
+  <!-- Arrow → -->
+  <line x1="130" y1="200" x2="145" y2="200" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+
+  <!-- Sub-box 2: Medium Filter -->
+  <rect x="150" y="175" width="85" height="50" fill="#f1f5f9" stroke="#003366" stroke-width="1" rx="3"/>
+  <text x="192" y="190" font-size="9" font-weight="600" fill="#003366" text-anchor="middle">Medium Filter</text>
+  <text x="192" y="201" font-size="9" fill="#1a1a1a" text-anchor="middle">F8/F9</text>
+  <text x="192" y="212" font-size="7" fill="#64748b" text-anchor="middle">90-95% eff.</text>
+
+  <!-- Arrow → -->
+  <line x1="235" y1="200" x2="250" y2="200" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+
+  <!-- Sub-box 3: UV-C -->
+  <rect x="255" y="175" width="70" height="50" fill="#f1f5f9" stroke="#003366" stroke-width="1" rx="3"/>
+  <text x="290" y="190" font-size="9" font-weight="600" fill="#003366" text-anchor="middle">UV-C Lamp</text>
+  <text x="290" y="201" font-size="8" fill="#1a1a1a" text-anchor="middle">Philips</text>
+  <text x="290" y="212" font-size="7" fill="#64748b" text-anchor="middle">30-72W</text>
+
+  <!-- Arrow → -->
+  <line x1="325" y1="200" x2="340" y2="200" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+
+  <!-- Sub-box 4: Coil Evaporator -->
+  <rect x="345" y="175" width="110" height="50" fill="#f1f5f9" stroke="#003366" stroke-width="1" rx="3"/>
+  <text x="400" y="190" font-size="9" font-weight="600" fill="#003366" text-anchor="middle">Coil Evaporator</text>
+  <text x="400" y="201" font-size="7" fill="#64748b" text-anchor="middle">10 hp, 100,000 BTU/h</text>
+  <text x="400" y="212" font-size="7" fill="#64748b" text-anchor="middle">R410, 3000 cfm</text>
+
+  <!-- Internal sub-boxes Row 2 -->
+  <!-- Sub-box 5: Heater -->
+  <rect x="100" y="248" width="130" height="40" fill="#f1f5f9" stroke="#003366" stroke-width="1" rx="3"/>
+  <text x="165" y="262" font-size="9" font-weight="600" fill="#003366" text-anchor="middle">Heater 4500W</text>
+  <text x="165" y="273" font-size="7" fill="#64748b" text-anchor="middle">SS304 tube+finned</text>
+  <text x="165" y="282" font-size="7" fill="#64748b" text-anchor="middle">750W &#xD7; 6 elements</text>
+
+  <!-- Arrow → -->
+  <line x1="230" y1="268" x2="260" y2="268" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+
+  <!-- Sub-box 6: Boster Fan -->
+  <rect x="265" y="248" width="150" height="40" fill="#f1f5f9" stroke="#003366" stroke-width="1" rx="3"/>
+  <text x="340" y="262" font-size="9" font-weight="600" fill="#003366" text-anchor="middle">Boster Fan</text>
+  <text x="340" y="273" font-size="8" fill="#1a1a1a" text-anchor="middle">&#xB1;3000 cfm | 1000 Pa</text>
+  <text x="340" y="282" font-size="7" fill="#64748b" text-anchor="middle">Magneheic 0-500 Pa</text>
+
+  <!-- Arrow AHU → Ducting -->
+  <line x1="250" y1="310" x2="250" y2="330" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <text x="268" y="323" font-size="8" fill="#64748b">Supply Duct</text>
+
+  <!-- ==================== ROW 3: Ducting System ==================== -->
+  <rect x="100" y="335" width="300" height="45" fill="#f1f5f9" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="250" y="353" font-size="10" font-weight="600" fill="#003366" text-anchor="middle">DUCTING SYSTEM</text>
+  <text x="250" y="366" font-size="8" fill="#64748b" text-anchor="middle">PIU TDI 20mm | &#xB1;100 m&#xB2;</text>
+  <text x="250" y="377" font-size="8" fill="#64748b" text-anchor="middle">Volume Damper + Perforated Grill</text>
+
+  <!-- Arrow Ducting → LAF -->
+  <line x1="250" y1="380" x2="250" y2="400" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+
+  <!-- ==================== ROW 4: Laminar Air Flow ==================== -->
+  <rect x="120" y="405" width="260" height="40" fill="#e0f2f1" stroke="#0d9488" stroke-width="1.5" rx="4"/>
+  <text x="250" y="421" font-size="10" font-weight="600" fill="#0d9488" text-anchor="middle">LAMINAR AIR FLOW</text>
+  <text x="250" y="434" font-size="8" fill="#1a1a1a" text-anchor="middle">HEPA H14 &#x2014; 99.99% eff. | 24" &#xD7; 48" &#xD7; 3"</text>
+
+  <!-- Supply air arrows (5 arrows) -->
+  <line x1="170" y1="445" x2="170" y2="470" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <line x1="210" y1="445" x2="210" y2="470" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <line x1="250" y1="445" x2="250" y2="470" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <line x1="290" y1="445" x2="290" y2="470" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <line x1="330" y1="445" x2="330" y2="470" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <text x="365" y="462" font-size="8" fill="#0d9488" font-weight="500">Supply Air</text>
+
+  <!-- ==================== ROW 5: Operating Room ==================== -->
+  <rect x="100" y="480" width="300" height="50" fill="rgba(13,148,136,0.08)" stroke="#0d9488" stroke-width="1.5" stroke-dasharray="6,3" rx="4"/>
+  <text x="250" y="502" font-size="11" font-weight="600" fill="#0d9488" text-anchor="middle">OPERATING ROOM</text>
+  <text x="250" y="518" font-size="8" fill="#64748b" text-anchor="middle">ISO Class 5-7 | 18-24&#xB0;C | 40-60% RH</text>
+
+  <!-- Bottom padding -->
+  <text x="250" y="548" font-size="8" fill="#64748b" text-anchor="middle">All specifications per spek-mot.md</text>
+
+</svg>

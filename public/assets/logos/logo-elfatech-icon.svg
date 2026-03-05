@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 90" width="80" height="90">
+  <!-- 
+    ELFATECH Logo - Header Icon Version (Icon Only)
+    Smaller version for use in page headers
+  -->
+  <defs>
+    <linearGradient id="crossGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3a4d7a"/>
+      <stop offset="100%" style="stop-color:#2d3e6e"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4a4a8a"/>
+      <stop offset="100%" style="stop-color:#6565a0"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Medical Cross Shape -->
+  <g transform="translate(5, 2)">
+    <!-- Cross - Top extension -->
+    <path d="M28,0 C28,0 35,0 42,0 C50,0 52,4 52,8 L52,25 L28,25 L18,25 C14,25 14,21 14,17 L14,8 C14,4 18,0 22,0 Z" fill="url(#crossGrad)"/>
+    
+    <!-- Cross - Left extension -->
+    <path d="M0,32 C0,28 4,25 8,25 L18,25 L18,58 C18,65 12,70 6,70 C0,70 0,66 0,60 L0,32 Z" fill="url(#crossGrad)"/>
+    
+    <!-- Cross - Right/Body extension -->
+    <path d="M52,25 L52,75 C52,81 46,85 40,85 L30,85 C24,85 18,81 18,75 L18,58 L18,25 Z" fill="url(#crossGrad)"/>
+    
+    <!-- Accent Swoosh -->
+    <path d="M6,55 Q10,65 24,70 Q14,68 10,60 Q4,52 6,40 Q8,50 12,55 Z" fill="url(#accentGrad)"/>
+    
+    <!-- Human Figure - Head -->
+    <circle cx="35" cy="36" r="8" fill="#ffffff"/>
+    
+    <!-- Human Figure - Body -->
+    <path d="M29,47 Q35,58 41,47 L39,65 Q35,70 31,65 Z" fill="#ffffff"/>
+    
+    <!-- Human Figure - Left Arm -->
+    <path d="M26,49 Q18,45 12,51 Q16,55 24,51 Q26,50 28,49 Z" fill="#ffffff"/>
+    
+    <!-- Human Figure - Right Arm -->
+    <path d="M44,49 Q52,45 58,51 Q54,55 46,51 Q44,50 42,49 Z" fill="#ffffff"/>
+  </g>
+</svg>

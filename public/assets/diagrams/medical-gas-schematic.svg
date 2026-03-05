@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 450 520"
+     width="100%" height="auto"
+     font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+
+  <defs>
+    <!-- Arrowhead marker (teal — untuk flow arrows) -->
+    <marker id="arrow-teal" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#0d9488"/>
+    </marker>
+
+    <!-- Arrowhead marker (navy — untuk dimension arrows) -->
+    <marker id="arrow-navy" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#003366"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="225" y="22" font-size="14" font-weight="700" fill="#003366" text-anchor="middle">MEDICAL GAS DISTRIBUTION SYSTEM</text>
+  <text x="225" y="38" font-size="9" fill="#64748b" text-anchor="middle">Complete Flow: Source to OHMEDA Outlets</text>
+
+  <!-- ==================== ROW 1: Gas Cylinder Bank ==================== -->
+  <rect x="125" y="50" width="200" height="40" fill="#f1f5f9" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="225" y="67" font-size="10" font-weight="600" fill="#003366" text-anchor="middle">GAS CYLINDER BANK</text>
+  <text x="225" y="80" font-size="8" fill="#64748b" text-anchor="middle">High Pressure Supply (max 200 bar)</text>
+
+  <!-- Arrow ROW1 → ROW2 -->
+  <line x1="225" y1="90" x2="225" y2="110" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+
+  <!-- ==================== ROW 2: LED Automatic Manifold ==================== -->
+  <rect x="100" y="115" width="250" height="65" fill="#f1f5f9" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="225" y="132" font-size="11" font-weight="600" fill="#003366" text-anchor="middle">LED AUTOMATIC MANIFOLD</text>
+  <text x="225" y="145" font-size="8" fill="#1a1a1a" text-anchor="middle">Input: 200 bar max &#x2192; Output: 0–12 bar (adjustable)</text>
+  <text x="225" y="157" font-size="8" fill="#64748b" text-anchor="middle">Max Flow: 100 m&#xB3;/h | 600 &#xD7; 500 &#xD7; 200 mm</text>
+  <text x="225" y="169" font-size="8" fill="#64748b" text-anchor="middle">Power: 110–240V, 50/60 Hz</text>
+
+  <!-- Arrow ROW2 → ROW3 (branching) -->
+  <line x1="225" y1="180" x2="225" y2="195" stroke="#0d9488" stroke-width="1.5"/>
+  <line x1="120" y1="195" x2="330" y2="195" stroke="#0d9488" stroke-width="1.5"/>
+  <line x1="120" y1="195" x2="120" y2="210" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <line x1="225" y1="195" x2="225" y2="210" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <line x1="330" y1="195" x2="330" y2="210" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+
+  <!-- ==================== ROW 3: Three boxes side-by-side ==================== -->
+  <!-- Box 3a: Header O2 -->
+  <rect x="65" y="215" width="110" height="45" fill="#f1f5f9" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="120" y="233" font-size="10" font-weight="600" fill="#003366" text-anchor="middle">HEADER O&#x2082;</text>
+  <text x="120" y="248" font-size="8" fill="#64748b" text-anchor="middle">Main equipment</text>
+
+  <!-- Box 3b: Alarm System -->
+  <rect x="180" y="215" width="90" height="45" fill="#f1f5f9" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="225" y="230" font-size="9" font-weight="600" fill="#003366" text-anchor="middle">ALARM</text>
+  <text x="225" y="241" font-size="9" font-weight="600" fill="#003366" text-anchor="middle">SYSTEM</text>
+  <text x="225" y="253" font-size="7" fill="#64748b" text-anchor="middle">15 MPa &#x2192; 0.4–0.8 MPa</text>
+
+  <!-- Box 3c: LED Alarm Gas -->
+  <rect x="275" y="215" width="110" height="45" fill="#f1f5f9" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="330" y="233" font-size="9" font-weight="600" fill="#003366" text-anchor="middle">LED ALARM GAS</text>
+  <text x="330" y="245" font-size="7" fill="#64748b" text-anchor="middle">Accuracy: &#xB1;1.5%</text>
+  <text x="330" y="255" font-size="7" fill="#64748b" text-anchor="middle">110–240 VAC</text>
+
+  <!-- Arrow ROW3 → ROW4 -->
+  <line x1="120" y1="260" x2="120" y2="275" stroke="#0d9488" stroke-width="1.5"/>
+  <line x1="120" y1="275" x2="225" y2="275" stroke="#0d9488" stroke-width="1.5"/>
+  <line x1="225" y1="275" x2="225" y2="290" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+
+  <!-- ==================== ROW 4: Copper Pipeline ==================== -->
+  <rect x="100" y="295" width="250" height="45" fill="#f1f5f9" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="225" y="313" font-size="10" font-weight="600" fill="#003366" text-anchor="middle">COPPER PIPELINE ASTM B-819</text>
+  <text x="225" y="328" font-size="8" fill="#64748b" text-anchor="middle">Sizes: 1/2" | 3/4" | 1 1/8" (medical grade)</text>
+
+  <!-- Arrow ROW4 → ROW5 -->
+  <line x1="225" y1="340" x2="225" y2="360" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+
+  <!-- ==================== ROW 5: Zone Box Valve ==================== -->
+  <rect x="100" y="365" width="250" height="50" fill="#f1f5f9" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="225" y="382" font-size="10" font-weight="600" fill="#003366" text-anchor="middle">ZONE BOX VALVE 5 GAS</text>
+  <text x="225" y="395" font-size="8" fill="#64748b" text-anchor="middle">Model: ZV-XXXXX | 450 &#xD7; 775 &#xD7; 103 mm</text>
+  <text x="225" y="407" font-size="8" fill="#64748b" text-anchor="middle">NFPA / ISO Standard | Dome loaded regulator</text>
+
+  <!-- Arrow ROW5 → ROW6 (distribution) -->
+  <line x1="225" y1="415" x2="225" y2="430" stroke="#0d9488" stroke-width="1.5"/>
+  <line x1="45" y1="430" x2="405" y2="430" stroke="#0d9488" stroke-width="1.5"/>
+  <!-- 6 vertical drops -->
+  <line x1="45" y1="430" x2="45" y2="445" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <line x1="117" y1="430" x2="117" y2="445" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <line x1="189" y1="430" x2="189" y2="445" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <line x1="261" y1="430" x2="261" y2="445" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <line x1="333" y1="430" x2="333" y2="445" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+  <line x1="405" y1="430" x2="405" y2="445" stroke="#0d9488" stroke-width="1.5" marker-end="url(#arrow-teal)"/>
+
+  <!-- ==================== ROW 6: Gas Outlet Boxes ==================== -->
+  <!-- O2 - GREEN -->
+  <rect x="15" y="450" width="60" height="50" fill="#22c55e" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="45" y="467" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">O&#x2082;</text>
+  <text x="45" y="480" font-size="8" font-weight="600" fill="#ffffff" text-anchor="middle">GREEN</text>
+  <text x="45" y="492" font-size="7" fill="#ffffff" text-anchor="middle">4.0 bar</text>
+
+  <!-- Air - YELLOW -->
+  <rect x="87" y="450" width="60" height="50" fill="#fbbf24" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="117" y="467" font-size="11" font-weight="700" fill="#1a1a1a" text-anchor="middle">Air</text>
+  <text x="117" y="480" font-size="8" font-weight="600" fill="#1a1a1a" text-anchor="middle">YELLOW</text>
+  <text x="117" y="492" font-size="7" fill="#1a1a1a" text-anchor="middle">4.0 bar</text>
+
+  <!-- Vacuum - WHITE -->
+  <rect x="159" y="450" width="60" height="50" fill="#ffffff" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="189" y="467" font-size="11" font-weight="700" fill="#003366" text-anchor="middle">Vac</text>
+  <text x="189" y="480" font-size="8" font-weight="600" fill="#003366" text-anchor="middle">WHITE</text>
+  <text x="189" y="492" font-size="7" fill="#003366" text-anchor="middle">-0.6 bar</text>
+
+  <!-- N2O - BLUE -->
+  <rect x="231" y="450" width="60" height="50" fill="#3b82f6" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="261" y="467" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">N&#x2082;O</text>
+  <text x="261" y="480" font-size="8" font-weight="600" fill="#ffffff" text-anchor="middle">BLUE</text>
+  <text x="261" y="492" font-size="7" fill="#ffffff" text-anchor="middle">4.0 bar</text>
+
+  <!-- CO2 - GREY -->
+  <rect x="303" y="450" width="60" height="50" fill="#6b7280" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="333" y="467" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">CO&#x2082;</text>
+  <text x="333" y="480" font-size="8" font-weight="600" fill="#ffffff" text-anchor="middle">GREY</text>
+  <text x="333" y="492" font-size="7" fill="#ffffff" text-anchor="middle">4.0 bar</text>
+
+  <!-- AGSS - PURPLE -->
+  <rect x="375" y="450" width="60" height="50" fill="#8b5cf6" stroke="#003366" stroke-width="1.5" rx="4"/>
+  <text x="405" y="467" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">AGSS</text>
+  <text x="405" y="480" font-size="8" font-weight="600" fill="#ffffff" text-anchor="middle">PURPLE</text>
+  <text x="405" y="492" font-size="7" fill="#ffffff" text-anchor="middle">Passive</text>
+
+  <!-- Bottom Label -->
+  <text x="225" y="515" font-size="9" font-weight="600" fill="#003366" text-anchor="middle">OHMEDA Standard Gas Outlets</text>
+
+</svg>

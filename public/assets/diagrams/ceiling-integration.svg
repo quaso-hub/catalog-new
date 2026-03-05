@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 400 300"
+     width="100%" height="auto"
+     font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+
+  <defs>
+    <pattern id="ceiling-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e2e8f0" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="200" y="20" font-size="14" font-weight="700" fill="#003366" text-anchor="middle">CEILING INTEGRATION</text>
+  <text x="200" y="34" font-size="9" fill="#64748b" text-anchor="middle">Top-Down View &#x2014; Ceiling Mounting Points</text>
+
+  <!-- ==================== Room outline (6m x 6m represented) ==================== -->
+  <rect x="50" y="50" width="300" height="220" fill="url(#ceiling-grid)" stroke="#003366" stroke-width="2" rx="2"/>
+
+  <!-- Room label -->
+  <text x="200" y="64" font-size="8" fill="#64748b" text-anchor="middle">OR Room Ceiling &#x2014; 6000 &#xD7; 6000 mm</text>
+
+  <!-- ==================== LAF Zone (center, 2400 x 2400) ==================== -->
+  <!-- Scale: 300px = 6000mm, so 2400mm = 120px -->
+  <rect x="140" y="110" width="120" height="120" fill="#e0f2f1" stroke="#0d9488" stroke-width="1.5" stroke-dasharray="5,3" rx="2"/>
+  <text x="200" y="165" font-size="9" font-weight="600" fill="#0d9488" text-anchor="middle">LAMINAR AIR FLOW</text>
+  <text x="200" y="178" font-size="7" fill="#64748b" text-anchor="middle">2400 &#xD7; 2400 mm</text>
+  <text x="200" y="189" font-size="7" fill="#64748b" text-anchor="middle">HEPA H14 &#x2014; 99.99%</text>
+
+  <!-- ==================== Shadowless Lamp (center of LAF) ==================== -->
+  <!-- Two lamp heads side by side -->
+  <circle cx="185" cy="150" r="12" fill="none" stroke="#b8860b" stroke-width="1" stroke-dasharray="3,2"/>
+  <circle cx="185" cy="150" r="6" fill="#fff8e1" stroke="#b8860b" stroke-width="0.8"/>
+  <circle cx="185" cy="150" r="2" fill="#ffd54f"/>
+
+  <circle cx="215" cy="150" r="12" fill="none" stroke="#b8860b" stroke-width="1" stroke-dasharray="3,2"/>
+  <circle cx="215" cy="150" r="6" fill="#fff8e1" stroke="#b8860b" stroke-width="0.8"/>
+  <circle cx="215" cy="150" r="2" fill="#ffd54f"/>
+
+  <text x="200" y="138" font-size="7" font-weight="600" fill="#003366" text-anchor="middle">Shadowless 700/700</text>
+
+  <!-- ==================== Pendant mount points ==================== -->
+  <!-- Left pendant -->
+  <circle cx="105" cy="170" r="6" fill="none" stroke="#003366" stroke-width="1" stroke-dasharray="2,1.5"/>
+  <circle cx="105" cy="170" r="2" fill="#003366"/>
+  <text x="105" y="185" font-size="7" fill="#003366" text-anchor="middle" font-weight="500">Pendant L</text>
+
+  <!-- Right pendant -->
+  <circle cx="295" cy="170" r="6" fill="none" stroke="#003366" stroke-width="1" stroke-dasharray="2,1.5"/>
+  <circle cx="295" cy="170" r="2" fill="#003366"/>
+  <text x="295" y="185" font-size="7" fill="#003366" text-anchor="middle" font-weight="500">Pendant R</text>
+
+  <!-- ==================== LED Panel positions ==================== -->
+  <!-- LED Panel 1197x297 = ~60x15 at scale -->
+  <!-- Top row -->
+  <rect x="70" y="75" width="60" height="15" fill="#f1f5f9" stroke="#003366" stroke-width="0.8" rx="1"/>
+  <text x="100" y="85" font-size="5" fill="#64748b" text-anchor="middle">LED 1197&#xD7;297</text>
+
+  <rect x="170" y="75" width="60" height="15" fill="#f1f5f9" stroke="#003366" stroke-width="0.8" rx="1"/>
+  <text x="200" y="85" font-size="5" fill="#64748b" text-anchor="middle">LED 1197&#xD7;297</text>
+
+  <rect x="270" y="75" width="60" height="15" fill="#f1f5f9" stroke="#003366" stroke-width="0.8" rx="1"/>
+  <text x="300" y="85" font-size="5" fill="#64748b" text-anchor="middle">LED 1197&#xD7;297</text>
+
+  <!-- Bottom row -->
+  <rect x="70" y="240" width="60" height="15" fill="#f1f5f9" stroke="#003366" stroke-width="0.8" rx="1"/>
+  <text x="100" y="250" font-size="5" fill="#64748b" text-anchor="middle">LED 1197&#xD7;297</text>
+
+  <rect x="170" y="240" width="60" height="15" fill="#f1f5f9" stroke="#003366" stroke-width="0.8" rx="1"/>
+  <text x="200" y="250" font-size="5" fill="#64748b" text-anchor="middle">LED 1197&#xD7;297</text>
+
+  <rect x="270" y="240" width="60" height="15" fill="#f1f5f9" stroke="#003366" stroke-width="0.8" rx="1"/>
+  <text x="300" y="250" font-size="5" fill="#64748b" text-anchor="middle">LED 1197&#xD7;297</text>
+
+  <!-- Side LEDs (597x597 = ~30x30 at scale) -->
+  <rect x="60" y="105" width="30" height="30" fill="#f1f5f9" stroke="#003366" stroke-width="0.8" rx="1"/>
+  <text x="75" y="122" font-size="5" fill="#64748b" text-anchor="middle">597&#xD7;597</text>
+
+  <rect x="310" y="105" width="30" height="30" fill="#f1f5f9" stroke="#003366" stroke-width="0.8" rx="1"/>
+  <text x="325" y="122" font-size="5" fill="#64748b" text-anchor="middle">597&#xD7;597</text>
+
+  <rect x="60" y="200" width="30" height="30" fill="#f1f5f9" stroke="#003366" stroke-width="0.8" rx="1"/>
+  <text x="75" y="217" font-size="5" fill="#64748b" text-anchor="middle">597&#xD7;597</text>
+
+  <rect x="310" y="200" width="30" height="30" fill="#f1f5f9" stroke="#003366" stroke-width="0.8" rx="1"/>
+  <text x="325" y="217" font-size="5" fill="#64748b" text-anchor="middle">597&#xD7;597</text>
+
+  <!-- ==================== Legend ==================== -->
+  <g transform="translate(60, 278)">
+    <rect x="0" y="0" width="10" height="8" fill="#e0f2f1" stroke="#0d9488" stroke-width="0.5" rx="1"/>
+    <text x="14" y="7" font-size="7" fill="#64748b">LAF Zone</text>
+
+    <circle cx="80" cy="4" r="4" fill="#fff8e1" stroke="#b8860b" stroke-width="0.5"/>
+    <text x="88" y="7" font-size="7" fill="#64748b">Lamp Mount</text>
+
+    <circle cx="150" cy="4" r="3" fill="none" stroke="#003366" stroke-width="0.5" stroke-dasharray="1.5,1"/>
+    <text x="157" y="7" font-size="7" fill="#64748b">Pendant Mount</text>
+
+    <rect x="210" y="0" width="12" height="8" fill="#f1f5f9" stroke="#003366" stroke-width="0.5" rx="1"/>
+    <text x="226" y="7" font-size="7" fill="#64748b">LED Panel</text>
+  </g>
+
+</svg>

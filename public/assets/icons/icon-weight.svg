@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#003366" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Weight/mass icon - kettlebell style -->
+  <circle cx="12" cy="5" r="2"/>
+  <path d="M6 21h12l-2-10H8L6 21z"/>
+  <line x1="12" y1="7" x2="12" y2="11"/>
+  <!-- Cross mark on weight body -->
+  <line x1="10" y1="16" x2="14" y2="16"/>
+  <line x1="12" y1="14" x2="12" y2="18"/>
+</svg>

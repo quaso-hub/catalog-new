@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 800 480"
+     width="100%" height="auto"
+     font-family="Arial, Helvetica, sans-serif">
+
+  <defs>
+    <!-- Dimension arrow markers -->
+    <marker id="dim-arrow-right" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#003366"/>
+    </marker>
+    <marker id="dim-arrow-left" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto">
+      <polygon points="8 0, 0 3, 8 6" fill="#003366"/>
+    </marker>
+    <marker id="dim-arrow-up" markerWidth="6" markerHeight="8" refX="3" refY="0" orient="auto">
+      <polygon points="0 8, 3 0, 6 8" fill="#003366"/>
+    </marker>
+    <marker id="dim-arrow-down" markerWidth="6" markerHeight="8" refX="3" refY="8" orient="auto">
+      <polygon points="0 0, 3 8, 6 0" fill="#003366"/>
+    </marker>
+
+    <!-- Hatching for stainless steel -->
+    <pattern id="hatch-ss" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#b0b0b0" stroke-width="0.5"/>
+    </pattern>
+
+    <!-- Glass fill -->
+    <pattern id="hatch-glass" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(-45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#93c5fd" stroke-width="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="480" fill="#ffffff"/>
+
+  <!-- ==================== DRAWING TITLE ==================== -->
+  <text x="300" y="22" font-size="13" font-weight="bold" fill="#000" text-anchor="middle">PASS BOX DIMENSIONAL DRAWING</text>
+  <text x="300" y="36" font-size="8" fill="#333" text-anchor="middle">Stainless Steel SUS-304 - Front View &amp; Side View</text>
+
+  <!-- ============================================================ -->
+  <!-- FRONT VIEW (left half) -->
+  <!-- Outer: 800x800mm mapped to ~220x220px -->
+  <!-- Inner: 500x500mm mapped to ~137.5x137.5px -->
+  <!-- Center of front view: (180, 200) -->
+  <!-- ============================================================ -->
+
+  <text x="180" y="55" font-size="10" font-weight="bold" fill="#000" text-anchor="middle">FRONT VIEW</text>
+
+  <!-- Outer box -->
+  <rect x="70" y="90" width="220" height="220" fill="#e5e7eb" stroke="#000" stroke-width="0.8"/>
+  <rect x="70" y="90" width="220" height="220" fill="url(#hatch-ss)" opacity="0.3"/>
+
+  <!-- Inner cavity (dashed) -->
+  <rect x="111.25" y="131.25" width="137.5" height="137.5" fill="#f9fafb" stroke="#000" stroke-width="0.5" stroke-dasharray="4,3"/>
+
+  <!-- Glass panel on door (center of inner cavity) -->
+  <rect x="145" y="160" width="70" height="70" fill="#dbeafe" stroke="#333" stroke-width="0.4"/>
+  <rect x="145" y="160" width="70" height="70" fill="url(#hatch-glass)" opacity="0.3"/>
+  <text x="180" y="200" font-size="5.5" fill="#1e3a5f" text-anchor="middle">Clear Glass</text>
+  <text x="180" y="207" font-size="5" fill="#1e3a5f" text-anchor="middle">12 mm</text>
+
+  <!-- UV light indicator (top center of inner) -->
+  <circle cx="180" cy="142" r="4" fill="#a78bfa" stroke="#333" stroke-width="0.3"/>
+  <text x="180" y="140" font-size="4.5" fill="#6d28d9" text-anchor="middle">UV</text>
+
+  <!-- Handle positions (small rectangles on sides of outer) -->
+  <rect x="62" y="185" width="8" height="30" rx="2" fill="#9ca3af" stroke="#000" stroke-width="0.3"/>
+  <rect x="290" y="185" width="8" height="30" rx="2" fill="#9ca3af" stroke="#000" stroke-width="0.3"/>
+
+  <!-- ===== FRONT VIEW DIMENSIONS ===== -->
+
+  <!-- Outer width: 800mm (horizontal, bottom) -->
+  <line x1="70" y1="310" x2="70" y2="335" stroke="#003366" stroke-width="0.3"/>
+  <line x1="290" y1="310" x2="290" y2="335" stroke="#003366" stroke-width="0.3"/>
+  <line x1="70" y1="330" x2="290" y2="330" stroke="#003366" stroke-width="0.4"
+        marker-start="url(#dim-arrow-left)" marker-end="url(#dim-arrow-right)"/>
+  <text x="180" y="326" font-size="8" font-weight="bold" fill="#003366" text-anchor="middle">800 mm</text>
+
+  <!-- Outer height: 800mm (vertical, left) -->
+  <line x1="70" y1="90" x2="40" y2="90" stroke="#003366" stroke-width="0.3"/>
+  <line x1="70" y1="310" x2="40" y2="310" stroke="#003366" stroke-width="0.3"/>
+  <line x1="48" y1="90" x2="48" y2="310" stroke="#003366" stroke-width="0.4"
+        marker-start="url(#dim-arrow-up)" marker-end="url(#dim-arrow-down)"/>
+  <text x="40" y="204" font-size="8" font-weight="bold" fill="#003366" transform="rotate(-90, 40, 204)" text-anchor="middle">800 mm</text>
+
+  <!-- Inner width: 500mm (horizontal, inside) -->
+  <line x1="111.25" y1="268.75" x2="111.25" y2="282" stroke="#003366" stroke-width="0.2"/>
+  <line x1="248.75" y1="268.75" x2="248.75" y2="282" stroke="#003366" stroke-width="0.2"/>
+  <line x1="111.25" y1="278" x2="248.75" y2="278" stroke="#003366" stroke-width="0.3"
+        marker-start="url(#dim-arrow-left)" marker-end="url(#dim-arrow-right)"/>
+  <text x="180" y="275" font-size="6.5" fill="#003366" text-anchor="middle">500 mm</text>
+
+  <!-- Inner height: 500mm (vertical, inside right) -->
+  <line x1="248.75" y1="131.25" x2="262" y2="131.25" stroke="#003366" stroke-width="0.2"/>
+  <line x1="248.75" y1="268.75" x2="262" y2="268.75" stroke="#003366" stroke-width="0.2"/>
+  <line x1="258" y1="131.25" x2="258" y2="268.75" stroke="#003366" stroke-width="0.3"
+        marker-start="url(#dim-arrow-up)" marker-end="url(#dim-arrow-down)"/>
+  <text x="266" y="204" font-size="6.5" fill="#003366" transform="rotate(90, 266, 204)" text-anchor="middle">500 mm</text>
+
+  <!-- ============================================================ -->
+  <!-- SIDE VIEW (right half) -->
+  <!-- Outer depth: 500mm mapped to ~137.5px -->
+  <!-- Outer height: 800mm mapped to ~220px -->
+  <!-- Inner depth: 600mm mapped to ~165px (larger than outer!) -->
+  <!-- Center of side view: (520, 200) -->
+  <!-- ============================================================ -->
+
+  <text x="520" y="55" font-size="10" font-weight="bold" fill="#000" text-anchor="middle">SIDE VIEW</text>
+
+  <!-- Outer box (side: depth x height = 500 x 800) -->
+  <rect x="451.25" y="90" width="137.5" height="220" fill="#e5e7eb" stroke="#000" stroke-width="0.8"/>
+  <rect x="451.25" y="90" width="137.5" height="220" fill="url(#hatch-ss)" opacity="0.3"/>
+
+  <!-- Inner cavity (side: depth 600 x height 500) -->
+  <!-- Inner depth 600mm > outer depth 500mm: inner extends beyond outer (door recess) -->
+  <!-- Inner mapped: 165px, centered vertically: y=131.25..268.75 -->
+  <!-- Horizontally: extends 13.75px beyond each side of outer -->
+  <rect x="437.5" y="131.25" width="165" height="137.5" fill="#f9fafb" stroke="#000" stroke-width="0.5" stroke-dasharray="4,3"/>
+
+  <!-- Door panels (thin rectangles at front and back of side view) -->
+  <!-- Front door (left side) -->
+  <rect x="437.5" y="131.25" width="4" height="137.5" fill="#dbeafe" stroke="#333" stroke-width="0.3"/>
+  <!-- Rear door (right side) -->
+  <rect x="598.5" y="131.25" width="4" height="137.5" fill="#dbeafe" stroke="#333" stroke-width="0.3"/>
+
+  <!-- Door labels -->
+  <text x="430" y="200" font-size="5" fill="#333" text-anchor="end" transform="rotate(-90, 430, 200)">Door 1</text>
+  <text x="612" y="200" font-size="5" fill="#333" text-anchor="start" transform="rotate(90, 612, 200)">Door 2</text>
+
+  <!-- ===== SIDE VIEW DIMENSIONS ===== -->
+
+  <!-- Outer depth: 500mm (horizontal, bottom) -->
+  <line x1="451.25" y1="310" x2="451.25" y2="335" stroke="#003366" stroke-width="0.3"/>
+  <line x1="588.75" y1="310" x2="588.75" y2="335" stroke="#003366" stroke-width="0.3"/>
+  <line x1="451.25" y1="330" x2="588.75" y2="330" stroke="#003366" stroke-width="0.4"
+        marker-start="url(#dim-arrow-left)" marker-end="url(#dim-arrow-right)"/>
+  <text x="520" y="326" font-size="8" font-weight="bold" fill="#003366" text-anchor="middle">500 mm</text>
+
+  <!-- Outer height: 800mm (vertical, right) -->
+  <line x1="588.75" y1="90" x2="625" y2="90" stroke="#003366" stroke-width="0.3"/>
+  <line x1="588.75" y1="310" x2="625" y2="310" stroke="#003366" stroke-width="0.3"/>
+  <line x1="618" y1="90" x2="618" y2="310" stroke="#003366" stroke-width="0.4"
+        marker-start="url(#dim-arrow-up)" marker-end="url(#dim-arrow-down)"/>
+  <text x="628" y="204" font-size="8" font-weight="bold" fill="#003366" transform="rotate(90, 628, 204)" text-anchor="middle">800 mm</text>
+
+  <!-- Inner depth: 600mm (horizontal, inside top) -->
+  <line x1="437.5" y1="131.25" x2="437.5" y2="120" stroke="#003366" stroke-width="0.2"/>
+  <line x1="602.5" y1="131.25" x2="602.5" y2="120" stroke="#003366" stroke-width="0.2"/>
+  <line x1="437.5" y1="124" x2="602.5" y2="124" stroke="#003366" stroke-width="0.3"
+        marker-start="url(#dim-arrow-left)" marker-end="url(#dim-arrow-right)"/>
+  <text x="520" y="121" font-size="6.5" fill="#003366" text-anchor="middle">600 mm (inner depth)</text>
+
+  <!-- Inner height: 500mm (vertical, left inside) -->
+  <line x1="437.5" y1="131.25" x2="426" y2="131.25" stroke="#003366" stroke-width="0.2"/>
+  <line x1="437.5" y1="268.75" x2="426" y2="268.75" stroke="#003366" stroke-width="0.2"/>
+  <line x1="430" y1="131.25" x2="430" y2="268.75" stroke="#003366" stroke-width="0.3"
+        marker-start="url(#dim-arrow-up)" marker-end="url(#dim-arrow-down)"/>
+  <text x="422" y="204" font-size="6.5" fill="#003366" transform="rotate(-90, 422, 204)" text-anchor="middle">500 mm</text>
+
+  <!-- ==================== TITLE BLOCK ==================== -->
+  <rect x="560" y="380" width="230" height="90" fill="none" stroke="#000" stroke-width="0.8"/>
+  <line x1="560" y1="396" x2="790" y2="396" stroke="#000" stroke-width="0.5"/>
+  <line x1="560" y1="410" x2="790" y2="410" stroke="#000" stroke-width="0.5"/>
+  <line x1="560" y1="424" x2="790" y2="424" stroke="#000" stroke-width="0.5"/>
+  <line x1="560" y1="438" x2="790" y2="438" stroke="#000" stroke-width="0.5"/>
+  <line x1="560" y1="452" x2="790" y2="452" stroke="#000" stroke-width="0.5"/>
+
+  <text x="675" y="392" font-size="8" font-weight="bold" fill="#000" text-anchor="middle">ELFATECH - MOT CATALOG</text>
+  <text x="675" y="406" font-size="7" fill="#333" text-anchor="middle">Drawing: Pass Box Dimensional</text>
+  <text x="675" y="420" font-size="7" fill="#333" text-anchor="middle">Scale: NOT TO SCALE</text>
+  <text x="675" y="434" font-size="7" fill="#333" text-anchor="middle">Material: Stainless Steel SUS-304</text>
+  <text x="675" y="448" font-size="7" fill="#333" text-anchor="middle">Ref: ELF-DWG-PB-001</text>
+  <text x="675" y="464" font-size="6.5" fill="#666" text-anchor="middle">Date: 2026 | Two Side Open Inter-Lock Door</text>
+
+  <!-- ==================== NOTES ==================== -->
+  <text x="30" y="380" font-size="6.5" fill="#666">Notes:</text>
+  <text x="30" y="392" font-size="6" fill="#666">1. All dimensions in millimeters (mm)</text>
+  <text x="30" y="403" font-size="6" fill="#666">2. Inner depth (600mm) exceeds outer depth (500mm) due to door recess design</text>
+  <text x="30" y="414" font-size="6" fill="#666">3. Two Side Open Inter-Lock Door system with PLC Interlock</text>
+  <text x="30" y="425" font-size="6" fill="#666">4. Equipped with UV Light and Timer Activation</text>
+  <text x="30" y="436" font-size="6" fill="#666">5. Magnetic Interlock system</text>
+  <text x="30" y="447" font-size="6" fill="#666">6. Clear Glass 12 mm on door panel</text>
+
+  <!-- ==================== FEATURE LABELS ==================== -->
+  <!-- Callout: Interlock doors -->
+  <line x1="62" y1="200" x2="30" y2="348" stroke="#333" stroke-width="0.3"/>
+  <text x="28" y="354" font-size="5.5" fill="#333" text-anchor="end">Handle / Interlock</text>
+  <text x="28" y="362" font-size="5" fill="#666" text-anchor="end">Magnetic Interlock</text>
+
+  <!-- Callout: UV light -->
+  <line x1="180" y1="138" x2="290" y2="70" stroke="#333" stroke-width="0.3"/>
+  <text x="294" y="68" font-size="5.5" fill="#333">UV Sterilization Light</text>
+  <text x="294" y="76" font-size="5" fill="#666">Timer Activation</text>
+
+</svg>
