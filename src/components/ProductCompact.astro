@@ -26,7 +26,7 @@ const { title, description, specs, imagePlaceholderText, imageFilename } = Astro
     <p class="product-compact__description">{description}</p>
     <div class="spec-inline">
       {specs.map((spec) => (
-        <span><strong>{spec.label}:</strong> <span set:html={spec.value}></span></span>
+        <span><strong>{spec.label}:</strong> <em set:html={spec.value}></em></span>
       ))}
     </div>
   </div>

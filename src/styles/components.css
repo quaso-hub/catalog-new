@@ -1470,6 +1470,10 @@
   border: 1px solid var(--color-neutral-200);
 }
 
+.spec-inline span em {
+  font-style: normal;
+}
+
 .spec-inline strong {
   color: var(--color-primary-700);
 }
