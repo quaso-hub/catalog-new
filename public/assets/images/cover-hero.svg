@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Cover Hero Illustration — Modular Operating Theatre
+  Style: Architectural / Technical Line Art
+  Palette: Deep navy bg, teal accent lines, white/light lines
+  Concept: Abstract OR room — ceiling grid, pendant arm, surgical lamp, clean wall panels
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#0a1628"/>
+      <stop offset="55%"  stop-color="#0d1f3c"/>
+      <stop offset="100%" stop-color="#071018"/>
+    </linearGradient>
+
+    <!-- Teal glow for accent lines -->
+    <filter id="glow-teal" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- Ceiling grid pattern -->
+    <pattern id="ceil-grid" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <rect width="60" height="60" fill="none"/>
+      <line x1="60" y1="0" x2="0" y2="0"  stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+      <line x1="0"  y1="0" x2="0" y2="60" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+    </pattern>
+
+    <!-- Floor grid pattern -->
+    <pattern id="floor-grid" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse" patternTransform="skewY(-8)">
+      <rect width="80" height="80" fill="none"/>
+      <line x1="80" y1="0" x2="0" y2="0"  stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+      <line x1="0"  y1="0" x2="0" y2="80" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+    </pattern>
+
+    <!-- Radial light halo for lamp -->
+    <radialGradient id="lamp-halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="rgba(255,255,240,0.18)"/>
+      <stop offset="40%"  stop-color="rgba(255,255,220,0.06)"/>
+      <stop offset="100%" stop-color="rgba(255,255,220,0)"/>
+    </radialGradient>
+
+    <!-- Spotlight cone gradient -->
+    <linearGradient id="spotlight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="rgba(255,255,230,0.12)"/>
+      <stop offset="100%" stop-color="rgba(255,255,230,0)"/>
+    </linearGradient>
+
+    <!-- Wall panel gradient -->
+    <linearGradient id="wall-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="rgba(255,255,255,0.04)"/>
+      <stop offset="50%"  stop-color="rgba(255,255,255,0.08)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.03)"/>
+    </linearGradient>
+
+    <!-- Floor gradient -->
+    <linearGradient id="floor-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="rgba(13,148,136,0.06)"/>
+      <stop offset="100%" stop-color="rgba(0,10,20,0)"/>
+    </linearGradient>
+
+    <!-- Teal glow blob -->
+    <radialGradient id="teal-ambient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="rgba(13,148,136,0.12)"/>
+      <stop offset="100%" stop-color="rgba(13,148,136,0)"/>
+    </radialGradient>
+
+    <!-- Clip for room bounds -->
+    <clipPath id="room-clip">
+      <rect x="0" y="0" width="1200" height="750"/>
+    </clipPath>
+  </defs>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- BACKGROUND                                       -->
+  <!-- ═══════════════════════════════════════════════ -->
+  <rect width="1200" height="750" fill="url(#bg)"/>
+
+  <!-- Ambient teal glow - center -->
+  <ellipse cx="600" cy="320" rx="480" ry="280" fill="url(#teal-ambient)" opacity="0.7"/>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- ROOM STRUCTURE — perspective view               -->
+  <!-- Vanishing point: ~(600, 280)                    -->
+  <!-- ═══════════════════════════════════════════════ -->
+
+  <!-- CEILING PLANE -->
+  <polygon points="120,80 1080,80 780,300 420,300" fill="rgba(255,255,255,0.025)"/>
+  <polygon points="120,80 1080,80 780,300 420,300" fill="url(#ceil-grid)"/>
+  <!-- Ceiling edge lines -->
+  <line x1="120" y1="80"  x2="1080" y2="80"  stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+  <line x1="120" y1="80"  x2="420"  y2="300" stroke="rgba(255,255,255,0.12)" stroke-width="0.8"/>
+  <line x1="1080" y1="80" x2="780"  y2="300" stroke="rgba(255,255,255,0.12)" stroke-width="0.8"/>
+  <!-- Ceiling front edge (cornice) -->
+  <line x1="420" y1="300" x2="780" y2="300" stroke="rgba(255,255,255,0.10)" stroke-width="0.8"/>
+
+  <!-- Ceiling grid perspective lines (depth) -->
+  <line x1="240"  y1="80" x2="450"  y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+  <line x1="360"  y1="80" x2="480"  y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+  <line x1="480"  y1="80" x2="520"  y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+  <line x1="600"  y1="80" x2="600"  y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+  <line x1="720"  y1="80" x2="680"  y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+  <line x1="840"  y1="80" x2="720"  y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+  <line x1="960"  y1="80" x2="750"  y2="300" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+  <!-- Cross lines -->
+  <line x1="150"  y1="112" x2="1050" y2="112" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+  <line x1="175"  y1="148" x2="1025" y2="148" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+  <line x1="215"  y1="190" x2="985"  y2="190" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+  <line x1="275"  y1="235" x2="925"  y2="235" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+  <line x1="345"  y1="272" x2="855"  y2="272" stroke="rgba(255,255,255,0.04)" stroke-width="0.5"/>
+
+  <!-- LEFT WALL -->
+  <polygon points="120,80 420,300 420,640 120,640" fill="rgba(255,255,255,0.02)"/>
+  <polygon points="120,80 420,300 420,640 120,640" fill="url(#wall-grad)"/>
+  <!-- Left wall outline -->
+  <line x1="120" y1="80"  x2="120" y2="640" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+  <line x1="120" y1="640" x2="420" y2="640" stroke="rgba(255,255,255,0.10)" stroke-width="0.8"/>
+
+  <!-- RIGHT WALL -->
+  <polygon points="1080,80 780,300 780,640 1080,640" fill="rgba(255,255,255,0.015)"/>
+  <!-- Right wall outline -->
+  <line x1="1080" y1="80"  x2="1080" y2="640" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+  <line x1="1080" y1="640" x2="780"  y2="640" stroke="rgba(255,255,255,0.10)" stroke-width="0.8"/>
+
+  <!-- BACK WALL (center) -->
+  <polygon points="420,300 780,300 780,640 420,640" fill="rgba(255,255,255,0.03)"/>
+
+  <!-- FLOOR -->
+  <polygon points="120,640 420,640 780,640 1080,640 1080,750 120,750" fill="rgba(0,14,28,0.6)"/>
+  <polygon points="120,640 420,640 780,640 1080,640 1080,750 120,750" fill="url(#floor-grad)"/>
+  <polygon points="120,640 1080,640 1080,750 120,750" fill="url(#floor-grid)"/>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- WALL PANELS — modular panel lines               -->
+  <!-- ═══════════════════════════════════════════════ -->
+
+  <!-- Back wall panel joints (vertical) -->
+  <line x1="490" y1="300" x2="490" y2="640" stroke="rgba(255,255,255,0.07)" stroke-width="0.6"/>
+  <line x1="560" y1="300" x2="560" y2="640" stroke="rgba(255,255,255,0.07)" stroke-width="0.6"/>
+  <line x1="630" y1="300" x2="630" y2="640" stroke="rgba(255,255,255,0.07)" stroke-width="0.6"/>
+  <line x1="700" y1="300" x2="700" y2="640" stroke="rgba(255,255,255,0.07)" stroke-width="0.6"/>
+  <!-- Back wall horizontal joints -->
+  <line x1="420" y1="420" x2="780" y2="420" stroke="rgba(255,255,255,0.06)" stroke-width="0.6"/>
+  <line x1="420" y1="530" x2="780" y2="530" stroke="rgba(255,255,255,0.06)" stroke-width="0.6"/>
+
+  <!-- Left wall panels (perspective) -->
+  <line x1="190" y1="148" x2="190" y2="640" stroke="rgba(255,255,255,0.05)" stroke-width="0.6"/>
+  <line x1="260" y1="190" x2="260" y2="640" stroke="rgba(255,255,255,0.05)" stroke-width="0.6"/>
+  <line x1="330" y1="240" x2="330" y2="640" stroke="rgba(255,255,255,0.05)" stroke-width="0.6"/>
+  <line x1="395" y1="285" x2="395" y2="640" stroke="rgba(255,255,255,0.05)" stroke-width="0.6"/>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- TEAL ACCENT LINES — clean room seals           -->
+  <!-- ═══════════════════════════════════════════════ -->
+
+  <!-- Ceiling-wall junction teal line -->
+  <line x1="120" y1="80"  x2="420"  y2="300" stroke="#0d9488" stroke-width="1.5" filter="url(#glow-teal)" opacity="0.7"/>
+  <line x1="1080" y1="80" x2="780"  y2="300" stroke="#0d9488" stroke-width="1.5" filter="url(#glow-teal)" opacity="0.7"/>
+  <line x1="120" y1="80"  x2="1080" y2="80"  stroke="#0d9488" stroke-width="1"   filter="url(#glow-teal)" opacity="0.5"/>
+
+  <!-- Floor-wall junction teal line -->
+  <line x1="120" y1="640" x2="420"  y2="640" stroke="#0d9488" stroke-width="1.5" filter="url(#glow-teal)" opacity="0.5"/>
+  <line x1="780" y1="640" x2="1080" y2="640" stroke="#0d9488" stroke-width="1.5" filter="url(#glow-teal)" opacity="0.5"/>
+  <line x1="420" y1="640" x2="780"  y2="640" stroke="#0d9488" stroke-width="1"   filter="url(#glow-teal)" opacity="0.4"/>
+
+  <!-- Corner vertical teal lines -->
+  <line x1="420" y1="300" x2="420" y2="640" stroke="#0d9488" stroke-width="1.5" filter="url(#glow-teal)" opacity="0.55"/>
+  <line x1="780" y1="300" x2="780" y2="640" stroke="#0d9488" stroke-width="1.5" filter="url(#glow-teal)" opacity="0.55"/>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- OPERATING TABLE — center floor                  -->
+  <!-- ═══════════════════════════════════════════════ -->
+
+  <!-- Table base/pedestal -->
+  <rect x="555" y="565" width="90" height="18" rx="2" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/>
+  <rect x="573" y="555" width="54" height="14" rx="1" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.18)" stroke-width="0.8"/>
+
+  <!-- Table surface -->
+  <rect x="490" y="530" width="220" height="30" rx="3" fill="rgba(255,255,255,0.10)" stroke="rgba(255,255,255,0.28)" stroke-width="1"/>
+  <!-- Table surface highlight -->
+  <rect x="492" y="531" width="216" height="4" rx="2" fill="rgba(255,255,255,0.15)"/>
+  <!-- Table panel lines -->
+  <line x1="535" y1="530" x2="535" y2="560" stroke="rgba(255,255,255,0.12)" stroke-width="0.6"/>
+  <line x1="580" y1="530" x2="580" y2="560" stroke="rgba(255,255,255,0.12)" stroke-width="0.6"/>
+  <line x1="625" y1="530" x2="625" y2="560" stroke="rgba(255,255,255,0.12)" stroke-width="0.6"/>
+  <line x1="670" y1="530" x2="670" y2="560" stroke="rgba(255,255,255,0.12)" stroke-width="0.6"/>
+
+  <!-- Table teal accent edge -->
+  <line x1="490" y1="530" x2="710" y2="530" stroke="#0d9488" stroke-width="1" opacity="0.6"/>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SURGICAL PENDANT ARM (left)                     -->
+  <!-- ═══════════════════════════════════════════════ -->
+
+  <!-- Ceiling mount -->
+  <rect x="300" y="298" width="44" height="8" rx="1" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.3)" stroke-width="0.8"/>
+  <rect x="318" y="306" width="8" height="6" fill="rgba(255,255,255,0.14)"/>
+
+  <!-- Vertical arm -->
+  <rect x="319" y="312" width="6" height="80" rx="1" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.22)" stroke-width="0.7"/>
+
+  <!-- Horizontal arm (elbow) -->
+  <rect x="288" y="388" width="74" height="10" rx="2" fill="rgba(255,255,255,0.14)" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/>
+
+  <!-- Second arm segment -->
+  <rect x="358" y="388" width="8" height="70" rx="1" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.22)" stroke-width="0.7"/>
+
+  <!-- Pendant head / equipment module -->
+  <rect x="338" y="455" width="48" height="52" rx="3" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.22)" stroke-width="0.8"/>
+  <!-- Module detail lines -->
+  <line x1="338" y1="472" x2="386" y2="472" stroke="rgba(255,255,255,0.12)" stroke-width="0.6"/>
+  <line x1="338" y1="487" x2="386" y2="487" stroke="rgba(255,255,255,0.12)" stroke-width="0.6"/>
+  <line x1="338" y1="500" x2="386" y2="500" stroke="rgba(255,255,255,0.10)" stroke-width="0.6"/>
+  <!-- Module indicator lights (teal dots) -->
+  <circle cx="350" cy="465" r="2.5" fill="#0d9488" opacity="0.8" filter="url(#glow-teal)"/>
+  <circle cx="360" cy="465" r="2.5" fill="#0d9488" opacity="0.6"/>
+  <circle cx="370" cy="465" r="2.5" fill="rgba(255,255,255,0.4)"/>
+
+  <!-- Pendant teal accent -->
+  <line x1="338" y1="455" x2="386" y2="455" stroke="#0d9488" stroke-width="1" opacity="0.5"/>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SURGICAL PENDANT ARM (right)                    -->
+  <!-- ═══════════════════════════════════════════════ -->
+
+  <!-- Ceiling mount -->
+  <rect x="856" y="298" width="44" height="8" rx="1" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.3)" stroke-width="0.8"/>
+  <rect x="874" y="306" width="8" height="6" fill="rgba(255,255,255,0.14)"/>
+
+  <!-- Vertical arm -->
+  <rect x="875" y="312" width="6" height="65" rx="1" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.22)" stroke-width="0.7"/>
+
+  <!-- Horizontal arm -->
+  <rect x="838" y="372" width="74" height="10" rx="2" fill="rgba(255,255,255,0.14)" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/>
+
+  <!-- Second arm segment -->
+  <rect x="838" y="382" width="8" height="55" rx="1" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.22)" stroke-width="0.7"/>
+
+  <!-- Pendant head -->
+  <rect x="820" y="434" width="48" height="48" rx="3" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.22)" stroke-width="0.8"/>
+  <!-- Module details -->
+  <line x1="820" y1="450" x2="868" y2="450" stroke="rgba(255,255,255,0.12)" stroke-width="0.6"/>
+  <line x1="820" y1="464" x2="868" y2="464" stroke="rgba(255,255,255,0.12)" stroke-width="0.6"/>
+  <line x1="820" y1="477" x2="868" y2="477" stroke="rgba(255,255,255,0.10)" stroke-width="0.6"/>
+  <!-- Indicator lights -->
+  <circle cx="832" cy="443" r="2.5" fill="#0d9488" opacity="0.8" filter="url(#glow-teal)"/>
+  <circle cx="842" cy="443" r="2.5" fill="rgba(255,255,255,0.4)"/>
+  <circle cx="852" cy="443" r="2.5" fill="rgba(255,255,255,0.25)"/>
+
+  <!-- Pendant teal accent -->
+  <line x1="820" y1="434" x2="868" y2="434" stroke="#0d9488" stroke-width="1" opacity="0.5"/>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- SHADOWLESS SURGICAL LAMP — ceiling center       -->
+  <!-- ═══════════════════════════════════════════════ -->
+
+  <!-- Lamp track / rail -->
+  <rect x="500" y="296" width="200" height="6" rx="3" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.25)" stroke-width="0.8"/>
+
+  <!-- Lamp arm -->
+  <rect x="594" y="302" width="12" height="55" rx="2" fill="rgba(255,255,255,0.14)" stroke="rgba(255,255,255,0.28)" stroke-width="0.8"/>
+
+  <!-- Lamp head (circular) -->
+  <circle cx="600" cy="388" r="46" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.22)" stroke-width="1.2"/>
+  <circle cx="600" cy="388" r="38" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  <!-- Lamp reflector segments -->
+  <line x1="600" y1="350" x2="600" y2="426" stroke="rgba(255,255,255,0.10)" stroke-width="0.6"/>
+  <line x1="562" y1="368" x2="638" y2="408" stroke="rgba(255,255,255,0.10)" stroke-width="0.6"/>
+  <line x1="562" y1="408" x2="638" y2="368" stroke="rgba(255,255,255,0.10)" stroke-width="0.6"/>
+  <!-- Lamp center bulb -->
+  <circle cx="600" cy="388" r="14" fill="rgba(255,255,240,0.20)" stroke="rgba(255,255,220,0.35)" stroke-width="1"/>
+  <circle cx="600" cy="388" r="8"  fill="rgba(255,255,230,0.35)"/>
+
+  <!-- Lamp halo glow -->
+  <ellipse cx="600" cy="388" rx="90" ry="80" fill="url(#lamp-halo)" filter="url(#glow-soft)"/>
+
+  <!-- Spotlight cone (downward) -->
+  <polygon points="572,430 628,430 680,540 520,540" fill="url(#spotlight)" opacity="0.7"/>
+
+  <!-- Lamp teal accent ring -->
+  <circle cx="600" cy="388" r="46" fill="none" stroke="#0d9488" stroke-width="0.8" opacity="0.35" filter="url(#glow-teal)"/>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- GAS OUTLET PANEL (back wall, left side)         -->
+  <!-- ═══════════════════════════════════════════════ -->
+
+  <!-- Panel box -->
+  <rect x="445" y="370" width="36" height="48" rx="2" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.18)" stroke-width="0.8"/>
+  <!-- Gas outlets (3 circles) -->
+  <circle cx="463" cy="387" r="5" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <circle cx="463" cy="387" r="2" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="463" cy="401" r="5" fill="none" stroke="#22c55e" stroke-width="1" opacity="0.6"/>
+  <circle cx="463" cy="401" r="2" fill="#22c55e" opacity="0.4"/>
+  <circle cx="463" cy="415" r="5" fill="none" stroke="#0d9488" stroke-width="1" opacity="0.6"/>
+  <circle cx="463" cy="415" r="2" fill="#0d9488" opacity="0.4"/>
+  <!-- Label -->
+  <line x1="445" y1="365" x2="481" y2="365" stroke="#0d9488" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- CONTROL PANEL (back wall, right side)           -->
+  <!-- ═══════════════════════════════════════════════ -->
+
+  <rect x="700" y="360" width="60" height="72" rx="2" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.16)" stroke-width="0.8"/>
+  <!-- Screen -->
+  <rect x="706" y="366" width="48" height="30" rx="1" fill="rgba(13,148,136,0.12)" stroke="rgba(13,148,136,0.3)" stroke-width="0.7"/>
+  <!-- Screen grid lines -->
+  <line x1="706" y1="378" x2="754" y2="378" stroke="rgba(13,148,136,0.2)" stroke-width="0.5"/>
+  <line x1="706" y1="388" x2="754" y2="388" stroke="rgba(13,148,136,0.2)" stroke-width="0.5"/>
+  <line x1="726" y1="366" x2="726" y2="396" stroke="rgba(13,148,136,0.2)" stroke-width="0.5"/>
+  <line x1="742" y1="366" x2="742" y2="396" stroke="rgba(13,148,136,0.2)" stroke-width="0.5"/>
+  <!-- Buttons row -->
+  <rect x="708" y="402" width="8"  height="5" rx="1" fill="rgba(255,255,255,0.18)"/>
+  <rect x="720" y="402" width="8"  height="5" rx="1" fill="#0d9488" opacity="0.6"/>
+  <rect x="732" y="402" width="8"  height="5" rx="1" fill="rgba(255,255,255,0.10)"/>
+  <rect x="744" y="402" width="8"  height="5" rx="1" fill="rgba(255,255,255,0.10)"/>
+  <!-- Row 2 -->
+  <rect x="708" y="412" width="44" height="4" rx="1" fill="rgba(255,255,255,0.07)"/>
+  <!-- Indicator light -->
+  <circle cx="730" cy="425" r="3" fill="#0d9488" opacity="0.7" filter="url(#glow-teal)"/>
+  <!-- Panel top accent -->
+  <line x1="700" y1="360" x2="760" y2="360" stroke="#0d9488" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- LAMINAR AIRFLOW DIFFUSER — ceiling center area  -->
+  <!-- ═══════════════════════════════════════════════ -->
+
+  <!-- Diffuser frame -->
+  <rect x="482" y="113" width="236" height="8" rx="1" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.2)" stroke-width="0.7"/>
+  <!-- Diffuser slats -->
+  <line x1="500" y1="113" x2="500" y2="121" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  <line x1="516" y1="113" x2="516" y2="121" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  <line x1="532" y1="113" x2="532" y2="121" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  <line x1="548" y1="113" x2="548" y2="121" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  <line x1="564" y1="113" x2="564" y2="121" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  <line x1="580" y1="113" x2="580" y2="121" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  <line x1="596" y1="113" x2="596" y2="121" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  <line x1="612" y1="113" x2="612" y2="121" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  <line x1="628" y1="113" x2="628" y2="121" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  <line x1="644" y1="113" x2="644" y2="121" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  <line x1="660" y1="113" x2="660" y2="121" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  <line x1="676" y1="113" x2="676" y2="121" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  <line x1="692" y1="113" x2="692" y2="121" stroke="rgba(255,255,255,0.15)" stroke-width="0.8"/>
+  <!-- Diffuser teal frame -->
+  <rect x="482" y="113" width="236" height="8" rx="1" fill="none" stroke="#0d9488" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- DEPTH HAZE — atmospheric depth                  -->
+  <!-- ═══════════════════════════════════════════════ -->
+
+  <!-- Far wall subtle haze -->
+  <rect x="420" y="300" width="360" height="340" fill="rgba(0,14,30,0.08)"/>
+
+  <!-- Floor reflection subtle -->
+  <ellipse cx="600" cy="660" rx="180" ry="25" fill="rgba(13,148,136,0.05)" filter="url(#glow-soft)"/>
+
+  <!-- ═══════════════════════════════════════════════ -->
+  <!-- DIMENSION LINES (technical drawing detail)      -->
+  <!-- ═══════════════════════════════════════════════ -->
+
+  <!-- Left wall height indicator -->
+  <line x1="105" y1="80"  x2="105" y2="640" stroke="rgba(255,255,255,0.08)" stroke-width="0.6" stroke-dasharray="3,4"/>
+  <line x1="100" y1="80"  x2="110" y2="80"  stroke="rgba(255,255,255,0.12)" stroke-width="0.6"/>
+  <line x1="100" y1="640" x2="110" y2="640" stroke="rgba(255,255,255,0.12)" stroke-width="0.6"/>
+
+  <!-- Top width indicator -->
+  <line x1="120" y1="65"  x2="1080" y2="65"  stroke="rgba(255,255,255,0.06)" stroke-width="0.6" stroke-dasharray="3,5"/>
+  <line x1="120" y1="60"  x2="120"  y2="70"  stroke="rgba(255,255,255,0.10)" stroke-width="0.6"/>
+  <line x1="1080" y1="60" x2="1080" y2="70"  stroke="rgba(255,255,255,0.10)" stroke-width="0.6"/>
+
+</svg>
