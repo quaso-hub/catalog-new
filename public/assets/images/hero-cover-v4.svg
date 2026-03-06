@@ -1,0 +1,505 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 1600 900" width="1600" height="900">
+
+  <!-- ════════════════════════════════════════════════════════════
+       HERO COVER V4 — HYBRID APPROACH
+       PT Teknomed Indo Timur / Elfatech · 2026 Product Catalogue
+       
+       Photo background + wireframe overlay + SVG effects/typography
+       PRINT-READY · A3 landscape · ZERO animation · ZERO JS
+       
+       Layer stack:
+         1. room-background.png (photo)
+         2. Dark mood overlay (SVG gradients)
+         3. lamp-wireframe.png (blend: screen)
+         4. Bloom / glow (SVG radials + cones)
+         5. Vignette + subtle grid (SVG)
+         6. Corner brackets (SVG)
+         7. Typography (SVG)
+       
+       Palette: #020B18 #0A1628 #1B4F72 #00B4D8 #FFFFFF #8BA3B8
+  ════════════════════════════════════════════════════════════ -->
+
+  <defs>
+
+    <!-- ─── OVERLAY GRADIENTS ─────────────────────────────────── -->
+
+    <!-- Radial darken: center semi-transparent → edges darker -->
+    <radialGradient id="ov-radial" cx="52%" cy="42%" r="68%" fx="52%" fy="42%">
+      <stop offset="0%"   stop-color="#020B18" stop-opacity="0.18"/>
+      <stop offset="35%"  stop-color="#020B18" stop-opacity="0.32"/>
+      <stop offset="70%"  stop-color="#020B18" stop-opacity="0.58"/>
+      <stop offset="100%" stop-color="#020B18" stop-opacity="0.82"/>
+    </radialGradient>
+
+    <!-- Left-side linear darken (for typography legibility) -->
+    <linearGradient id="ov-left" x1="0" y1="0.5" x2="1" y2="0.5">
+      <stop offset="0%"   stop-color="#020B18" stop-opacity="0.82"/>
+      <stop offset="32%"  stop-color="#020B18" stop-opacity="0.68"/>
+      <stop offset="55%"  stop-color="#020B18" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#020B18" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Bottom-left corner extra darken (title block area) -->
+    <linearGradient id="ov-bottom" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#020B18" stop-opacity="0"/>
+      <stop offset="45%"  stop-color="#020B18" stop-opacity="0.10"/>
+      <stop offset="75%"  stop-color="#020B18" stop-opacity="0.52"/>
+      <stop offset="100%" stop-color="#020B18" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <!-- Top bar darken (for company name readability) -->
+    <linearGradient id="ov-top" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#020B18" stop-opacity="0.72"/>
+      <stop offset="40%"  stop-color="#020B18" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#020B18" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- ─── GLOW / BLOOM GRADIENTS ────────────────────────────── -->
+
+    <!-- Lamp bloom — left lamp (estimated position ~590, 260 from photo) -->
+    <radialGradient id="bloom-L" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#FFFFFF"  stop-opacity="0.40"/>
+      <stop offset="12%"  stop-color="#CAF0F8"  stop-opacity="0.30"/>
+      <stop offset="30%"  stop-color="#00B4D8"  stop-opacity="0.22"/>
+      <stop offset="58%"  stop-color="#1B4F72"  stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#0A1628"  stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Lamp bloom — right lamp (estimated ~820, 240) -->
+    <radialGradient id="bloom-R" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#FFFFFF"  stop-opacity="0.35"/>
+      <stop offset="12%"  stop-color="#CAF0F8"  stop-opacity="0.26"/>
+      <stop offset="30%"  stop-color="#00B4D8"  stop-opacity="0.18"/>
+      <stop offset="58%"  stop-color="#1B4F72"  stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0A1628"  stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Lamp bloom secondary (warmer fill from LEDs) -->
+    <radialGradient id="bloom-warm-L" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#00B4D8"  stop-opacity="0.25"/>
+      <stop offset="40%"  stop-color="#00B4D8"  stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#1B4F72"  stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="bloom-warm-R" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#00B4D8"  stop-opacity="0.20"/>
+      <stop offset="40%"  stop-color="#00B4D8"  stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#1B4F72"  stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Light cone gradients -->
+    <linearGradient id="cone-L" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%"   stop-color="#00B4D8" stop-opacity="0.06"/>
+      <stop offset="60%"  stop-color="#00B4D8" stop-opacity="0.025"/>
+      <stop offset="100%" stop-color="#00B4D8" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="cone-R" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%"   stop-color="#00B4D8" stop-opacity="0.05"/>
+      <stop offset="60%"  stop-color="#00B4D8" stop-opacity="0.020"/>
+      <stop offset="100%" stop-color="#00B4D8" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Table illumination pool -->
+    <radialGradient id="table-pool" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#00B4D8" stop-opacity="0.08"/>
+      <stop offset="50%"  stop-color="#00B4D8" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#00B4D8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- ─── VIGNETTE ──────────────────────────────────────────── -->
+
+    <radialGradient id="vignette" cx="50%" cy="48%" r="62%">
+      <stop offset="0%"   stop-color="#000000" stop-opacity="0"/>
+      <stop offset="55%"  stop-color="#000000" stop-opacity="0.08"/>
+      <stop offset="85%"  stop-color="#000000" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.65"/>
+    </radialGradient>
+
+    <!-- ─── FILTERS (print-safe, static only) ─────────────────── -->
+
+    <!-- Soft bloom for glow circles -->
+    <filter id="f-bloom" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="18" result="b1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="b2"/>
+      <feMerge>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="b2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Light ray softener -->
+    <filter id="f-ray" x="-15%" y="-10%" width="130%" height="120%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+
+    <!-- Subtle glow for wireframe blend enhancement -->
+    <filter id="f-glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Noise texture (print grain richness) -->
+    <filter id="f-noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="3" stitchTiles="stitch" result="n"/>
+      <feColorMatrix type="saturate" values="0" in="n" result="g"/>
+      <feBlend in="SourceGraphic" in2="g" mode="overlay" result="b"/>
+      <feComposite in="b" in2="SourceGraphic" operator="in"/>
+    </filter>
+
+    <!-- Monitor screen glow -->
+    <radialGradient id="scr-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#00B4D8" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#00B4D8" stop-opacity="0"/>
+    </radialGradient>
+
+  </defs>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+       LAYER 1 — ROOM BACKGROUND PHOTO
+       Full-frame photorealistic operating theatre
+  ════════════════════════════════════════════════════════════ -->
+  <g id="layer-bg-photo">
+    <image href="room-background.png"
+           x="0" y="0" width="1600" height="900"
+           preserveAspectRatio="xMidYMid slice"/>
+  </g>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+       LAYER 2 — DARK MOOD OVERLAY
+       Multiple gradient layers to:
+         - Darken entire scene for dramatic mood
+         - Extra darken left side for typography contrast
+         - Extra darken bottom for title block
+         - Extra darken top for company name
+  ════════════════════════════════════════════════════════════ -->
+  <g id="layer-overlay">
+
+    <!-- Global radial darken (mood) -->
+    <rect width="1600" height="900" fill="url(#ov-radial)"/>
+
+    <!-- Blue-black tint layer (unify color palette) -->
+    <rect width="1600" height="900" fill="#020B18" opacity="0.30"/>
+
+    <!-- Left edge darken (typography backing) -->
+    <rect width="1600" height="900" fill="url(#ov-left)"/>
+
+    <!-- Bottom darken (title block backing) -->
+    <rect width="1600" height="900" fill="url(#ov-bottom)"/>
+
+    <!-- Top bar darken (company name backing) -->
+    <rect width="1600" height="120" fill="url(#ov-top)"/>
+
+    <!-- Subtle grain for print richness -->
+    <rect width="1600" height="900" fill="#0A1628" opacity="0.08" filter="url(#f-noise)"/>
+
+  </g>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+       LAYER 3 — LAMP WIREFRAME OVERLAY
+       Technical blueprint wireframe drawing
+       Blend mode: screen (white lines glow on dark bg)
+       Position: centered upper area over the lamp region
+  ════════════════════════════════════════════════════════════ -->
+  <g id="layer-wireframe">
+    <image href="lamp-wireframe.png"
+           x="300" y="40" width="1000" height="720"
+           preserveAspectRatio="xMidYMid meet"
+           opacity="0.62"
+           style="mix-blend-mode: screen"/>
+
+    <!-- Secondary pass: tighter crop, subtle glow enhancement on lamp heads -->
+    <image href="lamp-wireframe.png"
+           x="340" y="60" width="920" height="680"
+           preserveAspectRatio="xMidYMid meet"
+           opacity="0.12"
+           style="mix-blend-mode: screen"
+           filter="url(#f-glow)"/>
+  </g>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+       LAYER 4 — BLOOM / GLOW EFFECTS
+       Radial glow at each lamp position
+       Light cone trapezoids projecting downward
+       Table illumination pool
+  ════════════════════════════════════════════════════════════ -->
+  <g id="layer-glow">
+
+    <!-- ── LEFT LAMP BLOOM (position approx cx=620, cy=310) ── -->
+    <!-- Outer halo -->
+    <circle cx="620" cy="310" r="180"
+            fill="url(#bloom-L)" filter="url(#f-bloom)" opacity="0.75"/>
+    <!-- Mid warm ring -->
+    <circle cx="620" cy="310" r="110"
+            fill="url(#bloom-warm-L)" filter="url(#f-bloom)" opacity="0.65"/>
+    <!-- Core bright spot -->
+    <circle cx="620" cy="302" r="38"
+            fill="#FFFFFF" opacity="0.06" filter="url(#f-bloom)"/>
+
+    <!-- ── RIGHT LAMP BLOOM (position approx cx=850, cy=280) ── -->
+    <circle cx="850" cy="285" r="170"
+            fill="url(#bloom-R)" filter="url(#f-bloom)" opacity="0.70"/>
+    <circle cx="850" cy="285" r="100"
+            fill="url(#bloom-warm-R)" filter="url(#f-bloom)" opacity="0.60"/>
+    <circle cx="850" cy="278" r="35"
+            fill="#FFFFFF" opacity="0.05" filter="url(#f-bloom)"/>
+
+    <!-- ── LIGHT CONES (projecting down from lamps) ── -->
+    <!-- Left lamp cone -->
+    <polygon points="575,345  665,345  780,900  440,900"
+             fill="url(#cone-L)" filter="url(#f-ray)" opacity="0.55"/>
+    <!-- Right lamp cone -->
+    <polygon points="805,320  895,320  1010,900  690,900"
+             fill="url(#cone-R)" filter="url(#f-ray)" opacity="0.50"/>
+
+    <!-- ── TABLE ILLUMINATION POOL ── -->
+    <ellipse cx="740" cy="620" rx="260" ry="45"
+             fill="url(#table-pool)" opacity="0.50"/>
+    <ellipse cx="740" cy="628" rx="150" ry="22"
+             fill="#CAF0F8" opacity="0.018"/>
+
+    <!-- Subtle monitor glow reflections on right wall -->
+    <circle cx="1220" cy="420" r="65"
+            fill="url(#scr-glow)" opacity="0.35"/>
+    <circle cx="1280" cy="380" r="45"
+            fill="url(#scr-glow)" opacity="0.25"/>
+
+    <!-- Ambient bounce from floor -->
+    <ellipse cx="800" cy="910" rx="480" ry="160"
+             fill="#00B4D8" opacity="0.012"/>
+
+  </g>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+       LAYER 5 — VIGNETTE + SUBTLE GRID
+       Depth framing and technical grid character
+  ════════════════════════════════════════════════════════════ -->
+  <g id="layer-depth">
+
+    <!-- Vignette (dark edge framing) -->
+    <rect width="1600" height="900" fill="url(#vignette)"/>
+
+    <!-- ── SUBTLE PERSPECTIVE FLOOR GRID ── -->
+    <!-- Very faint, just enough to add technical blueprint feel -->
+    <!-- Vanishing toward center-top of scene -->
+    <g stroke="#1B4F72" stroke-width="0.4" fill="none" opacity="0.035">
+      <!-- Horizontal bands (floor area only, y=580+) -->
+      <line x1="0" y1="620" x2="1600" y2="620"/>
+      <line x1="0" y1="670" x2="1600" y2="670"/>
+      <line x1="0" y1="720" x2="1600" y2="720"/>
+      <line x1="0" y1="770" x2="1600" y2="770"/>
+      <line x1="0" y1="820" x2="1600" y2="820"/>
+      <line x1="0" y1="870" x2="1600" y2="870"/>
+      <!-- Radials converging to VP ≈ (800,280) -->
+      <line x1="800" y1="280" x2="0"    y2="900"/>
+      <line x1="800" y1="280" x2="200"  y2="900"/>
+      <line x1="800" y1="280" x2="400"  y2="900"/>
+      <line x1="800" y1="280" x2="600"  y2="900"/>
+      <line x1="800" y1="280" x2="800"  y2="900"/>
+      <line x1="800" y1="280" x2="1000" y2="900"/>
+      <line x1="800" y1="280" x2="1200" y2="900"/>
+      <line x1="800" y1="280" x2="1400" y2="900"/>
+      <line x1="800" y1="280" x2="1600" y2="900"/>
+    </g>
+
+    <!-- ── VERY SUBTLE CEILING GRID ── -->
+    <g stroke="#1B4F72" stroke-width="0.3" fill="none" opacity="0.025">
+      <line x1="0" y1="50"  x2="1600" y2="50"/>
+      <line x1="0" y1="100" x2="1600" y2="100"/>
+      <line x1="0" y1="150" x2="1600" y2="150"/>
+      <line x1="400" y1="0" x2="400" y2="200" stroke-dasharray="4,8"/>
+      <line x1="600" y1="0" x2="600" y2="200" stroke-dasharray="4,8"/>
+      <line x1="800" y1="0" x2="800" y2="200" stroke-dasharray="4,8"/>
+      <line x1="1000" y1="0" x2="1000" y2="200" stroke-dasharray="4,8"/>
+      <line x1="1200" y1="0" x2="1200" y2="200" stroke-dasharray="4,8"/>
+    </g>
+
+    <!-- Thin cyan accent lines (technical drawing markers) -->
+    <line x1="0" y1="575" x2="1600" y2="575"
+          stroke="#00B4D8" stroke-width="0.3" opacity="0.04"/>
+    <line x1="0" y1="200" x2="1600" y2="200"
+          stroke="#00B4D8" stroke-width="0.3" opacity="0.03"/>
+
+  </g>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+       LAYER 6 — CORNER BRACKETS (MINIMAL HUD FRAME)
+       4× L-shaped corner brackets
+       Thin border rect
+       NO scan lines · NO data panels · NO readouts
+  ════════════════════════════════════════════════════════════ -->
+  <g id="layer-frame">
+
+    <!-- Thin border frame -->
+    <rect x="10" y="10" width="1580" height="880"
+          fill="none" stroke="#1B4F72" stroke-width="0.8" opacity="0.25"/>
+
+    <!-- ── TOP-LEFT corner bracket ── -->
+    <polyline points="10,58  10,10  58,10"
+              fill="none" stroke="#1B4F72" stroke-width="1.2" opacity="0.60"/>
+
+    <!-- ── TOP-RIGHT corner bracket ── -->
+    <polyline points="1542,10  1590,10  1590,58"
+              fill="none" stroke="#1B4F72" stroke-width="1.2" opacity="0.60"/>
+
+    <!-- ── BOTTOM-LEFT corner bracket ── -->
+    <polyline points="10,842  10,890  58,890"
+              fill="none" stroke="#1B4F72" stroke-width="1.2" opacity="0.60"/>
+
+    <!-- ── BOTTOM-RIGHT corner bracket ── -->
+    <polyline points="1542,890  1590,890  1590,842"
+              fill="none" stroke="#1B4F72" stroke-width="1.2" opacity="0.60"/>
+
+    <!-- Inner accent marks at corners (subtle) -->
+    <line x1="18" y1="18" x2="38" y2="18"
+          stroke="#00B4D8" stroke-width="0.5" opacity="0.20"/>
+    <line x1="18" y1="18" x2="18" y2="38"
+          stroke="#00B4D8" stroke-width="0.5" opacity="0.20"/>
+
+    <line x1="1582" y1="18" x2="1562" y2="18"
+          stroke="#00B4D8" stroke-width="0.5" opacity="0.20"/>
+    <line x1="1582" y1="18" x2="1582" y2="38"
+          stroke="#00B4D8" stroke-width="0.5" opacity="0.20"/>
+
+    <line x1="18" y1="882" x2="38" y2="882"
+          stroke="#00B4D8" stroke-width="0.5" opacity="0.20"/>
+    <line x1="18" y1="882" x2="18" y2="862"
+          stroke="#00B4D8" stroke-width="0.5" opacity="0.20"/>
+
+    <line x1="1582" y1="882" x2="1562" y2="882"
+          stroke="#00B4D8" stroke-width="0.5" opacity="0.20"/>
+    <line x1="1582" y1="882" x2="1582" y2="862"
+          stroke="#00B4D8" stroke-width="0.5" opacity="0.20"/>
+
+  </g>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+       LAYER 7 — TYPOGRAPHY
+       Font: 'Courier New', Consolas, monospace
+       EXACT text from brief only — nothing else
+       Label text: UPPERCASE
+       Body text: sentence case
+  ════════════════════════════════════════════════════════════ -->
+  <g id="layer-typography">
+
+    <!-- ── TOP LEFT: Logo placeholder (80×40px) ── -->
+    <rect x="30" y="24" width="80" height="40"
+          fill="none" stroke="#1B4F72" stroke-width="0.6" stroke-dasharray="4,3" opacity="0.25"/>
+
+    <!-- ── TOP RIGHT: "PT TEKNOMED INDO TIMUR" ── -->
+    <!-- 13px, tracking 0.3em, fill #FFFFFF opacity 0.85 -->
+    <text x="1570" y="50"
+          text-anchor="end"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="13" font-weight="700"
+          letter-spacing="5.2"
+          fill="#FFFFFF" opacity="0.85">PT TEKNOMED INDO TIMUR</text>
+
+    <!-- ── LEFT MIDDLE: "—— 2026 PRODUCT CATALOGUE" ── -->
+    <!-- 11px, tracking 0.25em, fill #8BA3B8 -->
+    <g id="eyebrow">
+      <line x1="30" y1="420" x2="60" y2="420"
+            stroke="#00B4D8" stroke-width="1.2" opacity="0.60"/>
+      <text x="70" y="424"
+            font-family="'Courier New', Consolas, monospace"
+            font-size="11" font-weight="600"
+            letter-spacing="4.4"
+            fill="#8BA3B8" opacity="1">2026 PRODUCT CATALOGUE</text>
+    </g>
+
+    <!-- ── BOTTOM LEFT BLOCK ── -->
+
+    <!-- "MODULAR" — 13px, tracking 0.6em, fill #8BA3B8 -->
+    <text x="30" y="610"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="13" font-weight="400"
+          letter-spacing="7.8"
+          fill="#8BA3B8" opacity="1">MODULAR</text>
+
+    <!-- "OPERATING" — 78px, font-weight 700, fill #FFFFFF -->
+    <text x="26" y="690"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="78" font-weight="700"
+          letter-spacing="-1"
+          fill="#FFFFFF" opacity="1">OPERATING</text>
+
+    <!-- "THEATRE" — 78px, font-weight 700, fill #FFFFFF -->
+    <text x="26" y="778"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="78" font-weight="700"
+          letter-spacing="-1"
+          fill="#FFFFFF" opacity="1">THEATRE</text>
+
+    <!-- Left border line: 2px #00B4D8 -->
+    <line x1="30" y1="794" x2="30" y2="834"
+          stroke="#00B4D8" stroke-width="2" opacity="0.70"/>
+
+    <!-- "Engineering the future" — 14px, fill #8BA3B8 -->
+    <text x="44" y="812"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="14" font-weight="400"
+          letter-spacing="0.8"
+          fill="#8BA3B8" opacity="1">Engineering the future</text>
+
+    <!-- "of surgical environments" — 14px, fill #8BA3B8 -->
+    <text x="44" y="832"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="14" font-weight="400"
+          letter-spacing="0.8"
+          fill="#8BA3B8" opacity="1">of surgical environments</text>
+
+    <!-- ── BOTTOM BAR ── -->
+    <!-- Separator line -->
+    <line x1="30" y1="862" x2="1570" y2="862"
+          stroke="#1B4F72" stroke-width="0.5" opacity="0.30"/>
+
+    <!-- "CONTACT   +62 812-8805-4879   ·   teknomedindotimurpt@gmail.com" -->
+    <!-- 10px, tracking 0.2em, fill #8BA3B8 opacity 0.7 -->
+    <text x="30" y="880"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="10" font-weight="700"
+          letter-spacing="3.2"
+          fill="#00B4D8" opacity="0.70">CONTACT</text>
+
+    <text x="128" y="880"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="10"
+          letter-spacing="2"
+          fill="#8BA3B8" opacity="0.70">+62 812-8805-4879</text>
+
+    <text x="310" y="880"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="10"
+          fill="#8BA3B8" opacity="0.50">·</text>
+
+    <text x="330" y="880"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="10"
+          letter-spacing="2"
+          fill="#8BA3B8" opacity="0.70">teknomedindotimurpt@gmail.com</text>
+
+    <!-- ── BOTTOM RIGHT: "01" ── -->
+    <!-- 11px, fill #8BA3B8 opacity 0.5 -->
+    <text x="1570" y="880"
+          text-anchor="end"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="11"
+          letter-spacing="2.5"
+          fill="#8BA3B8" opacity="0.50">01</text>
+
+  </g>
+
+</svg>
