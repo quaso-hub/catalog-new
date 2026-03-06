@@ -1,0 +1,968 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900">
+
+  <!-- ============================================================
+       HERO COVER V3 — MODULAR OPERATING THEATRE
+       PT Teknomed Indo Timur / Elfatech · 2026 Product Catalogue
+       PRINT-READY static SVG · A3 landscape · 300dpi equivalent
+       Dark blueprint / technical wireframe aesthetic
+       2-point perspective: VP1(400,280) VP2(1200,280)
+       Palette: #020B18 #0A1628 #0D2137 #1B4F72 #00B4D8 #CAF0F8
+       ZERO animations · ZERO JS · ZERO HUD data panels
+  ============================================================ -->
+
+  <defs>
+
+    <!-- ── GRADIENTS ───────────────────────────────────────────── -->
+
+    <!-- Background deep radial -->
+    <radialGradient id="bg-radial" cx="50%" cy="46%" r="72%" fx="50%" fy="46%">
+      <stop offset="0%"   stop-color="#0A1628"/>
+      <stop offset="40%"  stop-color="#071220"/>
+      <stop offset="100%" stop-color="#020B18"/>
+    </radialGradient>
+
+    <!-- Vignette: transparent center → black edges -->
+    <radialGradient id="vignette" cx="50%" cy="50%" r="68%">
+      <stop offset="0%"   stop-color="#000000" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#000000" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.70"/>
+    </radialGradient>
+
+    <!-- Left wall gradient -->
+    <linearGradient id="wall-L" x1="0" y1=".5" x2="1" y2=".5">
+      <stop offset="0%"   stop-color="#020B18"/>
+      <stop offset="100%" stop-color="#0A1628"/>
+    </linearGradient>
+
+    <!-- Right wall gradient -->
+    <linearGradient id="wall-R" x1="0" y1=".5" x2="1" y2=".5">
+      <stop offset="0%"   stop-color="#0A1628"/>
+      <stop offset="100%" stop-color="#020B18"/>
+    </linearGradient>
+
+    <!-- Ceiling fill -->
+    <linearGradient id="ceiling" x1=".5" y1="0" x2=".5" y2="1">
+      <stop offset="0%"   stop-color="#0D2137"/>
+      <stop offset="100%" stop-color="#071220"/>
+    </linearGradient>
+
+    <!-- Floor reflection -->
+    <linearGradient id="floor-ref" x1=".5" y1="0" x2=".5" y2="1">
+      <stop offset="0%"   stop-color="#00B4D8" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#020B18" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Stainless steel material for arms -->
+    <linearGradient id="steel" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#1a1a2e"/>
+      <stop offset="30%"  stop-color="#3a3a5c"/>
+      <stop offset="50%"  stop-color="#7a7aaa"/>
+      <stop offset="70%"  stop-color="#3a3a5c"/>
+      <stop offset="100%" stop-color="#1a1a2e"/>
+    </linearGradient>
+
+    <!-- Arm pipe vertical -->
+    <linearGradient id="pipe-v" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#1a3a5a"/>
+      <stop offset="45%"  stop-color="#4a7aaa"/>
+      <stop offset="100%" stop-color="#1a3a5a"/>
+    </linearGradient>
+
+    <!-- OR table surface -->
+    <linearGradient id="tbl-top" x1=".5" y1="0" x2=".5" y2="1">
+      <stop offset="0%"   stop-color="#1B4F72" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#0A1628" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <!-- Lamp lens bloom — left -->
+    <radialGradient id="lens-L" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#FFFFFF"  stop-opacity="1"/>
+      <stop offset="16%"  stop-color="#CAF0F8"  stop-opacity="0.88"/>
+      <stop offset="38%"  stop-color="#00B4D8"  stop-opacity="0.50"/>
+      <stop offset="68%"  stop-color="#1B4F72"  stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0D2137"  stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Lamp lens bloom — right -->
+    <radialGradient id="lens-R" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#FFFFFF"  stop-opacity="0.95"/>
+      <stop offset="16%"  stop-color="#CAF0F8"  stop-opacity="0.82"/>
+      <stop offset="38%"  stop-color="#00B4D8"  stop-opacity="0.45"/>
+      <stop offset="68%"  stop-color="#1B4F72"  stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#0D2137"  stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Light cone left -->
+    <linearGradient id="cone-L" x1=".5" y1="0" x2=".5" y2="1">
+      <stop offset="0%"   stop-color="#00B4D8" stop-opacity="0.08"/>
+      <stop offset="55%"  stop-color="#00B4D8" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#00B4D8" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Light cone right -->
+    <linearGradient id="cone-R" x1=".5" y1="0" x2=".5" y2="1">
+      <stop offset="0%"   stop-color="#00B4D8" stop-opacity="0.07"/>
+      <stop offset="55%"  stop-color="#00B4D8" stop-opacity="0.025"/>
+      <stop offset="100%" stop-color="#00B4D8" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Monitor screen glow -->
+    <radialGradient id="scr-glow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%"   stop-color="#00B4D8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#00B4D8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Bloom outer layer gradient (for large halos) -->
+    <radialGradient id="bloom-outer-L" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#1B4F72" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#1B4F72" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bloom-mid-L" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#00B4D8" stop-opacity="0.60"/>
+      <stop offset="100%" stop-color="#00B4D8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bloom-core-L" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#FFFFFF" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#CAF0F8" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="bloom-outer-R" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#1B4F72" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#1B4F72" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bloom-mid-R" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#00B4D8" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#00B4D8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bloom-core-R" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#FFFFFF" stop-opacity="0.88"/>
+      <stop offset="100%" stop-color="#CAF0F8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- ── FILTERS (print-safe, static only) ───────────────────── -->
+
+    <!-- Bloom: lamp glow halos -->
+    <filter id="bloom" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Glow soft: secondary equipment edges -->
+    <filter id="glow-soft" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Light ray: cone softening -->
+    <filter id="ray" x="-15%" y="-10%" width="130%" height="120%">
+      <feGaussianBlur stdDeviation="12"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0.7  0 0 0 0 0.9  0 0 0 0 1  0 0 0 0.3 0"/>
+    </filter>
+
+    <!-- Bloom intense: core white concentration -->
+    <filter id="bloom-core" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="14" result="b1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5"  result="b2"/>
+      <feMerge>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="b2"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Particle softness -->
+    <filter id="dust" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="0.8"/>
+    </filter>
+
+    <!-- Noise texture (subtle film grain for print richness) -->
+    <filter id="noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" result="n"/>
+      <feColorMatrix type="saturate" values="0" in="n" result="g"/>
+      <feBlend in="SourceGraphic" in2="g" mode="overlay" result="b"/>
+      <feComposite in="b" in2="SourceGraphic" operator="in"/>
+    </filter>
+
+  </defs>
+
+
+  <!-- ============================================================
+       LAYER 1 — BACKGROUND
+       Radial gradient + vignette + perspective grids
+  ============================================================ -->
+  <g id="layer-background">
+
+    <!-- Deep background fill -->
+    <rect width="1600" height="900" fill="url(#bg-radial)"/>
+
+    <!-- Subtle noise grain for print texture -->
+    <rect width="1600" height="900" fill="#0A1628" opacity="0.22" filter="url(#noise)"/>
+
+    <!-- ── FLOOR GRID — converging to VP1(400,280) and VP2(1200,280) ── -->
+    <g id="grid-floor" stroke="#1A3A5C" stroke-width="0.6" fill="none" opacity="0.06">
+      <!-- Radials from VP1 -->
+      <line x1="400" y1="280" x2="0"    y2="900"/>
+      <line x1="400" y1="280" x2="150"  y2="900"/>
+      <line x1="400" y1="280" x2="300"  y2="900"/>
+      <line x1="400" y1="280" x2="450"  y2="900"/>
+      <line x1="400" y1="280" x2="600"  y2="900"/>
+      <line x1="400" y1="280" x2="750"  y2="900"/>
+      <line x1="400" y1="280" x2="900"  y2="900"/>
+      <!-- Radials from VP2 -->
+      <line x1="1200" y1="280" x2="700"  y2="900"/>
+      <line x1="1200" y1="280" x2="900"  y2="900"/>
+      <line x1="1200" y1="280" x2="1050" y2="900"/>
+      <line x1="1200" y1="280" x2="1200" y2="900"/>
+      <line x1="1200" y1="280" x2="1350" y2="900"/>
+      <line x1="1200" y1="280" x2="1500" y2="900"/>
+      <line x1="1200" y1="280" x2="1600" y2="900"/>
+      <!-- Cross lines (horizontal floor bands, perspective-scaled spacing) -->
+      <line x1="210" y1="610" x2="1390" y2="610"/>
+      <line x1="140" y1="660" x2="1460" y2="660"/>
+      <line x1="80"  y1="710" x2="1520" y2="710"/>
+      <line x1="30"  y1="760" x2="1570" y2="760"/>
+      <line x1="0"   y1="810" x2="1600" y2="810"/>
+      <line x1="0"   y1="860" x2="1600" y2="860"/>
+    </g>
+
+    <!-- ── CEILING GRID — horizontal bands + radials ── -->
+    <g id="grid-ceiling" stroke="#1A3A5C" stroke-width="0.5" fill="none" opacity="0.04">
+      <line x1="0" y1="55"  x2="1600" y2="55"/>
+      <line x1="0" y1="100" x2="1600" y2="100"/>
+      <line x1="0" y1="140" x2="1600" y2="140"/>
+      <line x1="0" y1="175" x2="1600" y2="175"/>
+      <line x1="0" y1="210" x2="1600" y2="210"/>
+      <line x1="0" y1="240" x2="1600" y2="240"/>
+      <!-- Radials ceiling → VP1 and VP2 -->
+      <line x1="400"  y1="280" x2="0"    y2="0"/>
+      <line x1="400"  y1="280" x2="300"  y2="0"/>
+      <line x1="400"  y1="280" x2="600"  y2="0"/>
+      <line x1="400"  y1="280" x2="800"  y2="0"/>
+      <line x1="1200" y1="280" x2="800"  y2="0"/>
+      <line x1="1200" y1="280" x2="1000" y2="0"/>
+      <line x1="1200" y1="280" x2="1300" y2="0"/>
+      <line x1="1200" y1="280" x2="1600" y2="0"/>
+    </g>
+
+    <!-- Vignette -->
+    <rect width="1600" height="900" fill="url(#vignette)"/>
+
+    <!-- Soft ambient floor bounce -->
+    <ellipse cx="800" cy="910" rx="520" ry="180" fill="#00B4D8" opacity="0.022"/>
+  </g>
+
+
+  <!-- ============================================================
+       LAYER 2 — ENVIRONMENT
+       2-point perspective room: walls, ceiling, floor, panels
+  ============================================================ -->
+  <g id="layer-environment">
+
+    <!-- ── BACK WALL ──────────────────────────────────────────── -->
+    <polygon points="460,155 1140,155 1140,575 460,575"
+             fill="#0D2137" opacity="0.50" stroke="#1B4F72" stroke-width="0.5"/>
+    <!-- Horizontal panel joints -->
+    <line x1="460" y1="245" x2="1140" y2="245" stroke="#1A3A5C" stroke-width="0.4" opacity="0.45"/>
+    <line x1="460" y1="335" x2="1140" y2="335" stroke="#1A3A5C" stroke-width="0.4" opacity="0.40"/>
+    <line x1="460" y1="425" x2="1140" y2="425" stroke="#1A3A5C" stroke-width="0.4" opacity="0.35"/>
+    <line x1="460" y1="505" x2="1140" y2="505" stroke="#1A3A5C" stroke-width="0.4" opacity="0.30"/>
+    <!-- Vertical panel joints -->
+    <line x1="575"  y1="155" x2="575"  y2="575" stroke="#1A3A5C" stroke-width="0.4" opacity="0.38"/>
+    <line x1="690"  y1="155" x2="690"  y2="575" stroke="#1A3A5C" stroke-width="0.4" opacity="0.32"/>
+    <line x1="800"  y1="155" x2="800"  y2="575" stroke="#1A3A5C" stroke-width="0.4" opacity="0.28"/>
+    <line x1="910"  y1="155" x2="910"  y2="575" stroke="#1A3A5C" stroke-width="0.4" opacity="0.32"/>
+    <line x1="1025" y1="155" x2="1025" y2="575" stroke="#1A3A5C" stroke-width="0.4" opacity="0.38"/>
+
+    <!-- ── LEFT WALL ──────────────────────────────────────────── -->
+    <polygon points="0,0 460,155 460,575 0,900"
+             fill="url(#wall-L)" opacity="0.68"/>
+    <!-- Horizontal joints (perspective) -->
+    <line x1="0"   y1="145" x2="460" y2="210" stroke="#1A3A5C" stroke-width="0.4" opacity="0.42"/>
+    <line x1="0"   y1="310" x2="460" y2="325" stroke="#1A3A5C" stroke-width="0.4" opacity="0.36"/>
+    <line x1="0"   y1="480" x2="460" y2="435" stroke="#1A3A5C" stroke-width="0.4" opacity="0.30"/>
+    <line x1="0"   y1="670" x2="460" y2="555" stroke="#1A3A5C" stroke-width="0.4" opacity="0.25"/>
+    <!-- Vertical joints -->
+    <line x1="105" y1="0"   x2="255" y2="575" stroke="#1A3A5C" stroke-width="0.3" opacity="0.28"/>
+    <line x1="225" y1="0"   x2="350" y2="575" stroke="#1A3A5C" stroke-width="0.3" opacity="0.23"/>
+
+    <!-- ── RIGHT WALL ─────────────────────────────────────────── -->
+    <polygon points="1140,155 1600,0 1600,900 1140,575"
+             fill="url(#wall-R)" opacity="0.68"/>
+    <line x1="1140" y1="210" x2="1600" y2="145" stroke="#1A3A5C" stroke-width="0.4" opacity="0.42"/>
+    <line x1="1140" y1="325" x2="1600" y2="310" stroke="#1A3A5C" stroke-width="0.4" opacity="0.36"/>
+    <line x1="1140" y1="435" x2="1600" y2="480" stroke="#1A3A5C" stroke-width="0.4" opacity="0.30"/>
+    <line x1="1140" y1="555" x2="1600" y2="670" stroke="#1A3A5C" stroke-width="0.4" opacity="0.25"/>
+    <line x1="1375" y1="0"   x2="1245" y2="575" stroke="#1A3A5C" stroke-width="0.3" opacity="0.28"/>
+    <line x1="1495" y1="0"   x2="1345" y2="575" stroke="#1A3A5C" stroke-width="0.3" opacity="0.23"/>
+
+    <!-- ── CEILING SLAB ───────────────────────────────────────── -->
+    <polygon points="0,0 1600,0 1140,155 460,155"
+             fill="url(#ceiling)" opacity="0.82"/>
+    <!-- Ceiling sub-panels -->
+    <line x1="460" y1="38"  x2="1140" y2="38"  stroke="#1A3A5C" stroke-width="0.4" opacity="0.28"/>
+    <line x1="460" y1="75"  x2="1140" y2="75"  stroke="#1A3A5C" stroke-width="0.4" opacity="0.25"/>
+    <line x1="460" y1="115" x2="1140" y2="115" stroke="#1A3A5C" stroke-width="0.4" opacity="0.22"/>
+
+    <!-- ── LAMINAR FLOW CANOPY (HVAC ceiling unit) ─────────────── -->
+    <rect x="595" y="150" width="410" height="20"
+          fill="#0D2137" stroke="#1B4F72" stroke-width="0.8" opacity="0.78"/>
+    <!-- Diffuser vertical slats -->
+    <line x1="605" y1="154" x2="605" y2="168" stroke="#1B4F72" stroke-width="0.5" opacity="0.45"/>
+    <line x1="625" y1="154" x2="625" y2="168" stroke="#1B4F72" stroke-width="0.5" opacity="0.45"/>
+    <line x1="645" y1="154" x2="645" y2="168" stroke="#1B4F72" stroke-width="0.5" opacity="0.45"/>
+    <line x1="665" y1="154" x2="665" y2="168" stroke="#1B4F72" stroke-width="0.5" opacity="0.45"/>
+    <line x1="685" y1="154" x2="685" y2="168" stroke="#1B4F72" stroke-width="0.5" opacity="0.45"/>
+    <line x1="705" y1="154" x2="705" y2="168" stroke="#1B4F72" stroke-width="0.5" opacity="0.45"/>
+    <line x1="725" y1="154" x2="725" y2="168" stroke="#1B4F72" stroke-width="0.5" opacity="0.45"/>
+    <line x1="745" y1="154" x2="745" y2="168" stroke="#1B4F72" stroke-width="0.5" opacity="0.45"/>
+    <line x1="765" y1="154" x2="765" y2="168" stroke="#1B4F72" stroke-width="0.5" opacity="0.45"/>
+    <line x1="785" y1="154" x2="785" y2="168" stroke="#1B4F72" stroke-width="0.5" opacity="0.45"/>
+    <line x1="805" y1="154" x2="805" y2="168" stroke="#1B4F72" stroke-width="0.5" opacity="0.45"/>
+    <line x1="825" y1="154" x2="825" y2="168" stroke="#1B4F72" stroke-width="0.5" opacity="0.45"/>
+    <line x1="845" y1="154" x2="845" y2="168" stroke="#1B4F72" stroke-width="0.5" opacity="0.45"/>
+    <line x1="865" y1="154" x2="865" y2="168" stroke="#1B4F72" stroke-width="0.5" opacity="0.45"/>
+    <line x1="885" y1="154" x2="885" y2="168" stroke="#1B4F72" stroke-width="0.5" opacity="0.45"/>
+    <line x1="905" y1="154" x2="905" y2="168" stroke="#1B4F72" stroke-width="0.5" opacity="0.45"/>
+    <line x1="925" y1="154" x2="925" y2="168" stroke="#1B4F72" stroke-width="0.5" opacity="0.45"/>
+    <line x1="945" y1="154" x2="945" y2="168" stroke="#1B4F72" stroke-width="0.5" opacity="0.45"/>
+    <line x1="965" y1="154" x2="965" y2="168" stroke="#1B4F72" stroke-width="0.5" opacity="0.45"/>
+    <line x1="985" y1="154" x2="985" y2="168" stroke="#1B4F72" stroke-width="0.5" opacity="0.45"/>
+    <!-- Canopy glow strip (bottom edge) -->
+    <rect x="595" y="168" width="410" height="2.5" fill="#00B4D8" opacity="0.10"/>
+    <!-- Canopy side accent bars -->
+    <rect x="593"  y="150" width="3" height="20" fill="#00B4D8" opacity="0.25"/>
+    <rect x="1004" y="150" width="3" height="20" fill="#00B4D8" opacity="0.25"/>
+
+    <!-- ── CEILING TRACK RAIL ─────────────────────────────────── -->
+    <rect x="678" y="92" width="244" height="8"
+          fill="#0D2137" stroke="#1B4F72" stroke-width="0.6" opacity="0.48"/>
+    <!-- Track mount to ceiling lines -->
+    <line x1="700"  y1="0" x2="760"  y2="155" stroke="#00B4D8" stroke-width="0.9" opacity="0.14"/>
+    <line x1="900"  y1="0" x2="860"  y2="155" stroke="#00B4D8" stroke-width="0.9" opacity="0.14"/>
+
+    <!-- ── BACK WALL PANELS (equipment bays) ──────────────────── -->
+    <!-- Left equipment bay -->
+    <rect x="488" y="195" width="118" height="88"
+          fill="#081928" stroke="#1B4F72" stroke-width="0.7" opacity="0.82"/>
+    <line x1="498" y1="212" x2="596" y2="212" stroke="#1A3A5C" stroke-width="0.5" opacity="0.55"/>
+    <line x1="498" y1="229" x2="596" y2="229" stroke="#1A3A5C" stroke-width="0.5" opacity="0.55"/>
+    <line x1="498" y1="246" x2="596" y2="246" stroke="#1A3A5C" stroke-width="0.5" opacity="0.50"/>
+    <line x1="498" y1="263" x2="596" y2="263" stroke="#1A3A5C" stroke-width="0.5" opacity="0.45"/>
+    <!-- Status indicators -->
+    <circle cx="503" cy="204" r="2.8" fill="#00B4D8" opacity="0.55"/>
+    <circle cx="516" cy="204" r="2.8" fill="#1B4F72" opacity="0.42"/>
+    <circle cx="529" cy="204" r="2.8" fill="#00B4D8" opacity="0.38"/>
+    <!-- Label strip -->
+    <rect x="488" y="270" width="118" height="13"
+          fill="#0D2137" stroke="#1A3A5C" stroke-width="0.4" opacity="0.65"/>
+
+    <!-- Right equipment bay -->
+    <rect x="994" y="195" width="118" height="88"
+          fill="#081928" stroke="#1B4F72" stroke-width="0.7" opacity="0.82"/>
+    <line x1="1004" y1="212" x2="1102" y2="212" stroke="#1A3A5C" stroke-width="0.5" opacity="0.55"/>
+    <line x1="1004" y1="229" x2="1102" y2="229" stroke="#1A3A5C" stroke-width="0.5" opacity="0.55"/>
+    <line x1="1004" y1="246" x2="1102" y2="246" stroke="#1A3A5C" stroke-width="0.5" opacity="0.50"/>
+    <line x1="1004" y1="263" x2="1102" y2="263" stroke="#1A3A5C" stroke-width="0.5" opacity="0.45"/>
+    <circle cx="1009" cy="204" r="2.8" fill="#1B4F72" opacity="0.42"/>
+    <circle cx="1022" cy="204" r="2.8" fill="#00B4D8" opacity="0.55"/>
+    <circle cx="1035" cy="204" r="2.8" fill="#1B4F72" opacity="0.38"/>
+    <rect x="994" y="270" width="118" height="13"
+          fill="#0D2137" stroke="#1A3A5C" stroke-width="0.4" opacity="0.65"/>
+
+    <!-- Center X-ray viewer -->
+    <rect x="756" y="172" width="88" height="65"
+          fill="#081928" stroke="#1B4F72" stroke-width="0.7" opacity="0.72"/>
+    <rect x="761" y="177" width="78" height="55"
+          fill="#0A1628" stroke="#1A3A5C" stroke-width="0.4" opacity="0.55"/>
+    <!-- Subtle rib-lines (x-ray content) -->
+    <line x1="800" y1="180" x2="800" y2="228" stroke="#1B4F72" stroke-width="0.5" opacity="0.25"/>
+    <line x1="782" y1="184" x2="818" y2="184" stroke="#1B4F72" stroke-width="0.3" opacity="0.18"/>
+    <line x1="780" y1="194" x2="820" y2="194" stroke="#1B4F72" stroke-width="0.3" opacity="0.18"/>
+    <line x1="781" y1="204" x2="819" y2="204" stroke="#1B4F72" stroke-width="0.3" opacity="0.18"/>
+    <line x1="783" y1="214" x2="817" y2="214" stroke="#1B4F72" stroke-width="0.3" opacity="0.15"/>
+    <line x1="786" y1="224" x2="814" y2="224" stroke="#1B4F72" stroke-width="0.3" opacity="0.12"/>
+
+    <!-- ── FLOOR SURFACE ──────────────────────────────────────── -->
+    <polygon points="0,900 1600,900 1140,575 460,575"
+             fill="#050E1C" opacity="0.88"/>
+    <!-- Floor reflection pool -->
+    <polygon points="500,575 1100,575 1200,900 400,900"
+             fill="url(#floor-ref)" opacity="0.50"/>
+    <!-- Floor-back edge -->
+    <line x1="460" y1="575" x2="1140" y2="575" stroke="#1B4F72" stroke-width="0.6" opacity="0.18"/>
+  </g>
+
+
+  <!-- ============================================================
+       LAYER 3 — EQUIPMENT
+       OR table, monitors, IV stands, trolleys
+       strokeDasharray wireframe feel
+  ============================================================ -->
+  <g id="layer-equipment">
+
+    <!-- ── OPERATING TABLE (center) ───────────────────────────── -->
+    <g id="or-table" opacity="0.80">
+      <!-- Table top -->
+      <rect x="640" y="525" width="320" height="55" rx="4"
+            fill="url(#tbl-top)" stroke="#1B4F72" stroke-width="1"/>
+      <!-- Surface highlight strip -->
+      <rect x="648" y="528" width="304" height="7" rx="2"
+            fill="#00B4D8" opacity="0.07"/>
+      <!-- Edge accent -->
+      <rect x="640" y="525" width="320" height="3.5" fill="#00B4D8" opacity="0.12"/>
+      <!-- Section dividers (head / body / leg) -->
+      <line x1="712" y1="525" x2="712" y2="580" stroke="#1B4F72" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.48"/>
+      <line x1="888" y1="525" x2="888" y2="580" stroke="#1B4F72" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.48"/>
+      <!-- Left column -->
+      <rect x="668" y="580" width="18" height="78"
+            fill="#0D2137" stroke="#1B4F72" stroke-width="0.7" opacity="0.78"/>
+      <line x1="677" y1="590" x2="677" y2="650" stroke="#1B4F72" stroke-width="0.3" opacity="0.38"/>
+      <!-- Right column -->
+      <rect x="914" y="580" width="18" height="78"
+            fill="#0D2137" stroke="#1B4F72" stroke-width="0.7" opacity="0.78"/>
+      <line x1="923" y1="590" x2="923" y2="650" stroke="#1B4F72" stroke-width="0.3" opacity="0.38"/>
+      <!-- Center telescoping column -->
+      <rect x="775" y="580" width="50" height="20"
+            fill="#0D2137" stroke="#1B4F72" stroke-width="0.7" opacity="0.72"/>
+      <rect x="785" y="600" width="30" height="52"
+            fill="#0D2137" stroke="#1A3A5C" stroke-width="0.5" opacity="0.68"/>
+      <!-- Base plates -->
+      <rect x="650" y="654" width="54" height="7" rx="2"
+            fill="#0D2137" stroke="#1B4F72" stroke-width="0.5" opacity="0.72"/>
+      <rect x="896" y="654" width="54" height="7" rx="2"
+            fill="#0D2137" stroke="#1B4F72" stroke-width="0.5" opacity="0.72"/>
+      <!-- Castors -->
+      <ellipse cx="663" cy="664" rx="5.5" ry="2.5" fill="#1B4F72" opacity="0.38"/>
+      <ellipse cx="691" cy="664" rx="5.5" ry="2.5" fill="#1B4F72" opacity="0.38"/>
+      <ellipse cx="909" cy="664" rx="5.5" ry="2.5" fill="#1B4F72" opacity="0.38"/>
+      <ellipse cx="937" cy="664" rx="5.5" ry="2.5" fill="#1B4F72" opacity="0.38"/>
+      <!-- Headrest extension -->
+      <rect x="640" y="500" width="68" height="26" rx="3"
+            fill="#0D2137" stroke="#1B4F72" stroke-width="0.7" opacity="0.68"/>
+      <ellipse cx="674" cy="513" rx="22" ry="7"
+               fill="none" stroke="#1A3A5C" stroke-width="0.5" opacity="0.38"/>
+      <!-- Arm rail left -->
+      <rect x="634" y="540" width="8" height="24"
+            fill="#0D2137" stroke="#1A3A5C" stroke-width="0.5" stroke-dasharray="2,2" opacity="0.50"/>
+    </g>
+
+    <!-- ── MONITOR — LEFT ─────────────────────────────────────── -->
+    <g id="mon-L" opacity="0.70">
+      <rect x="220" y="340" width="128" height="92" rx="3"
+            fill="#060F1E" stroke="#1B4F72" stroke-width="0.8"/>
+      <rect x="226" y="346" width="116" height="76"
+            fill="#081928" stroke="#1A3A5C" stroke-width="0.5"/>
+      <rect x="228" y="348" width="112" height="72"
+            fill="url(#scr-glow)" opacity="0.55"/>
+      <!-- ECG waveform -->
+      <polyline points="230,392 242,392 248,378 254,406 260,392 272,392 278,382 284,402 290,392 302,392 308,386 314,398 320,392 332,392 338,392"
+                fill="none" stroke="#00B4D8" stroke-width="0.8" opacity="0.52"/>
+      <!-- Grid lines -->
+      <line x1="228" y1="367" x2="340" y2="367" stroke="#1A3A5C" stroke-width="0.3" opacity="0.45"/>
+      <line x1="228" y1="386" x2="340" y2="386" stroke="#1A3A5C" stroke-width="0.3" opacity="0.45"/>
+      <line x1="228" y1="405" x2="340" y2="405" stroke="#1A3A5C" stroke-width="0.3" opacity="0.40"/>
+      <line x1="265" y1="348" x2="265" y2="420" stroke="#1A3A5C" stroke-width="0.3" opacity="0.32"/>
+      <line x1="303" y1="348" x2="303" y2="420" stroke="#1A3A5C" stroke-width="0.3" opacity="0.32"/>
+      <!-- Status dots -->
+      <circle cx="236" cy="428" r="2.8" fill="#00B4D8" opacity="0.60"/>
+      <circle cx="248" cy="428" r="2.8" fill="#1B4F72" opacity="0.45"/>
+      <!-- Stand -->
+      <rect x="274" y="432" width="20" height="38"
+            fill="#0D2137" stroke="#1A3A5C" stroke-width="0.5" stroke-dasharray="2,2" opacity="0.65"/>
+      <rect x="260" y="468" width="48" height="5" rx="1"
+            fill="#0D2137" stroke="#1A3A5C" stroke-width="0.5" opacity="0.60"/>
+    </g>
+
+    <!-- ── MONITOR — RIGHT ────────────────────────────────────── -->
+    <g id="mon-R" opacity="0.65">
+      <rect x="1252" y="340" width="128" height="92" rx="3"
+            fill="#060F1E" stroke="#1B4F72" stroke-width="0.8"/>
+      <rect x="1258" y="346" width="116" height="76"
+            fill="#081928" stroke="#1A3A5C" stroke-width="0.5"/>
+      <rect x="1260" y="348" width="112" height="72"
+            fill="url(#scr-glow)" opacity="0.48"/>
+      <polyline points="1262,392 1270,392 1276,383 1282,401 1288,392 1300,392 1306,378 1312,406 1318,392 1330,392 1336,388 1342,396 1348,392 1360,392 1366,390 1372,392"
+                fill="none" stroke="#00B4D8" stroke-width="0.8" opacity="0.48"/>
+      <line x1="1260" y1="367" x2="1372" y2="367" stroke="#1A3A5C" stroke-width="0.3" opacity="0.42"/>
+      <line x1="1260" y1="386" x2="1372" y2="386" stroke="#1A3A5C" stroke-width="0.3" opacity="0.42"/>
+      <line x1="1260" y1="405" x2="1372" y2="405" stroke="#1A3A5C" stroke-width="0.3" opacity="0.38"/>
+      <line x1="1297" y1="348" x2="1297" y2="420" stroke="#1A3A5C" stroke-width="0.3" opacity="0.30"/>
+      <line x1="1335" y1="348" x2="1335" y2="420" stroke="#1A3A5C" stroke-width="0.3" opacity="0.30"/>
+      <circle cx="1268" cy="428" r="2.8" fill="#1B4F72" opacity="0.45"/>
+      <circle cx="1280" cy="428" r="2.8" fill="#00B4D8" opacity="0.55"/>
+      <rect x="1306" y="432" width="20" height="38"
+            fill="#0D2137" stroke="#1A3A5C" stroke-width="0.5" stroke-dasharray="2,2" opacity="0.60"/>
+      <rect x="1292" y="468" width="48" height="5" rx="1"
+            fill="#0D2137" stroke="#1A3A5C" stroke-width="0.5" opacity="0.55"/>
+    </g>
+
+    <!-- ── IV STAND — LEFT ────────────────────────────────────── -->
+    <g id="iv-L" opacity="0.40">
+      <line x1="178" y1="380" x2="178" y2="580" stroke="#1B4F72" stroke-width="1.2" stroke-dasharray="4,2"/>
+      <path d="M178,388 Q184,380 190,384" fill="none" stroke="#1B4F72" stroke-width="0.9"/>
+      <path d="M178,388 Q172,380 166,384" fill="none" stroke="#1B4F72" stroke-width="0.9"/>
+      <rect x="170" y="394" width="16" height="22" rx="4"
+            fill="#0D2137" stroke="#1A3A5C" stroke-width="0.5" opacity="0.65"/>
+      <line x1="178" y1="416" x2="178" y2="458" stroke="#1A3A5C" stroke-width="0.5" stroke-dasharray="2,3" opacity="0.55"/>
+      <line x1="178" y1="580" x2="156" y2="596" stroke="#1B4F72" stroke-width="0.8"/>
+      <line x1="178" y1="580" x2="200" y2="596" stroke="#1B4F72" stroke-width="0.8"/>
+      <line x1="178" y1="580" x2="178" y2="600" stroke="#1B4F72" stroke-width="0.8"/>
+    </g>
+
+    <!-- ── IV STAND — RIGHT ───────────────────────────────────── -->
+    <g id="iv-R" opacity="0.40">
+      <line x1="1432" y1="380" x2="1432" y2="580" stroke="#1B4F72" stroke-width="1.2" stroke-dasharray="4,2"/>
+      <path d="M1432,388 Q1438,380 1444,384" fill="none" stroke="#1B4F72" stroke-width="0.9"/>
+      <path d="M1432,388 Q1426,380 1420,384" fill="none" stroke="#1B4F72" stroke-width="0.9"/>
+      <rect x="1424" y="394" width="16" height="22" rx="4"
+            fill="#0D2137" stroke="#1A3A5C" stroke-width="0.5" opacity="0.65"/>
+      <line x1="1432" y1="416" x2="1432" y2="458" stroke="#1A3A5C" stroke-width="0.5" stroke-dasharray="2,3" opacity="0.55"/>
+      <line x1="1432" y1="580" x2="1410" y2="596" stroke="#1B4F72" stroke-width="0.8"/>
+      <line x1="1432" y1="580" x2="1454" y2="596" stroke="#1B4F72" stroke-width="0.8"/>
+      <line x1="1432" y1="580" x2="1432" y2="600" stroke="#1B4F72" stroke-width="0.8"/>
+    </g>
+
+    <!-- ── TROLLEY — LEFT ─────────────────────────────────────── -->
+    <g id="trl-L" opacity="0.36">
+      <rect x="80" y="460" width="78" height="108" rx="2"
+            fill="#060F1E" stroke="#1B4F72" stroke-width="0.7" stroke-dasharray="5,3"/>
+      <line x1="80" y1="494" x2="158" y2="494" stroke="#1A3A5C" stroke-width="0.5" opacity="0.65"/>
+      <line x1="80" y1="528" x2="158" y2="528" stroke="#1A3A5C" stroke-width="0.5" opacity="0.65"/>
+      <circle cx="90"  cy="571" r="5" fill="none" stroke="#1B4F72" stroke-width="0.6"/>
+      <circle cx="148" cy="571" r="5" fill="none" stroke="#1B4F72" stroke-width="0.6"/>
+    </g>
+
+    <!-- ── TROLLEY — RIGHT ────────────────────────────────────── -->
+    <g id="trl-R" opacity="0.34">
+      <rect x="1462" y="460" width="78" height="108" rx="2"
+            fill="#060F1E" stroke="#1B4F72" stroke-width="0.7" stroke-dasharray="5,3"/>
+      <line x1="1462" y1="494" x2="1540" y2="494" stroke="#1A3A5C" stroke-width="0.5" opacity="0.65"/>
+      <line x1="1462" y1="528" x2="1540" y2="528" stroke="#1A3A5C" stroke-width="0.5" opacity="0.65"/>
+      <circle cx="1472" cy="571" r="5" fill="none" stroke="#1B4F72" stroke-width="0.6"/>
+      <circle cx="1530" cy="571" r="5" fill="none" stroke="#1B4F72" stroke-width="0.6"/>
+    </g>
+  </g>
+
+
+  <!-- ============================================================
+       LAYER 4 — HERO (HIGH DETAIL)
+       2× Surgical lamps with arm systems
+  ============================================================ -->
+  <g id="layer-hero">
+
+    <!-- ══════════════════════════════════════════
+         LEFT PENDANT ARM + LAMP (cx≈700)
+    ══════════════════════════════════════════ -->
+    <g id="pendant-L">
+
+      <!-- Ceiling mount plate -->
+      <rect x="686" y="150" width="28" height="14" rx="2"
+            fill="#0D2137" stroke="#1B4F72" stroke-width="0.8" opacity="0.88"/>
+      <circle cx="692" cy="157" r="1.5" fill="#00B4D8" opacity="0.45"/>
+      <circle cx="708" cy="157" r="1.5" fill="#00B4D8" opacity="0.45"/>
+
+      <!-- Vertical telescoping column -->
+      <rect x="694" y="164" width="12" height="72"
+            fill="url(#pipe-v)" stroke="#1B4F72" stroke-width="0.7" opacity="0.84"/>
+      <!-- Column housing rings -->
+      <rect x="692" y="178" width="16" height="4" rx="1" fill="#1B4F72" opacity="0.42"/>
+      <rect x="692" y="200" width="16" height="4" rx="1" fill="#1B4F72" opacity="0.42"/>
+      <rect x="692" y="222" width="16" height="4" rx="1" fill="#1B4F72" opacity="0.42"/>
+
+      <!-- Gas/power column block -->
+      <rect x="690" y="234" width="20" height="32"
+            fill="#0D2137" stroke="#1B4F72" stroke-width="0.7" opacity="0.78"/>
+      <circle cx="700" cy="244" r="3.5" fill="none" stroke="#00B4D8" stroke-width="0.7" opacity="0.55"/>
+      <circle cx="700" cy="258" r="3.5" fill="none" stroke="#1B4F72" stroke-width="0.7" opacity="0.45"/>
+      <rect x="695" y="260" width="10" height="6" rx="1"
+            fill="#1A3A5C" stroke="#1B4F72" stroke-width="0.4" opacity="0.48"/>
+
+      <!-- Horizontal pivot arm -->
+      <rect x="650" y="262" width="82" height="8" rx="3"
+            fill="url(#steel)" stroke="#1B4F72" stroke-width="0.8" opacity="0.78"/>
+      <circle cx="700" cy="266" r="5"
+              fill="#0D2137" stroke="#00B4D8" stroke-width="0.7" opacity="0.55"/>
+
+      <!-- Secondary drop arm -->
+      <rect x="676" y="270" width="10" height="58" rx="2"
+            fill="url(#pipe-v)" stroke="#1B4F72" stroke-width="0.6" opacity="0.80"/>
+
+      <!-- Lamp mount collar -->
+      <ellipse cx="681" cy="332" rx="24" ry="7"
+               fill="#0D2137" stroke="#1B4F72" stroke-width="0.9" opacity="0.82"/>
+
+      <!-- ── LAMP HEAD — LEFT ── -->
+      <!-- Octagonal outer housing -->
+      <polygon points="681,340 725,348 740,378 725,408 681,416 637,408 622,378 637,348"
+               fill="#0A1628" stroke="#1B4F72" stroke-width="1.3" opacity="0.92"/>
+      <!-- Inner housing ring -->
+      <polygon points="681,345 721,352 734,378 721,404 681,411 641,404 628,378 641,352"
+               fill="none" stroke="#0D2137" stroke-width="2" opacity="0.75"/>
+      <!-- Housing bolts (8 positions around octagon vertices) -->
+      <circle cx="725" cy="348" r="2.5" fill="#1B4F72" opacity="0.50"/>
+      <circle cx="740" cy="378" r="2.5" fill="#1B4F72" opacity="0.48"/>
+      <circle cx="725" cy="408" r="2.5" fill="#1B4F72" opacity="0.50"/>
+      <circle cx="681" cy="416" r="2.5" fill="#1B4F72" opacity="0.45"/>
+      <circle cx="637" cy="408" r="2.5" fill="#1B4F72" opacity="0.50"/>
+      <circle cx="622" cy="378" r="2.5" fill="#1B4F72" opacity="0.48"/>
+      <circle cx="637" cy="348" r="2.5" fill="#1B4F72" opacity="0.50"/>
+      <circle cx="681" cy="340" r="2.5" fill="#1B4F72" opacity="0.45"/>
+
+      <!-- Body circle -->
+      <circle cx="681" cy="378" r="54"
+              fill="#060F1E" stroke="#1B4F72" stroke-width="1.4" opacity="0.94"/>
+      <!-- Reflector bowl -->
+      <circle cx="681" cy="378" r="46"
+              fill="#0A1628" stroke="#1A3A5C" stroke-width="0.7" opacity="0.88"/>
+      <!-- LED array ring -->
+      <circle cx="681" cy="378" r="38"
+              fill="none" stroke="#1B4F72" stroke-width="0.5" stroke-dasharray="3,4" opacity="0.50"/>
+
+      <!-- 12 LED emitters evenly around r=34 ring -->
+      <circle cx="681" cy="344" r="3.5" fill="#00B4D8" opacity="0.55"/>
+      <circle cx="698" cy="347" r="3.5" fill="#00B4D8" opacity="0.52"/>
+      <circle cx="711" cy="358" r="3.5" fill="#00B4D8" opacity="0.50"/>
+      <circle cx="715" cy="375" r="3.5" fill="#00B4D8" opacity="0.48"/>
+      <circle cx="711" cy="392" r="3.5" fill="#00B4D8" opacity="0.50"/>
+      <circle cx="698" cy="403" r="3.5" fill="#00B4D8" opacity="0.52"/>
+      <circle cx="681" cy="412" r="3.5" fill="#00B4D8" opacity="0.55"/>
+      <circle cx="664" cy="403" r="3.5" fill="#00B4D8" opacity="0.52"/>
+      <circle cx="651" cy="392" r="3.5" fill="#00B4D8" opacity="0.50"/>
+      <circle cx="647" cy="375" r="3.5" fill="#00B4D8" opacity="0.48"/>
+      <circle cx="651" cy="358" r="3.5" fill="#00B4D8" opacity="0.50"/>
+      <circle cx="664" cy="347" r="3.5" fill="#00B4D8" opacity="0.52"/>
+
+      <!-- Concentric lens glow -->
+      <circle cx="681" cy="378" r="28" fill="url(#lens-L)" opacity="0.90"/>
+      <circle cx="681" cy="378" r="20" fill="#FFFFFF" opacity="0.11"/>
+      <circle cx="681" cy="378" r="14" fill="#FFFFFF" opacity="0.20"/>
+      <circle cx="681" cy="378" r="9"  fill="#FFFFFF" opacity="0.42"/>
+      <!-- White hot core -->
+      <circle cx="681" cy="378" r="5"  fill="#FFFFFF" opacity="0.88" filter="url(#bloom-core)"/>
+    </g>
+
+    <!-- ══════════════════════════════════════════
+         RIGHT PENDANT ARM + LAMP (cx≈920)
+    ══════════════════════════════════════════ -->
+    <g id="pendant-R">
+
+      <!-- Ceiling mount -->
+      <rect x="906" y="150" width="28" height="14" rx="2"
+            fill="#0D2137" stroke="#1B4F72" stroke-width="0.8" opacity="0.86"/>
+      <circle cx="912" cy="157" r="1.5" fill="#00B4D8" opacity="0.42"/>
+      <circle cx="928" cy="157" r="1.5" fill="#00B4D8" opacity="0.42"/>
+
+      <!-- Vertical column -->
+      <rect x="914" y="164" width="12" height="66"
+            fill="url(#pipe-v)" stroke="#1B4F72" stroke-width="0.7" opacity="0.82"/>
+      <rect x="912" y="176" width="16" height="4" rx="1" fill="#1B4F72" opacity="0.38"/>
+      <rect x="912" y="196" width="16" height="4" rx="1" fill="#1B4F72" opacity="0.38"/>
+      <rect x="912" y="216" width="16" height="4" rx="1" fill="#1B4F72" opacity="0.38"/>
+
+      <!-- Gas/power block -->
+      <rect x="910" y="228" width="20" height="32"
+            fill="#0D2137" stroke="#1B4F72" stroke-width="0.7" opacity="0.76"/>
+      <circle cx="920" cy="238" r="3.5" fill="none" stroke="#00B4D8" stroke-width="0.7" opacity="0.52"/>
+      <circle cx="920" cy="252" r="3.5" fill="none" stroke="#1B4F72" stroke-width="0.7" opacity="0.42"/>
+      <rect x="915" y="254" width="10" height="6" rx="1"
+            fill="#1A3A5C" stroke="#1B4F72" stroke-width="0.4" opacity="0.45"/>
+
+      <!-- Horizontal arm -->
+      <rect x="872" y="256" width="82" height="8" rx="3"
+            fill="url(#steel)" stroke="#1B4F72" stroke-width="0.8" opacity="0.76"/>
+      <circle cx="920" cy="260" r="5"
+              fill="#0D2137" stroke="#00B4D8" stroke-width="0.7" opacity="0.52"/>
+
+      <!-- Drop arm -->
+      <rect x="914" y="264" width="10" height="62" rx="2"
+            fill="url(#pipe-v)" stroke="#1B4F72" stroke-width="0.6" opacity="0.78"/>
+
+      <!-- Mount collar -->
+      <ellipse cx="919" cy="330" rx="22" ry="7"
+               fill="#0D2137" stroke="#1B4F72" stroke-width="0.9" opacity="0.80"/>
+
+      <!-- ── LAMP HEAD — RIGHT ── -->
+      <polygon points="919,336 961,343 974,372 961,401 919,408 877,401 864,372 877,343"
+               fill="#0A1628" stroke="#1B4F72" stroke-width="1.2" opacity="0.90"/>
+      <polygon points="919,340 957,346 968,372 957,398 919,404 881,398 870,372 881,346"
+               fill="none" stroke="#0D2137" stroke-width="1.8" opacity="0.72"/>
+      <!-- Bolts -->
+      <circle cx="961" cy="343" r="2.5" fill="#1B4F72" opacity="0.48"/>
+      <circle cx="974" cy="372" r="2.5" fill="#1B4F72" opacity="0.45"/>
+      <circle cx="961" cy="401" r="2.5" fill="#1B4F72" opacity="0.48"/>
+      <circle cx="919" cy="408" r="2.5" fill="#1B4F72" opacity="0.42"/>
+      <circle cx="877" cy="401" r="2.5" fill="#1B4F72" opacity="0.48"/>
+      <circle cx="864" cy="372" r="2.5" fill="#1B4F72" opacity="0.45"/>
+      <circle cx="877" cy="343" r="2.5" fill="#1B4F72" opacity="0.48"/>
+      <circle cx="919" cy="336" r="2.5" fill="#1B4F72" opacity="0.42"/>
+
+      <!-- Body -->
+      <circle cx="919" cy="372" r="50"
+              fill="#060F1E" stroke="#1B4F72" stroke-width="1.3" opacity="0.92"/>
+      <circle cx="919" cy="372" r="42"
+              fill="#0A1628" stroke="#1A3A5C" stroke-width="0.6" opacity="0.86"/>
+      <circle cx="919" cy="372" r="34"
+              fill="none" stroke="#1B4F72" stroke-width="0.5" stroke-dasharray="3,4" opacity="0.48"/>
+
+      <!-- 12 LED emitters around r=30 -->
+      <circle cx="919" cy="342" r="3"   fill="#00B4D8" opacity="0.52"/>
+      <circle cx="934" cy="345" r="3"   fill="#00B4D8" opacity="0.50"/>
+      <circle cx="946" cy="355" r="3"   fill="#00B4D8" opacity="0.48"/>
+      <circle cx="949" cy="370" r="3"   fill="#00B4D8" opacity="0.46"/>
+      <circle cx="946" cy="385" r="3"   fill="#00B4D8" opacity="0.48"/>
+      <circle cx="934" cy="395" r="3"   fill="#00B4D8" opacity="0.50"/>
+      <circle cx="919" cy="402" r="3"   fill="#00B4D8" opacity="0.52"/>
+      <circle cx="904" cy="395" r="3"   fill="#00B4D8" opacity="0.50"/>
+      <circle cx="892" cy="385" r="3"   fill="#00B4D8" opacity="0.48"/>
+      <circle cx="889" cy="370" r="3"   fill="#00B4D8" opacity="0.46"/>
+      <circle cx="892" cy="355" r="3"   fill="#00B4D8" opacity="0.48"/>
+      <circle cx="904" cy="345" r="3"   fill="#00B4D8" opacity="0.50"/>
+
+      <!-- Lens -->
+      <circle cx="919" cy="372" r="25" fill="url(#lens-R)" opacity="0.88"/>
+      <circle cx="919" cy="372" r="18" fill="#FFFFFF" opacity="0.10"/>
+      <circle cx="919" cy="372" r="12" fill="#FFFFFF" opacity="0.18"/>
+      <circle cx="919" cy="372" r="7.5" fill="#FFFFFF" opacity="0.40"/>
+      <!-- Core -->
+      <circle cx="919" cy="372" r="4.5" fill="#FFFFFF" opacity="0.85" filter="url(#bloom-core)"/>
+    </g>
+  </g>
+
+
+  <!-- ============================================================
+       LAYER 5 — LIGHTING
+       Light cones, 3-layer bloom per lamp, specular highlights
+  ============================================================ -->
+  <g id="layer-lighting">
+
+    <!-- ── LIGHT CONES ────────────────────────────────────────── -->
+    <!-- Left lamp cone (narrow + wide) -->
+    <polygon points="681,404 565,900 797,900" fill="url(#cone-L)" filter="url(#ray)" opacity="0.58"/>
+    <polygon points="681,418 505,900 857,900" fill="url(#cone-L)" opacity="0.22"/>
+
+    <!-- Right lamp cone -->
+    <polygon points="919,400 805,900 1033,900" fill="url(#cone-R)" filter="url(#ray)" opacity="0.52"/>
+    <polygon points="919,414 745,900 1093,900" fill="url(#cone-R)" opacity="0.20"/>
+
+    <!-- ── ILLUMINATION POOL ON TABLE ─────────────────────────── -->
+    <ellipse cx="800" cy="548" rx="200" ry="20"
+             fill="#00B4D8" opacity="0.05" filter="url(#glow-soft)"/>
+    <ellipse cx="800" cy="550" rx="125" ry="10"
+             fill="#CAF0F8" opacity="0.03"/>
+
+    <!-- ── 3-LAYER BLOOM — LEFT LAMP ─────────────────────────── -->
+    <!-- Outer: #1B4F72 opacity 0.25 -->
+    <circle cx="681" cy="378" r="82" fill="url(#bloom-outer-L)" filter="url(#bloom)"/>
+    <!-- Mid: #00B4D8 opacity 0.6 -->
+    <circle cx="681" cy="378" r="56" fill="url(#bloom-mid-L)" filter="url(#bloom)"/>
+    <!-- Core: #FFFFFF -->
+    <circle cx="681" cy="378" r="30" fill="url(#bloom-core-L)" filter="url(#bloom-core)"/>
+
+    <!-- ── 3-LAYER BLOOM — RIGHT LAMP ────────────────────────── -->
+    <circle cx="919" cy="372" r="76" fill="url(#bloom-outer-R)" filter="url(#bloom)"/>
+    <circle cx="919" cy="372" r="52" fill="url(#bloom-mid-R)" filter="url(#bloom)"/>
+    <circle cx="919" cy="372" r="28" fill="url(#bloom-core-R)" filter="url(#bloom-core)"/>
+
+    <!-- ── SPECULAR HIGHLIGHTS (0.3px white edges) ───────────── -->
+    <!-- Table top edge -->
+    <line x1="640" y1="525" x2="960" y2="525"
+          stroke="#CAF0F8" stroke-width="0.3" opacity="0.32"/>
+    <!-- Monitor top edges -->
+    <line x1="220" y1="340" x2="348" y2="340"
+          stroke="#CAF0F8" stroke-width="0.3" opacity="0.22"/>
+    <line x1="1252" y1="340" x2="1380" y2="340"
+          stroke="#CAF0F8" stroke-width="0.3" opacity="0.20"/>
+    <!-- Ceiling track -->
+    <line x1="678" y1="92" x2="922" y2="92"
+          stroke="#CAF0F8" stroke-width="0.3" opacity="0.18"/>
+    <!-- Laminar canopy bottom -->
+    <line x1="595" y1="170" x2="1005" y2="170"
+          stroke="#00B4D8" stroke-width="0.4" opacity="0.15"/>
+    <!-- Arm pipe tops -->
+    <line x1="694" y1="164" x2="706" y2="164"
+          stroke="#CAF0F8" stroke-width="0.3" opacity="0.20"/>
+    <line x1="914" y1="164" x2="926" y2="164"
+          stroke="#CAF0F8" stroke-width="0.3" opacity="0.18"/>
+  </g>
+
+
+  <!-- ============================================================
+       LAYER 6 — PARTICLES
+       ~28 static dust particles, blur filter, clustered near lamps
+  ============================================================ -->
+  <g id="layer-particles" filter="url(#dust)">
+
+    <!-- Near left lamp -->
+    <circle cx="635" cy="318" r="1.3" fill="#CAF0F8" opacity="0.28"/>
+    <circle cx="648" cy="295" r="0.8" fill="#00B4D8" opacity="0.22"/>
+    <circle cx="728" cy="308" r="1.5" fill="#CAF0F8" opacity="0.18"/>
+    <circle cx="702" cy="338" r="0.6" fill="#00B4D8" opacity="0.32"/>
+    <circle cx="618" cy="358" r="1.0" fill="#CAF0F8" opacity="0.20"/>
+    <circle cx="742" cy="352" r="0.7" fill="#00B4D8" opacity="0.25"/>
+    <circle cx="662" cy="432" r="1.4" fill="#CAF0F8" opacity="0.15"/>
+    <circle cx="706" cy="446" r="0.9" fill="#1B4F72" opacity="0.35"/>
+
+    <!-- Near right lamp -->
+    <circle cx="872" cy="316" r="1.1" fill="#CAF0F8" opacity="0.26"/>
+    <circle cx="892" cy="298" r="0.8" fill="#00B4D8" opacity="0.20"/>
+    <circle cx="968" cy="304" r="1.4" fill="#CAF0F8" opacity="0.17"/>
+    <circle cx="942" cy="334" r="0.6" fill="#00B4D8" opacity="0.30"/>
+    <circle cx="858" cy="350" r="1.0" fill="#CAF0F8" opacity="0.19"/>
+    <circle cx="978" cy="346" r="0.7" fill="#00B4D8" opacity="0.23"/>
+    <circle cx="922" cy="438" r="1.3" fill="#CAF0F8" opacity="0.14"/>
+    <circle cx="898" cy="454" r="0.8" fill="#1B4F72" opacity="0.32"/>
+
+    <!-- Ambient scatter -->
+    <circle cx="318"  cy="375" r="1.0" fill="#1B4F72" opacity="0.20"/>
+    <circle cx="475"  cy="285" r="0.7" fill="#00B4D8" opacity="0.14"/>
+    <circle cx="565"  cy="455" r="1.2" fill="#CAF0F8" opacity="0.12"/>
+    <circle cx="1060" cy="288" r="0.8" fill="#00B4D8" opacity="0.16"/>
+    <circle cx="1210" cy="378" r="1.0" fill="#1B4F72" opacity="0.18"/>
+    <circle cx="1348" cy="448" r="1.2" fill="#CAF0F8" opacity="0.12"/>
+    <circle cx="800"  cy="248" r="0.9" fill="#CAF0F8" opacity="0.22"/>
+    <circle cx="788"  cy="478" r="1.1" fill="#00B4D8" opacity="0.14"/>
+    <circle cx="548"  cy="542" r="0.7" fill="#1B4F72" opacity="0.16"/>
+    <circle cx="1110" cy="462" r="0.6" fill="#CAF0F8" opacity="0.18"/>
+    <circle cx="380"  cy="510" r="0.9" fill="#1B4F72" opacity="0.12"/>
+    <circle cx="1280" cy="295" r="0.8" fill="#00B4D8" opacity="0.10"/>
+  </g>
+
+
+  <!-- ============================================================
+       LAYER 7 — HUD OVERLAY (MINIMAL)
+       Corner brackets + thin border frame + page number only
+       NO scan lines · NO data readouts · NO animated elements
+  ============================================================ -->
+  <g id="layer-hud">
+
+    <!-- Thin border frame 1px #1B4F72 opacity 0.3 -->
+    <rect x="8" y="8" width="1584" height="884"
+          fill="none" stroke="#1B4F72" stroke-width="1" opacity="0.30"/>
+
+    <!-- ── CORNER BRACKETS — L-shaped 1px #1B4F72 opacity 0.5 ── -->
+    <!-- Top-left -->
+    <polyline points="8,48  8,8  48,8"
+              fill="none" stroke="#1B4F72" stroke-width="1" opacity="0.50"/>
+    <!-- Top-right -->
+    <polyline points="1552,8  1592,8  1592,48"
+              fill="none" stroke="#1B4F72" stroke-width="1" opacity="0.50"/>
+    <!-- Bottom-left -->
+    <polyline points="8,852  8,892  48,892"
+              fill="none" stroke="#1B4F72" stroke-width="1" opacity="0.50"/>
+    <!-- Bottom-right -->
+    <polyline points="1552,892  1592,892  1592,852"
+              fill="none" stroke="#1B4F72" stroke-width="1" opacity="0.50"/>
+
+  </g>
+
+
+  <!-- ============================================================
+       LAYER 8 — TYPOGRAPHY
+       Font: Courier New / Consolas, monospace
+       Uppercase all labels · letter-spacing min 0.15em
+       ONLY text specified in the brief, nothing more
+  ============================================================ -->
+  <g id="layer-typography">
+
+    <!-- ── TOP LEFT: Logo placeholder (80×40px) ──────────────── -->
+    <rect x="28" y="22" width="80" height="40"
+          fill="none" stroke="#1B4F72" stroke-width="0.5" stroke-dasharray="4,3" opacity="0.20"/>
+
+    <!-- ── TOP RIGHT: "PT TEKNOMED INDO TIMUR" 11px ──────────── -->
+    <text x="1572" y="42"
+          text-anchor="end"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="11" font-weight="700"
+          letter-spacing="4.8"
+          fill="#FFFFFF" opacity="0.60">PT TEKNOMED INDO TIMUR</text>
+
+    <!-- ── LEFT MIDDLE: "—— 2026 PRODUCT CATALOGUE" 10px ─────── -->
+    <g id="eyebrow">
+      <line x1="28" y1="400" x2="56" y2="400"
+            stroke="#00B4D8" stroke-width="1" opacity="0.55"/>
+      <text x="64" y="404"
+            font-family="'Courier New', Consolas, monospace"
+            font-size="10" font-weight="600"
+            letter-spacing="4"
+            fill="#8BA3B8" opacity="0.65">2026 PRODUCT CATALOGUE</text>
+    </g>
+
+    <!-- ── BOTTOM LEFT: Title block ──────────────────────────── -->
+
+    <!-- "MODULAR" 14px tracking-[0.5em] opacity 0.7 -->
+    <text x="28" y="590"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="14" font-weight="400"
+          letter-spacing="7"
+          fill="#FFFFFF" opacity="0.70">MODULAR</text>
+
+    <!-- "OPERATING" 72px bold -->
+    <text x="24" y="662"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="72" font-weight="700"
+          letter-spacing="-1.5"
+          fill="#FFFFFF" opacity="0.95">OPERATING</text>
+
+    <!-- "THEATRE" 72px bold -->
+    <text x="24" y="748"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="72" font-weight="700"
+          letter-spacing="-1.5"
+          fill="#FFFFFF" opacity="0.95">THEATRE</text>
+
+    <!-- Tagline with left border line -->
+    <!-- 13px, left teal rule -->
+    <line x1="28" y1="764" x2="28" y2="800"
+          stroke="#00B4D8" stroke-width="2" opacity="0.65"/>
+    <text x="40" y="780"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="13" font-weight="400"
+          letter-spacing="0.8"
+          fill="#FFFFFF" opacity="0.70">Engineering the future</text>
+    <text x="40" y="798"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="13" font-weight="400"
+          letter-spacing="0.8"
+          fill="#FFFFFF" opacity="0.70">of surgical environments</text>
+
+    <!-- ── BOTTOM BAR: Contact ───────────────────────────────── -->
+    <line x1="28" y1="870" x2="1572" y2="870"
+          stroke="#1B4F72" stroke-width="0.5" opacity="0.25"/>
+
+    <text x="28" y="886"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="8" font-weight="700"
+          letter-spacing="2.5"
+          fill="#00B4D8" opacity="0.68">CONTACT</text>
+
+    <text x="108" y="886"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="8"
+          letter-spacing="1"
+          fill="#8BA3B8" opacity="0.62">+62 812-8805-4879</text>
+
+    <text x="262" y="886"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="8"
+          fill="#1B4F72" opacity="0.50">·</text>
+
+    <text x="280" y="886"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="8"
+          letter-spacing="1"
+          fill="#8BA3B8" opacity="0.62">teknomedindotimurpt@gmail.com</text>
+
+    <!-- ── BOTTOM RIGHT: Page number "01" ────────────────────── -->
+    <text x="1572" y="886"
+          text-anchor="end"
+          font-family="'Courier New', Consolas, monospace"
+          font-size="8"
+          letter-spacing="2"
+          fill="#1B4F72" opacity="0.42">01</text>
+
+  </g>
+
+</svg>
