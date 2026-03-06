@@ -915,22 +915,15 @@
 }
 
 .cover-v4__company-name {
-  font-size: 7.5px;
+  font-size: 9.5px;
   font-weight: 500;
-  letter-spacing: 1.8px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.50);
+  color: rgba(255, 255, 255, 0.55);
   line-height: 1.4;
 }
 
-.cover-v4__company-tagline {
-  font-size: 6px;
-  font-weight: 400;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: rgba(13, 148, 136, 0.75);
-  line-height: 1.4;
-}
+/* .cover-v4__company-tagline removed — "Authorised Distributor" label eliminated */
 
 /* ── EYEBROW BLOCK ───────────────────────── */
 .cover-v4__eyebrow-block {
@@ -959,7 +952,7 @@
 }
 
 .cover-v4__year-text {
-  font-size: 7px;
+  font-size: 8.5px;
   font-weight: 500;
   letter-spacing: 2px;
   color: #0d9488;
@@ -967,11 +960,11 @@
 }
 
 .cover-v4__eyebrow {
-  font-size: 7px;
+  font-size: 9px;
   font-weight: 400;
-  letter-spacing: 3px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.38);
+  color: rgba(255, 255, 255, 0.42);
   margin: 0;
 }
 
@@ -987,11 +980,11 @@
 /* Pre-title — "Modular" descriptor */
 .cover-v4__pre-title {
   margin: 0 0 1.5mm;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 300;
   letter-spacing: 7px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.58);
   line-height: 1;
 }
 
@@ -1031,12 +1024,12 @@
 
 .cover-v4__tagline {
   margin: 0;
-  font-size: 9.5px;
+  font-size: 11.5px;
   font-weight: 300;
   font-style: normal;
   letter-spacing: 0.2px;
   line-height: 1.65;
-  color: rgba(255, 255, 255, 0.46);
+  color: rgba(255, 255, 255, 0.50);
 }
 
 /* ── FOOTER BAR ──────────────────────────── */
@@ -1062,11 +1055,11 @@
 }
 
 .cover-v4__contact-label {
-  font-size: 6px;
+  font-size: 8px;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(13, 148, 136, 0.65);
+  color: rgba(13, 148, 136, 0.70);
 }
 
 .cover-v4__contact-sep {
@@ -1075,19 +1068,13 @@
 }
 
 .cover-v4__contact-item {
-  font-size: 6.5px;
+  font-size: 8.5px;
   font-weight: 400;
   letter-spacing: 0.3px;
-  color: rgba(255, 255, 255, 0.32);
+  color: rgba(255, 255, 255, 0.38);
 }
 
-.cover-v4__page-num {
-  font-size: 7px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.18);
-  font-variant-numeric: tabular-nums;
-}
+/* .cover-v4__page-num removed — page number hidden on cover */
 
 /* ========================================
  * COVER V3 — Full-bleed editorial
