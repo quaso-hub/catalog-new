@@ -2,50 +2,64 @@
 ---
 
 <div class="page p-0">
-  <div class="cover-v3">
+  <div class="cover-v4">
 
-    <!-- Full-bleed background photo -->
-    <img src="/assets/images/cover-hero.svg" alt="" class="cover-v3__bg" aria-hidden="true">
+    <!-- Full-bleed architectural illustration -->
+    <img src="/assets/images/cover-hero.svg" alt="" class="cover-v4__bg" aria-hidden="true">
 
-    <!-- Dark overlay - gradient from bottom -->
-    <div class="cover-v3__overlay"></div>
+    <!-- Layered overlay system: vignette + left panel -->
+    <div class="cover-v4__overlay"></div>
 
-    <!-- Top bar: logo + company -->
-    <div class="cover-v3__topbar">
-      <img src="/assets/logos/logo-elfatech-hd.svg" alt="Elfatech" class="cover-v3__logo">
-      <div class="cover-v3__company">PT Teknomed Indo Timur</div>
+    <!-- ── TOP BAR ── logo left / company right -->
+    <header class="cover-v4__topbar">
+      <img src="/assets/logos/logo-elfatech-hd.svg" alt="Elfatech" class="cover-v4__logo">
+      <div class="cover-v4__company-block">
+        <span class="cover-v4__company-name">PT Teknomed Indo Timur</span>
+        <span class="cover-v4__company-tagline">Authorised Distributor</span>
+      </div>
+    </header>
+
+    <!-- ── EYEBROW + CATEGORY ── upper-left mid zone -->
+    <div class="cover-v4__eyebrow-block">
+      <div class="cover-v4__year-mark">
+        <span class="cover-v4__year-dash"></span>
+        <span class="cover-v4__year-text">2026</span>
+      </div>
+      <p class="cover-v4__eyebrow">Product Catalogue</p>
     </div>
 
-    <!-- Center-left: category label -->
-    <div class="cover-v3__category">Product Catalogue 2026</div>
+    <!-- ── MAIN TITLE BLOCK ── dominant lower-left -->
+    <div class="cover-v4__title-block">
 
-    <!-- Main title block — bottom-left -->
-    <div class="cover-v3__title-block">
-      <h1 class="cover-v3__title">
-        <span class="cover-v3__title-line cover-v3__title-line--thin">Modular</span>
-        <span class="cover-v3__title-line cover-v3__title-line--main">Operating</span>
-        <span class="cover-v3__title-line cover-v3__title-line--main">Theatre</span>
+      <!-- Pre-title discipline label -->
+      <p class="cover-v4__pre-title">Modular</p>
+
+      <!-- Main display title — print-scale -->
+      <h1 class="cover-v4__title">
+        <span class="cover-v4__title-line">Operating</span>
+        <span class="cover-v4__title-line">Theatre</span>
       </h1>
-      <div class="cover-v3__rule"></div>
-      <p class="cover-v3__sub">Engineering the future of surgical environments</p>
+
+      <!-- Teal rule + tagline -->
+      <div class="cover-v4__rule-group">
+        <div class="cover-v4__rule"></div>
+        <p class="cover-v4__tagline">
+          Engineering the future<br>of surgical environments
+        </p>
+      </div>
+
     </div>
 
-    <!-- Bottom right: contact -->
-    <div class="cover-v3__contact">
-      <span>+62 812-8865-4879</span>
-      <span>teknomedindotimurpt@gmail.com</span>
-    </div>
-
-    <!-- Bottom accent strip -->
-    <div class="cover-v3__strip">
-      <span>Clean Room</span>
-      <span class="cover-v3__strip-dot">·</span>
-      <span>Medical Gas</span>
-      <span class="cover-v3__strip-dot">·</span>
-      <span>HVAC Laminar</span>
-      <span class="cover-v3__strip-dot">·</span>
-      <span>Surgical Pendants</span>
-    </div>
+    <!-- ── BOTTOM BAR ── contact info, no strip -->
+    <footer class="cover-v4__footer">
+      <div class="cover-v4__contact">
+        <span class="cover-v4__contact-label">Contact</span>
+        <span class="cover-v4__contact-item">+62 812-8865-4879</span>
+        <span class="cover-v4__contact-sep">·</span>
+        <span class="cover-v4__contact-item">teknomedindotimurpt@gmail.com</span>
+      </div>
+      <div class="cover-v4__page-num">01</div>
+    </footer>
 
   </div>
 </div>
