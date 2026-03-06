@@ -823,6 +823,202 @@
 }
 
 /* ========================================
+ * COVER V3 — Full-bleed editorial
+ * Photo full page, typographic overlay
+ * Tone: Precision Editorial / Refined Industrial
+ * ======================================== */
+
+.cover-v3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #001a33;
+}
+
+/* Full-bleed background photo */
+.cover-v3__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+/* Layered overlay — dark bottom, subtle top */
+.cover-v3__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    /* heavy vignette bottom */
+    linear-gradient(to top,
+      rgba(0, 14, 30, 0.96) 0%,
+      rgba(0, 20, 40, 0.82) 28%,
+      rgba(0, 24, 48, 0.45) 55%,
+      rgba(0, 10, 22, 0.25) 75%,
+      rgba(0, 5, 15, 0.40) 100%
+    ),
+    /* left side darkening for text legibility */
+    linear-gradient(to right,
+      rgba(0, 10, 26, 0.55) 0%,
+      transparent 60%
+    );
+}
+
+/* ── TOP BAR ── */
+.cover-v3__topbar {
+  position: absolute;
+  top: 9mm;
+  left: 10mm;
+  right: 10mm;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.cover-v3__logo {
+  width: 120px;
+  height: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
+}
+
+.cover-v3__company {
+  font-size: 7px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* ── CATEGORY LABEL ── */
+.cover-v3__category {
+  position: absolute;
+  left: 10mm;
+  /* vertically centered between topbar and title block */
+  top: 50%;
+  transform: translateY(-105%);
+  font-size: 7.5px;
+  font-weight: 600;
+  letter-spacing: 3.5px;
+  text-transform: uppercase;
+  color: #0d9488;
+  z-index: 2;
+}
+
+/* ── MAIN TITLE BLOCK (bottom-left) ── */
+.cover-v3__title-block {
+  position: absolute;
+  bottom: 22mm;
+  left: 10mm;
+  z-index: 2;
+  max-width: 200mm;
+}
+
+.cover-v3__title {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0 0 5mm;
+}
+
+.cover-v3__title-line {
+  display: block;
+  line-height: 1.0;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  font-style: normal;
+}
+
+/* "Modular" — lighter weight, smaller */
+.cover-v3__title-line--thin {
+  font-size: 22px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 1mm;
+}
+
+/* "Operating" + "Theatre" — medium weight, large */
+.cover-v3__title-line--main {
+  font-size: 42px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.cover-v3__rule {
+  width: 32px;
+  height: 2px;
+  background: #0d9488;
+  margin-bottom: 4mm;
+}
+
+.cover-v3__sub {
+  font-size: 9px;
+  font-weight: 300;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  max-width: 160mm;
+  margin: 0;
+}
+
+/* ── CONTACT (bottom-right) ── */
+.cover-v3__contact {
+  position: absolute;
+  bottom: 22mm;
+  right: 10mm;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.cover-v3__contact span {
+  font-size: 7.5px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.38);
+  letter-spacing: 0.3px;
+}
+
+/* ── BOTTOM STRIP ── */
+.cover-v3__strip {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10mm;
+  background: rgba(13, 148, 136, 0.15);
+  border-top: 1px solid rgba(13, 148, 136, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6mm;
+  z-index: 2;
+}
+
+.cover-v3__strip span {
+  font-size: 6.5px;
+  font-weight: 500;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.cover-v3__strip-dot {
+  color: #0d9488 !important;
+  font-size: 8px !important;
+  letter-spacing: 0 !important;
+  opacity: 0.7;
+}
+
+/* ========================================
  * COVER V2 — Landscape split layout
  * Left: dark identity panel (40%)
  * Right: full-bleed hero photo (60%)

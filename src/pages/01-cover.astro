@@ -1,55 +1,50 @@
 ---
-import CertBadge from '../components/CertBadge.astro';
 ---
 
 <div class="page p-0">
-  <div class="cover-v2">
+  <div class="cover-v3">
 
-    <!-- LEFT PANEL: Identity + Title + Footer -->
-    <div class="cover-v2__left">
+    <!-- Full-bleed background photo -->
+    <img src="/assets/images/light-room.png" alt="" class="cover-v3__bg" aria-hidden="true">
 
-      <!-- Top: Logo -->
-      <div class="cover-v2__logo-area">
-        <img src="/assets/logos/logo-elfatech-hd.svg" alt="Elfatech" class="cover-v2__logo">
-        <div class="cover-v2__company-name">PT Teknomed Indo Timur</div>
-      </div>
+    <!-- Dark overlay - gradient from bottom -->
+    <div class="cover-v3__overlay"></div>
 
-      <!-- Center: Main Title Block -->
-      <div class="cover-v2__title-block">
-        <div class="cover-v2__overline">Product Catalogue 2026</div>
-        <h1 class="cover-v2__title">MODULAR<br>OPERATING<br>THEATRE</h1>
-        <div class="cover-v2__rule"></div>
-        <p class="cover-v2__tagline">Engineering the future of surgical environments</p>
-      </div>
-
-      <!-- Bottom: Certs + Contact -->
-      <div class="cover-v2__footer">
-        <CertBadge badges={[
-          { type: 'image', src: '/assets/logos/badge-ce.svg', alt: 'CE' },
-          { type: 'image', src: '/assets/logos/badge-iso13485.svg', alt: 'ISO 13485' },
-          { type: 'image', src: '/assets/logos/badge-sni.svg', alt: 'SNI' },
-          { type: 'text', text: 'TKDN' },
-        ]} />
-        <div class="cover-v2__contact">
-          <span>+62 812-8865-4879</span>
-          <span>teknomedindotimurpt@gmail.com</span>
-        </div>
-      </div>
-
+    <!-- Top bar: logo + company -->
+    <div class="cover-v3__topbar">
+      <img src="/assets/logos/logo-elfatech-hd.svg" alt="Elfatech" class="cover-v3__logo">
+      <div class="cover-v3__company">PT Teknomed Indo Timur</div>
     </div>
 
-    <!-- RIGHT PANEL: Hero Image -->
-    <div class="cover-v2__right">
-      <div class="cover-v2__hero-placeholder">
-        <span>OR Room Photo</span>
-      </div>
-      <!-- Swap with real image: -->
-      <!-- <img src="/assets/images/cover-hero.jpg" alt="Operating Theatre" class="cover-v2__hero-img"> -->
+    <!-- Center-left: category label -->
+    <div class="cover-v3__category">Product Catalogue 2026</div>
 
-      <!-- Accent bar bottom -->
-      <div class="cover-v2__accent-bar">
-        <span class="cover-v2__accent-label">CLEAN ROOM · MEDICAL GAS · HVAC · PENDANTS</span>
-      </div>
+    <!-- Main title block — bottom-left -->
+    <div class="cover-v3__title-block">
+      <h1 class="cover-v3__title">
+        <span class="cover-v3__title-line cover-v3__title-line--thin">Modular</span>
+        <span class="cover-v3__title-line cover-v3__title-line--main">Operating</span>
+        <span class="cover-v3__title-line cover-v3__title-line--main">Theatre</span>
+      </h1>
+      <div class="cover-v3__rule"></div>
+      <p class="cover-v3__sub">Engineering the future of surgical environments</p>
+    </div>
+
+    <!-- Bottom right: contact -->
+    <div class="cover-v3__contact">
+      <span>+62 812-8865-4879</span>
+      <span>teknomedindotimurpt@gmail.com</span>
+    </div>
+
+    <!-- Bottom accent strip -->
+    <div class="cover-v3__strip">
+      <span>Clean Room</span>
+      <span class="cover-v3__strip-dot">·</span>
+      <span>Medical Gas</span>
+      <span class="cover-v3__strip-dot">·</span>
+      <span>HVAC Laminar</span>
+      <span class="cover-v3__strip-dot">·</span>
+      <span>Surgical Pendants</span>
     </div>
 
   </div>
