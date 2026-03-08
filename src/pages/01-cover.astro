@@ -4,11 +4,36 @@
 <div class="page p-0">
   <div class="cover-v4">
 
-    <!-- Full-bleed architectural illustration -->
-    <img src="/assets/images/cover-hero.svg" alt="" class="cover-v4__bg" aria-hidden="true">
+    <!-- ── IMAGE LAYERS ── z-index 0–5 -->
 
-    <!-- Layered overlay system: vignette + left panel -->
-    <div class="cover-v4__overlay"></div>
+    <!-- L1: Real operating room photo — base -->
+    <div class="cv6__room-real">
+      <img src="/assets/images/hero-fix-asset/operating-room-v2.png" alt="" aria-hidden="true">
+    </div>
+
+    <!-- L2: Blueprint/wireframe room — left dominance, screen blend -->
+    <div class="cv6__room-wire">
+      <img src="/assets/images/hero-fix-asset/operating-room-wireframe-v2.png" alt="" aria-hidden="true">
+    </div>
+
+    <!-- L3: Surgical lamp wireframe — upper LEFT, screen blend -->
+    <div class="cv6__lamp-wire">
+      <img src="/assets/images/hero-fix-asset/surgical-lamp-wireframe-v3.png" alt="" aria-hidden="true">
+    </div>
+
+    <!-- Pendant wrapper — single anchor, real + wire share exact transform origin -->
+    <div class="cv6__pendant">
+      <div class="cv6__pendant-real">
+        <img src="/assets/images/hero-fix-asset/surgical-pendant.png" alt="" aria-hidden="true">
+      </div>
+      <div class="cv6__pendant-wire">
+        <img src="/assets/images/hero-fix-asset/surgical-pendant-wireframe.png" alt="" aria-hidden="true">
+      </div>
+    </div>
+
+    <!-- L6: Atmosphere gradient + vignette -->
+    <div class="cv6__atm"></div>
+    <div class="cv6__vig"></div>
 
     <!-- ── TOP BAR ── logo left / company right -->
     <header class="cover-v4__topbar">
