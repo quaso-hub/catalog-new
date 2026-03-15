@@ -152,7 +152,7 @@
 
 .toc {
   column-count: 2;
-  column-gap: 40px;
+  column-gap: 64px;
   column-fill: balance;
   max-width: 100%;
   margin: 0;
@@ -165,7 +165,7 @@
   font-size: var(--text-xl);
   font-weight: var(--font-bold);
   color: var(--color-primary-700);
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-4);
   text-align: left;
   padding-bottom: var(--space-2);
 }
@@ -181,7 +181,7 @@
 
 .toc__section {
   break-inside: avoid;
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-5);
 }
 
 .toc__section-title {
@@ -190,8 +190,8 @@
   color: var(--color-primary-700);
   text-transform: uppercase;
   letter-spacing: var(--tracking-wide);
-  margin-bottom: 3px;
-  padding-bottom: 2px;
+  margin-bottom: 6px;
+  padding-bottom: 3px;
   border-bottom: 1px solid var(--color-neutral-200);
 }
 
@@ -199,7 +199,7 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 2px 0;
+  padding: 3px 0;
   border-bottom: 1px dotted var(--color-neutral-300);
   font-size: 10px;
   line-height: 1.4;
@@ -2749,4 +2749,122 @@ p {
 .diagram-section img {
   max-width: 100%;
   height: auto;
+}
+
+/* ========================================
+ * COMPLIANCE BLOCKS (p45)
+ * ======================================== */
+
+.compliance-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  margin-top: var(--space-4);
+}
+
+.compliance-block {
+  padding: var(--space-4) var(--space-5);
+  border-left: 3px solid var(--color-teal-600);
+  background: var(--color-neutral-50);
+}
+
+.compliance-block__label {
+  font-size: 9px;
+  font-weight: var(--font-semibold);
+  color: var(--color-teal-600);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  margin-bottom: var(--space-1);
+}
+
+.compliance-block__title {
+  font-size: var(--text-base);
+  font-weight: var(--font-bold);
+  color: var(--color-primary-800);
+  margin-bottom: var(--space-2);
+  margin-top: 0;
+}
+
+.compliance-block__text {
+  font-size: var(--text-sm);
+  color: var(--color-neutral-700);
+  line-height: var(--leading-relaxed);
+  margin-bottom: var(--space-1);
+}
+
+.compliance-block__text:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================
+ * PROCESS STEPS (p49)
+ * ======================================== */
+
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  margin-top: var(--space-4);
+}
+
+.process-step {
+  display: flex;
+  gap: var(--space-5);
+  align-items: flex-start;
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-neutral-200);
+  margin-bottom: var(--space-4);
+}
+
+.process-step:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.process-step__number {
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-primary-700);
+  min-width: 40px;
+  line-height: 1;
+  padding-top: 2px;
+  opacity: 0.35;
+}
+
+.process-step__content {
+  flex: 1;
+}
+
+.process-step__title {
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  color: var(--color-primary-900);
+  margin-bottom: var(--space-1);
+  margin-top: 0;
+}
+
+.process-step__desc {
+  font-size: var(--text-sm);
+  color: var(--color-neutral-600);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+}
+
+/* ========================================
+ * SPEC TABLE COMPARISON VARIANT (p46)
+ * ======================================== */
+
+.spec-table--comparison th:first-child,
+.spec-table--comparison td:first-child {
+  width: 22%;
+  font-weight: var(--font-semibold);
+  color: var(--color-neutral-800);
+}
+
+.spec-table--comparison th:nth-child(2) {
+  background: var(--color-primary-800);
+}
+
+.spec-table--comparison td:nth-child(2) {
+  background: var(--color-primary-50);
 }
