@@ -6,81 +6,61 @@ import PageFooter from '../components/PageFooter.astro';
 <div class="page">
   <div class="page-content">
     <PageHeader category="TENTANG ELFATECH" pageNumber="49" />
-    <h2 class="section-title">Proses Pengerjaan</h2>
+    <h2 class="section-title">Cakupan Penyediaan</h2>
     <div class="divider-accent"></div>
     <p class="section-subtitle">
-      Setiap proyek MOT dikerjakan melalui alur terstruktur, dari survei awal
-      hingga serah terima dan garansi purna jual.
+      Komponen dan layanan yang termasuk dalam paket MOT Elfatech.
     </p>
-    <div class="process-steps">
-
-      <div class="process-step">
-        <div class="process-step__number">01</div>
-        <div class="process-step__content">
-          <h4 class="process-step__title">Survey &amp; Assessment</h4>
-          <p class="process-step__desc">
-            Pengukuran kondisi lapangan dan konsultasi dengan tim medis serta fasilitas
-            RS untuk menentukan spesifikasi ruang operasi yang dibutuhkan.
-          </p>
-        </div>
-      </div>
-
-      <div class="process-step">
-        <div class="process-step__number">02</div>
-        <div class="process-step__content">
-          <h4 class="process-step__title">Perancangan &amp; Engineering</h4>
-          <p class="process-step__desc">
-            Penyusunan shop drawing, spesifikasi material, dan jadwal kerja.
-            Seluruh dokumen disetujui bersama tim RS sebelum fabrikasi dimulai.
-          </p>
-        </div>
-      </div>
-
-      <div class="process-step">
-        <div class="process-step__number">03</div>
-        <div class="process-step__content">
-          <h4 class="process-step__title">Fabrikasi Panel</h4>
-          <p class="process-step__desc">
-            Panel diproduksi di workshop dengan quality control ketat.
-            Setiap unit dikirim ke lapangan dalam kondisi siap pasang dan terverifikasi.
-          </p>
-        </div>
-      </div>
-
-      <div class="process-step">
-        <div class="process-step__number">04</div>
-        <div class="process-step__content">
-          <h4 class="process-step__title">Instalasi</h4>
-          <p class="process-step__desc">
-            Pemasangan sistem panel modular, integrasi HVAC, gas medis, dan sistem
-            elektrikal oleh tim teknisi bersama subkontraktor MEP terkait.
-          </p>
-        </div>
-      </div>
-
-      <div class="process-step">
-        <div class="process-step__number">05</div>
-        <div class="process-step__content">
-          <h4 class="process-step__title">Commissioning &amp; Uji Fungsi</h4>
-          <p class="process-step__desc">
-            Pengujian teknis seluruh sistem: ventilasi, tekanan udara, gas medis,
-            dan pencahayaan. Parameter ruang divalidasi sesuai Permenkes No. 40 Tahun 2022.
-          </p>
-        </div>
-      </div>
-
-      <div class="process-step">
-        <div class="process-step__number">06</div>
-        <div class="process-step__content">
-          <h4 class="process-step__title">Serah Terima &amp; Garansi</h4>
-          <p class="process-step__desc">
-            Penyerahan dokumen as-built, pelatihan staf RS, dan dukungan purna jual.
-            Garansi instalasi dan layanan pemeliharaan berkala tersedia.
-          </p>
-        </div>
-      </div>
-
-    </div>
+    <table class="spec-table mt-4">
+      <thead>
+        <tr>
+          <th>Kategori</th>
+          <th>Item</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="6"><strong>Komponen Fisik</strong></td>
+          <td>Panel dinding modular (sandwich PIR / lead-lined)</td>
+        </tr>
+        <tr><td>Panel langit-langit modular</td></tr>
+        <tr><td>Profil sudut aluminium R40</td></tr>
+        <tr><td>Sistem lantai vinyl seamless dengan coving</td></tr>
+        <tr><td>Pintu hermetic otomatis (sliding / swing)</td></tr>
+        <tr><td>Pass box transfer</td></tr>
+        <tr>
+          <td rowspan="6"><strong>Sistem Mekanikal &amp; Elektrikal</strong></td>
+          <td>AHU (Air Handling Unit) dengan HEPA filtration</td>
+        </tr>
+        <tr><td>Ducting dan diffuser</td></tr>
+        <tr><td>Sistem gas medis (outlet OHMEDA)</td></tr>
+        <tr><td>Zone valve dan alarm gas medis</td></tr>
+        <tr><td>Panel kontrol ruang operasi</td></tr>
+        <tr><td>Instalasi elektrikal ruang OK</td></tr>
+        <tr>
+          <td rowspan="6"><strong>Peralatan Bedah</strong><br><em style="font-size: 9px; color: var(--color-neutral-500);">opsional / per kontrak</em></td>
+          <td>Lampu operasi LED shadowless</td>
+        </tr>
+        <tr><td>Meja operasi elektro-hidrolik</td></tr>
+        <tr><td>Medical pendant (ceiling / wall mounted)</td></tr>
+        <tr><td>X-Ray film viewer</td></tr>
+        <tr><td>Scrub sink stainless steel</td></tr>
+        <tr><td>Aksesoris ruang OK</td></tr>
+        <tr>
+          <td rowspan="7"><strong>Layanan</strong></td>
+          <td>Survey dan asesmen teknis</td>
+        </tr>
+        <tr><td>Perancangan dan shop drawing</td></tr>
+        <tr><td>Fabrikasi panel di workshop</td></tr>
+        <tr><td>Instalasi dan integrasi di lapangan</td></tr>
+        <tr><td>Commissioning dan uji fungsi</td></tr>
+        <tr><td>Pelatihan staf RS</td></tr>
+        <tr><td>Garansi dan layanan purna jual</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size: 9px; color: var(--color-neutral-500); margin-top: var(--space-3);">
+      Scope aktual disesuaikan per kontrak. Hubungi tim kami untuk konsultasi kebutuhan spesifik.
+    </p>
     <PageFooter />
   </div>
 </div>
