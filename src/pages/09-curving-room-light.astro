@@ -10,34 +10,21 @@ import ProductCompact from '../components/ProductCompact.astro';
     <div class="compact-section-intro">
       <h3 class="compact-section-intro__title">Finishing Components</h3>
       <p class="compact-section-intro__text">
-        Essential finishing elements that complete the modular wall and ceiling system &#8211;
-        from seamless corner profiles to integrated LED lighting panels.
+        Essential finishing element for the modular wall and ceiling system.
+        Aluminium corner profile for seamless wall-to-floor and wall-to-ceiling joints.
       </p>
     </div>
-    <div class="grid grid--2col">
+    <div class="grid grid--1col">
       <ProductCompact
         title="Curving (Corner Profile R40)"
         description="Corner profile covering wall joints and wall-to-floor/ceiling intersections. Compliant with Permenkes requirements prohibiting sharp corners in operating rooms. Facilitates cleaning."
         specs={[
-          { label: 'Material', value: 'Alumunium' },
+          { label: 'Material', value: 'Aluminium' },
           { label: 'Radius',   value: '40mm' },
           { label: 'Height',   value: '3000 mm' },
         ]}
         imagePlaceholderText="Curving R40"
         imageFilename="product-curving-r40.png"
-      />
-      <ProductCompact
-        title="Room Light Panel"
-        description="Flush-mounted into the cassette ceiling (recessed). LED panel lighting with IP20 protection and IK02 impact rating."
-        specs={[
-          { label: 'IP Rating', value: 'IP20 (Finger Protected)' },
-          { label: 'Impact',    value: 'IK02 (0.2 J)' },
-          { label: 'Power',     value: '220-240V, 40W' },
-          { label: 'Freq',      value: '50/60 Hz' },
-          { label: 'Size',      value: '297 &times; 1195 &times; 10mm' },
-        ]}
-        imagePlaceholderText="Room Light Panel"
-        imageFilename="product-room-light.png"
       />
     </div>
     <PageFooter />
