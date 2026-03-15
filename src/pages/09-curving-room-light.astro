@@ -1,32 +1,32 @@
 ---
 import PageHeader from '../components/PageHeader.astro';
 import PageFooter from '../components/PageFooter.astro';
-import ProductCompact from '../components/ProductCompact.astro';
+import ProductPage from '../components/ProductPage.astro';
 ---
 
 <div class="page">
   <div class="page-content">
     <PageHeader category="WALL &amp; CEILING SYSTEMS" pageNumber="09" />
-    <div class="compact-section-intro">
-      <h3 class="compact-section-intro__title">Finishing Components</h3>
-      <p class="compact-section-intro__text">
-        Essential finishing element for the modular wall and ceiling system.
-        Aluminium corner profile for seamless wall-to-floor and wall-to-ceiling joints.
-      </p>
-    </div>
-    <div class="grid grid--1col">
-      <ProductCompact
-        title="Curving (Corner Profile R40)"
-        description="Corner profile covering wall joints and wall-to-floor/ceiling intersections. Compliant with Permenkes requirements prohibiting sharp corners in operating rooms. Facilitates cleaning."
-        specs={[
-          { label: 'Material', value: 'Aluminium' },
-          { label: 'Radius',   value: '40mm' },
-          { label: 'Height',   value: '3000 mm' },
-        ]}
-        imagePlaceholderText="Curving R40"
-        imageFilename="product-curving-r40.png"
-      />
-    </div>
+    <h2 class="section-title">Curving Corner Profile R40</h2>
+    <div class="divider-accent"></div>
+    <ProductPage
+      title="Curving (Corner Profile R40)"
+      description="Aluminium corner profile covering wall-to-floor and wall-to-ceiling intersections. Required by Permenkes regulations — operating rooms must have no sharp corners. Seamless curved surface facilitates effective cleaning and infection control."
+      features={[
+        'Radius 40mm — eliminates sharp corners per Permenkes requirement',
+        'Covers wall-to-floor and wall-to-ceiling junctions',
+        'Aluminium profile — lightweight, durable, corrosion-resistant',
+        'Seamless curved surface for easy cleaning and infection control',
+        'Height 3000mm per unit (site-cut to fit)',
+      ]}
+      specCards={[
+        { icon: 'MAT', label: 'Material', value: 'Aluminium' },
+        { icon: 'R',   label: 'Radius',   value: '40mm' },
+        { icon: 'H',   label: 'Height',   value: '3000 mm' },
+      ]}
+      imageFilename="product-curving-r40.png"
+      imagePlaceholderText="Curving R40<br>Corner Profile"
+    />
     <PageFooter />
   </div>
 </div>
