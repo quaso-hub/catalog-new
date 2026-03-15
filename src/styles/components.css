@@ -153,10 +153,10 @@
 .toc {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  gap: 20px;
   max-width: 100%;
   margin: 0;
-  font-size: 9px;
+  font-size: 10px;
   padding-top: var(--space-4);
 }
 
@@ -184,12 +184,12 @@
 }
 
 .toc__section-title {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: var(--font-bold);
   color: var(--color-primary-700);
   text-transform: uppercase;
   letter-spacing: var(--tracking-wide);
-  margin-bottom: 2px;
+  margin-bottom: 3px;
   padding-bottom: 2px;
   border-bottom: 1px solid var(--color-neutral-200);
 }
@@ -198,9 +198,9 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  padding: 1px 0;
+  padding: 2px 0;
   border-bottom: 1px dotted var(--color-neutral-300);
-  font-size: 9px;
+  font-size: 10px;
   line-height: 1.4;
 }
 

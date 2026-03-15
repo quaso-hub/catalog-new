@@ -9,20 +9,20 @@ import ProductPage from '../components/ProductPage.astro';
     <PageHeader category="SUPPORT SYSTEMS" pageNumber="27" />
     <ProductPage
       title="HVAC &amp; Laminar Air Flow"
-      description="Hospital-grade HVAC system with laminar air flow diffuser designed specifically for operating theatres. Provides ultra-clean unidirectional airflow over the surgical zone with HEPA filtration achieving ISO Class 5 cleanliness in the critical zone."
+      description="Operating theatre HVAC system comprising two separate components: AHU Double Skin (air handling and conditioning) and Laminar Air Flow diffuser (unidirectional clean airflow over the surgical zone). Both components work together as an integrated system. Full AHU technical specifications are on the following page."
       features={[
-        'Laminar flow diffuser with HEPA H14 filter (99.995% efficiency)',
-        'ISO Class 5 / Class 100 air quality in surgical zone',
-        'Air change rate: 20-25 ACH (operating theatre standard)',
-        'Positive pressure maintained at &ge;15 Pa',
-        'Temperature control: 18-26&deg;C &plusmn;1&deg;C',
-        'Humidity control: 40-60% RH &plusmn;5%',
+        'AHU Double Skin with PIR insulation and UV-C ultraviolet sterilisation (Philips)',
+        'Multi-stage filtration: G4 pre-filter, F8/F9 medium filter',
+        'Laminar Air Flow (LAF) diffuser for unidirectional clean airflow over surgical zone',
+        'Temperature control: 18&ndash;26&deg;C &plusmn;1&deg;C',
+        'Humidity control: 40&ndash;60% RH &plusmn;5%',
+        'Compliant with Permenkes No. 7 Tahun 2019',
       ]}
       specCards={[
-        { icon: 'ACH',  label: 'Air Changes',  value: '20-25 ACH' },
-        { icon: 'TEMP', label: 'Temperature',  value: '18-26&deg;C' },
-        { icon: 'RH',   label: 'Humidity',     value: '40-60% RH' },
-        { icon: 'ISO',  label: 'Cleanliness',  value: 'ISO Class 5' },
+        { icon: 'TEMP', label: 'Temperature', value: '18&ndash;26&deg;C' },
+        { icon: 'RH',   label: 'Humidity',    value: '40&ndash;60% RH' },
+        { icon: 'UV',   label: 'UV-C Lamp',   value: 'Philips 30&ndash;72W' },
+        { icon: 'AHU',  label: 'AHU',         value: 'Double Skin 25mm' },
       ]}
       imageFilename="product-laminar-flow.png"
       imagePlaceholderText="Laminar Air Flow System<br>Product Image"
