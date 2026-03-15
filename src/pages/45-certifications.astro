@@ -5,45 +5,97 @@ import PageFooter from '../components/PageFooter.astro';
 
 <div class="page">
   <div class="page-content">
-    <PageHeader category="LEGALITAS" pageNumber="45" />
-    <h2 class="section-title">Legalitas &amp; Kepatuhan Teknis</h2>
+    <PageHeader category="KEPATUHAN TEKNIS" pageNumber="45" />
+    <h2 class="section-title">Kepatuhan Teknis Ruang Operasi</h2>
     <div class="divider-accent"></div>
-    <div class="compliance-blocks">
-
-      <div class="compliance-block">
-        <div class="compliance-block__label">REGULASI BANGUNAN RUMAH SAKIT</div>
-        <h4 class="compliance-block__title">Permenkes No. 40 Tahun 2022</h4>
-        <p class="compliance-block__text">
-          Seluruh instalasi MOT memenuhi Peraturan Menteri Kesehatan No. 40 Tahun 2022
-          tentang Persyaratan Teknis Bangunan, Prasarana, dan Peralatan Kesehatan Rumah Sakit.
-        </p>
-      </div>
-
-      <div class="compliance-block">
-        <div class="compliance-block__label">KEAMANAN RADIASI</div>
-        <h4 class="compliance-block__title">BAPETEN</h4>
-        <p class="compliance-block__text">
-          Ruang radiasi (RONT, Cathlab, Intervensi Vaskular) dirancang sesuai persyaratan
-          Badan Pengawas Tenaga Nuklir Republik Indonesia.
-          Panel timbal dan konstruksi shielding sesuai nilai Pb equivalent yang ditentukan
-          per jenis peralatan dan beban kerja radiasi.
-        </p>
-      </div>
-
-      <div class="compliance-block">
-        <div class="compliance-block__label">LEGALITAS BADAN USAHA</div>
-        <h4 class="compliance-block__title">SBU Jasa Konstruksi</h4>
-        <p class="compliance-block__text">
-          PT Teknomed Indo Timur terdaftar sebagai badan usaha jasa konstruksi
-          dengan Sertifikat Badan Usaha (SBU) yang diterbitkan LPJK, Kementerian PUPR.
-        </p>
-        <p class="compliance-block__text">
-          Dokumen SBU dan legalitas tersedia untuk proses pengadaan formal.
-          Hubungi kami untuk permintaan dokumen.
-        </p>
-      </div>
-
-    </div>
+    <p class="section-subtitle">
+      Kesesuaian sistem MOT Elfatech terhadap persyaratan teknis
+      Permenkes No. 40 Tahun 2022 dan KMK No. 1204/MENKES/SK/X/2004.
+    </p>
+    <table class="spec-table mt-4">
+      <thead>
+        <tr>
+          <th>Persyaratan</th>
+          <th>Standar</th>
+          <th>MOT Elfatech</th>
+          <th>Ref.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Suhu ruang operasi</strong></td>
+          <td>19&ndash;24 &deg;C</td>
+          <td>18&ndash;26 &deg;C (AHU controlled)</td>
+          <td>p41</td>
+        </tr>
+        <tr>
+          <td><strong>Kelembaban relatif</strong></td>
+          <td>45&ndash;60% RH</td>
+          <td>40&ndash;60% RH (AHU controlled)</td>
+          <td>p41</td>
+        </tr>
+        <tr>
+          <td><strong>Tekanan udara</strong></td>
+          <td>Positif thd koridor</td>
+          <td>Positive pressure differential</td>
+          <td>p27</td>
+        </tr>
+        <tr>
+          <td><strong>Indeks angka kuman</strong></td>
+          <td>maks 10 CFU/m&sup3;</td>
+          <td>HEPA H14 filtration + LAF</td>
+          <td>p27</td>
+        </tr>
+        <tr>
+          <td><strong>Kebisingan</strong></td>
+          <td>maks 45 dBA</td>
+          <td>Per design specification</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr>
+          <td><strong>Pencahayaan umum</strong></td>
+          <td>300&ndash;500 lux</td>
+          <td>LED panel system</td>
+          <td>p20</td>
+        </tr>
+        <tr>
+          <td><strong>Luas minimum</strong></td>
+          <td>min 36 m&sup2;</td>
+          <td>Per project layout</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr>
+          <td><strong>Tinggi langit-langit</strong></td>
+          <td>min 3.0 m</td>
+          <td>Per project specification</td>
+          <td>&ndash;</td>
+        </tr>
+        <tr>
+          <td><strong>Material dinding</strong></td>
+          <td>Anti-bakteri, mudah dibersihkan</td>
+          <td>Sandwich panel PIR, powder-coated steel</td>
+          <td>p06</td>
+        </tr>
+        <tr>
+          <td><strong>Material lantai</strong></td>
+          <td>Vinyl seamless</td>
+          <td>Vinyl 2.5&ndash;3mm (coving junction)</td>
+          <td>p36</td>
+        </tr>
+        <tr>
+          <td><strong>Pintu</strong></td>
+          <td>Hermetic seal</td>
+          <td>Auto hermetic sliding door</td>
+          <td>p11</td>
+        </tr>
+        <tr>
+          <td><strong>Proteksi radiasi</strong></td>
+          <td>Sesuai BAPETEN</td>
+          <td>Lead-lined panel, Pb equivalent per beban kerja</td>
+          <td>p06</td>
+        </tr>
+      </tbody>
+    </table>
     <PageFooter />
   </div>
 </div>
