@@ -43,7 +43,7 @@ const {
   </div>
   <div class="product-page__content">
     <h2 class="product-page__title">{title}</h2>
-    <p class="product-page__description">{description}</p>
+    <p class="product-page__description" set:html={description}></p>
     <div class="product-page__features">
       <h4 class="product-page__features-title">Key Features</h4>
       <ul class="feature-list">
