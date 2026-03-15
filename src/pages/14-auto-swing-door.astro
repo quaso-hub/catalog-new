@@ -1,31 +1,31 @@
 ---
 import PageHeader from '../components/PageHeader.astro';
 import PageFooter from '../components/PageFooter.astro';
-import ProductPage from '../components/ProductPage.astro';
+import SpecTable from '../components/SpecTable.astro';
 ---
 
 <div class="page">
   <div class="page-content">
     <PageHeader category="DOOR SYSTEMS" pageNumber="14" />
-    <ProductPage
-      title="Automatic Swing Door"
-      description="Motorized automatic swing door combining the convenience of automated operation with the space efficiency of swing doors. Ideal for corridors, recovery rooms, and utility areas where sliding door tracks are not feasible."
-      features={[
-        'Electromechanical automatic swing operator',
-        'Push button, sensor, or remote-control activation',
-        'Adjustable opening angle (90&deg; to 180&deg;)',
-        'Soft-open and soft-close mechanism',
-        'Battery backup for power failure operation',
-        'Anti-collision infrared safety sensor',
+    <SpecTable
+      title="Automatic Swing PB/Lead Door: Technical Specifications"
+      tableRows={[
+        { parameter: 'Door Size',          specification: '1000 &times; 2200 mm (W &times; H)' },
+        { parameter: 'Thickness',          specification: '&plusmn;45&ndash;50 mm' },
+        { parameter: 'Frame Material',     specification: 'Steel Plate 1.5&ndash;2mm / Stainless Steel' },
+        { parameter: 'Door Leaf Material', specification: 'Steel Plate 1.2&ndash;1.5mm / Stainless Steel' },
+        { parameter: 'Finishing',          specification: 'Powder Coating / Stainless Steel' },
+        { parameter: 'Pb Lead Lining',     specification: 'Plywood 9mm + Rangka Hollow + PIR insulation' },
+        { parameter: 'X-Ray Lock',         specification: 'Motise X-Ray Special (LBA)' },
+        { parameter: 'View Glass',         specification: 'View Glass Timbal (radiation-shielded)' },
+        { parameter: 'Accessories',        specification: 'Onassis, Wilka, Calvis, Griff, Dekson, Kend, etc.' },
       ]}
-      specCards={[
-        { icon: 'DIM', label: 'Door Size',  value: 'W1000&times;H2200mm' },
-        { icon: 'PWR', label: 'Power',      value: 'AC220V' },
-        { icon: 'MAT', label: 'Material',   value: 'Steel / SS' },
-        { icon: 'THK', label: 'Thickness',  value: '&plusmn;45-50mm' },
+      callouts={[
+        {
+          title: 'Radiation Shielding',
+          text: 'Door leaf incorporates Pb (Lead) lining throughout to provide radiation attenuation. Motise X-Ray Special lock and View Glass Timbal window maintain shielding continuity across all hardware penetrations.',
+        },
       ]}
-      imageFilename="product-auto-swing-door.png"
-      imagePlaceholderText="Automatic Swing Door<br>Product Image"
     />
     <PageFooter />
   </div>
