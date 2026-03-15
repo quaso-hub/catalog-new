@@ -78,7 +78,7 @@ import PageFooter from '../components/PageFooter.astro';
                 .svg-text--gas    { font-size: 10px; font-weight: 400; fill: #003366; }
                 .svg-text--gasmd  { font-size:  9px; font-weight: 400; fill: #003366; }
                 .svg-text--label  { font-size:  9px; font-weight: 600; }
-                .svg-text--model  { font-size:  9px; font-weight: 400; fill: #64748b; }
+                .svg-text--pres   { font-size:  9px; font-weight: 400; fill: #64748b; }
               </style></defs>
               <!-- Medical Gas Color Coding - OHMEDA Standard -->
               <rect x="0" y="0" width="460" height="220" fill="#ffffff"/>
@@ -88,55 +88,47 @@ import PageFooter from '../components/PageFooter.astro';
               <rect x="20" y="55" width="420" height="25" fill="#003366"/>
               <text x="80"  y="72" class="svg-text svg-text--head" text-anchor="middle">GAS TYPE</text>
               <text x="185" y="72" class="svg-text svg-text--head" text-anchor="middle">COLOR</text>
-              <text x="290" y="72" class="svg-text svg-text--head" text-anchor="middle">MODEL</text>
-              <text x="395" y="72" class="svg-text svg-text--head" text-anchor="middle">PRESSURE</text>
+              <text x="335" y="72" class="svg-text svg-text--head" text-anchor="middle">PRESSURE</text>
               <!-- Row 1: Oxygen -->
               <rect x="20" y="80" width="420" height="22" fill="#f8fafc"/>
               <text x="80"  y="95" class="svg-text svg-text--gas" text-anchor="middle">Oxygen (O&#x2082;)</text>
               <rect x="152" y="84" width="66" height="14" fill="#22c55e" stroke="#003366" stroke-width="1"/>
               <text x="185" y="95" class="svg-text svg-text--label" fill="#ffffff" text-anchor="middle">GREEN</text>
-              <text x="290" y="95" class="svg-text svg-text--model" text-anchor="middle">OH-WAL-OXY</text>
-              <text x="395" y="95" class="svg-text svg-text--model" text-anchor="middle">4.0 bar</text>
+              <text x="335" y="95" class="svg-text svg-text--pres" text-anchor="middle">4.0 bar</text>
               <!-- Row 2: Medical Air -->
               <rect x="20" y="102" width="420" height="22" fill="#ffffff"/>
               <text x="80"  y="117" class="svg-text svg-text--gas" text-anchor="middle">Medical Air</text>
               <rect x="152" y="106" width="66" height="14" fill="#fbbf24" stroke="#003366" stroke-width="1"/>
               <text x="185" y="117" class="svg-text svg-text--label" fill="#1a1a1a" text-anchor="middle">YELLOW</text>
-              <text x="290" y="117" class="svg-text svg-text--model" text-anchor="middle">OH-WAL-MA4</text>
-              <text x="395" y="117" class="svg-text svg-text--model" text-anchor="middle">4.0 bar</text>
+              <text x="335" y="117" class="svg-text svg-text--pres" text-anchor="middle">4.0 bar</text>
               <!-- Row 3: Vacuum -->
               <rect x="20" y="124" width="420" height="22" fill="#f8fafc"/>
               <text x="80"  y="139" class="svg-text svg-text--gas" text-anchor="middle">Vacuum</text>
               <rect x="152" y="128" width="66" height="14" fill="#ffffff" stroke="#003366" stroke-width="1"/>
               <text x="185" y="139" class="svg-text svg-text--label" fill="#003366" text-anchor="middle">WHITE</text>
-              <text x="290" y="139" class="svg-text svg-text--model" text-anchor="middle">OH-WAL-VAC</text>
-              <text x="395" y="139" class="svg-text svg-text--model" text-anchor="middle">-0.6 bar</text>
+              <text x="335" y="139" class="svg-text svg-text--pres" text-anchor="middle">-0.6 bar</text>
               <!-- Row 4: Nitrous Oxide -->
               <rect x="20" y="146" width="420" height="22" fill="#ffffff"/>
               <text x="80"  y="161" class="svg-text svg-text--gasmd" text-anchor="middle">Nitrous Oxide (N&#x2082;O)</text>
               <rect x="152" y="150" width="66" height="14" fill="#3b82f6" stroke="#003366" stroke-width="1"/>
               <text x="185" y="161" class="svg-text svg-text--label" fill="#ffffff" text-anchor="middle">BLUE</text>
-              <text x="290" y="161" class="svg-text svg-text--model" text-anchor="middle">OH-WAL-N2O</text>
-              <text x="395" y="161" class="svg-text svg-text--model" text-anchor="middle">4.0 bar</text>
+              <text x="335" y="161" class="svg-text svg-text--pres" text-anchor="middle">4.0 bar</text>
               <!-- Row 5: Carbon Dioxide -->
               <rect x="20" y="168" width="420" height="22" fill="#f8fafc"/>
               <text x="80"  y="183" class="svg-text svg-text--gasmd" text-anchor="middle">Carbon Dioxide (CO&#x2082;)</text>
               <rect x="152" y="172" width="66" height="14" fill="#6b7280" stroke="#003366" stroke-width="1"/>
               <text x="185" y="183" class="svg-text svg-text--label" fill="#ffffff" text-anchor="middle">GREY</text>
-              <text x="290" y="183" class="svg-text svg-text--model" text-anchor="middle">OH-WAL-CO2</text>
-              <text x="395" y="183" class="svg-text svg-text--model" text-anchor="middle">4.0 bar</text>
+              <text x="335" y="183" class="svg-text svg-text--pres" text-anchor="middle">4.0 bar</text>
               <!-- Row 6: AGSS -->
               <rect x="20" y="190" width="420" height="22" fill="#ffffff"/>
               <text x="80"  y="205" class="svg-text svg-text--gas" text-anchor="middle">AGSS</text>
               <rect x="152" y="194" width="66" height="14" fill="#8b5cf6" stroke="#003366" stroke-width="1"/>
               <text x="185" y="205" class="svg-text svg-text--label" fill="#ffffff" text-anchor="middle">PURPLE</text>
-              <text x="290" y="205" class="svg-text svg-text--model" text-anchor="middle">OH-WAL-AGSS</text>
-              <text x="395" y="205" class="svg-text svg-text--model" text-anchor="middle">Passive</text>
+              <text x="335" y="205" class="svg-text svg-text--pres" text-anchor="middle">Passive</text>
               <!-- Outer border + column dividers -->
               <rect x="20" y="55" width="420" height="157" fill="none" stroke="#003366" stroke-width="1"/>
               <line x1="140" y1="55" x2="140" y2="212" stroke="#003366" stroke-width="0.5" opacity="0.3"/>
               <line x1="230" y1="55" x2="230" y2="212" stroke="#003366" stroke-width="0.5" opacity="0.3"/>
-              <line x1="350" y1="55" x2="350" y2="212" stroke="#003366" stroke-width="0.5" opacity="0.3"/>
             </svg>
           </div>
         </div>
