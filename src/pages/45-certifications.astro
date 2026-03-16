@@ -23,12 +23,12 @@ import PageFooter from '../components/PageFooter.astro';
         <tr>
           <td><strong>Suhu ruang operasi</strong></td>
           <td>19&ndash;24 &deg;C</td>
-          <td>18&ndash;26 &deg;C (adjustable)</td>
+          <td>19&ndash;26 &deg;C (adjustable)</td>
         </tr>
         <tr>
           <td><strong>Kelembaban relatif</strong></td>
           <td>45&ndash;60% RH</td>
-          <td>40&ndash;60% RH (adjustable)</td>
+          <td>45&ndash;60% RH (adjustable)</td>
         </tr>
         <tr>
           <td><strong>Tekanan udara</strong></td>
@@ -43,7 +43,7 @@ import PageFooter from '../components/PageFooter.astro';
         <tr>
           <td><strong>Kebisingan</strong></td>
           <td>&le;45 dBA</td>
-          <td>Sesuai design specification</td>
+          <td>&le;45 dBA (sesuai persyaratan)</td>
         </tr>
         <tr>
           <td><strong>Pencahayaan umum</strong></td>
@@ -53,12 +53,12 @@ import PageFooter from '../components/PageFooter.astro';
         <tr>
           <td><strong>Luas minimum</strong></td>
           <td>&ge;36 m&sup2;</td>
-          <td>Sesuai layout proyek</td>
+          <td>Konfigurasi modular, &ge;36 m&sup2; per layout</td>
         </tr>
         <tr>
           <td><strong>Tinggi plafon</strong></td>
           <td>&ge;3,0 m</td>
-          <td>Sesuai spesifikasi proyek</td>
+          <td>&ge;3,0 m (disesuaikan per layout)</td>
         </tr>
         <tr>
           <td><strong>Material dinding</strong></td>
@@ -68,7 +68,7 @@ import PageFooter from '../components/PageFooter.astro';
         <tr>
           <td><strong>Material lantai</strong></td>
           <td>Vinyl seamless</td>
-          <td>Vinyl 2,5&ndash;3 mm, coving junction</td>
+          <td>Homogeneous vinyl, hospital grade, coving junction</td>
         </tr>
         <tr>
           <td><strong>Pintu</strong></td>
@@ -83,22 +83,13 @@ import PageFooter from '../components/PageFooter.astro';
       </tbody>
     </table>
 
-    <h3 style="font-size: 13px; color: var(--color-navy); margin-top: var(--space-5); margin-bottom: var(--space-2);">Legalitas Badan Usaha</h3>
-    <div style="display: flex; gap: var(--space-4); font-size: 10px; line-height: 1.5;">
-      <div style="flex: 1;">
-        <strong style="color: var(--color-navy);">Legalitas Usaha</strong><br>
-        NIB (Nomor Induk Berusaha): <em>[nomor — user isi]</em><br>
-        SBU Jasa Konstruksi: <em>[nomor — user isi]</em><br>
-        <span style="color: var(--color-neutral-500);">Verifikasi: oss.go.id | sbu.pu.go.id</span>
-      </div>
-      <div style="flex: 1;">
-        <strong style="color: var(--color-navy);">Kepatuhan Radiasi</strong><br>
-        Ruang radiasi dirancang sesuai standar BAPETEN Republik Indonesia.
-      </div>
+    <div class="cert-strip">
+      <span>Sertifikasi material produk:</span>
+      <img src="/assets/logos/badge-ce.svg" alt="CE" />
+      <img src="/assets/logos/badge-iso13485.svg" alt="ISO 13485" />
+      <img src="/assets/logos/badge-sni.svg" alt="SNI" />
+      <span>Dokumen tersedia atas permintaan.</span>
     </div>
-    <p style="font-size: 9px; color: var(--color-neutral-500); margin-top: var(--space-3);">
-      Dokumen legalitas lengkap tersedia atas permintaan.
-    </p>
     <PageFooter />
   </div>
 </div>
