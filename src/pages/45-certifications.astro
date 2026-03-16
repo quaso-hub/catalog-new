@@ -6,96 +6,99 @@ import PageFooter from '../components/PageFooter.astro';
 <div class="page">
   <div class="page-content">
     <PageHeader category="KEPATUHAN TEKNIS" pageNumber="45" />
-    <h2 class="section-title">Kepatuhan Teknis Ruang Operasi</h2>
+    <h2 class="section-title">Kepatuhan Teknis & Legalitas</h2>
     <div class="divider-accent"></div>
     <p class="section-subtitle">
-      Kesesuaian sistem MOT Elfatech terhadap persyaratan teknis
-      Permenkes No. 40 Tahun 2022 dan KMK No. 1204/MENKES/SK/X/2004.
+      Kesesuaian sistem MOT Elfatech terhadap persyaratan Permenkes No. 40 Tahun 2022.
     </p>
     <table class="spec-table mt-4">
       <thead>
         <tr>
-          <th>Persyaratan</th>
-          <th>Standar</th>
-          <th>MOT Elfatech</th>
-          <th>Ref.</th>
+          <th>Parameter</th>
+          <th>Standar Permenkes</th>
+          <th>Spesifikasi Elfatech</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td><strong>Suhu ruang operasi</strong></td>
           <td>19&ndash;24 &deg;C</td>
-          <td>18&ndash;26 &deg;C (AHU controlled)</td>
-          <td>p41</td>
+          <td>18&ndash;26 &deg;C (adjustable)</td>
         </tr>
         <tr>
           <td><strong>Kelembaban relatif</strong></td>
           <td>45&ndash;60% RH</td>
-          <td>40&ndash;60% RH (AHU controlled)</td>
-          <td>p41</td>
+          <td>40&ndash;60% RH (adjustable)</td>
         </tr>
         <tr>
           <td><strong>Tekanan udara</strong></td>
           <td>Positif thd koridor</td>
-          <td>Positive pressure differential</td>
-          <td>p27</td>
+          <td>Positive pressure, adjustable differential</td>
         </tr>
         <tr>
-          <td><strong>Indeks angka kuman</strong></td>
-          <td>maks 10 CFU/m&sup3;</td>
-          <td>HEPA H14 filtration + LAF</td>
-          <td>p27</td>
+          <td><strong>Partikel udara</strong></td>
+          <td>&le;10 CFU/m&sup3;</td>
+          <td>HEPA H14 (efisiensi 99,995%) + laminar airflow</td>
         </tr>
         <tr>
           <td><strong>Kebisingan</strong></td>
-          <td>maks 45 dBA</td>
-          <td>Per design specification</td>
-          <td>&ndash;</td>
+          <td>&le;45 dBA</td>
+          <td>Sesuai design specification</td>
         </tr>
         <tr>
           <td><strong>Pencahayaan umum</strong></td>
           <td>300&ndash;500 lux</td>
-          <td>LED panel system</td>
-          <td>p20</td>
+          <td>LED panel, adjustable</td>
         </tr>
         <tr>
           <td><strong>Luas minimum</strong></td>
-          <td>min 36 m&sup2;</td>
-          <td>Per project layout</td>
-          <td>&ndash;</td>
+          <td>&ge;36 m&sup2;</td>
+          <td>Sesuai layout proyek</td>
         </tr>
         <tr>
-          <td><strong>Tinggi langit-langit</strong></td>
-          <td>min 3.0 m</td>
-          <td>Per project specification</td>
-          <td>&ndash;</td>
+          <td><strong>Tinggi plafon</strong></td>
+          <td>&ge;3,0 m</td>
+          <td>Sesuai spesifikasi proyek</td>
         </tr>
         <tr>
           <td><strong>Material dinding</strong></td>
           <td>Anti-bakteri, mudah dibersihkan</td>
-          <td>Sandwich panel PIR, powder-coated steel</td>
-          <td>p06</td>
+          <td>Powder-coated steel, PIR core</td>
         </tr>
         <tr>
           <td><strong>Material lantai</strong></td>
           <td>Vinyl seamless</td>
-          <td>Vinyl 2.5&ndash;3mm (coving junction)</td>
-          <td>p36</td>
+          <td>Vinyl 2,5&ndash;3 mm, coving junction</td>
         </tr>
         <tr>
           <td><strong>Pintu</strong></td>
           <td>Hermetic seal</td>
-          <td>Auto hermetic sliding door</td>
-          <td>p11</td>
+          <td>Automatic hermetic seal</td>
         </tr>
         <tr>
           <td><strong>Proteksi radiasi</strong></td>
           <td>Sesuai BAPETEN</td>
-          <td>Lead-lined panel, Pb equivalent per beban kerja</td>
-          <td>p06</td>
+          <td>Lead-lined, Pb per beban kerja</td>
         </tr>
       </tbody>
     </table>
+
+    <h3 style="font-size: 13px; color: var(--color-navy); margin-top: var(--space-5); margin-bottom: var(--space-2);">Legalitas Badan Usaha</h3>
+    <div style="display: flex; gap: var(--space-4); font-size: 10px; line-height: 1.5;">
+      <div style="flex: 1;">
+        <strong style="color: var(--color-navy);">Legalitas Usaha</strong><br>
+        NIB (Nomor Induk Berusaha): <em>[nomor — user isi]</em><br>
+        SBU Jasa Konstruksi: <em>[nomor — user isi]</em><br>
+        <span style="color: var(--color-neutral-500);">Verifikasi: oss.go.id | sbu.pu.go.id</span>
+      </div>
+      <div style="flex: 1;">
+        <strong style="color: var(--color-navy);">Kepatuhan Radiasi</strong><br>
+        Ruang radiasi dirancang sesuai standar BAPETEN Republik Indonesia.
+      </div>
+    </div>
+    <p style="font-size: 9px; color: var(--color-neutral-500); margin-top: var(--space-3);">
+      Dokumen legalitas lengkap tersedia atas permintaan.
+    </p>
     <PageFooter />
   </div>
 </div>

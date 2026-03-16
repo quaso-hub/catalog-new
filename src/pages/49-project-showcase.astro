@@ -6,61 +6,49 @@ import PageFooter from '../components/PageFooter.astro';
 <div class="page">
   <div class="page-content">
     <PageHeader category="TENTANG ELFATECH" pageNumber="49" />
-    <h2 class="section-title">Cakupan Penyediaan</h2>
+    <h2 class="section-title">Dukungan Teknis & Garansi</h2>
     <div class="divider-accent"></div>
     <p class="section-subtitle">
-      Komponen dan layanan yang termasuk dalam paket MOT Elfatech.
+      Komitmen layanan purna jual untuk seluruh sistem MOT.
     </p>
-    <table class="spec-table mt-4">
-      <thead>
-        <tr>
-          <th>Kategori</th>
-          <th>Item</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td rowspan="6"><strong>Komponen Fisik</strong></td>
-          <td>Panel dinding modular (sandwich PIR / lead-lined)</td>
-        </tr>
-        <tr><td>Panel langit-langit modular</td></tr>
-        <tr><td>Profil sudut aluminium R40</td></tr>
-        <tr><td>Sistem lantai vinyl seamless dengan coving</td></tr>
-        <tr><td>Pintu hermetic otomatis (sliding / swing)</td></tr>
-        <tr><td>Pass box transfer</td></tr>
-        <tr>
-          <td rowspan="6"><strong>Sistem Mekanikal &amp; Elektrikal</strong></td>
-          <td>AHU (Air Handling Unit) dengan HEPA filtration</td>
-        </tr>
-        <tr><td>Ducting dan diffuser</td></tr>
-        <tr><td>Sistem gas medis (outlet OHMEDA)</td></tr>
-        <tr><td>Zone valve dan alarm gas medis</td></tr>
-        <tr><td>Panel kontrol ruang operasi</td></tr>
-        <tr><td>Instalasi elektrikal ruang OK</td></tr>
-        <tr>
-          <td rowspan="6"><strong>Peralatan Bedah</strong><br><em style="font-size: 9px; color: var(--color-neutral-500);">opsional / per kontrak</em></td>
-          <td>Lampu operasi LED shadowless</td>
-        </tr>
-        <tr><td>Meja operasi elektro-hidrolik</td></tr>
-        <tr><td>Medical pendant (ceiling / wall mounted)</td></tr>
-        <tr><td>X-Ray film viewer</td></tr>
-        <tr><td>Scrub sink stainless steel</td></tr>
-        <tr><td>Aksesoris ruang OK</td></tr>
-        <tr>
-          <td rowspan="7"><strong>Layanan</strong></td>
-          <td>Survey dan asesmen teknis</td>
-        </tr>
-        <tr><td>Perancangan dan shop drawing</td></tr>
-        <tr><td>Fabrikasi panel di workshop</td></tr>
-        <tr><td>Instalasi dan integrasi di lapangan</td></tr>
-        <tr><td>Commissioning dan uji fungsi</td></tr>
-        <tr><td>Pelatihan staf RS</td></tr>
-        <tr><td>Garansi dan layanan purna jual</td></tr>
-      </tbody>
-    </table>
-    <p style="font-size: 9px; color: var(--color-neutral-500); margin-top: var(--space-3);">
-      Scope aktual disesuaikan per kontrak. Hubungi tim kami untuk konsultasi kebutuhan spesifik.
-    </p>
+    <div class="compliance-blocks mt-4">
+      <div class="compliance-block">
+        <span class="compliance-block__label">01</span>
+        <h4 class="compliance-block__title">Garansi</h4>
+        <p class="compliance-block__text">
+          Garansi komprehensif mencakup komponen modular, sistem mekanikal,
+          dan instalasi elektrikal. Periode garansi dimulai sejak tanggal
+          berita acara serah terima (BAST). Klaim garansi diproses tanpa
+          biaya tambahan selama periode berlaku.
+        </p>
+      </div>
+      <div class="compliance-block">
+        <span class="compliance-block__label">02</span>
+        <h4 class="compliance-block__title">Respons Teknis</h4>
+        <p class="compliance-block__text">
+          Tim teknis tersedia untuk penanganan gangguan dan pemeliharaan.
+          Cakupan wilayah layanan meliputi seluruh area proyek aktif.
+        </p>
+      </div>
+      <div class="compliance-block">
+        <span class="compliance-block__label">03</span>
+        <h4 class="compliance-block__title">Pemeliharaan Berkala</h4>
+        <p class="compliance-block__text">
+          Program pemeliharaan preventif untuk menjaga performa sistem:
+          penggantian filter HEPA, kalibrasi sensor, inspeksi hermetisitas
+          pintu, dan pengecekan sistem gas medis.
+        </p>
+      </div>
+      <div class="compliance-block">
+        <span class="compliance-block__label">04</span>
+        <h4 class="compliance-block__title">Suku Cadang & Konsumabel</h4>
+        <p class="compliance-block__text">
+          Ketersediaan suku cadang dan komponen pengganti untuk seluruh
+          sistem yang terinstal. Termasuk: filter HEPA, gasket pintu,
+          lampu LED, komponen kontrol panel.
+        </p>
+      </div>
+    </div>
     <PageFooter />
   </div>
 </div>
