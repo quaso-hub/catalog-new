@@ -1,0 +1,33 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import ProductPage from '../components/ProductPage.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="SUPPORT SYSTEMS" pageNumber="33" />
+    <ProductPage
+      title="Scrub Sink 2 Bay"
+      description="Stainless Steel SUS-304 with 1.2mm thickness. Available in 1, 2, and 3 washing stations. Automatic sensor system with manual emergency backup. UV sterilized lamp system. Filter 5 micron. 2 bay faucet automatic + 2 foot manual. Safety electricity system. Low power consumption: AC 220V, 50Hz, 250W."
+      features={[
+        'Material: SUS 304, thickness 1.2mm',
+        'Available in 1, 2, and 3 washing stations',
+        'Automatic sensor system + manual emergency',
+        'UV sterilized lamp system',
+        'Filter system for 5 micron',
+        'Integrated water heater',
+        'Safety electricity system',
+      ]}
+      specCards={[
+        { icon: 'DIM', label: 'Dimension', value: '1600&times;600&times;1550mm' },
+        { icon: 'MAT', label: 'Material',  value: 'SUS 304' },
+        { icon: 'PWR', label: 'Power',     value: '220V, 250W' },
+        { icon: 'BAY', label: 'Stations',  value: '1/2/3 Bay' },
+      ]}
+      imageFilename="product-scrub-sink.png"
+      imagePlaceholderText="Scrub Sink 2 Bay<br>Product Image"
+    />
+    <PageFooter />
+  </div>
+</div>

@@ -1,0 +1,33 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import ProductPage from '../components/ProductPage.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="SUPPORT SYSTEMS" pageNumber="35" />
+    <ProductPage
+      title="Pass Box Stainless Steel SUS-304"
+      description="Transfer hatch between clean area and non-clean area. Material SUS 304 with UV lamp sterilization, timer activation, PLC interlock system, and custom size capability."
+      features={[
+        'Material: Stainless Steel SUS-304',
+        'UV lamp with timer activation',
+        'PLC Interlock System with dual magnetic lock',
+        'Two side open inter-lock door',
+        'Clear Glass 12mm',
+        'Magnetic Interlock + Lights LED 220V',
+        'Custom size available',
+      ]}
+      specCards={[
+        { icon: 'OUT',  label: 'Outer Size', value: '800&times;800&times;500mm' },
+        { icon: 'IN',   label: 'Inner Size', value: '500&times;500&times;600mm' },
+        { icon: 'MAT',  label: 'Material',   value: 'SUS 304' },
+        { icon: 'LOCK', label: 'Interlock',  value: 'PLC System' },
+      ]}
+      imageFilename="product-pass-box.png"
+      imagePlaceholderText="Pass Box Stainless Steel<br>Product Image"
+    />
+    <PageFooter />
+  </div>
+</div>

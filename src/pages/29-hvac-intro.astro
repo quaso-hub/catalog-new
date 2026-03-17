@@ -1,0 +1,32 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import ProductPage from '../components/ProductPage.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="SUPPORT SYSTEMS" pageNumber="29" />
+    <ProductPage
+      title="HVAC System"
+      description="Complete operating theatre HVAC solution integrating an AHU Double Skin air handling unit, multi-stage filtration, UV-C sterilisation, and precision climate control. Designed to maintain the OR environment within Permenkes No. 7 Tahun 2019 requirements at all times. Technical specifications: p.30. AHU Double Skin unit details: p.43."
+      features={[
+        'AHU Double Skin panel 25mm with PIR insulation for thermal and acoustic performance',
+        'UV-C ultraviolet sterilisation via Philips lamp (30&ndash;72W) integrated into AHU',
+        'Multi-stage filtration: G4 pre-filter (30&ndash;65%) &rarr; F8/F9 medium filter (90&ndash;95%) &rarr; H14 HEPA',
+        'Booster fan &plusmn;3000 cfm, 1000 Pa; heater 4500W (SS304 tube &amp; finned)',
+        'Precision temperature control: 18&ndash;26&deg;C &plusmn;1&deg;C; humidity: 40&ndash;60% RH &plusmn;5%',
+        'PLC-controlled panel with 7&quot; HMI; Magnehelic pressure monitoring 0&ndash;500 Pa',
+      ]}
+      specCards={[
+        { icon: 'AHU',  label: 'AHU Size',        value: '1200&times;3000&times;930mm' },
+        { icon: 'FAN',  label: 'Fan Capacity',     value: '&plusmn;3000 cfm / 1000 Pa' },
+        { icon: 'UV-C', label: 'UV-C Lamp',        value: 'Philips 30&ndash;72W' },
+        { icon: 'ACH',  label: 'Air Changes',      value: '20&ndash;25 ACH' },
+      ]}
+      imageFilename="product-hvac-system.png"
+      imagePlaceholderText="HVAC System<br>AHU Double Skin Unit"
+    />
+    <PageFooter />
+  </div>
+</div>

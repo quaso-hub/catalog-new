@@ -1,0 +1,31 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+import ProductPage from '../components/ProductPage.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="SUPPORT SYSTEMS" pageNumber="31" />
+    <ProductPage
+      title="Medical Gas Outlet System"
+      description="OHMEDA standard gas outlet terminals for operating theatre walls and ceiling pendants. Provides dedicated, gas-specific connection points for oxygen, medical air, vacuum, nitrous oxide, carbon dioxide, and AGSS. Each outlet is pin-indexed and colour-coded to prevent cross-connection. Wall-mounted terminal panels (Anesthesia Technical Panel) providing backup gas supply are covered on p.36. Gas pipeline infrastructure and zone valve systems are covered in the Medical Gas Infrastructure section (p.40&ndash;42)."
+      features={[
+        'OHMEDA standard gas-specific outlets (pin-indexed, colour-coded)',
+        'Gas types: O&#x2082; (Oxygen), Medical Air, Vacuum, N&#x2082;O, CO&#x2082;, AGSS',
+        'Available in DIN and SIS configurations (see Wall Terminal Gas, p.36)',
+        'Suitable for wall-mount and pendant-mount installation',
+        'Fully tested and commissioned prior to handover',
+      ]}
+      specCards={[
+        { icon: 'GAS',  label: 'Gas Types',  value: '6 Types' },
+        { icon: 'ELEC', label: 'Standard',   value: 'OHMEDA' },
+        { icon: 'PIN',  label: 'Connection', value: 'Pin-Indexed' },
+        { icon: 'CLR',  label: 'Coded',      value: 'Colour-Coded' },
+      ]}
+      imageFilename="product-medical-gas.png"
+      imagePlaceholderText="Medical Gas Outlet System<br>Product Image"
+    />
+    <PageFooter />
+  </div>
+</div>

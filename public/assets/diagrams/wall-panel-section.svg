@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 240" width="460" height="240">
   <defs>
     <!-- HRP steel skin pattern (diagonal lines = metal/steel convention) -->
     <pattern id="hrp-pattern" patternUnits="userSpaceOnUse" width="6" height="6">
@@ -23,15 +23,15 @@
   </defs>
 
   <!-- Background -->
-  <rect width="400" height="240" fill="#ffffff"/>
+  <rect width="460" height="240" fill="#ffffff"/>
 
-  <!-- Title block -->
-  <text x="200" y="20" font-family="Arial, sans-serif" font-size="12"
+  <!-- Title block (centred on 460px width) -->
+  <text x="230" y="20" font-family="Arial, sans-serif" font-size="12"
         font-weight="bold" fill="#003366" text-anchor="middle"
         letter-spacing="0.05em">WALL PANEL PIR 75mm</text>
-  <text x="200" y="33" font-family="Arial, sans-serif" font-size="9"
+  <text x="230" y="33" font-family="Arial, sans-serif" font-size="9"
         fill="#64748b" text-anchor="middle">Cross-Section View — Scale Nominal</text>
-  <line x1="50" y1="37" x2="350" y2="37" stroke="#003366" stroke-width="0.5"/>
+  <line x1="50" y1="37" x2="410" y2="37" stroke="#003366" stroke-width="0.5"/>
 
   <!-- TOP HRP Layer (0.5mm steel skin) -->
   <rect x="60" y="48" width="240" height="18" fill="#dce8f0" stroke="#003366"
@@ -68,17 +68,17 @@
   <text x="180" y="200" font-family="Arial, sans-serif" font-size="10"
         font-weight="bold" fill="#003366" text-anchor="middle">1180mm</text>
 
-  <!-- Callout: Top HRP annotation with leader line -->
-  <line x1="300" y1="57"  x2="320" y2="57"  stroke="#003366" stroke-width="0.5"/>
-  <line x1="320" y1="57"  x2="320" y2="53"  stroke="#003366" stroke-width="0.5"/>
-  <text x="323" y="54" font-family="Arial, sans-serif" font-size="8"
+  <!-- Callout: Top HRP annotation with leader line (extended right margin) -->
+  <line x1="300" y1="57"  x2="330" y2="57"  stroke="#003366" stroke-width="0.5"/>
+  <line x1="330" y1="57"  x2="330" y2="53"  stroke="#003366" stroke-width="0.5"/>
+  <text x="334" y="54" font-family="Arial, sans-serif" font-size="8"
         fill="#003366">HRP 0.5mm Steel Skin</text>
-  <text x="323" y="63" font-family="Arial, sans-serif" font-size="7.5"
+  <text x="334" y="63" font-family="Arial, sans-serif" font-size="7.5"
         fill="#0d9488">(Antibacterial — Blue Scope)</text>
 
   <!-- Callout: Bottom HRP annotation -->
-  <line x1="300" y1="165" x2="320" y2="165" stroke="#003366" stroke-width="0.5"/>
-  <text x="323" y="168" font-family="Arial, sans-serif" font-size="8"
+  <line x1="300" y1="165" x2="330" y2="165" stroke="#003366" stroke-width="0.5"/>
+  <text x="334" y="168" font-family="Arial, sans-serif" font-size="8"
         fill="#003366">HRP 0.5mm Steel Skin</text>
 
   <!-- Legend -->
@@ -88,9 +88,9 @@
   <text x="75"  y="221" font-family="Arial, sans-serif" font-size="8"
         fill="#333">HRP Antibacterial Steel (Blue Scope)</text>
 
-  <rect x="200" y="214" width="12" height="8" fill="#fef5dc" stroke="#003366"
+  <rect x="240" y="214" width="12" height="8" fill="#fef5dc" stroke="#003366"
         stroke-width="0.4"/>
-  <rect x="200" y="214" width="12" height="8" fill="url(#pir-pattern)"/>
-  <text x="215" y="221" font-family="Arial, sans-serif" font-size="8"
+  <rect x="240" y="214" width="12" height="8" fill="url(#pir-pattern)"/>
+  <text x="255" y="221" font-family="Arial, sans-serif" font-size="8"
         fill="#333">PIR Insulation Core</text>
 </svg>

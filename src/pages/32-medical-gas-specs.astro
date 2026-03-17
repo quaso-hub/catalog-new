@@ -1,0 +1,133 @@
+---
+import PageHeader from '../components/PageHeader.astro';
+import PageFooter from '../components/PageFooter.astro';
+---
+
+<div class="page">
+  <div class="page-content">
+    <PageHeader category="SUPPORT SYSTEMS" pageNumber="32" />
+    <div class="spec-table-page">
+      <h2 class="spec-table-page__title">Medical Gas System: Technical Specifications</h2>
+      <div class="spec-table-page__content">
+        <div class="spec-table-page__table-area">
+          <table class="spec-table">
+            <thead>
+              <tr><th>Gas Type</th><th>Pressure</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Oxygen (O&#x2082;)</td>
+                <td>4.0 bar (400 kPa)</td>
+              </tr>
+              <tr>
+                <td>Medical Air (4 bar)</td>
+                <td>4.0 bar (400 kPa)</td>
+              </tr>
+              <tr>
+                <td>Vacuum</td>
+                <td>-0.6 bar (-60 kPa)</td>
+              </tr>
+              <tr>
+                <td>Nitrous Oxide (N&#x2082;O)</td>
+                <td>4.0 bar (400 kPa)</td>
+              </tr>
+              <tr>
+                <td>Carbon Dioxide (CO&#x2082;)</td>
+                <td>4.0 bar (400 kPa)</td>
+              </tr>
+              <tr>
+                <td>AGSS</td>
+                <td>Passive / Active</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="spec-table mt-4">
+            <thead>
+              <tr><th>Component</th><th>Specification</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Outlet Standard</td><td>OHMEDA (gas-specific)</td></tr>
+              <tr><td>Connection Type</td><td>Pin-indexed, colour-coded</td></tr>
+              <tr><td>Installation</td><td>Wall-mount and pendant-mount</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="spec-table-page__notes">
+          <div class="callout">
+            <h4 class="callout__title">OHMEDA Outlet Terminals</h4>
+            <p class="callout__text">
+              All outlets are pin-indexed and colour-coded per OHMEDA standard to prevent
+              cross-connection. Gas pipeline infrastructure, zone valves, and alarm panels
+              are covered in the Medical Gas Equipment section (p.40&ndash;42).
+            </p>
+          </div>
+          <div class="diagram-section mt-4">
+            <h4 class="callout__title">Color Coding Reference</h4>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 220" style="max-width:100%;height:auto;">
+              <defs><style>
+                .svg-text { font-family: Inter, Arial, Helvetica, sans-serif; font-style: normal; }
+                .svg-text--title  { font-size: 13px; font-weight: 600; fill: #003366; }
+                .svg-text--sub    { font-size:  9px; font-weight: 400; fill: #64748b; }
+                .svg-text--head   { font-size: 10px; font-weight: 600; fill: #ffffff; }
+                .svg-text--gas    { font-size: 10px; font-weight: 400; fill: #003366; }
+                .svg-text--gasmd  { font-size:  9px; font-weight: 400; fill: #003366; }
+                .svg-text--label  { font-size:  9px; font-weight: 600; }
+                .svg-text--pres   { font-size:  9px; font-weight: 400; fill: #64748b; }
+              </style></defs>
+              <!-- Medical Gas Color Coding - OHMEDA Standard -->
+              <rect x="0" y="0" width="460" height="220" fill="#ffffff"/>
+              <text x="230" y="25" class="svg-text svg-text--title" text-anchor="middle">MEDICAL GAS COLOR CODING</text>
+              <text x="230" y="42" class="svg-text svg-text--sub" text-anchor="middle">OHMEDA Standard (ISO 32)</text>
+              <!-- Header -->
+              <rect x="20" y="55" width="420" height="25" fill="#003366"/>
+              <text x="80"  y="72" class="svg-text svg-text--head" text-anchor="middle">GAS TYPE</text>
+              <text x="185" y="72" class="svg-text svg-text--head" text-anchor="middle">COLOR</text>
+              <text x="335" y="72" class="svg-text svg-text--head" text-anchor="middle">PRESSURE</text>
+              <!-- Row 1: Oxygen -->
+              <rect x="20" y="80" width="420" height="22" fill="#f8fafc"/>
+              <text x="80"  y="95" class="svg-text svg-text--gas" text-anchor="middle">Oxygen (O&#x2082;)</text>
+              <rect x="152" y="84" width="66" height="14" fill="#22c55e" stroke="#003366" stroke-width="1"/>
+              <text x="185" y="95" class="svg-text svg-text--label" fill="#ffffff" text-anchor="middle">GREEN</text>
+              <text x="335" y="95" class="svg-text svg-text--pres" text-anchor="middle">4.0 bar</text>
+              <!-- Row 2: Medical Air -->
+              <rect x="20" y="102" width="420" height="22" fill="#ffffff"/>
+              <text x="80"  y="117" class="svg-text svg-text--gas" text-anchor="middle">Medical Air</text>
+              <rect x="152" y="106" width="66" height="14" fill="#fbbf24" stroke="#003366" stroke-width="1"/>
+              <text x="185" y="117" class="svg-text svg-text--label" fill="#1a1a1a" text-anchor="middle">YELLOW</text>
+              <text x="335" y="117" class="svg-text svg-text--pres" text-anchor="middle">4.0 bar</text>
+              <!-- Row 3: Vacuum -->
+              <rect x="20" y="124" width="420" height="22" fill="#f8fafc"/>
+              <text x="80"  y="139" class="svg-text svg-text--gas" text-anchor="middle">Vacuum</text>
+              <rect x="152" y="128" width="66" height="14" fill="#ffffff" stroke="#003366" stroke-width="1"/>
+              <text x="185" y="139" class="svg-text svg-text--label" fill="#003366" text-anchor="middle">WHITE</text>
+              <text x="335" y="139" class="svg-text svg-text--pres" text-anchor="middle">-0.6 bar</text>
+              <!-- Row 4: Nitrous Oxide -->
+              <rect x="20" y="146" width="420" height="22" fill="#ffffff"/>
+              <text x="80"  y="161" class="svg-text svg-text--gasmd" text-anchor="middle">Nitrous Oxide (N&#x2082;O)</text>
+              <rect x="152" y="150" width="66" height="14" fill="#3b82f6" stroke="#003366" stroke-width="1"/>
+              <text x="185" y="161" class="svg-text svg-text--label" fill="#ffffff" text-anchor="middle">BLUE</text>
+              <text x="335" y="161" class="svg-text svg-text--pres" text-anchor="middle">4.0 bar</text>
+              <!-- Row 5: Carbon Dioxide -->
+              <rect x="20" y="168" width="420" height="22" fill="#f8fafc"/>
+              <text x="80"  y="183" class="svg-text svg-text--gasmd" text-anchor="middle">Carbon Dioxide (CO&#x2082;)</text>
+              <rect x="152" y="172" width="66" height="14" fill="#6b7280" stroke="#003366" stroke-width="1"/>
+              <text x="185" y="183" class="svg-text svg-text--label" fill="#ffffff" text-anchor="middle">GREY</text>
+              <text x="335" y="183" class="svg-text svg-text--pres" text-anchor="middle">4.0 bar</text>
+              <!-- Row 6: AGSS -->
+              <rect x="20" y="190" width="420" height="22" fill="#ffffff"/>
+              <text x="80"  y="205" class="svg-text svg-text--gas" text-anchor="middle">AGSS</text>
+              <rect x="152" y="194" width="66" height="14" fill="#8b5cf6" stroke="#003366" stroke-width="1"/>
+              <text x="185" y="205" class="svg-text svg-text--label" fill="#ffffff" text-anchor="middle">PURPLE</text>
+              <text x="335" y="205" class="svg-text svg-text--pres" text-anchor="middle">Passive</text>
+              <!-- Outer border + column dividers -->
+              <rect x="20" y="55" width="420" height="157" fill="none" stroke="#003366" stroke-width="1"/>
+              <line x1="140" y1="55" x2="140" y2="212" stroke="#003366" stroke-width="0.5" opacity="0.3"/>
+              <line x1="230" y1="55" x2="230" y2="212" stroke="#003366" stroke-width="0.5" opacity="0.3"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <PageFooter />
+  </div>
+</div>
