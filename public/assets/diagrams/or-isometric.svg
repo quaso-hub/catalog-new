@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200" width="280" height="200">
+  <!--
+    OR Room Isometric Schematic
+    Axonometric projection: cx=140 cy=85 scale=14 scale_z=18
+    Formula: px = 140 + (x-y)*12.12   py = 85 + (x+y)*7 - z*18
+    Room: 6m × 6m × 3m
+  -->
+
+  <!-- Background -->
+  <rect width="280" height="200" fill="#ffffff"/>
+
+  <!-- CEILING (drawn first — back surface) -->
+  <polygon points="140,31 212.7,73 140,115 67.3,73"
+           fill="#eef2f8" stroke="#334155" stroke-width="0.8"/>
+
+  <!-- LAF DIFFUSER ZONE on ceiling (2.4×2.4m centred at x3,y3) -->
+  <!-- Vertices: (0.8,0.8,3)=140,42.2  (3.2,0.8,3)=169.1,59  (3.2,3.2,3)=140,75.8  (0.8,3.2,3)=110.9,59 -->
+  <polygon points="140,42.2 169.1,59 140,75.8 110.9,59"
+           fill="#0d9488" fill-opacity="0.2" stroke="#0d9488" stroke-width="1"/>
+  <text x="140" y="60" font-family="Arial,sans-serif" font-size="5"
+        fill="#0d9488" text-anchor="middle" font-weight="bold">LAF DIFFUSER</text>
+  <text x="140" y="66.5" font-family="Arial,sans-serif" font-size="3.8"
+        fill="#0d9488" text-anchor="middle">2400×2400 mm · HEPA H14</text>
+
+  <!-- NORTH WALL (y=0, right visible face) -->
+  <!-- Vertices: A(0,0,0)=140,85  B(6,0,0)=212.7,127  B'(6,0,3)=212.7,73  A'(0,0,3)=140,31 -->
+  <polygon points="140,85 212.7,127 212.7,73 140,31"
+           fill="#dde4ee" stroke="#334155" stroke-width="1"/>
+  <!-- Panel joints at x=2 and x=4 (dashed vertical lines on north face) -->
+  <!-- x=2,y=0: (164.2,99)→(164.2,45)   x=4,y=0: (188.5,113)→(188.5,59) -->
+  <line x1="164.2" y1="99"  x2="164.2" y2="45"  stroke="#8aaccf" stroke-width="0.5" stroke-dasharray="2,1"/>
+  <line x1="188.5" y1="113" x2="188.5" y2="59"  stroke="#8aaccf" stroke-width="0.5" stroke-dasharray="2,1"/>
+  <!-- Wall label -->
+  <text x="183" y="86" font-family="Arial,sans-serif" font-size="4"
+        fill="#64748b" font-style="italic" text-anchor="middle">PIR 75mm</text>
+
+  <!-- WEST WALL left section (x=0, y=0→2) -->
+  <!-- (0,0,0)=140,85  (0,2,0)=115.8,99  (0,2,3)=115.8,45  (0,0,3)=140,31 -->
+  <polygon points="140,85 115.8,99 115.8,45 140,31"
+           fill="#d8dfe8" stroke="#334155" stroke-width="1"/>
+  <!-- Panel joint at y=1: (0,1,0)=127.9,92 → (0,1,3)=127.9,38 -->
+  <line x1="127.9" y1="92" x2="127.9" y2="38"  stroke="#8aaccf" stroke-width="0.5" stroke-dasharray="2,1"/>
+
+  <!-- WEST WALL right section (x=0, y=4→6) -->
+  <!-- (0,4,0)=91.5,113  (0,6,0)=67.3,127  (0,6,3)=67.3,73  (0,4,3)=91.5,59 -->
+  <polygon points="91.5,113 67.3,127 67.3,73 91.5,59"
+           fill="#d8dfe8" stroke="#334155" stroke-width="1"/>
+  <!-- Panel joint at y=5: (0,5,0)=79.4,120 → (0,5,3)=79.4,66 -->
+  <line x1="79.4" y1="120" x2="79.4" y2="66"  stroke="#8aaccf" stroke-width="0.5" stroke-dasharray="2,1"/>
+
+  <!-- FLOOR (drawn after walls so floor covers wall bases) -->
+  <!-- A(0,0,0)=140,85  B(6,0,0)=212.7,127  C(6,6,0)=140,169  D(0,6,0)=67.3,127 -->
+  <polygon points="140,85 212.7,127 140,169 67.3,127"
+           fill="#f0f4f8" stroke="#334155" stroke-width="0.8"/>
+  <!-- Floor grid x-lines (each goes from front edge to back edge) -->
+  <line x1="152.1" y1="92"  x2="79.4"  y2="134" stroke="#c5cfe0" stroke-width="0.3"/>
+  <line x1="164.2" y1="99"  x2="91.5"  y2="141" stroke="#c5cfe0" stroke-width="0.3"/>
+  <line x1="176.4" y1="106" x2="103.6" y2="148" stroke="#c5cfe0" stroke-width="0.3"/>
+  <line x1="188.5" y1="113" x2="115.8" y2="155" stroke="#c5cfe0" stroke-width="0.3"/>
+  <line x1="200.6" y1="120" x2="127.9" y2="162" stroke="#c5cfe0" stroke-width="0.3"/>
+  <!-- Floor grid y-lines -->
+  <line x1="127.9" y1="92"  x2="200.6" y2="134" stroke="#c5cfe0" stroke-width="0.3"/>
+  <line x1="115.8" y1="99"  x2="188.5" y2="141" stroke="#c5cfe0" stroke-width="0.3"/>
+  <line x1="103.6" y1="106" x2="176.4" y2="148" stroke="#c5cfe0" stroke-width="0.3"/>
+  <line x1="91.5"  y1="113" x2="164.2" y2="155" stroke="#c5cfe0" stroke-width="0.3"/>
+  <line x1="79.4"  y1="120" x2="152.1" y2="162" stroke="#c5cfe0" stroke-width="0.3"/>
+  <!-- LAF zone floor highlight (ISO Cl.5 surgical field) -->
+  <!-- (0.8,0.8,0)=140,96.2  (3.2,0.8,0)=169.1,113  (3.2,3.2,0)=140,129.8  (0.8,3.2,0)=110.9,113 -->
+  <polygon points="140,96.2 169.1,113 140,129.8 110.9,113"
+           fill="#0d9488" fill-opacity="0.07" stroke="#0d9488"
+           stroke-width="0.5" stroke-dasharray="3,1.5"/>
+
+  <!-- OPERATING TABLE (x=2→4, y=2.7→3.3, z=0→0.8) -->
+  <!-- Top face: (2,2.7,0.8)=131.5,103.5  (4,2.7,0.8)=155.8,117.5  (4,3.3,0.8)=148.5,121.7  (2,3.3,0.8)=124.2,107.7 -->
+  <polygon points="131.5,103.5 155.8,117.5 148.5,121.7 124.2,107.7"
+           fill="#c8d8e8" stroke="#003366" stroke-width="0.8"/>
+  <!-- Front face (y=2.7): (2,2.7,0)=131.5,117.9  (4,2.7,0)=155.8,131.9 -->
+  <polygon points="131.5,117.9 155.8,131.9 155.8,117.5 131.5,103.5"
+           fill="#b8cad8" stroke="#003366" stroke-width="0.8"/>
+  <!-- Right face (x=4): (4,3.3,0)=148.5,136.1 -->
+  <polygon points="155.8,117.5 148.5,121.7 148.5,136.1 155.8,131.9"
+           fill="#afc0d0" stroke="#003366" stroke-width="0.8"/>
+  <!-- Table top label -->
+  <text x="140" y="114" font-family="Arial,sans-serif" font-size="4"
+        fill="#003366" text-anchor="middle">Op. Table</text>
+
+  <!-- SHADOWLESS LAMPS (at z=2.3) -->
+  <!-- Pendant arms to ceiling: (2.5,3,3)=133.9,69.5  (3.5,3,3)=146.1,69.5 -->
+  <line x1="133.9" y1="76.1" x2="133.9" y2="69.5" stroke="#8a9ab0" stroke-width="0.6"/>
+  <line x1="146.1" y1="83.1" x2="146.1" y2="69.5" stroke="#8a9ab0" stroke-width="0.6"/>
+  <!-- Lamp 1: (2.5,3,2.3)=133.9,82.1 -->
+  <circle cx="133.9" cy="82.1" r="5.5" fill="#fff9e8" stroke="#b8860b" stroke-width="0.7"/>
+  <circle cx="133.9" cy="82.1" r="2.5" fill="#ffd54f"/>
+  <!-- Lamp 2: (3.5,3,2.3)=146.1,89.1 -->
+  <circle cx="146.1" cy="89.1" r="5.5" fill="#fff9e8" stroke="#b8860b" stroke-width="0.7"/>
+  <circle cx="146.1" cy="89.1" r="2.5" fill="#ffd54f"/>
+
+  <!-- ACCESS DOOR on west wall (x=0, y=2→4, z=0→2.1) -->
+  <!-- (0,2,0)=115.8,99  (0,4,0)=91.5,113  (0,4,2.1)=91.5,75.2  (0,2,2.1)=115.8,61.2 -->
+  <polygon points="115.8,99 91.5,113 91.5,75.2 115.8,61.2"
+           fill="#d0eaf5" stroke="#2a6fa8" stroke-width="0.7"/>
+  <!-- Door inner frame lines -->
+  <line x1="113.8" y1="63"  x2="93.5"  y2="75"  stroke="#2a6fa8" stroke-width="0.3" stroke-dasharray="1.5,1"/>
+  <line x1="93.5"  y1="75"  x2="93.5"  y2="111" stroke="#2a6fa8" stroke-width="0.3" stroke-dasharray="1.5,1"/>
+  <!-- Door label -->
+  <text x="94"  y="89" font-family="Arial,sans-serif" font-size="4"
+        fill="#2a6fa8" text-anchor="middle">Access</text>
+  <text x="94"  y="94" font-family="Arial,sans-serif" font-size="4"
+        fill="#2a6fa8" text-anchor="middle">Door</text>
+
+  <!-- DIMENSION ANNOTATIONS -->
+  <!-- Wall height 3m: right edge of north wall B(212.7,127) to B'(212.7,73) -->
+  <line x1="215" y1="73"  x2="215" y2="127" stroke="#334155" stroke-width="0.5"/>
+  <line x1="213" y1="73"  x2="217" y2="73"  stroke="#334155" stroke-width="0.5"/>
+  <line x1="213" y1="127" x2="217" y2="127" stroke="#334155" stroke-width="0.5"/>
+  <text x="219" y="103" font-family="Arial,sans-serif" font-size="5"
+        fill="#334155" text-anchor="start">3 m</text>
+
+  <!-- Floor width along x-axis (6m north base) -->
+  <text x="188" y="133" font-family="Arial,sans-serif" font-size="4.5"
+        fill="#334155" text-anchor="middle">6 m</text>
+  <!-- Floor depth along y-axis (6m west base) -->
+  <text x="93"  y="133" font-family="Arial,sans-serif" font-size="4.5"
+        fill="#334155" text-anchor="middle">6 m</text>
+
+  <!-- Scale bar (1m along x-axis direction: Δpx=12.12, Δpy=7) -->
+  <line x1="228" y1="162" x2="240.1" y2="169" stroke="#334155" stroke-width="1.2"/>
+  <line x1="228" y1="159" x2="228"   y2="165" stroke="#334155" stroke-width="0.8"/>
+  <line x1="240.1" y1="166" x2="240.1" y2="172" stroke="#334155" stroke-width="0.8"/>
+  <text x="234" y="178" font-family="Arial,sans-serif" font-size="4.5"
+        fill="#334155" text-anchor="middle">1 m</text>
+
+  <!-- TITLE -->
+  <text x="140" y="10" font-family="Arial,sans-serif" font-size="6.5"
+        fill="#003366" text-anchor="middle" font-weight="bold">OPERATING THEATRE — ISOMETRIC SCHEMATIC</text>
+
+  <!-- LEGEND (bottom left) -->
+  <rect x="4" y="156" width="65" height="42" fill="white" fill-opacity="0.9"
+        stroke="#e2e8f0" stroke-width="0.5" rx="1"/>
+  <!-- LAF Zone -->
+  <polygon points="6,160 11,160 11,165 6,165" fill="#0d9488" fill-opacity="0.25" stroke="#0d9488" stroke-width="0.5"/>
+  <text x="14" y="165" font-family="Arial,sans-serif" font-size="4" fill="#334155">LAF Zone (ISO Cl.5)</text>
+  <!-- Op Table -->
+  <polygon points="6,168 11,168 11,173 6,173" fill="#c8d8e8" stroke="#003366" stroke-width="0.5"/>
+  <text x="14" y="173" font-family="Arial,sans-serif" font-size="4" fill="#334155">Operating Table</text>
+  <!-- Lamp -->
+  <circle cx="8.5" cy="180" r="2.5" fill="#fff9e8" stroke="#b8860b" stroke-width="0.5"/>
+  <circle cx="8.5" cy="180" r="1"   fill="#ffd54f"/>
+  <text x="14" y="182" font-family="Arial,sans-serif" font-size="4" fill="#334155">Shadowless Lamp</text>
+  <!-- Door -->
+  <polygon points="6,186 11,186 11,193 6,193" fill="#d0eaf5" stroke="#2a6fa8" stroke-width="0.5"/>
+  <text x="14" y="191" font-family="Arial,sans-serif" font-size="4" fill="#334155">Access Door</text>
+
+</svg>
