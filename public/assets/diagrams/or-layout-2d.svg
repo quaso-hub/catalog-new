@@ -1,205 +1,174 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 170" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 175" width="100%" height="auto">
   <defs>
     <!-- Grid Pattern -->
     <pattern id="grid" width="6" height="6" patternUnits="userSpaceOnUse">
-      <path d="M 6 0 L 0 0 0 6" fill="none" stroke="#e8e8e8" stroke-width="0.2"/>
+      <path d="M 6 0 L 0 0 0 6" fill="none" stroke="#ebebeb" stroke-width="0.15"/>
     </pattern>
-
-    <!-- Laminar Flow Pattern -->
-    <pattern id="laminar-pattern" width="4" height="4" patternUnits="userSpaceOnUse">
-      <line x1="2" y1="0" x2="2" y2="4" stroke="#0d9488" stroke-width="0.3" stroke-opacity="0.2"/>
+    <!-- Laminar Flow Pattern (vertical lines) -->
+    <pattern id="laminar-fill" width="3" height="3" patternUnits="userSpaceOnUse">
+      <line x1="1.5" y1="0" x2="1.5" y2="3" stroke="#0d9488" stroke-width="0.25" stroke-opacity="0.18"/>
     </pattern>
-
     <!-- Arrow Markers -->
-    <marker id="arrow" markerWidth="6" markerHeight="4" refX="6" refY="2" orient="auto">
-      <polygon points="0 0, 6 2, 0 4" fill="#003366"/>
+    <marker id="arrow-teal" markerWidth="5" markerHeight="4" refX="5" refY="2" orient="auto">
+      <polygon points="0 0, 5 2, 0 4" fill="#0d9488"/>
     </marker>
-    <marker id="arrow-teal" markerWidth="5" markerHeight="3" refX="5" refY="1.5" orient="auto">
-      <polygon points="0 0, 5 1.5, 0 3" fill="#0d9488"/>
-    </marker>
-
-    <!-- Styles -->
     <style>
-      .wall-outer { fill: #ffffff; stroke: #1a1a1a; stroke-width: 1.2; }
-      .wall-panel { fill: #f5f7fa; stroke: #003366; stroke-width: 0.8; }
-      .equipment { fill: #f5f5f5; stroke: #003366; stroke-width: 0.6; }
-      .equipment-detail { fill: #ffffff; stroke: #003366; stroke-width: 0.4; }
-      .door { fill: #e8f4fc; stroke: #003366; stroke-width: 0.6; }
-      .door-swing { fill: none; stroke: #003366; stroke-width: 0.4; stroke-dasharray: 1,1; }
-      .laminar-zone { fill: url(#laminar-pattern); stroke: #0d9488; stroke-width: 0.5; stroke-dasharray: 2,1; }
-      .window { fill: none; stroke: #003366; stroke-width: 0.5; stroke-dasharray: 1.5,0.5; }
-      .label { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 4.5px; fill: #1a1a1a; font-weight: 500; }
-      .label-sm { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 4px; fill: #666; }
-      .label-zone { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 5px; fill: #0d9488; font-weight: 600; }
-      .dim-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 4px; fill: #666; }
-      .dim-line { stroke: #888; stroke-width: 0.25; }
-      .gas-o2 { fill: #ffffff; stroke: #22c55e; stroke-width: 0.5; }
-      .gas-air { fill: #ffffff; stroke: #eab308; stroke-width: 0.5; }
-      .gas-vac { fill: #ffffff; stroke: #666; stroke-width: 0.5; }
-      .gas-n2o { fill: #ffffff; stroke: #3b82f6; stroke-width: 0.5; }
+      .wall-outer { fill: none; stroke: #1a1a1a; stroke-width: 1.4; }
+      .wall-fill  { fill: #f0f2f5; stroke: #003366; stroke-width: 0.7; }
+      .equipment  { fill: #f5f5f5; stroke: #003366; stroke-width: 0.6; }
+      .equip-dark { fill: #003366; stroke: #003366; stroke-width: 0.3; }
+      .door       { fill: #daeef8; stroke: #003366; stroke-width: 0.5; }
+      .door-arc   { fill: none; stroke: #003366; stroke-width: 0.4; stroke-dasharray: 1.5,0.5; }
+      .laminar    { fill: url(#laminar-fill); stroke: #0d9488; stroke-width: 0.6;
+                    stroke-dasharray: 2.5,1; }
+      .dim-line   { stroke: #888; stroke-width: 0.25; }
+      .label      { font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+                    font-size: 4.5px; fill: #1a1a1a; font-weight: 500; }
+      .label-sm   { font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+                    font-size: 3.8px; fill: #555; }
+      .label-zone { font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+                    font-size: 5px; fill: #0d9488; font-weight: 700;
+                    letter-spacing: 0.05em; }
+      .label-eq   { font-family: -apple-system, 'Segoe UI', Arial, sans-serif;
+                    font-size: 4px; fill: #003366; font-weight: 600; }
     </style>
   </defs>
 
-  <!-- Background -->
-  <rect width="200" height="170" fill="#fafafa"/>
+  <!-- Room background with grid -->
+  <rect x="10" y="8" width="120" height="120" fill="url(#grid)"/>
 
-  <!-- Main Floor Plan Area -->
-  <g id="floor-plan" transform="translate(10, 8)">
+  <!-- Room outer wall -->
+  <rect x="10" y="8" width="120" height="120" class="wall-outer"/>
 
-    <!-- Grid background for room -->
-    <rect x="0" y="0" width="120" height="120" fill="url(#grid)"/>
+  <!-- Wall panels - North (with joint lines) -->
+  <rect x="10" y="8"  width="120" height="3.5" class="wall-fill"/>
+  <line x1="34" y1="8"  x2="34" y2="11.5"  stroke="#6a88aa" stroke-width="0.3"/>
+  <line x1="58" y1="8"  x2="58" y2="11.5"  stroke="#6a88aa" stroke-width="0.3"/>
+  <line x1="82" y1="8"  x2="82" y2="11.5"  stroke="#6a88aa" stroke-width="0.3"/>
+  <line x1="106" y1="8" x2="106" y2="11.5" stroke="#6a88aa" stroke-width="0.3"/>
 
-    <!-- Room Outline (6000mm × 6000mm at 1:50 = 120mm × 120mm) -->
-    <rect x="0" y="0" width="120" height="120" class="wall-outer"/>
+  <!-- Wall panels - South (with door opening gap) -->
+  <rect x="10"  y="124.5" width="44" height="3.5" class="wall-fill"/>
+  <rect x="78"  y="124.5" width="52" height="3.5" class="wall-fill"/>
 
-    <!-- Wall Panels - Top (North) -->
-    <g id="wall-north">
-      <rect x="0" y="0" width="24" height="3" class="wall-panel"/>
-      <rect x="24" y="0" width="24" height="3" class="wall-panel"/>
-      <rect x="48" y="0" width="24" height="3" class="wall-panel"/>
-      <rect x="72" y="0" width="24" height="3" class="wall-panel"/>
-      <rect x="96" y="0" width="24" height="3" class="wall-panel"/>
-    </g>
+  <!-- Wall panels - West (with emergency door gap) -->
+  <rect x="10"   y="11.5" width="3.5" height="26" class="wall-fill"/>
+  <rect x="10"   y="51"   width="3.5" height="74" class="wall-fill"/>
 
-    <!-- Wall Panels - Bottom (South) -->
-    <g id="wall-south">
-      <rect x="0" y="117" width="24" height="3" class="wall-panel"/>
-      <rect x="24" y="117" width="24" height="3" class="wall-panel"/>
-      <rect x="78" y="117" width="18" height="3" class="wall-panel"/>
-      <rect x="96" y="117" width="24" height="3" class="wall-panel"/>
-    </g>
+  <!-- Wall panels - East (with sterile door gap) -->
+  <rect x="126.5" y="11.5" width="3.5" height="30" class="wall-fill"/>
+  <rect x="126.5" y="67"   width="3.5" height="62" class="wall-fill"/>
 
-    <!-- Wall Panels - Left (West) -->
-    <g id="wall-west">
-      <rect x="0" y="3" width="3" height="28" class="wall-panel"/>
-      <rect x="0" y="49" width="3" height="68" class="wall-panel"/>
-    </g>
+  <!-- Laminar Air Flow Zone -->
+  <rect x="44" y="40" width="52" height="52" class="laminar" rx="0.5"/>
+  <!-- LAF label background -->
+  <rect x="46" y="30.5" width="48" height="8" fill="white" fill-opacity="0.9"/>
+  <text x="70" y="37" text-anchor="middle" class="label-zone">LAMINAR ZONE</text>
 
-    <!-- Wall Panels - Right (East) -->
-    <g id="wall-east">
-      <rect x="117" y="3" width="3" height="32" class="wall-panel"/>
-      <rect x="117" y="65" width="3" height="52" class="wall-panel"/>
-    </g>
+  <!-- Operating Table -->
+  <rect x="48" y="57" width="44" height="12" class="equipment" rx="0.5"/>
+  <rect x="50" y="58.5" width="40" height="9" fill="none" stroke="#003366"
+        stroke-width="0.3"/>
+  <!-- Head end indicator -->
+  <line x1="86" y1="58.5" x2="86" y2="67.5" stroke="#003366" stroke-width="0.5"/>
+  <text x="70" y="73" text-anchor="middle" class="label">Operating Table</text>
 
-    <!-- Laminar Air Flow Zone -->
-    <g id="laminar-zone">
-      <rect x="36" y="36" width="48" height="48" class="laminar-zone" rx="1"/>
-      <rect x="38" y="26" width="44" height="9" fill="white" opacity="0.92" rx="1"/>
-      <text x="60" y="33" text-anchor="middle" class="label-zone" font-size="4.5">LAMINAR ZONE</text>
-    </g>
-
-    <!-- Operating Table -->
-    <g id="operating-table" transform="translate(39, 54.5)">
-      <rect x="0" y="0" width="42" height="11" class="equipment" rx="1"/>
-      <rect x="2" y="1.5" width="38" height="8" class="equipment-detail" rx="0.5"/>
-      <circle cx="38" cy="5.5" r="2" fill="none" stroke="#003366" stroke-width="0.3"/>
-      <text x="21" y="16" text-anchor="middle" class="label">Operating Table</text>
-    </g>
-
-    <!-- Shadowless Lamps -->
-    <g id="shadowless-lamps">
-      <g transform="translate(50, 48)">
-        <circle cx="0" cy="0" r="7" fill="none" stroke="#003366" stroke-width="0.4" stroke-dasharray="1.5,0.5"/>
-        <circle cx="0" cy="0" r="4" fill="#fff8e1" stroke="#b8860b" stroke-width="0.4"/>
-        <circle cx="0" cy="0" r="1.5" fill="#ffd54f"/>
-      </g>
-      <g transform="translate(70, 48)">
-        <circle cx="0" cy="0" r="7" fill="none" stroke="#003366" stroke-width="0.4" stroke-dasharray="1.5,0.5"/>
-        <circle cx="0" cy="0" r="4" fill="#fff8e1" stroke="#b8860b" stroke-width="0.4"/>
-        <circle cx="0" cy="0" r="1.5" fill="#ffd54f"/>
-      </g>
-      <text x="60" y="56" text-anchor="middle" class="label-sm" font-size="3.8">Shadowless Lamp 700/700</text>
-    </g>
-
-    <!-- Surgical Pendant - Left -->
-    <g id="surgical-pendant" transform="translate(18, 50)">
-      <circle cx="6" cy="0" r="3" fill="none" stroke="#003366" stroke-width="0.3" stroke-dasharray="1,0.5"/>
-      <line x1="6" y1="3" x2="6" y2="8" stroke="#003366" stroke-width="0.4"/>
-      <rect x="0" y="8" width="12" height="20" class="equipment" rx="1"/>
-      <circle cx="4" cy="12" r="1.2" class="gas-o2"/>
-      <circle cx="8" cy="12" r="1.2" class="gas-air"/>
-      <circle cx="4" cy="16" r="1.2" class="gas-vac"/>
-      <circle cx="8" cy="16" r="1.2" class="gas-n2o"/>
-      <text x="6" y="33" text-anchor="middle" class="label">Pendant</text>
-    </g>
-
-    <!-- Anesthesia Pendant - Right -->
-    <g id="anesthesia-pendant" transform="translate(90, 50)">
-      <circle cx="6" cy="0" r="3" fill="none" stroke="#003366" stroke-width="0.3" stroke-dasharray="1,0.5"/>
-      <line x1="6" y1="3" x2="6" y2="8" stroke="#003366" stroke-width="0.4"/>
-      <rect x="0" y="8" width="12" height="24" class="equipment" rx="1"/>
-      <circle cx="4" cy="12" r="1.2" class="gas-o2"/>
-      <circle cx="8" cy="12" r="1.2" class="gas-air"/>
-      <circle cx="4" cy="16" r="1.2" class="gas-vac"/>
-      <circle cx="8" cy="16" r="1.2" class="gas-n2o"/>
-      <text x="6" y="37" text-anchor="middle" class="label">Pendant</text>
-    </g>
-
-    <!-- Control Panel - North Wall -->
-    <g id="control-panel" transform="translate(8, 6)">
-      <rect x="0" y="0" width="16" height="10" class="equipment" rx="0.5"/>
-      <rect x="1" y="1" width="14" height="7" fill="#003366" rx="0.3"/>
-      <text x="8" y="14" text-anchor="middle" class="label">Control</text>
-    </g>
-
-    <!-- X-Ray Viewer - North Wall -->
-    <g id="xray-viewer" transform="translate(30, 6)">
-      <rect x="0" y="0" width="18" height="10" class="equipment" rx="0.5"/>
-      <rect x="1" y="1" width="7.5" height="8" fill="#f0f4f8" stroke="#003366" stroke-width="0.3" rx="0.2"/>
-      <rect x="9.5" y="1" width="7.5" height="8" fill="#f0f4f8" stroke="#003366" stroke-width="0.3" rx="0.2"/>
-      <text x="9" y="14" text-anchor="middle" class="label">X-Ray</text>
-    </g>
-
-    <!-- Main Entry Door - South Wall -->
-    <g id="door-main">
-      <rect x="48" y="117" width="30" height="3" class="door"/>
-      <path d="M 54 118.5 L 50 118.5" stroke="#003366" stroke-width="0.3" marker-end="url(#arrow)"/>
-      <path d="M 72 118.5 L 76 118.5" stroke="#003366" stroke-width="0.3" marker-end="url(#arrow)"/>
-      <text x="63" y="125" text-anchor="middle" class="label">Main Entry</text>
-    </g>
-
-    <!-- Sterile Door - East Wall -->
-    <g id="door-sterile">
-      <rect x="117" y="35" width="3" height="30" class="door"/>
-      <path d="M 118.5 41 L 118.5 37" stroke="#003366" stroke-width="0.3" marker-end="url(#arrow)"/>
-      <path d="M 118.5 59 L 118.5 63" stroke="#003366" stroke-width="0.3" marker-end="url(#arrow)"/>
-    </g>
-
-    <!-- Emergency Exit - West Wall -->
-    <g id="door-emergency">
-      <rect x="0" y="31" width="3" height="18" class="door"/>
-      <path d="M 3 31 Q 15 40 3 49" class="door-swing"/>
-    </g>
-
-    <!-- Observation Window - South Wall -->
-    <g id="observation-window">
-      <rect x="90" y="117" width="20" height="3" class="window" fill="#e0f2fe" fill-opacity="0.5"/>
-    </g>
-
-    <!-- Airflow Indicators -->
-    <g id="airflow" opacity="0.6">
-      <path d="M 50 12 L 50 24" stroke="#0d9488" stroke-width="0.5" marker-end="url(#arrow-teal)"/>
-      <path d="M 60 12 L 60 24" stroke="#0d9488" stroke-width="0.5" marker-end="url(#arrow-teal)"/>
-      <path d="M 70 12 L 70 24" stroke="#0d9488" stroke-width="0.5" marker-end="url(#arrow-teal)"/>
-    </g>
+  <!-- Shadowless Lamps — ceiling mount symbol -->
+  <g transform="translate(57, 53)">
+    <circle cx="0" cy="0" r="7" fill="none" stroke="#003366"
+            stroke-width="0.35" stroke-dasharray="1.5,0.5"/>
+    <circle cx="0" cy="0" r="4" fill="#fff9e8" stroke="#b8860b" stroke-width="0.4"/>
+    <circle cx="0" cy="0" r="1.5" fill="#ffd54f"/>
   </g>
-
-  <!-- Simple Inline Legend -->
-  <g id="simple-legend" transform="translate(10, 155)">
-    <rect x="0" y="0" width="8" height="5" class="equipment"/>
-    <text x="10" y="4" class="label-sm">Equipment</text>
-
-    <circle cx="45" cy="2.5" r="3" fill="none" stroke="#003366" stroke-width="0.4" stroke-dasharray="1,0.5"/>
-    <text x="50" y="4" class="label-sm">Ceiling Mount</text>
-
-    <rect x="85" y="0" width="10" height="5" class="laminar-zone"/>
-    <text x="97" y="4" class="label-sm">Laminar Zone</text>
-
-    <rect x="130" y="0" width="8" height="5" class="door"/>
-    <text x="140" y="4" class="label-sm">Door</text>
-
-    <text x="165" y="4" class="label-sm" fill="#666">6m × 6m</text>
+  <g transform="translate(83, 53)">
+    <circle cx="0" cy="0" r="7" fill="none" stroke="#003366"
+            stroke-width="0.35" stroke-dasharray="1.5,0.5"/>
+    <circle cx="0" cy="0" r="4" fill="#fff9e8" stroke="#b8860b" stroke-width="0.4"/>
+    <circle cx="0" cy="0" r="1.5" fill="#ffd54f"/>
   </g>
+  <!-- Lamp label — ABOVE the lamp circles, OUTSIDE surgical zone -->
+  <text x="70" y="44" text-anchor="middle" class="label-sm">Surgical Lamp (x2)</text>
 
+  <!-- Pendant Left — schematic: ceiling circle + drop + unit -->
+  <circle cx="25" cy="14.5" r="3.5" fill="none" stroke="#003366"
+          stroke-width="0.4" stroke-dasharray="1,0.5"/>
+  <line   x1="25" y1="18"   x2="25" y2="55" stroke="#003366" stroke-width="0.4"/>
+  <rect   x="19" y="55" width="12" height="22" class="equipment" rx="0.5"/>
+  <text   x="25" y="81" text-anchor="middle" class="label">Pendant</text>
+
+  <!-- Pendant Right — schematic -->
+  <circle cx="115" cy="14.5" r="3.5" fill="none" stroke="#003366"
+          stroke-width="0.4" stroke-dasharray="1,0.5"/>
+  <line   x1="115" y1="18"  x2="115" y2="55" stroke="#003366" stroke-width="0.4"/>
+  <rect   x="109" y="55" width="12" height="22" class="equipment" rx="0.5"/>
+  <text   x="115" y="81" text-anchor="middle" class="label">Pendant</text>
+
+  <!-- Control Panel — North wall -->
+  <rect x="16" y="11.5" width="16" height="11" class="equipment" rx="0.3"/>
+  <rect x="17.5" y="13"  width="13" height="7.5" class="equip-dark" rx="0.2"/>
+  <text x="24"  y="26"  text-anchor="middle" class="label">Control</text>
+
+  <!-- X-Ray Viewer — North wall -->
+  <rect x="40" y="11.5" width="20" height="11" class="equipment" rx="0.3"/>
+  <rect x="41.5" y="13"   width="7.5" height="8" fill="#edf4fc"
+        stroke="#003366" stroke-width="0.25" rx="0.2"/>
+  <rect x="51"   y="13"   width="7.5" height="8" fill="#edf4fc"
+        stroke="#003366" stroke-width="0.25" rx="0.2"/>
+  <text x="50"   y="26"   text-anchor="middle" class="label">X-Ray</text>
+
+  <!-- Main Entry Door — South wall (hermetic biparting) -->
+  <rect x="54" y="124.5" width="24" height="3.5" class="door"/>
+  <!-- Biparting indicator: two inward arrows -->
+  <path d="M 62 126.2 L 57 126.2" stroke="#003366" stroke-width="0.5"
+        fill="none" stroke-linecap="round"/>
+  <polygon points="57,126.2 59.5,125.2 59.5,127.2" fill="#003366"/>
+  <path d="M 70 126.2 L 75 126.2" stroke="#003366" stroke-width="0.5"
+        fill="none" stroke-linecap="round"/>
+  <polygon points="75,126.2 72.5,125.2 72.5,127.2" fill="#003366"/>
+  <text x="66" y="132" text-anchor="middle" class="label">Main Entry</text>
+
+  <!-- Emergency Door — West wall (single swing, arc) -->
+  <rect x="10" y="37" width="3.5" height="14" class="door"/>
+  <path d="M 13.5 37 A 14 14 0 0 1 13.5 51" class="door-arc"/>
+
+  <!-- Sterile Door — East wall -->
+  <rect x="126.5" y="37" width="3.5" height="30" class="door"/>
+  <path d="M 126.5 41 L 126.5 37" stroke="#003366" stroke-width="0.4"
+        stroke-dasharray="1,0.5"/>
+  <path d="M 126.5 63 L 126.5 67" stroke="#003366" stroke-width="0.4"
+        stroke-dasharray="1,0.5"/>
+
+  <!-- Airflow arrows from ceiling (LAF supply) -->
+  <path d="M 53 18 L 53 38" stroke="#0d9488" stroke-width="0.6"
+        marker-end="url(#arrow-teal)" opacity="0.7"/>
+  <path d="M 70 18 L 70 38" stroke="#0d9488" stroke-width="0.6"
+        marker-end="url(#arrow-teal)" opacity="0.7"/>
+  <path d="M 87 18 L 87 38" stroke="#0d9488" stroke-width="0.6"
+        marker-end="url(#arrow-teal)" opacity="0.7"/>
+
+  <!-- Scale bar -->
+  <line x1="10" y1="142" x2="30" y2="142" stroke="#555" stroke-width="0.5"/>
+  <line x1="10" y1="140" x2="10" y2="144" stroke="#555" stroke-width="0.5"/>
+  <line x1="30" y1="140" x2="30" y2="144" stroke="#555" stroke-width="0.5"/>
+  <text x="20" y="148" text-anchor="middle" class="label-sm">2 m</text>
+  <text x="70" y="148" text-anchor="middle" class="label-sm">Scale 1:100 approx.</text>
+
+  <!-- Legend -->
+  <g transform="translate(10, 155)">
+    <rect x="0" y="0" width="7" height="5" class="equipment"/>
+    <text x="9" y="4.5" class="label-sm">Equipment</text>
+
+    <circle cx="44" cy="2.5" r="3" fill="none" stroke="#003366"
+            stroke-width="0.4" stroke-dasharray="1,0.5"/>
+    <text x="49" y="4.5" class="label-sm">Ceiling Mount</text>
+
+    <rect x="85" y="0" width="9" height="5" class="laminar"/>
+    <text x="96" y="4.5" class="label-sm">Laminar Zone</text>
+
+    <rect x="130" y="0" width="7" height="5" class="door"/>
+    <text x="139" y="4.5" class="label-sm">Door</text>
+
+    <text x="165" y="4.5" class="label-sm" fill="#555">6m x 6m</text>
+  </g>
 </svg>
