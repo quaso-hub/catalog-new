@@ -2398,7 +2398,8 @@
   display: flex;
   justify-content: center;
   gap: var(--space-6);
-  margin: auto 0;
+  margin-top: auto;
+  padding: var(--space-5) 0;
 }
 
 .stat-box {
@@ -2565,12 +2566,19 @@ p {
 }
 
 .vm-cards--compact .vm-card {
-  padding: var(--space-3);
+  padding: var(--space-3) 0 var(--space-3) var(--space-3);
+  background: transparent;
+  border-left: 3px solid var(--color-accent-teal);
+  border-radius: 0;
 }
 
 .vm-cards--compact .vm-card__title {
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  color: var(--color-primary-800);
   margin-bottom: var(--space-1);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
 }
 
 .vm-cards--compact .vm-card__text {
