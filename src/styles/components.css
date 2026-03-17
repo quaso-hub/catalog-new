@@ -212,6 +212,11 @@
 .toc__item-title {
   font-size: var(--text-sm);
   color: var(--color-neutral-800);
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-right: var(--space-2);
 }
 
 .toc__item-page {
