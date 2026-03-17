@@ -14,13 +14,11 @@ import SpecTable from '../components/SpecTable.astro';
         { parameter: 'Air Velocity',         specification: '0.25&ndash;0.45 m/s (unidirectional)' },
         { parameter: 'ISO Cleanliness Class',specification: 'ISO Class 5 (Class 100) per ISO 14644-1' },
         { parameter: 'HEPA Filter Rating',   specification: 'H14 &mdash; 99.995% efficiency' },
-        { parameter: 'Pre-Filter',           specification: 'G4 washable/disposable, 30&ndash;65%' },
-        { parameter: 'Medium Filter',        specification: 'F8/F9, 90&ndash;95%' },
+        { parameter: 'Filtration Stages',    specification: 'Pre-filter G4 (30&ndash;65%) &rarr; Medium F8/F9 (90&ndash;95%) &rarr; HEPA H14 (99.995%)' },
         { parameter: 'Temperature Control',  specification: '18&ndash;26&deg;C &plusmn;1&deg;C' },
         { parameter: 'Humidity Control',     specification: '40&ndash;60% RH &plusmn;5%' },
         { parameter: 'UV-C Sterilisation',   specification: 'Philips UV-C lamp, 30&ndash;72W' },
         { parameter: 'Standard Compliance',  specification: 'Permenkes No. 7 Tahun 2019; ASHRAE 170' },
-        { parameter: 'LAF Configuration',    specification: 'Per project design requirement. Contact our team.' },
       ]}
       callouts={[
         {
@@ -28,13 +26,15 @@ import SpecTable from '../components/SpecTable.astro';
           text: 'The LAF diffuser delivers filtered air in a uniform vertical downflow pattern, sweeping contaminants away from the surgical field and maintaining ISO Class 5 conditions throughout the procedure.',
         },
         {
+          title: 'Airflow Diagram',
+          text: 'For complete system airflow diagram (AHU, ducting, return air): see HVAC System Technical Specifications, p.30.',
+        },
+        {
           title: 'HVAC System & AHU',
           text: 'HVAC system specifications (temperature, humidity, air change rates): p.30. Complete AHU Double Skin unit specifications (fan, heater, coil, ducting): p.43.',
           variant: 'teal',
         },
       ]}
-      diagramPath="/assets/diagrams/hvac-airflow.svg"
-      diagramTitle="Airflow Direction — LAF to Surgical Zone"
     />
     <PageFooter />
   </div>
