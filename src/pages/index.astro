@@ -5,13 +5,13 @@ import '../styles/base.css';
 import '../styles/components.css';
 import '../styles/paged-config.css';
 
-// M2 Batch 1/6 — Pages 01-04
+// Batch 1 — Pages 01-04
 import Cover from './01-cover.astro';
 import TOC from './02-toc.astro';
 import CompanyProfile from './03-company-profile.astro';
 import ORSolution from './04-or-solution.astro';
 
-// M2 Batch 2/6 — Pages 05-14
+// Batch 2 — Pages 05-14
 import WallCeilingDivider from './05-divider-wall-ceiling.astro';
 import WallPanel from './06-wall-panel.astro';
 import WallPanelSpecs from './07-wall-panel-specs.astro';
@@ -23,7 +23,7 @@ import HermeticDoorSpecs from './12-hermetic-door-specs.astro';
 import SwingDoor from './13-swing-door.astro';
 import AutoSwingDoor from './14-auto-swing-door.astro';
 
-// M2 Batch 3/6 — Pages 15-23
+// Batch 3 — Pages 15-23
 import SurgicalDivider from './15-divider-surgical.astro';
 import ControlPanel from './16-control-panel.astro';
 import ControlPanelSpecs from './17-control-panel-specs.astro';
@@ -34,41 +34,43 @@ import ShadowlessLampSpecs from './21-shadowless-lamp-specs.astro';
 import OperatingTable from './22-operating-table.astro';
 import OperatingTableSpecs from './23-operating-table-specs.astro';
 
-// M2 Batch 4/6 — Pages 24-34
+// Batch 4 — Pages 24-35 (V7: LAF+HVAC split into 4 pages)
 import SupportDivider from './24-divider-support.astro';
 import XRayViewer from './25-xray-viewer.astro';
 import XRayViewerSpecs from './26-xray-viewer-specs.astro';
-import HvacLaminar from './27-hvac-laminar.astro';
-import HvacSpecs from './28-hvac-specs.astro';
-import MedicalGas from './29-medical-gas.astro';
-import MedicalGasSpecs from './30-medical-gas-specs.astro';
-import ScrubSink from './31-scrub-sink.astro';
-import ScrubSinkSpecs from './32-scrub-sink-specs.astro';
-import PassBox from './33-pass-box.astro';
-import WallTerminal from './34-wall-terminal.astro';
+import LafSystem from './27-hvac-laminar.astro';
+import LafSpecs from './28-laf-specs.astro';
+import HvacIntro from './29-hvac-intro.astro';
+import HvacSpecs from './30-hvac-specs.astro';
+import MedicalGas from './31-medical-gas.astro';
+import MedicalGasSpecs from './32-medical-gas-specs.astro';
+import ScrubSink from './33-scrub-sink.astro';
+import ScrubSinkSpecs from './34-scrub-sink-specs.astro';
+import PassBox from './35-pass-box.astro';
 
-// M2 Batch 5/6 — Pages 35-46
-import FlooringDivider from './35-divider-flooring.astro';
-import VinylFlooring from './36-vinyl-flooring.astro';
-import PacsAirGrille from './37-pacs-air-grille.astro';
-import GasEquip1 from './38-gas-equip-1.astro';
-import GasEquip2 from './39-gas-equip-2.astro';
-import GasEquip3 from './40-gas-equip-3.astro';
-import AhuSystem from './41-ahu-system.astro';
-import OrAccessories1 from './42-or-accessories-1.astro';
-import OrAccessories2 from './43-or-accessories-2.astro';
-import QualityDivider from './44-divider-quality.astro';
-import Certifications from './45-certifications.astro';
-import TestCertificates from './46-test-certificates.astro';
+// Batch 5 — Pages 36-46
+import WallTerminal from './36-wall-terminal.astro';
+import FlooringDivider from './37-divider-flooring.astro';
+import VinylFlooring from './38-vinyl-flooring.astro';
+import PacsAirGrille from './39-pacs-air-grille.astro';
+import GasEquip1 from './40-gas-equip-1.astro';
+import GasEquip2 from './41-gas-equip-2.astro';
+import GasEquip3 from './42-gas-equip-3.astro';
+import AhuSystem from './43-ahu-system.astro';
+import OrAccessories1 from './44-or-accessories-1.astro';
+import OrAccessories2 from './45-or-accessories-2.astro';
+import QualityDivider from './46-divider-quality.astro';
 
-// M2 Batch 6/6 — Pages 47-53
-import References1 from './47-references-1.astro';
-import References2 from './48-references-2.astro';
-import ProjectShowcase from './49-project-showcase.astro';
-import Gallery1 from './50-gallery-1.astro';
-import Gallery2 from './51-gallery-2.astro';
-import Gallery3 from './52-gallery-3.astro';
-import Contact from './53-contact.astro';
+// Batch 6 — Pages 47-55
+import Certifications from './47-certifications.astro';
+import TestCertificates from './48-test-certificates.astro';
+import References1 from './49-references-1.astro';
+import References2 from './50-references-2.astro';
+import ProjectShowcase from './51-project-showcase.astro';
+import Gallery1 from './52-gallery-1.astro';
+import Gallery2 from './53-gallery-2.astro';
+import Gallery3 from './54-gallery-3.astro';
+import Contact from './55-contact.astro';
 ---
 
 <html lang="en">
@@ -107,7 +109,9 @@ import Contact from './53-contact.astro';
     <SupportDivider />
     <XRayViewer />
     <XRayViewerSpecs />
-    <HvacLaminar />
+    <LafSystem />
+    <LafSpecs />
+    <HvacIntro />
     <HvacSpecs />
     <MedicalGas />
     <MedicalGasSpecs />
