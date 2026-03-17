@@ -2581,21 +2581,35 @@ p {
 }
 
 .strengths-grid--compact .strength-item {
-  padding: var(--space-2);
+  padding: var(--space-2) var(--space-2) var(--space-2) var(--space-3);
+  text-align: left;
+  border-left: 2px solid var(--color-accent-teal);
 }
 
 .strengths-grid--compact .strength-item__icon {
-  font-size: var(--text-lg);
-  width: 28px;
-  height: 28px;
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 0 0 3px 0;
+  font-size: 8px;
+  font-weight: var(--font-bold);
+  color: var(--color-accent-teal);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
+  line-height: 1;
 }
 
 .strengths-grid--compact .strength-item__title {
   font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  color: var(--color-primary-800);
+  margin-bottom: 3px;
 }
 
 .strengths-grid--compact .strength-item__text {
   font-size: var(--text-xs);
+  color: var(--color-neutral-600);
+  line-height: var(--leading-normal);
 }
 
 /* ========================================
