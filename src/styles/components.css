@@ -2948,23 +2948,35 @@ p {
   border-bottom: none;
 }
 
+.methodology-phase:nth-child(odd) {
+  background: var(--color-neutral-50);
+  border-radius: var(--radius-sm);
+  padding-left: var(--space-2);
+  padding-right: var(--space-2);
+}
+
 .methodology-phase__number {
-  font-size: 28px;
+  font-size: 16px;
   font-weight: 800;
-  color: var(--color-accent-teal);
+  color: #ffffff;
+  background: var(--color-accent-teal);
+  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
   line-height: 1;
-  min-width: 36px;
-  padding-top: 2px;
 }
 
 .methodology-phase__content {
   flex: 1;
-  border-left: 3px solid var(--color-accent-teal);
-  padding-left: var(--space-4);
+  padding-left: var(--space-3);
 }
 
 .methodology-phase__title {
-  font-size: var(--text-sm);
+  font-size: 11px;
   font-weight: 700;
   color: var(--color-primary-900);
   margin: 0 0 4px 0;
