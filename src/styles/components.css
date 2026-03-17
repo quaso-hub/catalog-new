@@ -3033,14 +3033,6 @@ p {
   color: var(--color-primary-800);
 }
 
-.contact-elegant__bottom-rule {
-  width: 100%;
-  height: 2px;
-  background: var(--color-accent-teal);
-  margin-top: auto;
-  margin-bottom: var(--space-3);
-}
-
 .contact-elegant__colophon {
   font-size: 7px;
   color: var(--color-neutral-600);
