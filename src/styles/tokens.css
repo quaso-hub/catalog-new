@@ -45,6 +45,18 @@
   --color-accent-red: #dc2626;
   --color-accent-blue: #2563eb;
 
+  /* Teal Scale (alias dari accent-teal) */
+  --color-teal-900: #0c4a4a;
+  --color-teal-800: #134e4a;
+  --color-teal-700: #0f766e;
+  --color-teal-600: #0d9488;  /* = --color-accent-teal */
+  --color-teal-500: #14b8a6;  /* = --color-accent-teal-light */
+  --color-teal-400: #2dd4bf;
+  --color-teal-300: #5eead4;
+  --color-teal-200: #99f6e4;
+  --color-teal-100: #ccfbf1;
+  --color-teal-50:  #f0fdfa;
+
   /* Semantic Colors */
   --color-success: var(--color-accent-green);
   --color-warning: var(--color-accent-gold);
