@@ -5,13 +5,18 @@ import PageFooter from '../components/PageFooter.astro';
 
 <div class="page">
   <div class="page-content">
-    <PageHeader category="KEPATUHAN TEKNIS" pageNumber="45" />
-    <h2 class="section-title">Kepatuhan Teknis & Legalitas</h2>
+    <PageHeader category="STANDAR TEKNIS" pageNumber="45" />
+    <h2 class="section-title">Standar Teknis & Kepatuhan</h2>
     <div class="divider-accent"></div>
     <p class="section-subtitle">
-      Kesesuaian sistem MOT Elfatech terhadap persyaratan Permenkes No. 40 Tahun 2022.
+      Kesesuaian sistem MOT Elfatech terhadap Permenkes No. 40 Tahun 2022.
     </p>
-    <table class="spec-table mt-4">
+    <table class="spec-table mt-4" style="table-layout: fixed;">
+      <colgroup>
+        <col style="width: 22%;">
+        <col style="width: 28%;">
+        <col style="width: 50%;">
+      </colgroup>
       <thead>
         <tr>
           <th>Parameter</th>
@@ -23,17 +28,17 @@ import PageFooter from '../components/PageFooter.astro';
         <tr>
           <td><strong>Suhu ruang operasi</strong></td>
           <td>19&ndash;24 &deg;C</td>
-          <td>19&ndash;26 &deg;C (adjustable)</td>
+          <td>19&ndash;26 &deg;C</td>
         </tr>
         <tr>
           <td><strong>Kelembaban relatif</strong></td>
           <td>45&ndash;60% RH</td>
-          <td>45&ndash;60% RH (adjustable)</td>
+          <td>45&ndash;60% RH</td>
         </tr>
         <tr>
           <td><strong>Tekanan udara</strong></td>
           <td>Positif thd koridor</td>
-          <td>Positive pressure, adjustable differential</td>
+          <td>Tekanan positif terhadap koridor</td>
         </tr>
         <tr>
           <td><strong>Partikel udara</strong></td>
@@ -43,12 +48,12 @@ import PageFooter from '../components/PageFooter.astro';
         <tr>
           <td><strong>Kebisingan</strong></td>
           <td>&le;45 dBA</td>
-          <td>&le;45 dBA (sesuai persyaratan)</td>
+          <td>&le;45 dBA</td>
         </tr>
         <tr>
           <td><strong>Pencahayaan umum</strong></td>
           <td>300&ndash;500 lux</td>
-          <td>LED panel 40&ndash;45W, 12 unit, adjustable</td>
+          <td>LED panel 40&ndash;45 W, 12 unit</td>
         </tr>
         <tr>
           <td><strong>Luas minimum</strong></td>
@@ -58,7 +63,7 @@ import PageFooter from '../components/PageFooter.astro';
         <tr>
           <td><strong>Tinggi plafon</strong></td>
           <td>&ge;3,0 m</td>
-          <td>&ge;3,0 m (disesuaikan per layout)</td>
+          <td>&ge;3,0 m</td>
         </tr>
         <tr>
           <td><strong>Material dinding</strong></td>
