@@ -2796,13 +2796,17 @@ p {
 
 .diagram-section {
   padding: var(--space-3);
+  flex: 1;
 }
 
 .diagram-section object,
 .diagram-section svg,
 .diagram-section img {
+  width: 100%;
   max-width: 100%;
   height: auto;
+  min-height: 160px;
+  display: block;
 }
 
 /* ========================================
