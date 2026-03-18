@@ -2155,6 +2155,14 @@
   margin-bottom: var(--space-4);
 }
 
+.or-layout-section object,
+.or-layout-section img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .diagram-container--compact {
   flex: 0 0 70%;
   max-width: 700px;
