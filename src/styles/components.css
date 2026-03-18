@@ -2999,10 +2999,18 @@ p {
   flex: 1;
 }
 
-.contact-elegant__logo-img {
-  height: 40px;
-  width: auto;
-  margin-bottom: var(--space-4);
+.contact-elegant__company-header {
+  margin-bottom: var(--space-3);
+}
+
+.contact-elegant__company-name {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--color-primary-800);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1.2;
 }
 
 .contact-elegant__tagline {
