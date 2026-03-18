@@ -2802,16 +2802,17 @@ p {
  * ======================================== */
 
 .compliance-blocks {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-5);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
   margin-top: var(--space-4);
 }
 
 .compliance-block {
-  padding: var(--space-4) var(--space-5);
+  padding: var(--space-4);
   border-left: 3px solid var(--color-teal-600);
   background: var(--color-neutral-50);
+  border-radius: var(--radius-sm);
 }
 
 .compliance-block__label {
