@@ -1,155 +1,245 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 200" width="280" height="200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 240">
   <!--
-    OR Room Isometric Schematic
-    Axonometric projection: cx=140 cy=85 scale=14 scale_z=18
+    OR Room Isometric Schematic v2 — Enhanced Cleanroom BIM Style
+    Axonometric projection (original coords preserved via scale wrapper):
+    cx=140 cy=85 scale=14 scale_z=18
     Formula: px = 140 + (x-y)*12.12   py = 85 + (x+y)*7 - z*18
     Room: 6m × 6m × 3m
+    v2: gradient walls, LAF crosshatch, pendant arms, control panel, RAG grilles, leader lines
+    All existing elements wrapped in <g transform="scale(1.214) translate(0,0)">
+    New elements added inside same transform wrapper (original coord space).
   -->
 
+  <defs>
+    <!-- Wall gradient fills — simulated lighting (light from left-top) -->
+    <linearGradient id="wall-north-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#dde4ee"/>
+      <stop offset="100%" stop-color="#b8c8d8"/>
+    </linearGradient>
+    <linearGradient id="wall-west-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#c8d8e8"/>
+      <stop offset="100%" stop-color="#a8b8c8"/>
+    </linearGradient>
+    <linearGradient id="ceiling-grad" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%"   stop-color="#eef2f8"/>
+      <stop offset="100%" stop-color="#d8e0ec"/>
+    </linearGradient>
+    <!-- LAF crosshatch pattern -->
+    <pattern id="laf-hatch" patternUnits="userSpaceOnUse" width="4" height="4"
+             patternTransform="rotate(30)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#0d9488" stroke-width="0.5" opacity="0.4"/>
+    </pattern>
+  </defs>
+
   <!-- Background -->
-  <rect width="280" height="200" fill="#ffffff"/>
+  <rect width="340" height="240" fill="#ffffff"/>
 
-  <!-- CEILING (drawn first — back surface) -->
-  <polygon points="140,31 212.7,73 140,115 67.3,73"
-           fill="#eef2f8" stroke="#334155" stroke-width="0.8"/>
+  <!-- ═══ SCALE(1.214) WRAPPER — all original + new elements ═══ -->
+  <g transform="scale(1.214)">
 
-  <!-- LAF DIFFUSER ZONE on ceiling (2.4×2.4m centred at x3,y3) -->
-  <!-- Vertices: (0.8,0.8,3)=140,42.2  (3.2,0.8,3)=169.1,59  (3.2,3.2,3)=140,75.8  (0.8,3.2,3)=110.9,59 -->
-  <polygon points="140,42.2 169.1,59 140,75.8 110.9,59"
-           fill="#0d9488" fill-opacity="0.2" stroke="#0d9488" stroke-width="1"/>
-  <text x="140" y="60" font-family="Arial,sans-serif" font-size="7"
-        fill="#0d9488" text-anchor="middle" font-weight="bold">LAF DIFFUSER</text>
-  <text x="140" y="66.5" font-family="Arial,sans-serif" font-size="6"
-        fill="#0d9488" text-anchor="middle">2400×2400 mm · HEPA H14</text>
+    <!-- CEILING (drawn first — back surface) -->
+    <polygon points="140,31 212.7,73 140,115 67.3,73"
+             fill="url(#ceiling-grad)" stroke="#334155" stroke-width="0.8"/>
 
-  <!-- NORTH WALL (y=0, right visible face) -->
-  <!-- Vertices: A(0,0,0)=140,85  B(6,0,0)=212.7,127  B'(6,0,3)=212.7,73  A'(0,0,3)=140,31 -->
-  <polygon points="140,85 212.7,127 212.7,73 140,31"
-           fill="#dde4ee" stroke="#334155" stroke-width="1"/>
-  <!-- Panel joints at x=2 and x=4 (dashed vertical lines on north face) -->
-  <!-- x=2,y=0: (164.2,99)→(164.2,45)   x=4,y=0: (188.5,113)→(188.5,59) -->
-  <line x1="164.2" y1="99"  x2="164.2" y2="45"  stroke="#8aaccf" stroke-width="0.5" stroke-dasharray="2,1"/>
-  <line x1="188.5" y1="113" x2="188.5" y2="59"  stroke="#8aaccf" stroke-width="0.5" stroke-dasharray="2,1"/>
-  <!-- Wall label -->
-  <text x="183" y="86" font-family="Arial,sans-serif" font-size="6"
-        fill="#64748b" font-style="italic" text-anchor="middle">PIR 75mm</text>
+    <!-- LAF DIFFUSER ZONE on ceiling — crosshatch pattern -->
+    <!-- Vertices: (0.8,0.8,3)=140,42.2  (3.2,0.8,3)=169.1,59  (3.2,3.2,3)=140,75.8  (0.8,3.2,3)=110.9,59 -->
+    <polygon points="140,42.2 169.1,59 140,75.8 110.9,59"
+             fill="url(#laf-hatch)" stroke="#0d9488" stroke-width="1.2"/>
 
-  <!-- WEST WALL left section (x=0, y=0→2) -->
-  <!-- (0,0,0)=140,85  (0,2,0)=115.8,99  (0,2,3)=115.8,45  (0,0,3)=140,31 -->
-  <polygon points="140,85 115.8,99 115.8,45 140,31"
-           fill="#d8dfe8" stroke="#334155" stroke-width="1"/>
-  <!-- Panel joint at y=1: (0,1,0)=127.9,92 → (0,1,3)=127.9,38 -->
-  <line x1="127.9" y1="92" x2="127.9" y2="38"  stroke="#8aaccf" stroke-width="0.5" stroke-dasharray="2,1"/>
+    <!-- NORTH WALL (y=0, right visible face) — gradient fill -->
+    <polygon points="140,85 212.7,127 212.7,73 140,31"
+             fill="url(#wall-north-grad)" stroke="#334155" stroke-width="1"/>
+    <!-- Panel joints at x=2 and x=4 -->
+    <line x1="164.2" y1="99"  x2="164.2" y2="45"  stroke="#8aaccf" stroke-width="0.5" stroke-dasharray="2,1"/>
+    <line x1="188.5" y1="113" x2="188.5" y2="59"  stroke="#8aaccf" stroke-width="0.5" stroke-dasharray="2,1"/>
+    <!-- Wall label -->
+    <text x="183" y="86" font-family="Arial,sans-serif" font-size="6"
+          fill="#64748b" font-style="italic" text-anchor="middle">PIR 75mm</text>
 
-  <!-- WEST WALL right section (x=0, y=4→6) -->
-  <!-- (0,4,0)=91.5,113  (0,6,0)=67.3,127  (0,6,3)=67.3,73  (0,4,3)=91.5,59 -->
-  <polygon points="91.5,113 67.3,127 67.3,73 91.5,59"
-           fill="#d8dfe8" stroke="#334155" stroke-width="1"/>
-  <!-- Panel joint at y=5: (0,5,0)=79.4,120 → (0,5,3)=79.4,66 -->
-  <line x1="79.4" y1="120" x2="79.4" y2="66"  stroke="#8aaccf" stroke-width="0.5" stroke-dasharray="2,1"/>
+    <!-- CONTROL PANEL on north wall (x=4.5→5.5, y=0, z=0.8→1.6) -->
+    <!-- Corner (4.5,0,0.8): px=140+(4.5-0)*12.12=194.5, py=85+(4.5+0)*7-0.8*18=103.1 -->
+    <!-- Corner (5.5,0,0.8): px=140+(5.5-0)*12.12=206.7, py=85+(5.5+0)*7-0.8*18=111.7 -->
+    <!-- Corner (5.5,0,1.6): px=140+(5.5-0)*12.12=206.7, py=85+(5.5+0)*7-1.6*18=97.3 -->
+    <!-- Corner (4.5,0,1.6): px=140+(4.5-0)*12.12=194.5, py=85+(4.5+0)*7-1.6*18=88.7 -->
+    <polygon points="194.5,103.1 206.7,111.7 206.7,97.3 194.5,88.7"
+             fill="#1e3a5f" stroke="#334155" stroke-width="0.7"/>
+    <!-- Horizontal lines simulating monitor/switches -->
+    <line x1="196" y1="92"  x2="205" y2="97.5"  stroke="#4a7fa8" stroke-width="0.5" stroke-dasharray="1.5,1"/>
+    <line x1="196" y1="96"  x2="205" y2="101.5" stroke="#4a7fa8" stroke-width="0.5" stroke-dasharray="1.5,1"/>
+    <line x1="196" y1="100" x2="205" y2="105.5" stroke="#4a7fa8" stroke-width="0.5" stroke-dasharray="1.5,1"/>
+    <!-- Control Panel label via leader line -->
+    <line x1="205" y1="100" x2="216" y2="97" stroke="#64748b" stroke-width="0.4"/>
+    <text x="218" y="99" font-family="Arial,sans-serif" font-size="5.5"
+          fill="#334155" text-anchor="start">Control</text>
+    <text x="218" y="104" font-family="Arial,sans-serif" font-size="5.5"
+          fill="#334155" text-anchor="start">Panel</text>
 
-  <!-- FLOOR (drawn after walls so floor covers wall bases) -->
-  <!-- A(0,0,0)=140,85  B(6,0,0)=212.7,127  C(6,6,0)=140,169  D(0,6,0)=67.3,127 -->
-  <polygon points="140,85 212.7,127 140,169 67.3,127"
-           fill="#f0f4f8" stroke="#334155" stroke-width="0.8"/>
-  <!-- Floor grid x-lines (each goes from front edge to back edge) -->
-  <line x1="152.1" y1="92"  x2="79.4"  y2="134" stroke="#c5cfe0" stroke-width="0.3"/>
-  <line x1="164.2" y1="99"  x2="91.5"  y2="141" stroke="#c5cfe0" stroke-width="0.3"/>
-  <line x1="176.4" y1="106" x2="103.6" y2="148" stroke="#c5cfe0" stroke-width="0.3"/>
-  <line x1="188.5" y1="113" x2="115.8" y2="155" stroke="#c5cfe0" stroke-width="0.3"/>
-  <line x1="200.6" y1="120" x2="127.9" y2="162" stroke="#c5cfe0" stroke-width="0.3"/>
-  <!-- Floor grid y-lines -->
-  <line x1="127.9" y1="92"  x2="200.6" y2="134" stroke="#c5cfe0" stroke-width="0.3"/>
-  <line x1="115.8" y1="99"  x2="188.5" y2="141" stroke="#c5cfe0" stroke-width="0.3"/>
-  <line x1="103.6" y1="106" x2="176.4" y2="148" stroke="#c5cfe0" stroke-width="0.3"/>
-  <line x1="91.5"  y1="113" x2="164.2" y2="155" stroke="#c5cfe0" stroke-width="0.3"/>
-  <line x1="79.4"  y1="120" x2="152.1" y2="162" stroke="#c5cfe0" stroke-width="0.3"/>
-  <!-- LAF zone floor highlight (ISO Cl.5 surgical field) -->
-  <!-- (0.8,0.8,0)=140,96.2  (3.2,0.8,0)=169.1,113  (3.2,3.2,0)=140,129.8  (0.8,3.2,0)=110.9,113 -->
-  <polygon points="140,96.2 169.1,113 140,129.8 110.9,113"
-           fill="#0d9488" fill-opacity="0.07" stroke="#0d9488"
-           stroke-width="0.5" stroke-dasharray="3,1.5"/>
+    <!-- WEST WALL left section (x=0, y=0→2) — gradient fill -->
+    <polygon points="140,85 115.8,99 115.8,45 140,31"
+             fill="url(#wall-west-grad)" stroke="#334155" stroke-width="1"/>
+    <line x1="127.9" y1="92" x2="127.9" y2="38"  stroke="#8aaccf" stroke-width="0.5" stroke-dasharray="2,1"/>
 
-  <!-- OPERATING TABLE (x=2→4, y=2.7→3.3, z=0→0.8) -->
-  <!-- Top face: (2,2.7,0.8)=131.5,103.5  (4,2.7,0.8)=155.8,117.5  (4,3.3,0.8)=148.5,121.7  (2,3.3,0.8)=124.2,107.7 -->
-  <polygon points="131.5,103.5 155.8,117.5 148.5,121.7 124.2,107.7"
-           fill="#c8d8e8" stroke="#003366" stroke-width="0.8"/>
-  <!-- Front face (y=2.7): (2,2.7,0)=131.5,117.9  (4,2.7,0)=155.8,131.9 -->
-  <polygon points="131.5,117.9 155.8,131.9 155.8,117.5 131.5,103.5"
-           fill="#b8cad8" stroke="#003366" stroke-width="0.8"/>
-  <!-- Right face (x=4): (4,3.3,0)=148.5,136.1 -->
-  <polygon points="155.8,117.5 148.5,121.7 148.5,136.1 155.8,131.9"
-           fill="#afc0d0" stroke="#003366" stroke-width="0.8"/>
-  <!-- Table top label -->
-  <text x="140" y="114" font-family="Arial,sans-serif" font-size="6"
-        fill="#003366" text-anchor="middle">Op. Table</text>
+    <!-- WEST WALL right section (x=0, y=4→6) — gradient fill -->
+    <polygon points="91.5,113 67.3,127 67.3,73 91.5,59"
+             fill="url(#wall-west-grad)" stroke="#334155" stroke-width="1"/>
+    <line x1="79.4" y1="120" x2="79.4" y2="66"  stroke="#8aaccf" stroke-width="0.5" stroke-dasharray="2,1"/>
 
-  <!-- SHADOWLESS LAMPS (at z=2.3) -->
-  <!-- Pendant arms to ceiling: (2.5,3,3)=133.9,69.5  (3.5,3,3)=146.1,69.5 -->
-  <line x1="133.9" y1="76.1" x2="133.9" y2="69.5" stroke="#8a9ab0" stroke-width="0.6"/>
-  <line x1="146.1" y1="83.1" x2="146.1" y2="69.5" stroke="#8a9ab0" stroke-width="0.6"/>
-  <!-- Lamp 1: (2.5,3,2.3)=133.9,82.1 -->
-  <circle cx="133.9" cy="82.1" r="5.5" fill="#fff9e8" stroke="#b8860b" stroke-width="0.7"/>
-  <circle cx="133.9" cy="82.1" r="2.5" fill="#ffd54f"/>
-  <!-- Lamp 2: (3.5,3,2.3)=146.1,89.1 -->
-  <circle cx="146.1" cy="89.1" r="5.5" fill="#fff9e8" stroke="#b8860b" stroke-width="0.7"/>
-  <circle cx="146.1" cy="89.1" r="2.5" fill="#ffd54f"/>
+    <!-- RETURN AIR GRILLES on west wall — low position, y=1 z=0.3 and y=5 z=0.3 -->
+    <!-- RAG 1: (0,1,0.3) → corners of small box (0→0.6, 1→1.6, z=0.1→0.5) -->
+    <!-- Approx: center near (0,1,0.3): px=140+(0-1)*12.12=127.9, py=85+(0+1)*7-0.3*18=86.6 -->
+    <!-- Small louvre box on left section of west wall -->
+    <rect x="123" y="84" width="7" height="5" fill="none" stroke="#64748b" stroke-width="0.5"/>
+    <line x1="124.2" y1="84" x2="124.2" y2="89" stroke="#64748b" stroke-width="0.3"/>
+    <line x1="125.7" y1="84" x2="125.7" y2="89" stroke="#64748b" stroke-width="0.3"/>
+    <line x1="127.2" y1="84" x2="127.2" y2="89" stroke="#64748b" stroke-width="0.3"/>
+    <line x1="128.7" y1="84" x2="128.7" y2="89" stroke="#64748b" stroke-width="0.3"/>
+    <text x="120" y="83" font-family="Arial,sans-serif" font-size="4.5"
+          fill="#64748b" text-anchor="middle">RAG</text>
 
-  <!-- ACCESS DOOR on west wall (x=0, y=2→4, z=0→2.1) -->
-  <!-- (0,2,0)=115.8,99  (0,4,0)=91.5,113  (0,4,2.1)=91.5,75.2  (0,2,2.1)=115.8,61.2 -->
-  <polygon points="115.8,99 91.5,113 91.5,75.2 115.8,61.2"
-           fill="#d0eaf5" stroke="#2a6fa8" stroke-width="0.7"/>
-  <!-- Door inner frame lines -->
-  <line x1="113.8" y1="63"  x2="93.5"  y2="75"  stroke="#2a6fa8" stroke-width="0.3" stroke-dasharray="1.5,1"/>
-  <line x1="93.5"  y1="75"  x2="93.5"  y2="111" stroke="#2a6fa8" stroke-width="0.3" stroke-dasharray="1.5,1"/>
-  <!-- Door label -->
-  <text x="94"  y="89" font-family="Arial,sans-serif" font-size="6"
-        fill="#2a6fa8" text-anchor="middle">Access</text>
-  <text x="94"  y="94" font-family="Arial,sans-serif" font-size="6"
-        fill="#2a6fa8" text-anchor="middle">Door</text>
+    <!-- RAG 2: (0,5,0.3): px=140+(0-5)*12.12=79.4, py=85+(0+5)*7-0.3*18=114.1 -->
+    <rect x="75" y="112" width="7" height="5" fill="none" stroke="#64748b" stroke-width="0.5"/>
+    <line x1="76.2" y1="112" x2="76.2" y2="117" stroke="#64748b" stroke-width="0.3"/>
+    <line x1="77.7" y1="112" x2="77.7" y2="117" stroke="#64748b" stroke-width="0.3"/>
+    <line x1="79.2" y1="112" x2="79.2" y2="117" stroke="#64748b" stroke-width="0.3"/>
+    <line x1="80.7" y1="112" x2="80.7" y2="117" stroke="#64748b" stroke-width="0.3"/>
+    <text x="72" y="111" font-family="Arial,sans-serif" font-size="4.5"
+          fill="#64748b" text-anchor="middle">RAG</text>
 
-  <!-- DIMENSION ANNOTATIONS -->
-  <!-- Wall height 3m: right edge of north wall B(212.7,127) to B'(212.7,73) -->
-  <line x1="215" y1="73"  x2="215" y2="127" stroke="#334155" stroke-width="0.5"/>
-  <line x1="213" y1="73"  x2="217" y2="73"  stroke="#334155" stroke-width="0.5"/>
-  <line x1="213" y1="127" x2="217" y2="127" stroke="#334155" stroke-width="0.5"/>
-  <text x="219" y="103" font-family="Arial,sans-serif" font-size="6"
-        fill="#334155" text-anchor="start">3 m</text>
+    <!-- FLOOR (drawn after walls so floor covers wall bases) -->
+    <polygon points="140,85 212.7,127 140,169 67.3,127"
+             fill="#f0f4f8" stroke="#334155" stroke-width="0.8"/>
+    <!-- Floor grid x-lines -->
+    <line x1="152.1" y1="92"  x2="79.4"  y2="134" stroke="#c5cfe0" stroke-width="0.3"/>
+    <line x1="164.2" y1="99"  x2="91.5"  y2="141" stroke="#c5cfe0" stroke-width="0.3"/>
+    <line x1="176.4" y1="106" x2="103.6" y2="148" stroke="#c5cfe0" stroke-width="0.3"/>
+    <line x1="188.5" y1="113" x2="115.8" y2="155" stroke="#c5cfe0" stroke-width="0.3"/>
+    <line x1="200.6" y1="120" x2="127.9" y2="162" stroke="#c5cfe0" stroke-width="0.3"/>
+    <!-- Floor grid y-lines -->
+    <line x1="127.9" y1="92"  x2="200.6" y2="134" stroke="#c5cfe0" stroke-width="0.3"/>
+    <line x1="115.8" y1="99"  x2="188.5" y2="141" stroke="#c5cfe0" stroke-width="0.3"/>
+    <line x1="103.6" y1="106" x2="176.4" y2="148" stroke="#c5cfe0" stroke-width="0.3"/>
+    <line x1="91.5"  y1="113" x2="164.2" y2="155" stroke="#c5cfe0" stroke-width="0.3"/>
+    <line x1="79.4"  y1="120" x2="152.1" y2="162" stroke="#c5cfe0" stroke-width="0.3"/>
+    <!-- LAF zone floor highlight (ISO Cl.5 surgical field) -->
+    <polygon points="140,96.2 169.1,113 140,129.8 110.9,113"
+             fill="#0d9488" fill-opacity="0.07" stroke="#0d9488"
+             stroke-width="0.5" stroke-dasharray="3,1.5"/>
 
-  <!-- Floor width along x-axis (6m north base) -->
-  <text x="188" y="133" font-family="Arial,sans-serif" font-size="6"
-        fill="#334155" text-anchor="middle">6 m</text>
-  <!-- Floor depth along y-axis (6m west base) -->
-  <text x="93"  y="133" font-family="Arial,sans-serif" font-size="6"
-        fill="#334155" text-anchor="middle">6 m</text>
+    <!-- OPERATING TABLE (x=2→4, y=2.7→3.3, z=0→0.8) -->
+    <polygon points="131.5,103.5 155.8,117.5 148.5,121.7 124.2,107.7"
+             fill="#c8d8e8" stroke="#003366" stroke-width="0.8"/>
+    <polygon points="131.5,117.9 155.8,131.9 155.8,117.5 131.5,103.5"
+             fill="#b8cad8" stroke="#003366" stroke-width="0.8"/>
+    <polygon points="155.8,117.5 148.5,121.7 148.5,136.1 155.8,131.9"
+             fill="#afc0d0" stroke="#003366" stroke-width="0.8"/>
+    <!-- Table label with leader line -->
+    <line x1="140" y1="114" x2="158" y2="126" stroke="#64748b" stroke-width="0.4"/>
+    <text x="160" y="129" font-family="Arial,sans-serif" font-size="6"
+          fill="#003366" text-anchor="start">Op. Table</text>
 
-  <!-- Scale bar (1m along x-axis direction: Δpx=12.12, Δpy=7) -->
-  <line x1="228" y1="162" x2="240.1" y2="169" stroke="#334155" stroke-width="1.2"/>
-  <line x1="228" y1="159" x2="228"   y2="165" stroke="#334155" stroke-width="0.8"/>
-  <line x1="240.1" y1="166" x2="240.1" y2="172" stroke="#334155" stroke-width="0.8"/>
-  <text x="234" y="178" font-family="Arial,sans-serif" font-size="6"
-        fill="#334155" text-anchor="middle">1 m</text>
+    <!-- MEDICAL PENDANT ARMS -->
+    <!-- Pendant arm 1: ceiling mount (2.2,3,3) → down to (2.2,3,1.8) → L-arm to (2.8,3,1.8) -->
+    <!-- (2.2,3,3): px=140+(2.2-3)*12.12=130.3, py=85+(2.2+3)*7-3*18=39.4+85-54=76.4 -->
+    <!-- Wait, let me recalculate: py=85+(2.2+3)*7-3*18 = 85+36.4-54 = 67.4 -->
+    <!-- (2.2,3,1.8): py=85+(2.2+3)*7-1.8*18 = 85+36.4-32.4 = 89 -->
+    <!-- (2.8,3,1.8): px=140+(2.8-3)*12.12=137.6, py=85+(2.8+3)*7-1.8*18 = 85+40.6-32.4 = 93.2 -->
+    <!-- Vertical pipe arm 1 -->
+    <line x1="130.3" y1="67.4" x2="130.3" y2="89"
+          stroke="#334155" stroke-width="0.8"/>
+    <!-- Horizontal L-arm 1 -->
+    <line x1="130.3" y1="89" x2="137.6" y2="93.2"
+          stroke="#334155" stroke-width="0.8"/>
+    <!-- Pendant head 1 at (2.8,3,1.8) -->
+    <ellipse cx="137.6" cy="93.2" rx="4" ry="2.5"
+             fill="#c8d8e8" stroke="#003366" stroke-width="0.7"/>
 
-  <!-- TITLE -->
-  <text x="140" y="10" font-family="Arial,sans-serif" font-size="7"
-        fill="#003366" text-anchor="middle" font-weight="bold">OPERATING THEATRE: ISOMETRIC SCHEMATIC</text>
+    <!-- Pendant arm 2: ceiling mount (3.8,3,3) → down to (3.8,3,1.8) → L-arm to (3.2,3,1.8) -->
+    <!-- (3.8,3,3): px=140+(3.8-3)*12.12=149.7, py=85+(3.8+3)*7-3*18=85+47.6-54=78.6 -->
+    <!-- (3.8,3,1.8): py=85+(3.8+3)*7-1.8*18=85+47.6-32.4=100.2 -->
+    <!-- (3.2,3,1.8): px=140+(3.2-3)*12.12=142.4, py=85+(3.2+3)*7-1.8*18=85+43.4-32.4=96 -->
+    <!-- Vertical pipe arm 2 -->
+    <line x1="149.7" y1="78.6" x2="149.7" y2="100.2"
+          stroke="#334155" stroke-width="0.8"/>
+    <!-- Horizontal L-arm 2 -->
+    <line x1="149.7" y1="100.2" x2="142.4" y2="96"
+          stroke="#334155" stroke-width="0.8"/>
+    <!-- Pendant head 2 at (3.2,3,1.8) -->
+    <ellipse cx="142.4" cy="96" rx="4" ry="2.5"
+             fill="#c8d8e8" stroke="#003366" stroke-width="0.7"/>
+    <!-- Pendant label -->
+    <text x="155" y="88" font-family="Arial,sans-serif" font-size="5.5"
+          fill="#334155" text-anchor="start">Pendant</text>
 
-  <!-- LEGEND (bottom left) -->
-  <rect x="4" y="156" width="65" height="42" fill="white" fill-opacity="0.9"
-        stroke="#e2e8f0" stroke-width="0.5" rx="1"/>
-  <!-- LAF Zone -->
-  <polygon points="6,160 11,160 11,165 6,165" fill="#0d9488" fill-opacity="0.25" stroke="#0d9488" stroke-width="0.5"/>
-  <text x="14" y="165" font-family="Arial,sans-serif" font-size="6" fill="#334155">LAF Zone (ISO Cl.5)</text>
-  <!-- Op Table -->
-  <polygon points="6,168 11,168 11,173 6,173" fill="#c8d8e8" stroke="#003366" stroke-width="0.5"/>
-  <text x="14" y="173" font-family="Arial,sans-serif" font-size="6" fill="#334155">Operating Table</text>
-  <!-- Lamp -->
-  <circle cx="8.5" cy="180" r="2.5" fill="#fff9e8" stroke="#b8860b" stroke-width="0.5"/>
-  <circle cx="8.5" cy="180" r="1"   fill="#ffd54f"/>
-  <text x="14" y="182" font-family="Arial,sans-serif" font-size="6" fill="#334155">Shadowless Lamp</text>
-  <!-- Door -->
-  <polygon points="6,186 11,186 11,193 6,193" fill="#d0eaf5" stroke="#2a6fa8" stroke-width="0.5"/>
-  <text x="14" y="191" font-family="Arial,sans-serif" font-size="6" fill="#334155">Access Door</text>
+    <!-- SHADOWLESS LAMPS (at z=2.3) -->
+    <line x1="133.9" y1="76.1" x2="133.9" y2="69.5" stroke="#8a9ab0" stroke-width="0.6"/>
+    <line x1="146.1" y1="83.1" x2="146.1" y2="69.5" stroke="#8a9ab0" stroke-width="0.6"/>
+    <circle cx="133.9" cy="82.1" r="5.5" fill="#fff9e8" stroke="#b8860b" stroke-width="0.7"/>
+    <circle cx="133.9" cy="82.1" r="2.5" fill="#ffd54f"/>
+    <circle cx="146.1" cy="89.1" r="5.5" fill="#fff9e8" stroke="#b8860b" stroke-width="0.7"/>
+    <circle cx="146.1" cy="89.1" r="2.5" fill="#ffd54f"/>
+
+    <!-- ACCESS DOOR on west wall (x=0, y=2→4, z=0→2.1) -->
+    <polygon points="115.8,99 91.5,113 91.5,75.2 115.8,61.2"
+             fill="#d0eaf5" stroke="#2a6fa8" stroke-width="0.7"/>
+    <line x1="113.8" y1="63"  x2="93.5"  y2="75"  stroke="#2a6fa8" stroke-width="0.3" stroke-dasharray="1.5,1"/>
+    <line x1="93.5"  y1="75"  x2="93.5"  y2="111" stroke="#2a6fa8" stroke-width="0.3" stroke-dasharray="1.5,1"/>
+    <!-- Door label -->
+    <text x="94"  y="89" font-family="Arial,sans-serif" font-size="6"
+          fill="#2a6fa8" text-anchor="middle">Access</text>
+    <text x="94"  y="94" font-family="Arial,sans-serif" font-size="6"
+          fill="#2a6fa8" text-anchor="middle">Door</text>
+
+    <!-- LAF DIFFUSER label with leader line -->
+    <!-- Move text to upper-left of LAF polygon, draw leader to polygon centroid -->
+    <line x1="115" y1="52" x2="130" y2="58" stroke="#64748b" stroke-width="0.4"/>
+    <text x="113" y="50" font-family="Arial,sans-serif" font-size="7"
+          fill="#0d9488" text-anchor="end" font-weight="bold">LAF DIFFUSER</text>
+    <text x="113" y="57" font-family="Arial,sans-serif" font-size="6"
+          fill="#0d9488" text-anchor="end">2400×2400 mm · HEPA H14</text>
+
+    <!-- DIMENSION ANNOTATIONS -->
+    <!-- Wall height 3m: right edge of north wall -->
+    <line x1="215" y1="73"  x2="215" y2="127" stroke="#334155" stroke-width="0.5"/>
+    <line x1="213" y1="73"  x2="217" y2="73"  stroke="#334155" stroke-width="0.5"/>
+    <line x1="213" y1="127" x2="217" y2="127" stroke="#334155" stroke-width="0.5"/>
+    <text x="219" y="103" font-family="Arial,sans-serif" font-size="6"
+          fill="#334155" text-anchor="start">3 m</text>
+
+    <!-- Floor dimensions -->
+    <text x="188" y="133" font-family="Arial,sans-serif" font-size="6"
+          fill="#334155" text-anchor="middle">6 m</text>
+    <text x="93"  y="133" font-family="Arial,sans-serif" font-size="6"
+          fill="#334155" text-anchor="middle">6 m</text>
+
+    <!-- Scale bar -->
+    <line x1="228" y1="162" x2="240.1" y2="169" stroke="#334155" stroke-width="1.2"/>
+    <line x1="228" y1="159" x2="228"   y2="165" stroke="#334155" stroke-width="0.8"/>
+    <line x1="240.1" y1="166" x2="240.1" y2="172" stroke="#334155" stroke-width="0.8"/>
+    <text x="234" y="178" font-family="Arial,sans-serif" font-size="6"
+          fill="#334155" text-anchor="middle">1 m</text>
+
+    <!-- TITLE -->
+    <text x="140" y="10" font-family="Arial,sans-serif" font-size="8"
+          fill="#003366" text-anchor="middle" font-weight="bold">OPERATING THEATRE: ISOMETRIC SCHEMATIC</text>
+
+    <!-- LEGEND (bottom left) -->
+    <rect x="4" y="150" width="68" height="46" fill="white" fill-opacity="0.9"
+          stroke="#e2e8f0" stroke-width="0.5" rx="1"/>
+    <!-- LAF Zone -->
+    <polygon points="6,154 11,154 11,159 6,159" fill="url(#laf-hatch)" stroke="#0d9488" stroke-width="0.5"/>
+    <text x="14" y="159" font-family="Arial,sans-serif" font-size="6" fill="#334155">LAF Zone (ISO Cl.5)</text>
+    <!-- Op Table -->
+    <polygon points="6,162 11,162 11,167 6,167" fill="#c8d8e8" stroke="#003366" stroke-width="0.5"/>
+    <text x="14" y="167" font-family="Arial,sans-serif" font-size="6" fill="#334155">Operating Table</text>
+    <!-- Lamp -->
+    <circle cx="8.5" cy="174" r="2.5" fill="#fff9e8" stroke="#b8860b" stroke-width="0.5"/>
+    <circle cx="8.5" cy="174" r="1"   fill="#ffd54f"/>
+    <text x="14" y="176" font-family="Arial,sans-serif" font-size="6" fill="#334155">Shadowless Lamp</text>
+    <!-- Door -->
+    <polygon points="6,180 11,180 11,187 6,187" fill="#d0eaf5" stroke="#2a6fa8" stroke-width="0.5"/>
+    <text x="14" y="185" font-family="Arial,sans-serif" font-size="6" fill="#334155">Access Door</text>
+
+  </g><!-- end scale wrapper -->
 
 </svg>
