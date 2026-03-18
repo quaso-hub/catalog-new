@@ -2963,6 +2963,16 @@ p {
   border-bottom: 0.5px solid var(--color-neutral-200);
 }
 .methodology-phase:last-child { border-bottom: none; }
+.methodology-note {
+  margin-top: var(--space-6);
+  padding: var(--space-4);
+  background: var(--color-neutral-50);
+  border-top: 1.5px solid var(--color-primary-700);
+  font-size: 9px;
+  color: var(--color-neutral-600);
+  line-height: 1.5;
+  font-style: italic;
+}
 .methodology-phase__number {
   font-size: 20px;
   font-weight: 800;
