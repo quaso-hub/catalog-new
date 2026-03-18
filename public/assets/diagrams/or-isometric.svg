@@ -133,7 +133,7 @@
 
   <!-- TITLE -->
   <text x="140" y="10" font-family="Arial,sans-serif" font-size="7"
-        fill="#003366" text-anchor="middle" font-weight="bold">OPERATING THEATRE — ISOMETRIC SCHEMATIC</text>
+        fill="#003366" text-anchor="middle" font-weight="bold">OPERATING THEATRE: ISOMETRIC SCHEMATIC</text>
 
   <!-- LEGEND (bottom left) -->
   <rect x="4" y="156" width="65" height="42" fill="white" fill-opacity="0.9"

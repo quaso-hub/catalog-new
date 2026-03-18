@@ -59,7 +59,7 @@
         font-weight="bold" fill="#ffffff" text-anchor="middle"
         letter-spacing="0.03em">LAMINAR AIR DIFFUSER</text>
   <text x="200" y="132" font-family="Arial, sans-serif" font-size="8.5"
-        fill="#003366" text-anchor="middle">2400 x 2400 mm — Unidirectional Flow</text>
+        fill="#003366" text-anchor="middle">2400 x 2400 mm, Unidirectional Flow</text>
 
   <!-- Supply air columns (laminar flow indicator) -->
   <line x1="125" y1="143" x2="125" y2="162" stroke="#0d9488" stroke-width="1.5"

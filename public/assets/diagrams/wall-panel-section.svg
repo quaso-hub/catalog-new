@@ -30,7 +30,7 @@
         font-weight="bold" fill="#003366" text-anchor="middle"
         letter-spacing="0.05em">WALL PANEL PIR 75mm</text>
   <text x="230" y="33" font-family="Arial, sans-serif" font-size="9"
-        fill="#64748b" text-anchor="middle">Cross-Section View — Scale Nominal</text>
+        fill="#64748b" text-anchor="middle">Cross-Section View: Scale Nominal</text>
   <line x1="50" y1="37" x2="410" y2="37" stroke="#003366" stroke-width="0.5"/>
 
   <!-- TOP HRP Layer (0.5mm steel skin) -->
@@ -74,7 +74,7 @@
   <text x="334" y="54" font-family="Arial, sans-serif" font-size="8"
         fill="#003366">HRP 0.5mm Steel Skin</text>
   <text x="334" y="63" font-family="Arial, sans-serif" font-size="7.5"
-        fill="#0d9488">(Antibacterial — Blue Scope)</text>
+        fill="#0d9488">(Antibacterial, Blue Scope)</text>
 
   <!-- Callout: Bottom HRP annotation -->
   <line x1="300" y1="165" x2="330" y2="165" stroke="#003366" stroke-width="0.5"/>

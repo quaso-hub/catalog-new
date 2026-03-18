@@ -29,7 +29,7 @@
 
   <!-- ==================== TITLE ==================== -->
   <text x="225" y="17" font-size="12" font-weight="700" fill="#003366" text-anchor="middle" letter-spacing="-0.01em">OPERATING THEATRE PRESSURE CASCADE</text>
-  <text x="225" y="29" font-size="7" fill="#64748b" text-anchor="middle">Positive Pressure Gradient — Clean to Uncontrolled Zones</text>
+  <text x="225" y="29" font-size="7" fill="#64748b" text-anchor="middle">Positive Pressure Gradient: Clean to Uncontrolled Zones</text>
 
   <!-- Thin accent line under title -->
   <line x1="150" y1="33" x2="300" y2="33" stroke="#0d9488" stroke-width="0.8" opacity="0.35"/>
