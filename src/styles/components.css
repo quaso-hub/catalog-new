@@ -2134,6 +2134,60 @@
 }
 
 /* ========================================
+ * COMPACT SECTION INTRO (p39, dst)
+ * Header strip ringkas di atas grid produk — ringkas, tidak ambil ruang besar
+ * ======================================== */
+
+.compact-section-intro {
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 1px solid var(--color-neutral-200);
+}
+
+.compact-section-intro__title {
+  font-size: var(--text-base);
+  font-weight: var(--font-semibold);
+  color: var(--color-primary-700);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  margin-bottom: 2px;
+}
+
+.compact-section-intro__text {
+  font-size: var(--text-xs);
+  color: var(--color-neutral-700);
+  line-height: var(--leading-snug);
+  margin: 0;
+  max-width: 75ch;
+}
+
+/* ========================================
+ * FEATURE NOTE & GALLERY NOTE (footnote/disclaimer kecil)
+ * Italic muted untuk catatan kaki dalam product page / gallery
+ * ======================================== */
+
+.feature-note,
+.gallery-note {
+  font-size: var(--text-xs);
+  color: var(--color-neutral-600);
+  line-height: var(--leading-snug);
+  margin-top: var(--space-2);
+  margin-bottom: 0;
+}
+
+.feature-note em,
+.gallery-note em {
+  font-style: italic;
+}
+
+.gallery-note {
+  margin-top: var(--space-3);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-neutral-200);
+  text-align: right;
+}
+
+/* ========================================
  * DIAGRAM CONTAINER
  * ======================================== */
 
