@@ -30,6 +30,11 @@
              patternTransform="rotate(30)">
       <line x1="0" y1="0" x2="0" y2="4" stroke="#0d9488" stroke-width="0.5" opacity="0.4"/>
     </pattern>
+    <!-- Airflow arrowhead (downward) for LAF laminar stream -->
+    <marker id="airflow-arrow" viewBox="0 0 6 6" refX="3" refY="5"
+            markerUnits="userSpaceOnUse" markerWidth="4" markerHeight="4" orient="auto">
+      <path d="M0,0 L3,5 L6,0 L3,1.5 Z" fill="#0d9488" opacity="0.85"/>
+    </marker>
   </defs>
 
   <!-- Background -->
@@ -53,9 +58,6 @@
     <!-- Panel joints at x=2 and x=4 -->
     <line x1="164.2" y1="99"  x2="164.2" y2="45"  stroke="#8aaccf" stroke-width="0.5" stroke-dasharray="2,1"/>
     <line x1="188.5" y1="113" x2="188.5" y2="59"  stroke="#8aaccf" stroke-width="0.5" stroke-dasharray="2,1"/>
-    <!-- Wall label -->
-    <text x="183" y="86" font-family="Arial,sans-serif" font-size="6"
-          fill="#64748b" font-style="italic" text-anchor="middle">PIR 75mm</text>
 
     <!-- CONTROL PANEL on north wall (x=4.5→5.5, y=0, z=0.8→1.6) -->
     <!-- Corner (4.5,0,0.8): px=140+(4.5-0)*12.12=194.5, py=85+(4.5+0)*7-0.8*18=103.1 -->
@@ -126,6 +128,16 @@
              fill="#0d9488" fill-opacity="0.07" stroke="#0d9488"
              stroke-width="0.5" stroke-dasharray="3,1.5"/>
 
+    <!-- LAF AIRFLOW ARROWS — laminar downward streams from diffuser to surgical field
+         3 streams positioned to avoid op. table, lamp, and pendant arms.
+         Start near ceiling diffuser (z=3, y=75.8 area), end near floor LAF zone (z=0). -->
+    <line x1="125"   y1="68" x2="125"   y2="105" stroke="#0d9488" stroke-width="0.7"
+          opacity="0.55" stroke-dasharray="2,2" marker-end="url(#airflow-arrow)"/>
+    <line x1="155"   y1="68" x2="155"   y2="105" stroke="#0d9488" stroke-width="0.7"
+          opacity="0.55" stroke-dasharray="2,2" marker-end="url(#airflow-arrow)"/>
+    <line x1="140"   y1="55" x2="140"   y2="96"  stroke="#0d9488" stroke-width="0.7"
+          opacity="0.55" stroke-dasharray="2,2" marker-end="url(#airflow-arrow)"/>
+
     <!-- OPERATING TABLE (x=2→4, y=2.7→3.3, z=0→0.8) -->
     <polygon points="131.5,103.5 155.8,117.5 148.5,121.7 124.2,107.7"
              fill="#c8d8e8" stroke="#003366" stroke-width="0.8"/>
@@ -133,9 +145,9 @@
              fill="#b8cad8" stroke="#003366" stroke-width="0.8"/>
     <polygon points="155.8,117.5 148.5,121.7 148.5,136.1 155.8,131.9"
              fill="#afc0d0" stroke="#003366" stroke-width="0.8"/>
-    <!-- Table label with leader line -->
-    <line x1="140" y1="114" x2="158" y2="126" stroke="#64748b" stroke-width="0.4"/>
-    <text x="160" y="129" font-family="Arial,sans-serif" font-size="6"
+    <!-- Table label with leader line (placed to upper-right, away from "6 m" floor dim) -->
+    <line x1="148" y1="113" x2="170" y2="118" stroke="#64748b" stroke-width="0.4"/>
+    <text x="172" y="120" font-family="Arial,sans-serif" font-size="6"
           fill="#003366" text-anchor="start">Op. Table</text>
 
     <!-- MEDICAL PENDANT ARMS -->
@@ -199,12 +211,13 @@
           fill="#0d9488" text-anchor="end">2400×2400 mm · HEPA H14</text>
 
     <!-- DIMENSION ANNOTATIONS -->
-    <!-- Wall height 3m: right edge of north wall -->
-    <line x1="215" y1="73"  x2="215" y2="127" stroke="#334155" stroke-width="0.5"/>
-    <line x1="213" y1="73"  x2="217" y2="73"  stroke="#334155" stroke-width="0.5"/>
-    <line x1="213" y1="127" x2="217" y2="127" stroke="#334155" stroke-width="0.5"/>
-    <text x="219" y="103" font-family="Arial,sans-serif" font-size="6"
-          fill="#334155" text-anchor="start">3 m</text>
+    <!-- Wall height 3m: dimension line right of north wall.
+         Label placed ABOVE the line (text-anchor middle) to avoid Control Panel labels. -->
+    <line x1="222" y1="73"  x2="222" y2="127" stroke="#334155" stroke-width="0.5"/>
+    <line x1="220" y1="73"  x2="224" y2="73"  stroke="#334155" stroke-width="0.5"/>
+    <line x1="220" y1="127" x2="224" y2="127" stroke="#334155" stroke-width="0.5"/>
+    <text x="222" y="71" font-family="Arial,sans-serif" font-size="6"
+          fill="#334155" text-anchor="middle">3 m</text>
 
     <!-- Floor dimensions -->
     <text x="188" y="133" font-family="Arial,sans-serif" font-size="6"
