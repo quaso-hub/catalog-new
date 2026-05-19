@@ -47,10 +47,16 @@
     <polygon points="140,31 212.7,73 140,115 67.3,73"
              fill="url(#ceiling-grad)" stroke="#334155" stroke-width="0.8"/>
 
-    <!-- LAF DIFFUSER ZONE on ceiling — crosshatch pattern -->
-    <!-- Vertices: (0.8,0.8,3)=140,42.2  (3.2,0.8,3)=169.1,59  (3.2,3.2,3)=140,75.8  (0.8,3.2,3)=110.9,59 -->
+    <!-- LAF DIFFUSER ZONE on ceiling — HEPA filter module with 3x3 cell grid
+         Outer frame: (0.8,0.8,3) (3.2,0.8,3) (3.2,3.2,3) (0.8,3.2,3) — 2.4m square -->
     <polygon points="140,42.2 169.1,59 140,75.8 110.9,59"
-             fill="url(#laf-hatch)" stroke="#0d9488" stroke-width="1.2"/>
+             fill="url(#laf-hatch)" stroke="#0d9488" stroke-width="2"/>
+    <!-- 3x3 grid: vertical lines (y-direction) at x=1.6, 2.4 -->
+    <line x1="149.7" y1="47.8" x2="120.6" y2="64.6" stroke="#0d9488" stroke-width="0.6" opacity="0.7"/>
+    <line x1="159.4" y1="53.4" x2="130.3" y2="70.2" stroke="#0d9488" stroke-width="0.6" opacity="0.7"/>
+    <!-- 3x3 grid: horizontal lines (x-direction) at y=1.6, 2.4 -->
+    <line x1="130.3" y1="47.8" x2="159.4" y2="64.6" stroke="#0d9488" stroke-width="0.6" opacity="0.7"/>
+    <line x1="120.6" y1="53.4" x2="149.7" y2="70.2" stroke="#0d9488" stroke-width="0.6" opacity="0.7"/>
 
     <!-- NORTH WALL (y=0, right visible face) — gradient fill -->
     <polygon points="140,85 212.7,127 212.7,73 140,31"
@@ -138,50 +144,84 @@
     <line x1="140"   y1="55" x2="140"   y2="96"  stroke="#0d9488" stroke-width="0.7"
           opacity="0.55" stroke-dasharray="2,2" marker-end="url(#airflow-arrow)"/>
 
-    <!-- OPERATING TABLE (x=2→4, y=2.7→3.3, z=0→0.8) -->
-    <polygon points="131.5,103.5 155.8,117.5 148.5,121.7 124.2,107.7"
+    <!-- ─────────────────────────────────────────
+         OPERATING TABLE — 3-tier construction (real OR table profile)
+         Pad (top, surgical surface):  x=2→4,    y=2.85→3.15, z=0.7→0.8
+         Pedestal (column):            x=2.85→3.15, y=2.85→3.15, z=0.15→0.7
+         Base (foot, weighted plate):  x=2.5→3.5, y=2.7→3.3,   z=0→0.15
+         Drawn back-to-front for proper occlusion: base, pedestal, pad. -->
+
+    <!-- BASE FOOT (z=0→0.15) -->
+    <!-- top -->
+    <polygon points="137.6,118.7 149.7,125.7 142.4,129.9 130.3,122.9"
+             fill="#b8cad8" stroke="#003366" stroke-width="0.7"/>
+    <!-- front face (y=3.3) -->
+    <polygon points="130.3,122.9 142.4,129.9 142.4,132.6 130.3,125.6"
+             fill="#a8bcc8" stroke="#003366" stroke-width="0.7"/>
+    <!-- right face (x=3.5) -->
+    <polygon points="149.7,125.7 142.4,129.9 142.4,132.6 149.7,128.4"
+             fill="#9eb2c0" stroke="#003366" stroke-width="0.7"/>
+
+    <!-- PEDESTAL COLUMN (z=0.15→0.7) — narrow square stem -->
+    <!-- front face (y=3.15) -->
+    <polygon points="136.4,114.4 140,116.5 140,126.4 136.4,124.3"
+             fill="#a8bcc8" stroke="#003366" stroke-width="0.6"/>
+    <!-- right face (x=3.15) -->
+    <polygon points="143.6,114.4 140,116.5 140,126.4 143.6,124.3"
+             fill="#98aebc" stroke="#003366" stroke-width="0.6"/>
+
+    <!-- PAD / SURGICAL SURFACE (z=0.7→0.8) — long thin slab -->
+    <!-- top -->
+    <polygon points="129.7,104.55 153.9,118.55 150.3,120.65 126.06,106.65"
+             fill="#dde8f4" stroke="#003366" stroke-width="0.8"/>
+    <!-- front face (y=3.15) -->
+    <polygon points="126.06,106.65 150.3,120.65 150.3,122.45 126.06,108.45"
              fill="#c8d8e8" stroke="#003366" stroke-width="0.8"/>
-    <polygon points="131.5,117.9 155.8,131.9 155.8,117.5 131.5,103.5"
+    <!-- right face (x=4) -->
+    <polygon points="153.9,118.55 150.3,120.65 150.3,122.45 153.9,120.35"
              fill="#b8cad8" stroke="#003366" stroke-width="0.8"/>
-    <polygon points="155.8,117.5 148.5,121.7 148.5,136.1 155.8,131.9"
-             fill="#afc0d0" stroke="#003366" stroke-width="0.8"/>
+
     <!-- Table label with leader line (placed to upper-right, away from "6 m" floor dim) -->
-    <line x1="148" y1="113" x2="170" y2="118" stroke="#64748b" stroke-width="0.4"/>
+    <line x1="151" y1="120" x2="170" y2="118" stroke="#64748b" stroke-width="0.4"/>
     <text x="172" y="120" font-family="Arial,sans-serif" font-size="6"
           fill="#003366" text-anchor="start">Op. Table</text>
 
-    <!-- MEDICAL PENDANT ARMS -->
-    <!-- Pendant arm 1: ceiling mount (2.2,3,3) → down to (2.2,3,1.8) → L-arm to (2.8,3,1.8) -->
-    <!-- (2.2,3,3): px=140+(2.2-3)*12.12=130.3, py=85+(2.2+3)*7-3*18=39.4+85-54=76.4 -->
-    <!-- Wait, let me recalculate: py=85+(2.2+3)*7-3*18 = 85+36.4-54 = 67.4 -->
-    <!-- (2.2,3,1.8): py=85+(2.2+3)*7-1.8*18 = 85+36.4-32.4 = 89 -->
-    <!-- (2.8,3,1.8): px=140+(2.8-3)*12.12=137.6, py=85+(2.8+3)*7-1.8*18 = 85+40.6-32.4 = 93.2 -->
-    <!-- Vertical pipe arm 1 -->
-    <line x1="130.3" y1="67.4" x2="130.3" y2="89"
-          stroke="#334155" stroke-width="0.8"/>
-    <!-- Horizontal L-arm 1 -->
-    <line x1="130.3" y1="89" x2="137.6" y2="93.2"
-          stroke="#334155" stroke-width="0.8"/>
-    <!-- Pendant head 1 at (2.8,3,1.8) -->
-    <ellipse cx="137.6" cy="93.2" rx="4" ry="2.5"
-             fill="#c8d8e8" stroke="#003366" stroke-width="0.7"/>
+    <!-- ─────────────────────────────────────────
+         MEDICAL PENDANTS — 2 ceiling-mounted units flanking the surgical field
+         Pendant 1 (surgeon side):    mount (2.0, 2.4, 3) → body at z=1.7
+         Pendant 2 (anesthesia side): mount (4.0, 2.4, 3) → body at z=1.7
+         Heads positioned at y=2.4 (north of surgical zone) so they do not
+         intersect Op. Table or shadowless lamps. -->
 
-    <!-- Pendant arm 2: ceiling mount (3.8,3,3) → down to (3.8,3,1.8) → L-arm to (3.2,3,1.8) -->
-    <!-- (3.8,3,3): px=140+(3.8-3)*12.12=149.7, py=85+(3.8+3)*7-3*18=85+47.6-54=78.6 -->
-    <!-- (3.8,3,1.8): py=85+(3.8+3)*7-1.8*18=85+47.6-32.4=100.2 -->
-    <!-- (3.2,3,1.8): px=140+(3.2-3)*12.12=142.4, py=85+(3.2+3)*7-1.8*18=85+43.4-32.4=96 -->
-    <!-- Vertical pipe arm 2 -->
-    <line x1="149.7" y1="78.6" x2="149.7" y2="100.2"
-          stroke="#334155" stroke-width="0.8"/>
-    <!-- Horizontal L-arm 2 -->
-    <line x1="149.7" y1="100.2" x2="142.4" y2="96"
-          stroke="#334155" stroke-width="0.8"/>
-    <!-- Pendant head 2 at (3.2,3,1.8) -->
-    <ellipse cx="142.4" cy="96" rx="4" ry="2.5"
+    <!-- Pendant 1: ceiling mount disk + vertical pipe + head ellipse -->
+    <!-- Mount (2.0, 2.4, 3):     px=135.15, py=61.8 -->
+    <!-- Head  (2.0, 2.4, 1.7):   px=135.15, py=85.2 -->
+    <ellipse cx="135.15" cy="61.8" rx="2.4" ry="1.1"
+             fill="#94a3b8" stroke="#003366" stroke-width="0.5"/>
+    <line x1="135.15" y1="62.5" x2="135.15" y2="84.2"
+          stroke="#334155" stroke-width="1"/>
+    <!-- Pendant 1 head: small disc body -->
+    <ellipse cx="135.15" cy="85.2" rx="3.4" ry="1.8"
              fill="#c8d8e8" stroke="#003366" stroke-width="0.7"/>
-    <!-- Pendant label -->
-    <text x="155" y="88" font-family="Arial,sans-serif" font-size="5.5"
-          fill="#334155" text-anchor="start">Pendant</text>
+    <ellipse cx="135.15" cy="85.2" rx="2.2" ry="1.0" fill="none"
+             stroke="#4a6582" stroke-width="0.4"/>
+
+    <!-- Pendant 2: same construction, mount (4.0, 2.4, 3) -->
+    <!-- Mount (4.0, 2.4, 3):     px=159.4, py=75.8 -->
+    <!-- Head  (4.0, 2.4, 1.7):   px=159.4, py=99.2 -->
+    <ellipse cx="159.4" cy="75.8" rx="2.4" ry="1.1"
+             fill="#94a3b8" stroke="#003366" stroke-width="0.5"/>
+    <line x1="159.4" y1="76.5" x2="159.4" y2="98.2"
+          stroke="#334155" stroke-width="1"/>
+    <ellipse cx="159.4" cy="99.2" rx="3.4" ry="1.8"
+             fill="#c8d8e8" stroke="#003366" stroke-width="0.7"/>
+    <ellipse cx="159.4" cy="99.2" rx="2.2" ry="1.0" fill="none"
+             stroke="#4a6582" stroke-width="0.4"/>
+
+    <!-- Pendant label — placed between two pendants, leader pointing to pendant 1 head -->
+    <text x="146" y="76" font-family="Arial,sans-serif" font-size="5.5"
+          fill="#334155" text-anchor="middle">Pendant</text>
+    <line x1="143" y1="78" x2="138" y2="84" stroke="#64748b" stroke-width="0.4"/>
 
     <!-- SHADOWLESS LAMPS (at z=2.3) -->
     <line x1="133.9" y1="76.1" x2="133.9" y2="69.5" stroke="#8a9ab0" stroke-width="0.6"/>
