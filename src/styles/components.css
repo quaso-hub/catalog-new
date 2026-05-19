@@ -20,45 +20,6 @@
   gap: var(--space-4);
 }
 
-.product-page__hero-image {
-  flex: 1;
-  background: var(--color-neutral-100);
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100mm;
-}
-
-.product-page__hero-image img {
-  max-width: 90%;
-  max-height: 90%;
-  object-fit: contain;
-}
-
-.product-page__thumbnails {
-  display: flex;
-  gap: var(--space-3);
-}
-
-.product-page__thumbnail {
-  width: 25mm;
-  height: 25mm;
-  background: var(--color-neutral-100);
-  border: 1px solid var(--color-neutral-200);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.product-page__thumbnail img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
 .product-page__content {
   display: flex;
   flex-direction: column;
@@ -69,13 +30,6 @@
   font-weight: var(--font-bold);
   color: var(--color-primary-700);
   margin-bottom: var(--space-2);
-}
-
-.product-page__model {
-  font-size: var(--text-sm);
-  color: var(--color-neutral-500);
-  font-family: var(--font-mono);
-  margin-bottom: var(--space-4);
 }
 
 .product-page__description {
@@ -99,52 +53,6 @@
 /* ========================================
  * PRODUCT SPECS SECTION
  * ======================================== */
-
-.specs-section {
-  margin-top: auto;
-}
-
-.specs-section__title {
-  font-size: var(--text-lg);
-  font-weight: var(--font-semibold);
-  color: var(--color-primary-700);
-  margin-bottom: var(--space-3);
-  padding-bottom: var(--space-2);
-  border-bottom: 2px solid var(--color-primary-700);
-}
-
-.specs-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-3);
-}
-
-.spec-item {
-  display: flex;
-  flex-direction: column;
-  padding: var(--space-3);
-  background: var(--color-neutral-50);
-  border-radius: var(--radius-sm);
-}
-
-.spec-item__icon {
-  font-size: var(--text-xl);
-  margin-bottom: var(--space-1);
-}
-
-.spec-item__label {
-  font-size: var(--text-xs);
-  color: var(--color-neutral-500);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-wide);
-  margin-bottom: var(--space-1);
-}
-
-.spec-item__value {
-  font-size: var(--text-base);
-  font-weight: var(--font-semibold);
-  color: var(--color-neutral-900);
-}
 
 /* ========================================
  * TABLE OF CONTENTS
@@ -244,43 +152,6 @@
  * ABOUT/COMPANY PROFILE
  * ======================================== */
 
-.about-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-8);
-}
-
-.about-section__content {
-  display: flex;
-  flex-direction: column;
-}
-
-.about-section__title {
-  font-size: var(--text-3xl);
-  font-weight: var(--font-bold);
-  color: var(--color-primary-700);
-  margin-bottom: var(--space-4);
-}
-
-.about-section__text {
-  font-size: var(--text-base);
-  line-height: var(--leading-loose);
-  color: var(--color-neutral-700);
-  margin-bottom: var(--space-4);
-}
-
-.about-section__image {
-  background: var(--color-neutral-100);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-
-.about-section__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 /* Vision/Mission Cards */
 .vm-cards {
   display: grid;
@@ -351,226 +222,17 @@
  * PROJECT REFERENCE
  * ======================================== */
 
-.project-card {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  gap: var(--space-5);
-  padding: var(--space-5);
-  background: var(--color-white);
-  border: 1px solid var(--color-neutral-200);
-  border-radius: var(--radius-lg);
-}
-
-.project-card__image {
-  aspect-ratio: 4/3;
-  background: var(--color-neutral-100);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-}
-
-.project-card__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.project-card__content {
-  display: flex;
-  flex-direction: column;
-}
-
-.project-card__title {
-  font-size: var(--text-xl);
-  font-weight: var(--font-bold);
-  color: var(--color-primary-700);
-  margin-bottom: var(--space-2);
-}
-
-.project-card__location {
-  font-size: var(--text-sm);
-  color: var(--color-neutral-500);
-  margin-bottom: var(--space-3);
-}
-
-.project-card__description {
-  font-size: var(--text-sm);
-  line-height: var(--leading-relaxed);
-  color: var(--color-neutral-700);
-  margin-bottom: var(--space-4);
-}
-
-.project-card__scope {
-  margin-top: auto;
-}
-
-.project-card__scope-title {
-  font-size: var(--text-xs);
-  font-weight: var(--font-semibold);
-  color: var(--color-neutral-500);
-  text-transform: uppercase;
-  margin-bottom: var(--space-2);
-}
-
-.project-card__scope-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-}
-
-.project-card__scope-item {
-  font-size: var(--text-xs);
-  padding: var(--space-1) var(--space-2);
-  background: var(--color-primary-50);
-  color: var(--color-primary-700);
-  border-radius: var(--radius-sm);
-}
-
 /* ========================================
  * CERTIFICATION PAGE
  * ======================================== */
-
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-6);
-}
-
-.cert-item {
-  text-align: center;
-  padding: var(--space-6);
-  background: var(--color-neutral-50);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-neutral-200);
-}
-
-.cert-item__badge {
-  width: 30mm;
-  height: 30mm;
-  margin: 0 auto var(--space-4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 3px solid var(--color-primary-700);
-  border-radius: var(--radius-md);
-}
-
-.cert-item__badge-text {
-  font-size: var(--text-xl);
-  font-weight: var(--font-bold);
-  color: var(--color-primary-700);
-}
-
-.cert-item__title {
-  font-size: var(--text-lg);
-  font-weight: var(--font-bold);
-  color: var(--color-neutral-900);
-  margin-bottom: var(--space-2);
-}
-
-.cert-item__description {
-  font-size: var(--text-sm);
-  color: var(--color-neutral-600);
-  line-height: var(--leading-relaxed);
-}
 
 /* ========================================
  * CONTACT PAGE
  * ======================================== */
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-5);
-  margin-top: var(--space-6);
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-5);
-}
-
-.contact-item {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  padding: var(--space-3) 0;
-  border-bottom: 1px solid var(--color-neutral-200);
-}
-
-.contact-item:last-child {
-  border-bottom: none;
-}
-
-.contact-item__icon {
-  display: none;
-}
-
-.contact-item__content {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-item__label {
-  font-size: 8px;
-  font-weight: var(--font-bold);
-  color: var(--color-teal-700);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-widest);
-  margin-bottom: var(--space-1);
-}
-
-.contact-item__value {
-  font-size: var(--text-base);
-  font-weight: var(--font-medium);
-  color: var(--color-neutral-900);
-}
-
-.contact-map {
-  background: var(--color-neutral-100);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-
 /* ========================================
  * INTEGRATION/SOLUTION PAGE
  * ======================================== */
-
-.solution-hero {
-  position: relative;
-  height: 60%;
-  background: var(--color-neutral-100);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  margin-bottom: var(--space-6);
-}
-
-.solution-hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.solution-hero__overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: var(--space-6);
-  background: linear-gradient(transparent, rgba(0, 51, 102, 0.9));
-  color: var(--color-white);
-}
-
-.solution-hero__title {
-  font-size: var(--text-3xl);
-  font-weight: var(--font-bold);
-  margin-bottom: var(--space-2);
-}
-
-.solution-hero__subtitle {
-  font-size: var(--text-lg);
-  opacity: 0.9;
-}
 
 .solution-features {
   display: flex;
@@ -592,10 +254,6 @@
 
 .solution-feature:last-child {
   border-right: none;
-}
-
-.solution-feature__icon {
-  display: none;
 }
 
 .solution-feature__title {
@@ -1023,16 +681,6 @@
   flex: 1;
 }
 
-.product-image-placeholder--small {
-  width: 80px;
-  height: 80px;
-  min-height: auto;
-}
-
-.product-image-placeholder--xray {
-  background: #e5e7eb;
-}
-
 .product-image-placeholder__icon {
   display: none;
 }
@@ -1043,9 +691,7 @@
   color: #9ca3af;
 }
 
-.product-image-placeholder__filename,
-.product-image-placeholder__warning,
-.placeholder-hint {
+.product-image-placeholder__filename {
   display: none;
 }
 
@@ -1109,13 +755,6 @@
   margin-bottom: var(--space-2);
 }
 
-.spec-table-page__model {
-  font-size: var(--text-sm);
-  color: var(--color-neutral-500);
-  font-family: var(--font-mono);
-  margin-bottom: var(--space-6);
-}
-
 .spec-table-page__content {
   flex: 1;
   display: grid;
@@ -1160,11 +799,6 @@
 
 .callout--teal {
   border-left-color: var(--color-accent-teal);
-  background: var(--color-neutral-50);
-}
-
-.callout--gold {
-  border-left-color: var(--color-accent-gold);
   background: var(--color-neutral-50);
 }
 
@@ -1215,72 +849,9 @@
  * ADDITIONAL CERTIFICATIONS BOX
  * ======================================== */
 
-.additional-certs {
-  background: var(--color-primary-50);
-  border-radius: 4px;
-  padding: var(--space-5);
-  margin-top: var(--space-6);
-  border-left: 4px solid var(--color-primary-700);
-}
-
-.additional-certs__title {
-  color: var(--color-primary-700);
-  font-weight: var(--font-semibold);
-  margin-bottom: var(--space-2);
-}
-
-.additional-certs__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-3);
-  font-size: var(--text-sm);
-}
-
 /* ========================================
  * TEST CERTIFICATES PAGE
  * ======================================== */
-
-.test-cert-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-5);
-  flex: 1;
-}
-
-.test-cert-card {
-  padding: var(--space-5);
-  background: var(--color-neutral-50);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-neutral-200);
-  display: flex;
-  flex-direction: column;
-}
-
-.test-cert-card__icon {
-  font-size: 32px;
-  margin-bottom: var(--space-3);
-}
-
-.test-cert-card__title {
-  font-size: var(--text-lg);
-  font-weight: var(--font-bold);
-  color: var(--color-primary-700);
-  margin-bottom: var(--space-2);
-}
-
-.test-cert-card__description {
-  font-size: var(--text-sm);
-  color: var(--color-neutral-600);
-  line-height: var(--leading-relaxed);
-  margin-bottom: var(--space-3);
-}
-
-.test-cert-card__standard {
-  font-size: var(--text-xs);
-  font-family: var(--font-mono);
-  color: var(--color-accent-teal);
-  margin-top: auto;
-}
 
 /* ========================================
  * PROJECT REFERENCES PAGE
@@ -1362,26 +933,6 @@
  * CONTACT CTA BOX
  * ======================================== */
 
-.contact-cta {
-  background: var(--color-primary-700);
-  color: var(--color-white);
-  padding: var(--space-5);
-  border-radius: var(--radius-lg);
-  margin-top: var(--space-8);
-  text-align: center;
-}
-
-.contact-cta__title {
-  font-weight: var(--font-semibold);
-  margin-bottom: var(--space-2);
-  color: var(--color-white);
-}
-
-.contact-cta__text {
-  font-size: var(--text-sm);
-  opacity: 0.9;
-}
-
 /* ========================================
  * SECTION TITLE (for content pages)
  * ======================================== */
@@ -1391,21 +942,10 @@
   margin-bottom: var(--space-2);
 }
 
-.section-title--center {
-  text-align: center;
-}
-
 .section-subtitle {
   color: var(--color-neutral-600);
   margin-bottom: var(--space-4);
   max-width: 70%;
-}
-
-.section-subtitle--center {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: var(--space-8);
 }
 
 /* ========================================
@@ -1554,96 +1094,9 @@
  * ACCESSORIES PAGE
  * ======================================== */
 
-.accessories-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-5);
-  flex: 1;
-}
-
-.accessory-card {
-  display: flex;
-  gap: var(--space-4);
-  padding: var(--space-5);
-  background: var(--color-neutral-50);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--color-neutral-200);
-}
-
-.accessory-card__image {
-  width: 120px;
-  height: 120px;
-  background: var(--color-neutral-200);
-  border-radius: var(--radius-md);
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.accessory-card__content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.accessory-card__title {
-  font-size: var(--text-lg);
-  font-weight: var(--font-bold);
-  color: var(--color-primary-700);
-  margin-bottom: var(--space-1);
-}
-
-.accessory-card__model {
-  font-size: var(--text-xs);
-  color: var(--color-neutral-500);
-  font-family: var(--font-mono);
-  margin-bottom: var(--space-2);
-}
-
-.accessory-card__description {
-  font-size: var(--text-sm);
-  color: var(--color-neutral-600);
-  line-height: var(--leading-relaxed);
-}
-
 /* ========================================
  * SERVICES GRID (Company Profile page 2)
  * ======================================== */
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-4);
-}
-
-.service-card {
-  padding: var(--space-5);
-  background: var(--color-white);
-  border: 1px solid var(--color-neutral-200);
-  border-radius: var(--radius-lg);
-  text-align: center;
-}
-
-.service-card__number {
-  font-size: var(--text-3xl);
-  font-weight: var(--font-bold);
-  color: var(--color-primary-700);
-  margin-bottom: var(--space-2);
-}
-
-.service-card__title {
-  font-size: var(--text-base);
-  font-weight: var(--font-semibold);
-  color: var(--color-neutral-900);
-  margin-bottom: var(--space-2);
-}
-
-.service-card__text {
-  font-size: var(--text-xs);
-  color: var(--color-neutral-500);
-  line-height: var(--leading-relaxed);
-}
 
 /* ========================================
  * COMPACT PRODUCT CARDS (for multi-product pages)
@@ -1675,13 +1128,6 @@
   font-size: var(--text-lg);
   font-weight: var(--font-bold);
   color: var(--color-primary-700);
-  margin: 0;
-}
-
-.product-compact__model {
-  font-size: var(--text-xs);
-  color: var(--color-neutral-500);
-  font-family: var(--font-mono);
   margin: 0;
 }
 
@@ -1791,35 +1237,11 @@
  * PRINT-CATALOG CARD VARIANT
  * ======================================== */
 
-.card--print {
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  padding: var(--space-4);
-}
-
-.card--print + .card--print {
-  border-top: 0.5pt solid var(--color-neutral-200);
-  padding-top: var(--space-5);
-  margin-top: var(--space-4);
-}
-
 /* ========================================
  * V5 LAYOUT FLOW IMPROVEMENTS
  * ======================================== */
 
-/* Asymmetric column widths for visual interest */
-.product-page--asymmetric {
-  grid-template-columns: 45% 55%;
-}
-
-.product-page--asymmetric-reverse {
-  grid-template-columns: 55% 45%;
-}
-
 /* Typography rhythm */
-.page-title,
 h1 {
   line-height: var(--leading-tight);
   letter-spacing: var(--tracking-tighter);
@@ -1830,17 +1252,8 @@ h2 {
   line-height: var(--leading-snug);
 }
 
-.body-text,
 p {
   line-height: var(--leading-relaxed);
-}
-
-.category-label {
-  letter-spacing: var(--tracking-wider);
-  text-transform: uppercase;
-  font-size: var(--text-xs);
-  font-weight: var(--font-semibold);
-  color: var(--color-accent-teal);
 }
 
 /* Section divider accent line */
@@ -1851,14 +1264,6 @@ p {
   height: 3px;
   background: var(--color-primary-700);
   margin: var(--space-5) 0;
-}
-
-/* Highlight note styling */
-.highlight-note {
-  border-left: 3px solid var(--color-accent-teal);
-  padding-left: var(--space-4);
-  background: linear-gradient(90deg, rgba(13,148,136,0.05) 0%, transparent 100%);
-  margin: var(--space-4) 0;
 }
 
 /* ========================================
@@ -2008,63 +1413,6 @@ p {
  * ACCESSORIES GRID (Pages 31-32)
  * ======================================== */
 
-.accessories-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-4);
-}
-
-.accessory-card {
-  display: grid;
-  grid-template-columns: 140px 1fr; /* Bigger image beside content */
-  gap: var(--space-4);
-  padding: var(--space-4);
-  background: var(--color-neutral-50);
-  border: 1px solid var(--color-neutral-200);
-  border-radius: var(--radius-md);
-  align-items: start;
-}
-
-.accessory-card__image {
-  width: 140px;
-  height: 140px;
-  min-height: 140px;
-  background: var(--color-neutral-200);
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  color: var(--color-neutral-400);
-}
-
-.accessory-card__content {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-}
-
-.accessory-card__title {
-  font-size: var(--text-base);
-  font-weight: var(--font-bold);
-  color: var(--color-primary-700);
-  margin: 0;
-}
-
-.accessory-card__model {
-  font-size: var(--text-xs);
-  color: var(--color-neutral-500);
-  font-family: var(--font-mono);
-  margin: 0;
-}
-
-.accessory-card__description {
-  font-size: var(--text-sm);
-  color: var(--color-neutral-600);
-  line-height: var(--leading-relaxed);
-  margin: 0;
-}
-
 /* ========================================
  * DUAL PRODUCT LAYOUT (Pages 39-40, 42-43)
  * ======================================== */
@@ -2197,74 +1545,9 @@ p {
  * PROCESS STEPS (p49)
  * ======================================== */
 
-.process-steps {
-  display: flex;
-  flex-direction: column;
-  margin-top: var(--space-4);
-}
-
-.process-step {
-  display: flex;
-  gap: var(--space-5);
-  align-items: flex-start;
-  padding-bottom: var(--space-4);
-  border-bottom: 1px solid var(--color-neutral-200);
-  margin-bottom: var(--space-4);
-}
-
-.process-step:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.process-step__number {
-  font-size: var(--text-2xl);
-  font-weight: var(--font-bold);
-  color: var(--color-primary-700);
-  min-width: 40px;
-  line-height: 1;
-  padding-top: 2px;
-  opacity: 0.35;
-}
-
-.process-step__content {
-  flex: 1;
-}
-
-.process-step__title {
-  font-size: var(--text-sm);
-  font-weight: var(--font-bold);
-  color: var(--color-primary-900);
-  margin-bottom: var(--space-1);
-  margin-top: 0;
-}
-
-.process-step__desc {
-  font-size: var(--text-sm);
-  color: var(--color-neutral-600);
-  line-height: var(--leading-relaxed);
-  margin: 0;
-}
-
 /* ========================================
  * SPEC TABLE COMPARISON VARIANT (p46)
  * ======================================== */
-
-.spec-table--comparison th:first-child,
-.spec-table--comparison td:first-child {
-  width: 22%;
-  font-weight: var(--font-semibold);
-  color: var(--color-neutral-800);
-}
-
-.spec-table--comparison th:nth-child(2) {
-  background: var(--color-primary-800);
-}
-
-.spec-table--comparison td:nth-child(2) {
-  background: var(--color-primary-50);
-}
 
 /* ─── Certification Strip ──────────────────────────────────────── */
 .cert-strip {
